@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import KakaoMap from './components/KakaoMap.jsx'
+import ReviewSection from './components/ReviewSection.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
+import { getUserDisplayName, isSupabaseConfigured, supabase } from './lib/supabase.js'
 import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
 const initialFilters = { weather: '', age: '', duration: '', price: '', themes: [] }
@@ -15,6 +17,25 @@ function formatDistance(distance) {
 
 function toggleValue(values, value) {
   return values.includes(value) ? values.filter((item) => item !== value) : [...values, value]
+}
+
+function AuthControl({ user, status, error, onLogin, onLogout }) {
+  if (!isSupabaseConfigured) return <span className="auth-pending">후기 기능 준비 중</span>
+  if (status === 'loading') return <span className="auth-pending">로그인 확인 중…</span>
+
+  return (
+    <div className="auth-control">
+      {user ? (
+        <>
+          <span><strong>{getUserDisplayName(user)}</strong>님</span>
+          <button type="button" onClick={onLogout}>로그아웃</button>
+        </>
+      ) : (
+        <button className="nav-kakao-login" type="button" onClick={onLogin}>카카오로 로그인</button>
+      )}
+      {error && <span className="auth-error" role="alert">{error}</span>}
+    </div>
+  )
 }
 
 function FilterGroup({ group, selected, onSelect }) {
@@ -173,7 +194,7 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset }
   )
 }
 
-function PlaceModal({ place, distance, isFavorite, onToggleFavorite, onClose }) {
+function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
   useEffect(() => {
     const closeOnEscape = (event) => event.key === 'Escape' && onClose()
     document.addEventListener('keydown', closeOnEscape)
@@ -206,6 +227,7 @@ function PlaceModal({ place, distance, isFavorite, onToggleFavorite, onClose }) 
           <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
         </dl>
         <p className="modal-note">운영시간과 실제 요금은 방문 전에 해당 장소의 최신 안내를 확인해 주세요.</p>
+        <ReviewSection place={place} user={user} onLogin={onLogin} />
       </section>
     </div>
   )
@@ -220,6 +242,9 @@ export default function App() {
   const [viewMode, setViewMode] = useState('list')
   const [location, setLocation] = useState(null)
   const [locationStatus, setLocationStatus] = useState('idle')
+  const [user, setUser] = useState(null)
+  const [authStatus, setAuthStatus] = useState(isSupabaseConfigured ? 'loading' : 'not-configured')
+  const [authError, setAuthError] = useState('')
   const [favoriteIds, setFavoriteIds] = useState(() => {
     try {
       const saved = JSON.parse(localStorage.getItem('oneul-favorite-places') || '[]')
@@ -232,6 +257,48 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('oneul-favorite-places', JSON.stringify(favoriteIds))
   }, [favoriteIds])
+
+  useEffect(() => {
+    if (!supabase) return undefined
+    let active = true
+
+    supabase.auth.getSession().then(({ data, error }) => {
+      if (!active) return
+      if (error) {
+        setAuthError('로그인 상태를 확인하지 못했어요.')
+      }
+      setUser(data.session?.user || null)
+      setAuthStatus('ready')
+    })
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!active) return
+      setUser(session?.user || null)
+      setAuthStatus('ready')
+      setAuthError('')
+    })
+
+    return () => {
+      active = false
+      subscription.unsubscribe()
+    }
+  }, [])
+
+  const signInWithKakao = async () => {
+    if (!supabase) return
+    setAuthError('')
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'kakao',
+      options: { redirectTo: `${window.location.origin}/` },
+    })
+    if (error) setAuthError('카카오 로그인을 시작하지 못했어요.')
+  }
+
+  const signOut = async () => {
+    if (!supabase) return
+    const { error } = await supabase.auth.signOut()
+    if (error) setAuthError('로그아웃하지 못했어요. 다시 시도해 주세요.')
+  }
 
   const getMyLocation = () => {
     if (!navigator.geolocation) {
@@ -288,7 +355,10 @@ export default function App() {
       <header className="hero">
         <nav className="nav" aria-label="주요 메뉴">
           <a className="brand" href="#top" aria-label="오늘 어디가지 홈">오늘 어디가지? <span>👟</span></a>
-          <span className="nav-note">서울·수도권 가족 나들이</span>
+          <div className="nav-side">
+            <span className="nav-note">서울·수도권 가족 나들이</span>
+            <AuthControl user={user} status={authStatus} error={authError} onLogin={signInWithKakao} onLogout={signOut} />
+          </div>
         </nav>
         <div className="hero-content" id="top">
           <p className="eyebrow">오늘의 나들이, 가볍게 골라요</p>
@@ -373,7 +443,7 @@ export default function App() {
       <footer><strong>오늘 어디가지? 👟</strong><span>가족의 즐거운 오늘을 응원해요.</span></footer>
 
       {selectedPlace && (
-        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={user} onLogin={signInWithKakao} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
       )}
     </>
   )
