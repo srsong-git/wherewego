@@ -11,6 +11,9 @@
 - 브라우저에 저장되는 찜하기
 - 카카오 로그인과 장소별 가족 후기
 - 우리 아이 반응, 재방문 의사, 아이 연령별 후기 요약
+- 공개 후기의 사용자 UUID 비공개 처리
+- 후기 신고, 20초 저장 간격 제한, 개인정보 작성 경고
+- 개인정보·이용 안내와 회원 탈퇴 요청
 
 ## 로컬 실행
 
@@ -39,7 +42,10 @@ VITE_KAKAO_MAP_KEY=발급받은_JavaScript_키
 
 ## 카카오 로그인과 후기 데이터베이스 설정
 
-후기는 Supabase의 Auth와 PostgreSQL을 사용합니다. Supabase 프로젝트를 만든 뒤 SQL Editor에서 `supabase/migrations/202608210001_create_reviews.sql`을 실행합니다.
+후기는 Supabase의 Auth와 PostgreSQL을 사용합니다. Supabase 프로젝트를 만든 뒤 SQL Editor에서 다음 파일을 순서대로 실행합니다.
+
+1. `supabase/migrations/202608210001_create_reviews.sql`
+2. `supabase/migrations/202608210002_public_beta_safety.sql`
 
 Supabase 프로젝트의 Authentication > Providers > Kakao에서 다음 값을 등록합니다.
 
@@ -64,3 +70,12 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 ```
 
 `service_role` 키와 카카오 Client Secret은 프런트엔드 환경변수나 GitHub에 넣지 않습니다.
+
+## 공개 베타 운영
+
+Supabase의 Table Editor에서 다음 항목을 주기적으로 확인합니다.
+
+- `review_reports`: `status`가 `pending`인 신고를 확인하고, 필요한 경우 원본 `reviews` 행을 삭제한 뒤 `resolved` 또는 `dismissed`로 변경합니다.
+- `account_deletion_requests`: `status`가 `pending`인 사용자를 Authentication > Users에서 삭제합니다. 사용자 삭제 후 요청 행도 외래 키 설정에 따라 함께 삭제됩니다.
+
+관리자 작업은 Supabase Dashboard에서만 수행하고, 관리자용 키를 웹사이트 코드에 추가하지 않습니다. GitHub, Vercel, Supabase, Kakao Developers 계정에는 2단계 인증을 사용하는 것을 권장합니다.

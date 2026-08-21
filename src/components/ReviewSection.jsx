@@ -15,8 +15,10 @@ const revisitOptions = [
   { value: 1, emoji: '🤔', label: '잘 모르겠어요' },
 ]
 
+const reportReasons = ['개인정보 노출', '광고 또는 도배', '욕설 또는 부적절한 내용', '사실과 다른 정보', '기타']
 const ageOptions = ['유아', '초등 저학년', '초등 고학년']
 const emptyForm = { childReaction: 5, revisitIntent: 3, childAgeGroup: '유아', content: '' }
+const emptyReport = { reason: reportReasons[0], details: '' }
 
 function formatReviewDate(date) {
   return new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: 'short', day: 'numeric' }).format(new Date(date))
@@ -51,20 +53,21 @@ function RatingChoices({ legend, options, value, onChange }) {
 
 export default function ReviewSection({ place, user, onLogin }) {
   const [reviews, setReviews] = useState([])
+  const [myReview, setMyReview] = useState(null)
   const [status, setStatus] = useState(isSupabaseConfigured ? 'loading' : 'not-configured')
   const [form, setForm] = useState(emptyForm)
   const [submitStatus, setSubmitStatus] = useState('idle')
   const [notice, setNotice] = useState('')
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false)
+  const [reportingReviewId, setReportingReviewId] = useState(null)
+  const [reportForm, setReportForm] = useState(emptyReport)
+  const [reportStatus, setReportStatus] = useState('idle')
+  const [reportNotice, setReportNotice] = useState('')
 
-  const loadReviews = useCallback(async () => {
+  const loadPublicReviews = useCallback(async () => {
     if (!supabase) return
     setStatus('loading')
-    const { data, error } = await supabase
-      .from('reviews')
-      .select('id, place_id, user_id, author_name, child_reaction, revisit_intent, child_age_group, content, created_at, updated_at')
-      .eq('place_id', place.id)
-      .order('created_at', { ascending: false })
+    const { data, error } = await supabase.rpc('get_public_reviews', { target_place_id: place.id })
 
     if (error) {
       console.error('후기 조회 실패', error)
@@ -76,14 +79,33 @@ export default function ReviewSection({ place, user, onLogin }) {
     setStatus('ready')
   }, [place.id])
 
-  useEffect(() => {
-    loadReviews()
-  }, [loadReviews])
+  const loadMyReview = useCallback(async () => {
+    if (!supabase || !user) {
+      setMyReview(null)
+      return
+    }
 
-  const myReview = useMemo(
-    () => user ? reviews.find((review) => review.user_id === user.id) : null,
-    [reviews, user],
-  )
+    const { data, error } = await supabase
+      .from('reviews')
+      .select('id, place_id, user_id, author_name, child_reaction, revisit_intent, child_age_group, content, created_at, updated_at')
+      .eq('place_id', place.id)
+      .eq('user_id', user.id)
+      .maybeSingle()
+
+    if (error) {
+      console.error('내 후기 조회 실패', error)
+      return
+    }
+    setMyReview(data || null)
+  }, [place.id, user])
+
+  useEffect(() => {
+    loadPublicReviews()
+  }, [loadPublicReviews])
+
+  useEffect(() => {
+    loadMyReview()
+  }, [loadMyReview])
 
   useEffect(() => {
     if (myReview) {
@@ -101,6 +123,8 @@ export default function ReviewSection({ place, user, onLogin }) {
   useEffect(() => {
     setNotice('')
     setDeleteConfirmOpen(false)
+    setReportingReviewId(null)
+    setReportNotice('')
   }, [place.id, user?.id])
 
   const summary = useMemo(() => {
@@ -112,6 +136,10 @@ export default function ReviewSection({ place, user, onLogin }) {
       revisitRate: Math.round((positiveRevisits / reviews.length) * 100),
     }
   }, [reviews])
+
+  const refreshReviews = async () => {
+    await Promise.all([loadPublicReviews(), loadMyReview()])
+  }
 
   const submitReview = async (event) => {
     event.preventDefault()
@@ -133,20 +161,19 @@ export default function ReviewSection({ place, user, onLogin }) {
       revisit_intent: form.revisitIntent,
       child_age_group: form.childAgeGroup,
       content,
-      updated_at: new Date().toISOString(),
     }
 
     const { error } = await supabase.from('reviews').upsert(payload, { onConflict: 'place_id,user_id' })
     if (error) {
       console.error('후기 저장 실패', error)
-      setNotice('후기를 저장하지 못했어요. 잠시 후 다시 시도해 주세요.')
+      setNotice(error.message?.includes('20초') ? '도배 방지를 위해 20초 후에 다시 저장해 주세요.' : '후기를 저장하지 못했어요. 잠시 후 다시 시도해 주세요.')
       setSubmitStatus('idle')
       return
     }
 
     setNotice(myReview ? '후기를 수정했어요.' : '후기를 등록했어요.')
     setSubmitStatus('idle')
-    await loadReviews()
+    await refreshReviews()
   }
 
   const deleteMyReview = async () => {
@@ -167,10 +194,46 @@ export default function ReviewSection({ place, user, onLogin }) {
       return
     }
     setForm(emptyForm)
+    setMyReview(null)
     setDeleteConfirmOpen(false)
     setNotice('후기를 삭제했어요.')
     setSubmitStatus('idle')
-    await loadReviews()
+    await refreshReviews()
+  }
+
+  const openReport = (reviewId) => {
+    if (!user) {
+      onLogin()
+      return
+    }
+    setReportingReviewId(reviewId)
+    setReportForm(emptyReport)
+    setReportNotice('')
+    setReportStatus('idle')
+  }
+
+  const submitReport = async (event) => {
+    event.preventDefault()
+    if (!supabase || !user || !reportingReviewId) return
+
+    setReportStatus('saving')
+    setReportNotice('')
+    const { error } = await supabase.from('review_reports').insert({
+      review_id: reportingReviewId,
+      reporter_id: user.id,
+      reason: reportForm.reason,
+      details: reportForm.details.trim(),
+    })
+
+    if (error) {
+      console.error('후기 신고 실패', error)
+      setReportNotice(error.code === '23505' ? '이미 신고한 후기예요.' : '신고를 접수하지 못했어요. 잠시 후 다시 시도해 주세요.')
+      setReportStatus('idle')
+      return
+    }
+
+    setReportNotice('신고가 접수됐어요. 운영자가 확인할게요.')
+    setReportStatus('done')
   }
 
   return (
@@ -200,7 +263,7 @@ export default function ReviewSection({ place, user, onLogin }) {
       ) : !user ? (
         <div className="review-login-card">
           <strong>후기는 카카오 로그인 후 작성할 수 있어요.</strong>
-          <p>로그인하면 장소별로 내 후기를 작성하고 언제든 수정할 수 있어요.</p>
+          <p>작성자의 카카오 닉네임과 후기 내용은 공개됩니다. 개인정보는 적지 말아 주세요.</p>
           <button className="kakao-login-button" type="button" onClick={onLogin}>카카오로 로그인</button>
         </div>
       ) : (
@@ -241,6 +304,7 @@ export default function ReviewSection({ place, user, onLogin }) {
             />
             <span>{form.content.length} / 500</span>
           </label>
+          <p className="review-privacy-note">후기와 닉네임은 모든 방문자에게 공개돼요. 실명, 연락처, 학교명 등 개인정보는 작성하지 마세요.</p>
 
           {notice && <p className="review-notice" role="status">{notice}</p>}
           <button className="review-submit" type="submit" disabled={submitStatus === 'saving'}>{submitStatus === 'saving' ? '저장 중…' : myReview ? '후기 수정하기' : '후기 등록하기'}</button>
@@ -251,20 +315,42 @@ export default function ReviewSection({ place, user, onLogin }) {
         {status === 'loading' && <p className="review-state">후기를 불러오는 중…</p>}
         {status === 'error' && <p className="review-state error">후기를 불러오지 못했어요. 잠시 후 다시 확인해 주세요.</p>}
         {status === 'ready' && reviews.length === 0 && <p className="review-state">등록된 후기가 아직 없어요.</p>}
-        {status === 'ready' && reviews.map((review) => (
-          <article className={review.user_id === user?.id ? 'review-item mine' : 'review-item'} key={review.id}>
-            <div className="review-item-heading">
-              <div><strong>{review.author_name}</strong>{review.user_id === user?.id && <span>내 후기</span>}</div>
-              <time dateTime={review.created_at}>{formatReviewDate(review.created_at)}</time>
-            </div>
-            <div className="review-badges">
-              <span>아이 반응 {optionLabel(reactionOptions, review.child_reaction)}</span>
-              <span>재방문 {optionLabel(revisitOptions, review.revisit_intent)}</span>
-              <span>👧 {review.child_age_group}</span>
-            </div>
-            <p>{review.content}</p>
-          </article>
-        ))}
+        {status === 'ready' && reviews.map((review) => {
+          const isMine = myReview?.id === review.id
+          return (
+            <article className={isMine ? 'review-item mine' : 'review-item'} key={review.id}>
+              <div className="review-item-heading">
+                <div><strong>{review.author_name}</strong>{isMine && <span>내 후기</span>}</div>
+                <time dateTime={review.created_at}>{formatReviewDate(review.created_at)}</time>
+              </div>
+              <div className="review-badges">
+                <span>아이 반응 {optionLabel(reactionOptions, review.child_reaction)}</span>
+                <span>재방문 {optionLabel(revisitOptions, review.revisit_intent)}</span>
+                <span>👧 {review.child_age_group}</span>
+              </div>
+              <p>{review.content}</p>
+              {!isMine && <button className="review-report-button" type="button" onClick={() => openReport(review.id)}>신고</button>}
+              {reportingReviewId === review.id && (
+                <form className="review-report-form" onSubmit={submitReport}>
+                  <strong>후기 신고</strong>
+                  <label>신고 이유
+                    <select value={reportForm.reason} onChange={(event) => setReportForm({ ...reportForm, reason: event.target.value })}>
+                      {reportReasons.map((reason) => <option value={reason} key={reason}>{reason}</option>)}
+                    </select>
+                  </label>
+                  <label>추가 설명 <span>(선택)</span>
+                    <textarea value={reportForm.details} maxLength="300" onChange={(event) => setReportForm({ ...reportForm, details: event.target.value })} />
+                  </label>
+                  {reportNotice && <p role="status">{reportNotice}</p>}
+                  <div>
+                    <button type="button" onClick={() => setReportingReviewId(null)}>닫기</button>
+                    {reportStatus !== 'done' && <button className="submit" type="submit" disabled={reportStatus === 'saving'}>{reportStatus === 'saving' ? '접수 중…' : '신고 접수'}</button>}
+                  </div>
+                </form>
+              )}
+            </article>
+          )
+        })}
       </div>
     </section>
   )

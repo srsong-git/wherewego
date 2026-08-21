@@ -183,6 +183,7 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .review-content-label { position: relative; margin-bottom: 0; }
 .review-content-label textarea { display: block; width: 100%; min-height: 120px; margin-top: 9px; padding: 13px; resize: vertical; border: 1px solid #dad6ca; border-radius: 12px; color: #313b34; background: #fffefa; font: inherit; font-size: .82rem; line-height: 1.65; }
 .review-content-label > span { display: block; margin-top: 6px; color: #8a918c; text-align: right; font-size: .68rem; font-weight: 400; }
+.review-privacy-note { margin: -7px 0 0; padding: 11px 12px; border-radius: 10px; color: #755f34; background: #fff4d9; font-size: .7rem; line-height: 1.6; }
 .review-notice { margin: -6px 0 0; color: #41604a; font-size: .76rem; }
 .review-submit { min-height: 48px; border: 0; border-radius: 12px; color: #fff; background: #335e45; cursor: pointer; font-weight: 800; }
 .review-submit:disabled, .review-delete:disabled { cursor: wait; opacity: .55; }
@@ -197,7 +198,49 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .review-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
 .review-badges span { padding: 6px 8px; border-radius: 8px; color: #5d685f; background: #f2f1eb; font-size: .68rem; }
 .review-item > p { margin: 0; color: #4c574f; font-size: .8rem; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
-footer { display: flex; justify-content: space-between; max-width: 1120px; margin: auto; padding: 30px 24px; border-top: 1px solid #e5dfd3; color: #788078; font-size: .8rem; }
+.review-report-button { display: block; margin: 12px 0 0 auto; padding: 4px 0; border: 0; color: #8b8780; background: transparent; cursor: pointer; font-size: .66rem; text-decoration: underline; }
+.review-report-form { display: grid; gap: 12px; margin-top: 12px; padding: 15px; border: 1px solid #e3d9ce; border-radius: 12px; background: #faf7f1; }
+.review-report-form > strong { font-size: .82rem; }
+.review-report-form label { color: #626d65; font-size: .7rem; font-weight: 700; }
+.review-report-form label span { color: #8b928d; font-weight: 400; }
+.review-report-form select, .review-report-form textarea { display: block; width: 100%; margin-top: 6px; padding: 9px 10px; border: 1px solid #dcd6ca; border-radius: 9px; color: #38443c; background: #fff; font-size: .75rem; }
+.review-report-form textarea { min-height: 70px; resize: vertical; }
+.review-report-form > p { margin: 0; color: #47634f; font-size: .72rem; }
+.review-report-form > div { display: flex; justify-content: flex-end; gap: 7px; }
+.review-report-form button { min-height: 38px; padding: 8px 12px; border: 1px solid #d8d2c7; border-radius: 9px; background: #fff; cursor: pointer; font-size: .7rem; }
+.review-report-form button.submit { border-color: #79514d; color: #fff; background: #79514d; }
+.review-report-form button:disabled { cursor: wait; opacity: .55; }
+footer { display: flex; justify-content: space-between; align-items: center; max-width: 1120px; margin: auto; padding: 30px 24px; border-top: 1px solid #e5dfd3; color: #788078; font-size: .8rem; }
+footer > div:first-child { display: flex; flex-direction: column; gap: 5px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 9px; }
+.footer-links button { padding: 5px 0; border: 0; color: #657068; background: transparent; cursor: pointer; font-size: .75rem; text-decoration: underline; text-underline-offset: 3px; }
+.info-modal-backdrop { position: fixed; inset: 0; z-index: 250; display: grid; place-items: center; padding: 20px; background: rgba(22, 31, 25, .68); backdrop-filter: blur(5px); }
+.info-modal { width: min(650px, 100%); max-height: min(820px, calc(100vh - 40px)); overflow-y: auto; padding: clamp(22px, 5vw, 34px); border-radius: 22px; background: #fffefa; box-shadow: 0 30px 80px rgba(0,0,0,.3); }
+.info-modal-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-bottom: 18px; border-bottom: 1px solid #e7e1d5; }
+.info-modal-heading h2 { font-size: clamp(1.3rem, 4vw, 1.7rem); }
+.info-modal-heading button { width: 40px; height: 40px; padding: 0; border: 0; color: #687169; background: transparent; cursor: pointer; font-size: 1.8rem; }
+.info-modal-content { padding-top: 20px; }
+.info-modal-content .policy-intro { padding: 15px; border-radius: 12px; color: #365643; background: #eaf2e9; font-weight: 700; }
+.info-modal-content section { margin-top: 22px; }
+.info-modal-content section h3 { margin-bottom: 8px; font-size: .95rem; }
+.info-modal-content section p, .info-modal-content section li { color: #626d65; font-size: .8rem; line-height: 1.75; }
+.info-modal-content section ul { margin: 0; padding-left: 20px; }
+.info-modal-content .policy-date { margin: 26px 0 0; color: #8a918c; font-size: .7rem; }
+.info-modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px; padding-top: 18px; border-top: 1px solid #e7e1d5; }
+.info-modal-actions button { min-height: 44px; padding: 10px 15px; border: 1px solid #d9d4c9; border-radius: 10px; background: #fff; cursor: pointer; font-size: .78rem; font-weight: 700; }
+.info-modal-actions button.primary { border-color: #335e45; color: #fff; background: #335e45; }
+.info-modal-actions button:disabled { cursor: not-allowed; opacity: .45; }
+.policy-check { display: flex; align-items: flex-start; gap: 10px; margin-top: 24px; padding: 14px; border: 1px solid #d8dfd6; border-radius: 12px; background: #f7faf5; cursor: pointer; }
+.policy-check input { flex: none; width: 18px; height: 18px; margin-top: 1px; accent-color: #335e45; }
+.policy-check span { color: #465249; font-size: .8rem; line-height: 1.6; }
+.policy-check.danger { border-color: #e5cbc6; background: #fff7f5; }
+.policy-check.danger input { accent-color: #a94c49; }
+.account-panel > p, .account-result p { color: #626d65; font-size: .82rem; line-height: 1.75; }
+.account-result { padding: 22px; border-radius: 14px; text-align: center; background: #f4f5ef; }
+.account-result strong { display: block; margin-bottom: 8px; }
+.account-delete-button { width: 100%; min-height: 48px; margin-top: 14px; border: 0; border-radius: 11px; color: #fff; background: #a94c49; cursor: pointer; font-weight: 800; }
+.account-delete-button:disabled { cursor: not-allowed; opacity: .45; }
+.account-error { color: #a24e4e !important; }
 
 @media (max-width: 850px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) {
@@ -245,7 +288,11 @@ footer { display: flex; justify-content: space-between; max-width: 1120px; margi
   .review-delete-actions button { flex: 1; }
   .review-rating-choices { display: grid; grid-template-columns: repeat(2, 1fr); }
   .review-rating-choices button { width: 100%; }
-  footer { align-items: flex-start; flex-direction: column; gap: 7px; padding-inline: 18px; }
+  .info-modal-backdrop { align-items: end; padding: 0; }
+  .info-modal { max-height: 90vh; border-radius: 22px 22px 0 0; }
+  .info-modal-actions { align-items: stretch; flex-direction: column-reverse; }
+  .info-modal-actions button { width: 100%; }
+  footer { align-items: flex-start; flex-direction: column; gap: 16px; padding-inline: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }

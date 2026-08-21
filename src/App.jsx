@@ -38,6 +38,60 @@ function AuthControl({ user, status, error, onLogin, onLogout }) {
   )
 }
 
+function InfoModal({ title, children, onClose, actions }) {
+  useEffect(() => {
+    const closeOnEscape = (event) => event.key === 'Escape' && onClose()
+    document.addEventListener('keydown', closeOnEscape)
+    return () => document.removeEventListener('keydown', closeOnEscape)
+  }, [onClose])
+
+  return (
+    <div className="info-modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <section className="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title">
+        <div className="info-modal-heading">
+          <h2 id="info-modal-title">{title}</h2>
+          <button type="button" onClick={onClose} aria-label={`${title} 닫기`}>×</button>
+        </div>
+        <div className="info-modal-content">{children}</div>
+        {actions && <div className="info-modal-actions">{actions}</div>}
+      </section>
+    </div>
+  )
+}
+
+function PrivacyContent() {
+  return (
+    <>
+      <p className="policy-intro">오늘 어디가지?는 공개 베타 서비스입니다. 필요한 정보만 사용하고, 후기 작성자와 방문자의 개인정보를 최소화합니다.</p>
+      <section>
+        <h3>수집·이용하는 정보</h3>
+        <ul>
+          <li>카카오 로그인: 회원 식별정보, 닉네임 및 사용자가 카카오에서 제공에 동의한 정보</li>
+          <li>후기: 닉네임, 아이 연령대, 아이 반응, 재방문 의사, 후기 내용</li>
+          <li>운영: 후기 신고 내용, 탈퇴 요청 시각, 익명으로 집계되는 방문 통계</li>
+        </ul>
+      </section>
+      <section>
+        <h3>공개되는 정보</h3>
+        <p>후기를 등록하면 닉네임, 아이 연령대, 평가와 후기 내용이 모든 방문자에게 공개됩니다. 실명, 연락처, 학교명, 상세 주소 등 개인정보는 후기 안에 작성하지 마세요.</p>
+      </section>
+      <section>
+        <h3>위치 정보</h3>
+        <p>현재 위치는 사용자가 허용한 경우에만 브라우저에서 거리 계산과 지도 표시에 사용하며, 오늘 어디가지?의 데이터베이스에는 저장하지 않습니다.</p>
+      </section>
+      <section>
+        <h3>보관과 삭제</h3>
+        <p>후기는 직접 삭제할 수 있습니다. 회원 탈퇴를 요청하면 작성 후기는 즉시 삭제되고, 인증 계정은 운영자가 요청을 확인한 뒤 삭제합니다.</p>
+      </section>
+      <section>
+        <h3>외부 서비스</h3>
+        <p>서비스 제공을 위해 카카오 로그인·지도, Supabase 인증·데이터베이스, Vercel 호스팅·익명 방문 통계를 사용합니다.</p>
+      </section>
+      <p className="policy-date">시행일: 2026년 8월 21일</p>
+    </>
+  )
+}
+
 function FilterGroup({ group, selected, onSelect }) {
   return (
     <fieldset className="filter-group">
@@ -245,6 +299,11 @@ export default function App() {
   const [user, setUser] = useState(null)
   const [authStatus, setAuthStatus] = useState(isSupabaseConfigured ? 'loading' : 'not-configured')
   const [authError, setAuthError] = useState('')
+  const [infoModal, setInfoModal] = useState(null)
+  const [loginNoticeAccepted, setLoginNoticeAccepted] = useState(false)
+  const [deletionAccepted, setDeletionAccepted] = useState(false)
+  const [deletionStatus, setDeletionStatus] = useState('idle')
+  const [deletionNotice, setDeletionNotice] = useState('')
   const [favoriteIds, setFavoriteIds] = useState(() => {
     try {
       const saved = JSON.parse(localStorage.getItem('oneul-favorite-places') || '[]')
@@ -294,10 +353,39 @@ export default function App() {
     if (error) setAuthError('카카오 로그인을 시작하지 못했어요.')
   }
 
+  const requestKakaoLogin = () => {
+    setLoginNoticeAccepted(false)
+    setInfoModal('login')
+  }
+
   const signOut = async () => {
     if (!supabase) return
     const { error } = await supabase.auth.signOut()
     if (error) setAuthError('로그아웃하지 못했어요. 다시 시도해 주세요.')
+  }
+
+  const requestAccountDeletion = async () => {
+    if (!supabase || !user || !deletionAccepted) return
+    setDeletionStatus('saving')
+    setDeletionNotice('')
+    const { error } = await supabase.rpc('request_account_deletion')
+    if (error) {
+      console.error('회원 탈퇴 요청 실패', error)
+      setDeletionNotice('탈퇴 요청을 접수하지 못했어요. 잠시 후 다시 시도해 주세요.')
+      setDeletionStatus('idle')
+      return
+    }
+
+    await supabase.auth.signOut()
+    setDeletionStatus('done')
+    setDeletionNotice('탈퇴 요청이 접수됐고 작성한 후기가 삭제됐어요. 인증 계정은 운영자가 확인 후 삭제합니다.')
+  }
+
+  const openAccountManager = () => {
+    setDeletionAccepted(false)
+    setDeletionStatus('idle')
+    setDeletionNotice('')
+    setInfoModal('account')
   }
 
   const getMyLocation = () => {
@@ -357,7 +445,7 @@ export default function App() {
           <a className="brand" href="#top" aria-label="오늘 어디가지 홈">오늘 어디가지? <span>👟</span></a>
           <div className="nav-side">
             <span className="nav-note">서울·수도권 가족 나들이</span>
-            <AuthControl user={user} status={authStatus} error={authError} onLogin={signInWithKakao} onLogout={signOut} />
+            <AuthControl user={user} status={authStatus} error={authError} onLogin={requestKakaoLogin} onLogout={signOut} />
           </div>
         </nav>
         <div className="hero-content" id="top">
@@ -440,10 +528,70 @@ export default function App() {
           </section>
         )}
       </main>
-      <footer><strong>오늘 어디가지? 👟</strong><span>가족의 즐거운 오늘을 응원해요.</span></footer>
+      <footer>
+        <div><strong>오늘 어디가지? 👟</strong><span>가족의 즐거운 오늘을 응원해요.</span></div>
+        <div className="footer-links">
+          <button type="button" onClick={() => setInfoModal('privacy')}>개인정보·이용 안내</button>
+          <button type="button" onClick={openAccountManager}>계정 관리·탈퇴</button>
+        </div>
+      </footer>
 
       {selectedPlace && (
-        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={user} onLogin={signInWithKakao} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={user} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+      )}
+
+      {infoModal === 'privacy' && (
+        <InfoModal title="개인정보·이용 안내" onClose={() => setInfoModal(null)}>
+          <PrivacyContent />
+        </InfoModal>
+      )}
+
+      {infoModal === 'login' && (
+        <InfoModal
+          title="카카오 로그인 전 확인해 주세요"
+          onClose={() => setInfoModal(null)}
+          actions={(
+            <>
+              <button type="button" onClick={() => setInfoModal(null)}>취소</button>
+              <button
+                className="primary"
+                type="button"
+                disabled={!loginNoticeAccepted}
+                onClick={() => {
+                  setInfoModal(null)
+                  signInWithKakao()
+                }}
+              >동의하고 카카오 로그인</button>
+            </>
+          )}
+        >
+          <PrivacyContent />
+          <label className="policy-check">
+            <input type="checkbox" checked={loginNoticeAccepted} onChange={(event) => setLoginNoticeAccepted(event.target.checked)} />
+            <span>닉네임과 후기의 공개 범위, 개인정보 이용 안내를 확인했습니다.</span>
+          </label>
+        </InfoModal>
+      )}
+
+      {infoModal === 'account' && (
+        <InfoModal title="계정 관리·탈퇴" onClose={() => setInfoModal(null)}>
+          {deletionStatus === 'done' ? (
+            <div className="account-result" role="status"><strong>요청이 접수됐어요.</strong><p>{deletionNotice}</p></div>
+          ) : user ? (
+            <div className="account-panel">
+              <p><strong>{getUserDisplayName(user)}</strong>님의 계정입니다.</p>
+              <p>탈퇴를 요청하면 작성한 모든 후기가 즉시 삭제됩니다. 인증 계정은 운영자가 요청을 확인한 뒤 최종 삭제하며, 처리 전까지 다시 로그인하지 말아 주세요.</p>
+              <label className="policy-check danger">
+                <input type="checkbox" checked={deletionAccepted} onChange={(event) => setDeletionAccepted(event.target.checked)} />
+                <span>작성 후기 삭제와 계정 탈퇴 요청에 동의합니다.</span>
+              </label>
+              {deletionNotice && <p className="account-error" role="alert">{deletionNotice}</p>}
+              <button className="account-delete-button" type="button" disabled={!deletionAccepted || deletionStatus === 'saving'} onClick={requestAccountDeletion}>{deletionStatus === 'saving' ? '요청 접수 중…' : '회원 탈퇴 요청'}</button>
+            </div>
+          ) : (
+            <div className="account-result"><strong>현재 로그인되어 있지 않아요.</strong><p>로그인한 뒤 이 메뉴에서 회원 탈퇴와 데이터 삭제를 요청할 수 있습니다.</p></div>
+          )}
+        </InfoModal>
       )}
     </>
   )
