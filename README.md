@@ -23,3 +23,14 @@ pnpm dev
 pnpm build
 ```
 
+## 카카오맵 설정
+
+카카오 개발자 콘솔에서 앱을 만들고 카카오맵 사용 설정을 켠 뒤, JavaScript 키의 사이트 도메인에 로컬 주소와 배포 주소를 등록합니다.
+
+프로젝트 루트에 `.env.local` 파일을 만들고 다음 값을 입력합니다.
+
+```bash
+VITE_KAKAO_MAP_KEY=발급받은_JavaScript_키
+```
+
+환경변수를 추가하거나 변경한 뒤에는 개발 서버를 다시 시작해야 합니다. 배포 환경에서는 Vercel 프로젝트의 Environment Variables에도 같은 이름으로 등록합니다.

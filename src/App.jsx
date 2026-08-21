@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import KakaoMap from './components/KakaoMap.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
 import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
@@ -216,6 +217,7 @@ export default function App() {
   const [resultFilters, setResultFilters] = useState(initialResultFilters)
   const [randomPick, setRandomPick] = useState(null)
   const [selectedPlace, setSelectedPlace] = useState(null)
+  const [viewMode, setViewMode] = useState('list')
   const [location, setLocation] = useState(null)
   const [locationStatus, setLocationStatus] = useState('idle')
   const [favoriteIds, setFavoriteIds] = useState(() => {
@@ -248,12 +250,16 @@ export default function App() {
     )
   }
 
-  const displayedResults = results ? refinePlaces(results, resultFilters, favoriteIds, location) : []
+  const displayedResults = useMemo(
+    () => results ? refinePlaces(results, resultFilters, favoriteIds, location) : [],
+    [favoriteIds, location, resultFilters, results],
+  )
 
   const findPlaces = () => {
     setResults(searchPlaces(places, filters))
     setResultFilters(initialResultFilters)
     setRandomPick(null)
+    setViewMode('list')
   }
 
   const resetAll = () => {
@@ -262,6 +268,7 @@ export default function App() {
     setResultFilters(initialResultFilters)
     setRandomPick(null)
     setSelectedPlace(null)
+    setViewMode('list')
   }
 
   const toggleFavorite = (id) => {
@@ -328,7 +335,15 @@ export default function App() {
                 <h2 id="results-title">{displayedResults.length ? <>현재 조건에 맞는 장소 <em>{displayedResults.length}곳</em>이에요!</> : '조건에 맞는 장소가 없어요 😢'}</h2>
                 <p className="result-summary">처음 검색 결과 {results.length}곳 · 현재 표시 {displayedResults.length}곳</p>
               </div>
-              {displayedResults.length > 0 && <button className="random-button" type="button" onClick={chooseRandom}>🎲 아무 데나 골라줘</button>}
+              {displayedResults.length > 0 && (
+                <div className="result-actions">
+                  <div className="view-toggle" aria-label="검색 결과 보기 방식">
+                    <button className={viewMode === 'list' ? 'active' : ''} type="button" aria-pressed={viewMode === 'list'} onClick={() => setViewMode('list')}>▦ 목록 보기</button>
+                    <button className={viewMode === 'map' ? 'active' : ''} type="button" aria-pressed={viewMode === 'map'} onClick={() => setViewMode('map')}>📍 지도 보기</button>
+                  </div>
+                  <button className="random-button" type="button" onClick={chooseRandom}>🎲 아무 데나 골라줘</button>
+                </div>
+              )}
             </div>
 
             <ResultFilters filters={resultFilters} setFilters={setResultFilters} favoriteCount={favoriteIds.length} location={location} onReset={() => setResultFilters(initialResultFilters)} />
@@ -338,9 +353,13 @@ export default function App() {
             )}
 
             {displayedResults.length ? (
-              <div className="card-grid">{displayedResults.map(({ place, distance }) => (
-                <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={setSelectedPlace} key={place.id} />
-              ))}</div>
+              viewMode === 'map' ? (
+                <KakaoMap items={displayedResults} userLocation={location} onOpenPlace={setSelectedPlace} />
+              ) : (
+                <div className="card-grid">{displayedResults.map(({ place, distance }) => (
+                  <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={setSelectedPlace} key={place.id} />
+                ))}</div>
+              )
             ) : (
               <div className="empty-state">
                 <span>🧐</span>

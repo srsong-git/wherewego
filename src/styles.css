@@ -57,6 +57,10 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .results-heading { align-items: end; margin-bottom: 24px; }
 .results h2 em { color: #bf8a17; }
 .result-summary { margin: 9px 0 0; color: #7a837b; font-size: .82rem; }
+.result-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.view-toggle { display: flex; padding: 4px; border: 1px solid #dedbd1; border-radius: 12px; background: #fffefa; }
+.view-toggle button { min-height: 43px; padding: 9px 13px; border: 0; border-radius: 9px; color: #6b756d; background: transparent; cursor: pointer; font-size: .78rem; font-weight: 700; }
+.view-toggle button.active { color: #fff; background: #335e45; }
 .random-button { padding: 13px 20px; color: #354127; background: #f1cf76; }
 .refine-panel { margin-bottom: 24px; padding: 24px; border: 1px solid #e6e1d4; border-radius: 18px; background: #f7f7f1; }
 .refine-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
@@ -110,6 +114,16 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .empty-state { padding: 70px 20px; border: 1px dashed #d8d5ca; border-radius: 20px; text-align: center; background: #fffefa; color: #6d766f; }
 .empty-state span { display: block; margin-bottom: 12px; font-size: 2.5rem; }
 .empty-reset { min-height: 44px; padding: 10px 15px; border: 0; border-radius: 10px; color: #fff; background: #335e45; cursor: pointer; font-weight: 700; }
+.map-panel { position: relative; overflow: hidden; border: 1px solid #dedbd1; border-radius: 20px; background: #fffefa; box-shadow: 0 8px 24px rgba(50, 63, 53, .08); }
+.kakao-map { width: 100%; height: clamp(430px, 62vw, 650px); background: #edf0e9; }
+.map-loading { position: absolute; inset: 0 0 48px; z-index: 2; display: grid; place-items: center; color: #667268; background: #edf0e9; font-size: .86rem; }
+.map-caption { margin: 0; padding: 14px 18px; color: #6e786f; background: #fffefa; font-size: .75rem; }
+.map-user-label { padding: 5px 9px; border: 2px solid #fff; border-radius: 999px; color: #fff; background: #d64b58; box-shadow: 0 3px 10px rgba(60, 40, 40, .25); font-family: 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.map-setup-card { display: grid; justify-items: center; padding: clamp(48px, 8vw, 80px) 22px; border: 1px dashed #cfcabd; border-radius: 20px; text-align: center; background: #f7f7f1; }
+.map-setup-card > span { margin-bottom: 13px; font-size: 2.8rem; }
+.map-setup-card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+.map-setup-card p { max-width: 520px; margin: 0; color: #737d75; font-size: .82rem; line-height: 1.7; }
+.map-setup-card.error { border-color: #e4c7c5; background: #fff6f5; }
 .modal-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 20px; background: rgba(22, 31, 25, .62); backdrop-filter: blur(5px); }
 .place-modal { width: min(610px, 100%); max-height: min(760px, calc(100vh - 40px)); overflow-y: auto; padding: clamp(24px, 5vw, 38px); border-radius: 22px; background: #fffefa; box-shadow: 0 30px 80px rgba(0,0,0,.3); }
 .modal-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
@@ -146,6 +160,9 @@ footer { display: flex; justify-content: space-between; max-width: 1120px; margi
   .choice { width: 100%; }
   .results { padding-top: 55px; }
   .results-heading { align-items: stretch; flex-direction: column; }
+  .result-actions { align-items: stretch; flex-direction: column; }
+  .view-toggle { width: 100%; }
+  .view-toggle button { flex: 1; }
   .random-button { width: 100%; }
   .refine-panel { padding: 19px 16px; }
   .refine-grid { grid-template-columns: 1fr; }
@@ -154,6 +171,7 @@ footer { display: flex; justify-content: space-between; max-width: 1120px; margi
   .sort-control select { flex: 1; }
   .refine-reset { margin-left: 0; }
   .description { min-height: 0; }
+  .kakao-map { height: 520px; }
   .modal-backdrop { align-items: end; padding: 0; }
   .place-modal { max-height: 88vh; border-radius: 22px 22px 0 0; }
   .detail-list div { grid-template-columns: 100px 1fr; }
