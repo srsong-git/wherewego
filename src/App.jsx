@@ -15,6 +15,10 @@ function formatDistance(distance) {
   return distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`
 }
 
+function getKakaoMapLink(place, type = 'map') {
+  return `https://map.kakao.com/link/${type}/${encodeURIComponent(place.name)},${place.latitude},${place.longitude}`
+}
+
 function toggleValue(values, value) {
   return values.includes(value) ? values.filter((item) => item !== value) : [...values, value]
 }
@@ -191,59 +195,66 @@ function RandomPick({ place, distance, onRetry, onClose, onOpen }) {
   )
 }
 
-function ResultFilters({ filters, setFilters, favoriteCount, location, onReset }) {
+function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, isOpen, onToggle }) {
   const activeCount = (filters.region !== '전체' ? 1 : 0)
     + filters.themes.length
     + (filters.environment !== '전체' ? 1 : 0)
     + (filters.favoritesOnly ? 1 : 0)
 
   return (
-    <section className="refine-panel" aria-labelledby="refine-title">
+    <section className={isOpen ? 'refine-panel open' : 'refine-panel'} aria-labelledby="refine-title">
       <div className="refine-heading">
         <div>
           <p className="step">QUICK FILTER</p>
           <h3 id="refine-title">결과 내에서 더 좁혀보기</h3>
           <p>버튼을 누르면 결과에 바로 반영돼요.</p>
         </div>
-        <div className="active-filter-count">적용 중 {activeCount}개</div>
-      </div>
-
-      <div className="refine-grid">
-        <div className="refine-group">
-          <strong>지역</strong>
-          <div className="mini-choices">
-            {regionOptions.map((region) => (
-              <button className={filters.region === region ? 'active' : ''} type="button" aria-pressed={filters.region === region} onClick={() => setFilters({ ...filters, region })} key={region}>{region}</button>
-            ))}
-          </div>
-        </div>
-        <div className="refine-group">
-          <strong>실내 / 야외</strong>
-          <div className="mini-choices">
-            {environmentOptions.map((environment) => (
-              <button className={filters.environment === environment ? 'active' : ''} type="button" aria-pressed={filters.environment === environment} onClick={() => setFilters({ ...filters, environment })} key={environment}>{environment}</button>
-            ))}
-          </div>
+        <div className="refine-heading-actions">
+          <div className="active-filter-count">적용 중 {activeCount}개</div>
+          <button className="refine-toggle" type="button" aria-expanded={isOpen} aria-controls="refine-body" onClick={onToggle}>
+            {isOpen ? '빠른 필터 접기' : '빠른 필터 펼치기'} <span aria-hidden="true">{isOpen ? '⌃' : '⌄'}</span>
+          </button>
         </div>
       </div>
 
-      <div className="refine-group refine-themes">
-        <strong>테마</strong>
-        <ThemeSelector compact selected={filters.themes} onToggle={(theme) => setFilters({ ...filters, themes: toggleValue(filters.themes, theme) })} />
-      </div>
+      <div className="refine-body" id="refine-body">
+        <div className="refine-grid">
+          <div className="refine-group">
+            <strong>지역</strong>
+            <div className="mini-choices">
+              {regionOptions.map((region) => (
+                <button className={filters.region === region ? 'active' : ''} type="button" aria-pressed={filters.region === region} onClick={() => setFilters({ ...filters, region })} key={region}>{region}</button>
+              ))}
+            </div>
+          </div>
+          <div className="refine-group">
+            <strong>실내 / 야외</strong>
+            <div className="mini-choices">
+              {environmentOptions.map((environment) => (
+                <button className={filters.environment === environment ? 'active' : ''} type="button" aria-pressed={filters.environment === environment} onClick={() => setFilters({ ...filters, environment })} key={environment}>{environment}</button>
+              ))}
+            </div>
+          </div>
+        </div>
 
-      <div className="refine-footer">
-        <button className={filters.favoritesOnly ? 'favorites-only active' : 'favorites-only'} type="button" aria-pressed={filters.favoritesOnly} onClick={() => setFilters({ ...filters, favoritesOnly: !filters.favoritesOnly })}>❤️ 찜한 곳 {favoriteCount}</button>
-        <label className="sort-control">정렬
-          <select value={filters.sort} onChange={(event) => setFilters({ ...filters, sort: event.target.value })}>
-            <option value="default">기본 추천순</option>
-            <option value="distance">📍 가까운 순</option>
-            <option value="name">가나다순</option>
-          </select>
-        </label>
-        <button className="refine-reset" type="button" onClick={onReset}>↻ 결과 내 필터 초기화</button>
+        <div className="refine-group refine-themes">
+          <strong>테마</strong>
+          <ThemeSelector compact selected={filters.themes} onToggle={(theme) => setFilters({ ...filters, themes: toggleValue(filters.themes, theme) })} />
+        </div>
+
+        <div className="refine-footer">
+          <button className={filters.favoritesOnly ? 'favorites-only active' : 'favorites-only'} type="button" aria-pressed={filters.favoritesOnly} onClick={() => setFilters({ ...filters, favoritesOnly: !filters.favoritesOnly })}>❤️ 찜한 곳 {favoriteCount}</button>
+          <label className="sort-control">정렬
+            <select value={filters.sort} onChange={(event) => setFilters({ ...filters, sort: event.target.value })}>
+              <option value="default">기본 추천순</option>
+              <option value="distance">📍 가까운 순</option>
+              <option value="name">가나다순</option>
+            </select>
+          </label>
+          <button className="refine-reset" type="button" onClick={onReset}>↻ 결과 내 필터 초기화</button>
+        </div>
+        {filters.sort === 'distance' && !location && <p className="sort-notice" role="status">가까운 순으로 보려면 내 위치를 먼저 확인해 주세요.</p>}
       </div>
-      {filters.sort === 'distance' && !location && <p className="sort-notice" role="status">가까운 순으로 보려면 내 위치를 먼저 확인해 주세요.</p>}
     </section>
   )
 }
@@ -262,26 +273,33 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
   return (
     <div className="modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <section className="place-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div className="modal-top">
-          <p className="eyebrow">PLACE DETAIL</p>
-          <div>
-            <button className={isFavorite ? 'modal-favorite active' : 'modal-favorite'} type="button" onClick={() => onToggleFavorite(place.id)}>{isFavorite ? '♥ 찜했어요' : '♡ 찜하기'}</button>
-            <button className="modal-close" type="button" onClick={onClose} aria-label="상세정보 닫기">×</button>
+        <div className="modal-scroll-content">
+          <div className="modal-top">
+            <p className="eyebrow">PLACE DETAIL</p>
+            <div>
+              <button className={isFavorite ? 'modal-favorite active' : 'modal-favorite'} type="button" onClick={() => onToggleFavorite(place.id)}>{isFavorite ? '♥ 찜했어요' : '♡ 찜하기'}</button>
+              <button className="modal-close" type="button" onClick={onClose} aria-label="상세정보 닫기">×</button>
+            </div>
           </div>
+          <h2 id="modal-title">{place.name}</h2>
+          <p className="modal-description">{place.description}</p>
+          <div className="modal-themes">{place.themes.map((theme) => <span key={theme}>{themeLabelMap[theme]}</span>)}</div>
+          <dl className="detail-list">
+            <div><dt>📍 지역</dt><dd>{place.area}</dd></div>
+            {distance != null && <div><dt>📏 거리</dt><dd>현재 위치에서 직선거리 약 {formatDistance(distance)}</dd></div>}
+            <div><dt>{place.indoorOutdoor === '실내' ? '☔' : '☀️'} 공간</dt><dd>{place.indoorOutdoor}</dd></div>
+            <div><dt>👧 추천 연령</dt><dd>{place.ageGroups.join(' · ')}</dd></div>
+            <div><dt>⏱ 예상 시간</dt><dd>{place.duration}</dd></div>
+            <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
+          </dl>
+          <p className="modal-note">운영시간과 실제 요금은 방문 전에 해당 장소의 최신 안내를 확인해 주세요.</p>
+          <ReviewSection place={place} user={user} onLogin={onLogin} />
         </div>
-        <h2 id="modal-title">{place.name}</h2>
-        <p className="modal-description">{place.description}</p>
-        <div className="modal-themes">{place.themes.map((theme) => <span key={theme}>{themeLabelMap[theme]}</span>)}</div>
-        <dl className="detail-list">
-          <div><dt>📍 지역</dt><dd>{place.area}</dd></div>
-          {distance != null && <div><dt>📏 거리</dt><dd>현재 위치에서 직선거리 약 {formatDistance(distance)}</dd></div>}
-          <div><dt>{place.indoorOutdoor === '실내' ? '☔' : '☀️'} 공간</dt><dd>{place.indoorOutdoor}</dd></div>
-          <div><dt>👧 추천 연령</dt><dd>{place.ageGroups.join(' · ')}</dd></div>
-          <div><dt>⏱ 예상 시간</dt><dd>{place.duration}</dd></div>
-          <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
-        </dl>
-        <p className="modal-note">운영시간과 실제 요금은 방문 전에 해당 장소의 최신 안내를 확인해 주세요.</p>
-        <ReviewSection place={place} user={user} onLogin={onLogin} />
+        <div className="modal-cta-bar" aria-label="장소 바로가기">
+          <a className="route" href={getKakaoMapLink(place, 'to')} target="_blank" rel="noreferrer" aria-label={`${place.name} 카카오맵 길찾기 새 창`}>🧭 길찾기</a>
+          <a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.name} 카카오맵에서 보기 새 창`}>📍 지도 보기</a>
+          <button type="button" onClick={(event) => event.currentTarget.closest('.place-modal')?.querySelector('.review-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>💬 후기 보기</button>
+        </div>
       </section>
     </div>
   )
@@ -294,6 +312,7 @@ export default function App() {
   const [randomPick, setRandomPick] = useState(null)
   const [selectedPlace, setSelectedPlace] = useState(null)
   const [viewMode, setViewMode] = useState('list')
+  const [refineOpen, setRefineOpen] = useState(false)
   const [location, setLocation] = useState(null)
   const [locationStatus, setLocationStatus] = useState('idle')
   const [user, setUser] = useState(null)
@@ -415,6 +434,10 @@ export default function App() {
     setResultFilters(initialResultFilters)
     setRandomPick(null)
     setViewMode('list')
+    setRefineOpen(false)
+    requestAnimationFrame(() => {
+      document.getElementById('results')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
   }
 
   const resetAll = () => {
@@ -424,6 +447,7 @@ export default function App() {
     setRandomPick(null)
     setSelectedPlace(null)
     setViewMode('list')
+    setRefineOpen(false)
   }
 
   const toggleFavorite = (id) => {
@@ -485,6 +509,12 @@ export default function App() {
           <button className="primary-button" type="button" onClick={findPlaces}>갈 곳 찾아보기 <span aria-hidden="true">→</span></button>
         </section>
 
+        {!results && (
+          <div className="mobile-search-dock">
+            <button type="button" onClick={findPlaces}>갈 곳 찾아보기 <span aria-hidden="true">→</span></button>
+          </div>
+        )}
+
         {results && (
           <section className="results" id="results" aria-labelledby="results-title">
             <div className="results-heading">
@@ -504,7 +534,15 @@ export default function App() {
               )}
             </div>
 
-            <ResultFilters filters={resultFilters} setFilters={setResultFilters} favoriteCount={favoriteIds.length} location={location} onReset={() => setResultFilters(initialResultFilters)} />
+            <ResultFilters
+              filters={resultFilters}
+              setFilters={setResultFilters}
+              favoriteCount={favoriteIds.length}
+              location={location}
+              onReset={() => setResultFilters(initialResultFilters)}
+              isOpen={refineOpen}
+              onToggle={() => setRefineOpen((current) => !current)}
+            />
 
             {randomPick && displayedResults.some(({ place }) => place.id === randomPick.id) && (
               <RandomPick place={randomPick} distance={location ? calculateDistance(location, randomPick) : null} onRetry={chooseRandom} onClose={() => setRandomPick(null)} onOpen={setSelectedPlace} />
