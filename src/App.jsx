@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import KakaoMap from './components/KakaoMap.jsx'
 import ReviewSection from './components/ReviewSection.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
@@ -10,6 +10,9 @@ const initialResultFilters = { region: '전체', themes: [], environment: '전�
 const regionOptions = ['전체', '서울', '경기', '인천']
 const environmentOptions = ['전체', '실내', '야외', '실내+야외']
 const themeLabelMap = Object.fromEntries(themeOptions.map(({ value, label }) => [value, label]))
+const RESULT_PAGE_SIZE = 12
+const PLACE_DATA_UPDATED_AT = '2026.08.23'
+const dialogFocusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
 function formatDistance(distance) {
   return distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`
@@ -21,6 +24,66 @@ function getKakaoMapLink(place, type = 'map') {
 
 function toggleValue(values, value) {
   return values.includes(value) ? values.filter((item) => item !== value) : [...values, value]
+}
+
+function useDialogFocusTrap(containerRef, initialFocusRef, onClose) {
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
+
+  useEffect(() => {
+    const previousFocus = document.activeElement
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const focusFrame = requestAnimationFrame(() => {
+      const initialTarget = initialFocusRef.current || containerRef.current
+      initialTarget?.focus()
+    })
+
+    const handleKeyDown = (event) => {
+      const container = containerRef.current
+      if (!container) return
+      const openDialogs = [...document.querySelectorAll('[role="dialog"][aria-modal="true"]')]
+      if (openDialogs.at(-1) !== container) return
+
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        onCloseRef.current()
+        return
+      }
+
+      if (event.key !== 'Tab') return
+      const focusable = [...container.querySelectorAll(dialogFocusableSelector)]
+        .filter((element) => element.getClientRects().length > 0)
+      if (!focusable.length) {
+        event.preventDefault()
+        container.focus()
+        return
+      }
+
+      const first = focusable[0]
+      const last = focusable.at(-1)
+      if (!container.contains(document.activeElement)) {
+        event.preventDefault()
+        const fallbackTarget = event.shiftKey ? last : first
+        fallbackTarget.focus()
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      cancelAnimationFrame(focusFrame)
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = previousOverflow
+      if (previousFocus instanceof HTMLElement && document.contains(previousFocus)) previousFocus.focus()
+    }
+  }, [containerRef, initialFocusRef])
 }
 
 function AuthControl({ user, status, error, onLogin, onLogout }) {
@@ -43,18 +106,16 @@ function AuthControl({ user, status, error, onLogin, onLogout }) {
 }
 
 function InfoModal({ title, children, onClose, actions }) {
-  useEffect(() => {
-    const closeOnEscape = (event) => event.key === 'Escape' && onClose()
-    document.addEventListener('keydown', closeOnEscape)
-    return () => document.removeEventListener('keydown', closeOnEscape)
-  }, [onClose])
+  const modalRef = useRef(null)
+  const closeButtonRef = useRef(null)
+  useDialogFocusTrap(modalRef, closeButtonRef, onClose)
 
   return (
     <div className="info-modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section className="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title">
+      <section className="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title" ref={modalRef} tabIndex="-1">
         <div className="info-modal-heading">
           <h2 id="info-modal-title">{title}</h2>
-          <button type="button" onClick={onClose} aria-label={`${title} 닫기`}>×</button>
+          <button type="button" onClick={onClose} aria-label={`${title} 닫기`} ref={closeButtonRef}>×</button>
         </div>
         <div className="info-modal-content">{children}</div>
         {actions && <div className="info-modal-actions">{actions}</div>}
@@ -260,25 +321,19 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, 
 }
 
 function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
-  useEffect(() => {
-    const closeOnEscape = (event) => event.key === 'Escape' && onClose()
-    document.addEventListener('keydown', closeOnEscape)
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.removeEventListener('keydown', closeOnEscape)
-      document.body.style.overflow = ''
-    }
-  }, [onClose])
+  const modalRef = useRef(null)
+  const closeButtonRef = useRef(null)
+  useDialogFocusTrap(modalRef, closeButtonRef, onClose)
 
   return (
     <div className="modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section className="place-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <section className="place-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" ref={modalRef} tabIndex="-1">
         <div className="modal-scroll-content">
           <div className="modal-top">
             <p className="eyebrow">PLACE DETAIL</p>
             <div>
               <button className={isFavorite ? 'modal-favorite active' : 'modal-favorite'} type="button" onClick={() => onToggleFavorite(place.id)}>{isFavorite ? '♥ 찜했어요' : '♡ 찜하기'}</button>
-              <button className="modal-close" type="button" onClick={onClose} aria-label="상세정보 닫기">×</button>
+              <button className="modal-close" type="button" onClick={onClose} aria-label="상세정보 닫기" ref={closeButtonRef}>×</button>
             </div>
           </div>
           <h2 id="modal-title">{place.name}</h2>
@@ -292,7 +347,11 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
             <div><dt>⏱ 예상 시간</dt><dd>{place.duration}</dd></div>
             <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
           </dl>
-          <p className="modal-note">운영시간과 실제 요금은 방문 전에 해당 장소의 최신 안내를 확인해 주세요.</p>
+          <div className="place-info-status">
+            <strong>방문 전 최신 정보를 확인해 주세요</strong>
+            <p>현재 표시된 소요시간과 비용은 추천용 구분이며 실시간 운영정보가 아니에요. 정확한 주소, 운영시간, 휴무일, 실제 요금은 카카오맵 장소정보와 해당 장소의 공식 채널에서 확인해 주세요.</p>
+            <div><span>서비스 데이터 업데이트 {PLACE_DATA_UPDATED_AT}</span><a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.name} 최신 장소정보 확인 새 창`}>최신 장소정보 확인 ↗</a></div>
+          </div>
           <ReviewSection place={place} user={user} onLogin={onLogin} />
         </div>
         <div className="modal-cta-bar" aria-label="장소 바로가기">
@@ -313,6 +372,7 @@ export default function App() {
   const [selectedPlace, setSelectedPlace] = useState(null)
   const [viewMode, setViewMode] = useState('list')
   const [refineOpen, setRefineOpen] = useState(false)
+  const [visibleResultCount, setVisibleResultCount] = useState(RESULT_PAGE_SIZE)
   const [location, setLocation] = useState(null)
   const [locationStatus, setLocationStatus] = useState('idle')
   const [user, setUser] = useState(null)
@@ -428,6 +488,31 @@ export default function App() {
     () => results ? refinePlaces(results, resultFilters, favoriteIds, location) : [],
     [favoriteIds, location, resultFilters, results],
   )
+  const visibleResults = useMemo(
+    () => displayedResults.slice(0, visibleResultCount),
+    [displayedResults, visibleResultCount],
+  )
+  const itemListJsonLd = useMemo(() => results ? ({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '오늘 어디가지? 조건별 가족 나들이 추천 결과',
+    numberOfItems: displayedResults.length,
+    itemListElement: displayedResults.map(({ place }, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Place',
+        name: place.name,
+        description: place.description,
+        address: { '@type': 'PostalAddress', addressRegion: place.area },
+        geo: { '@type': 'GeoCoordinates', latitude: place.latitude, longitude: place.longitude },
+      },
+    })),
+  }) : null, [displayedResults, results])
+
+  useEffect(() => {
+    setVisibleResultCount(RESULT_PAGE_SIZE)
+  }, [location, resultFilters, results])
 
   const findPlaces = () => {
     setResults(searchPlaces(places, filters))
@@ -435,6 +520,7 @@ export default function App() {
     setRandomPick(null)
     setViewMode('list')
     setRefineOpen(false)
+    setVisibleResultCount(RESULT_PAGE_SIZE)
     requestAnimationFrame(() => {
       document.getElementById('results')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     })
@@ -448,6 +534,7 @@ export default function App() {
     setSelectedPlace(null)
     setViewMode('list')
     setRefineOpen(false)
+    setVisibleResultCount(RESULT_PAGE_SIZE)
   }
 
   const toggleFavorite = (id) => {
@@ -464,6 +551,7 @@ export default function App() {
 
   return (
     <>
+      {itemListJsonLd && <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>}
       <header className="hero">
         <nav className="nav" aria-label="주요 메뉴">
           <a className="brand" href="#top" aria-label="오늘 어디가지 홈">오늘 어디가지? <span>👟</span></a>
@@ -521,7 +609,7 @@ export default function App() {
               <div>
                 <p className="step">STEP 02</p>
                 <h2 id="results-title">{displayedResults.length ? <>현재 조건에 맞는 장소 <em>{displayedResults.length}곳</em>이에요!</> : '조건에 맞는 장소가 없어요 😢'}</h2>
-                <p className="result-summary">처음 검색 결과 {results.length}곳 · 현재 표시 {displayedResults.length}곳</p>
+                <p className="result-summary">처음 검색 결과 {results.length}곳 · 조건 결과 {displayedResults.length}곳</p>
               </div>
               {displayedResults.length > 0 && (
                 <div className="result-actions">
@@ -552,9 +640,19 @@ export default function App() {
               viewMode === 'map' ? (
                 <KakaoMap items={displayedResults} userLocation={location} onOpenPlace={setSelectedPlace} />
               ) : (
-                <div className="card-grid">{displayedResults.map(({ place, distance }) => (
-                  <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={setSelectedPlace} key={place.id} />
-                ))}</div>
+                <>
+                  <div className="card-grid">{visibleResults.map(({ place, distance }) => (
+                    <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={setSelectedPlace} key={place.id} />
+                  ))}</div>
+                  <div className="load-more-panel" aria-live="polite">
+                    <p><strong>{visibleResults.length}곳</strong> / 전체 {displayedResults.length}곳을 보고 있어요.</p>
+                    {visibleResults.length < displayedResults.length && (
+                      <button type="button" onClick={() => setVisibleResultCount((count) => Math.min(count + RESULT_PAGE_SIZE, displayedResults.length))}>
+                        장소 {Math.min(RESULT_PAGE_SIZE, displayedResults.length - visibleResults.length)}곳 더 보기 <span aria-hidden="true">↓</span>
+                      </button>
+                    )}
+                  </div>
+                </>
               )
             ) : (
               <div className="empty-state">
