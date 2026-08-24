@@ -21,5 +21,6 @@ export function getUserDisplayName(user) {
     || metadata.nickname
     || metadata.full_name
     || metadata.user_name
-    || '카카오 사용자'
+    || metadata.preferred_username
+    || '방문자'
 }

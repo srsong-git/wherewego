@@ -11,6 +11,7 @@ const regionOptions = ['전체', '서울', '경기', '인천']
 const environmentOptions = ['전체', '실내', '야외', '실내+야외']
 const themeLabelMap = Object.fromEntries(themeOptions.map(({ value, label }) => [value, label]))
 const fatigueLabelMap = { low: '낮음', medium: '보통', high: '높음' }
+const fatigueSentenceMap = { low: '낮아요.', medium: '보통이에요.', high: '높아요.' }
 const RESULT_PAGE_SIZE = 12
 const PLACE_DATA_UPDATED_AT = '2026.08.24'
 const dialogFocusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
@@ -27,7 +28,22 @@ function toggleValue(values, value) {
   return values.includes(value) ? values.filter((item) => item !== value) : [...values, value]
 }
 
-function getTopRecommendations(items) {
+function getMatchingConditionText(place, filters, resultFilters) {
+  const labels = []
+  if (filters.weather === 'indoor') labels.push('실내')
+  if (filters.age) labels.push(filters.age)
+  if (filters.duration) labels.push(filters.duration)
+  if (filters.price && filters.price !== '상관없음') labels.push(filters.price)
+  const matchingTheme = [...filters.themes, ...resultFilters.themes].find((theme) => place.themes.includes(theme))
+  if (matchingTheme) labels.push(themeLabelMap[matchingTheme])
+  if (resultFilters.region !== '전체') labels.push(resultFilters.region)
+  if (resultFilters.environment !== '전체') labels.push(resultFilters.environment)
+
+  const uniqueLabels = [...new Set(labels)].slice(0, 2)
+  return uniqueLabels.length ? `고른 ${uniqueLabels.join('·')} 조건에 맞고` : `${place.indoorOutdoor}에서 ${place.duration} 동안 즐기기 좋고`
+}
+
+function getTopRecommendations(items, filters, resultFilters) {
   const childFriendlyThemes = ['놀이', '동물', '체험', '과학', '물놀이·스포츠']
   const fatigueScore = { low: 3, medium: 1, high: 0 }
   const durationScore = { '1~2시간': 3, 반나절: 2, 하루: 0 }
@@ -38,7 +54,7 @@ function getTopRecommendations(items) {
       title: '오늘 가장 무난해요',
       score: (place) => place.ageGroups.length * 2 + fatigueScore[place.parentFatigueLevel] + durationScore[place.duration]
         + (place.indoorOutdoor === '실내' ? 2 : 0) + (place.priceCategory === '무료' ? 1 : 0),
-      reason: (place) => `${place.ageGroups.length === 3 ? '여러 연령이 함께 즐기기 좋고' : `${place.ageGroups.join('·')} 눈높이에 잘 맞고`}, ${place.duration} 일정으로 부담 없이 계획하기 좋아요.`,
+      reason: (place) => `${getMatchingConditionText(place, filters, resultFilters)}, ${place.ageGroups.length === 3 ? '나이가 다른 형제자매도 함께 즐길 수 있어' : `${place.ageGroups.join('·')} 아이 눈높이에 맞아`} 첫 선택으로 무난해요.${place.parentFatigueLevel === 'high' ? ` ${place.parentFatigueReason}` : ''}`,
     },
     {
       type: 'child',
@@ -46,7 +62,7 @@ function getTopRecommendations(items) {
       title: '아이 반응이 좋을 것 같아요',
       score: (place) => place.themes.filter((theme) => childFriendlyThemes.includes(theme)).length * 5
         + place.ageGroups.length + (place.description.match(/체험|놀이|동물|직접|만지/g)?.length || 0),
-      reason: (place) => `${place.themes.slice(0, 2).map((theme) => themeLabelMap[theme]).join('·') || '새로운 공간'} 중심이라 아이가 직접 보고 움직이며 몰입하기 좋아요.`,
+      reason: (place) => `${getMatchingConditionText(place, filters, resultFilters)}, ${place.themes.slice(0, 2).map((theme) => themeLabelMap[theme]).join('·') || '새로운 체험'}을 좋아하는 ${place.ageGroups.join('·')} 아이가 보고 움직이며 몰입하기 좋아요.${place.parentFatigueLevel === 'high' ? ' 중간에 쉬는 시간은 꼭 잡아 주세요.' : ''}`,
     },
     {
       type: 'easy',
@@ -54,7 +70,7 @@ function getTopRecommendations(items) {
       title: '엄마가 덜 힘들어요',
       score: (place) => fatigueScore[place.parentFatigueLevel] * 5 + durationScore[place.duration]
         + (place.indoorOutdoor === '실내' ? 3 : 0),
-      reason: (place) => place.parentFatigueReason,
+      reason: (place) => `${getMatchingConditionText(place, filters, resultFilters)}, 예상 엄마 피로도가 ${fatigueSentenceMap[place.parentFatigueLevel]} ${place.parentFatigueReason}`,
     },
   ]
   const usedIds = new Set()
@@ -243,7 +259,7 @@ function ThemeSelector({ selected, onToggle, compact = false }) {
 
 function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
   return (
-    <article className="place-card">
+    <article className="place-card" onClick={() => onOpen(place)}>
       <div className="card-heading">
         <div>
           <p className="area">📍 {place.area}</p>
@@ -255,7 +271,10 @@ function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
             type="button"
             aria-label={`${place.name} ${isFavorite ? '찜 해제' : '찜하기'}`}
             aria-pressed={isFavorite}
-            onClick={() => onToggleFavorite(place.id)}
+            onClick={(event) => {
+              event.stopPropagation()
+              onToggleFavorite(place.id)
+            }}
           >
             {isFavorite ? '♥' : '♡'}
           </button>
@@ -276,7 +295,10 @@ function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
         <span className={`fatigue-badge ${place.parentFatigueLevel}`}>🌿 엄마 피로도: {fatigueLabelMap[place.parentFatigueLevel]}</span>
       </div>
       <p className="fatigue-reason">{place.parentFatigueReason}</p>
-      <button className="detail-button" type="button" onClick={() => onOpen(place)}>자세히 보기 <span>→</span></button>
+      <button className="detail-button" type="button" onClick={(event) => {
+        event.stopPropagation()
+        onOpen(place)
+      }}>자세히 보기 <span>→</span></button>
     </article>
   )
 }
@@ -349,7 +371,7 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, 
           <p>버튼을 누르면 결과에 바로 반영돼요.</p>
         </div>
         <div className="refine-heading-actions">
-          <div className="active-filter-count">적용 중 {activeCount}개</div>
+          <div className="active-filter-count">추가 필터 {activeCount}개</div>
           <button className="refine-toggle" type="button" aria-expanded={isOpen} aria-controls="refine-body" onClick={onToggle}>
             {isOpen ? '빠른 필터 접기' : '빠른 필터 펼치기'} <span aria-hidden="true">{isOpen ? '⌃' : '⌄'}</span>
           </button>
@@ -455,6 +477,7 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
 
 export default function App() {
   const [filters, setFilters] = useState(initialFilters)
+  const [appliedFilters, setAppliedFilters] = useState(initialFilters)
   const [results, setResults] = useState(null)
   const [resultFilters, setResultFilters] = useState(initialResultFilters)
   const [randomPick, setRandomPick] = useState(null)
@@ -472,6 +495,8 @@ export default function App() {
   const [deletionAccepted, setDeletionAccepted] = useState(false)
   const [deletionStatus, setDeletionStatus] = useState('idle')
   const [deletionNotice, setDeletionNotice] = useState('')
+  const [favoriteToast, setFavoriteToast] = useState('')
+  const favoriteToastTimerRef = useRef(null)
   const [favoriteIds, setFavoriteIds] = useState(() => {
     try {
       const saved = JSON.parse(localStorage.getItem('oneul-favorite-places') || '[]')
@@ -484,6 +509,10 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('oneul-favorite-places', JSON.stringify(favoriteIds))
   }, [favoriteIds])
+
+  useEffect(() => () => {
+    if (favoriteToastTimerRef.current) window.clearTimeout(favoriteToastTimerRef.current)
+  }, [])
 
   useEffect(() => {
     if (!supabase) return undefined
@@ -581,7 +610,10 @@ export default function App() {
     () => displayedResults.slice(0, visibleResultCount),
     [displayedResults, visibleResultCount],
   )
-  const topRecommendations = useMemo(() => getTopRecommendations(displayedResults), [displayedResults])
+  const topRecommendations = useMemo(
+    () => getTopRecommendations(displayedResults, appliedFilters, resultFilters),
+    [appliedFilters, displayedResults, resultFilters],
+  )
   const itemListJsonLd = useMemo(() => results ? ({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -606,6 +638,7 @@ export default function App() {
 
   const findPlaces = () => {
     setResults(searchPlaces(places, filters))
+    setAppliedFilters({ ...filters, themes: [...filters.themes] })
     setResultFilters(initialResultFilters)
     setRandomPick(null)
     setViewMode('list')
@@ -618,6 +651,7 @@ export default function App() {
 
   const resetAll = () => {
     setFilters(initialFilters)
+    setAppliedFilters(initialFilters)
     setResults(null)
     setResultFilters(initialResultFilters)
     setRandomPick(null)
@@ -628,7 +662,11 @@ export default function App() {
   }
 
   const toggleFavorite = (id) => {
-    setFavoriteIds((current) => current.includes(id) ? current.filter((favoriteId) => favoriteId !== id) : [...current, id])
+    const isFavorite = favoriteIds.includes(id)
+    setFavoriteIds((current) => isFavorite ? current.filter((favoriteId) => favoriteId !== id) : [...current, id])
+    setFavoriteToast(isFavorite ? '찜을 취소했어요.' : '찜했어요. 찜 목록에서 다시 볼 수 있어요.')
+    if (favoriteToastTimerRef.current) window.clearTimeout(favoriteToastTimerRef.current)
+    favoriteToastTimerRef.current = window.setTimeout(() => setFavoriteToast(''), 2600)
   }
 
   const chooseRandom = () => {
@@ -700,7 +738,7 @@ export default function App() {
               <div>
                 <p className="step">STEP 02</p>
                 <h2 id="results-title">{displayedResults.length ? <>현재 조건에 맞는 장소 <em>{displayedResults.length}곳</em>이에요!</> : '조건에 맞는 장소가 없어요 😢'}</h2>
-                <p className="result-summary">처음 검색 결과 {results.length}곳 · 조건 결과 {displayedResults.length}곳</p>
+                <p className="result-summary">마음에 드는 곳을 고르면 길찾기와 최신 정보를 확인할 수 있어요.</p>
               </div>
               {displayedResults.length > 0 && (
                 <div className="result-actions">
@@ -764,6 +802,8 @@ export default function App() {
           <button type="button" onClick={openAccountManager}>계정 관리·탈퇴</button>
         </div>
       </footer>
+
+      {favoriteToast && <div className="favorite-toast" role="status" aria-live="polite">{favoriteToast}</div>}
 
       {selectedPlace && (
         <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={user} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />

@@ -38,12 +38,12 @@ const hardPointOptions = ['많이 걸어요', '대기 길어요', '주차 어려
 const reportReasons = ['개인정보 노출', '광고 또는 도배', '욕설 또는 부적절한 내용', '사실과 다른 정보', '기타']
 const ageOptions = ['유아', '초등 저학년', '초등 고학년']
 const emptyForm = {
-  childReaction: 5,
-  revisitIntent: 3,
-  childAgeGroup: '유아',
-  parkingDifficulty: 'normal',
-  crowdLevel: 'normal',
-  parentFatigueReview: 'normal',
+  childReaction: null,
+  revisitIntent: null,
+  childAgeGroup: '',
+  parkingDifficulty: '',
+  crowdLevel: '',
+  parentFatigueReview: '',
   hardPoints: [],
   content: '',
 }
@@ -167,9 +167,9 @@ export default function ReviewSection({ place, user, onLogin }) {
         childReaction: myReview.child_reaction,
         revisitIntent: myReview.revisit_intent,
         childAgeGroup: myReview.child_age_group,
-        parkingDifficulty: myReview.parking_difficulty || 'normal',
-        crowdLevel: myReview.crowd_level || 'normal',
-        parentFatigueReview: myReview.parent_fatigue_review || 'normal',
+        parkingDifficulty: myReview.parking_difficulty || '',
+        crowdLevel: myReview.crowd_level || '',
+        parentFatigueReview: myReview.parent_fatigue_review || '',
         hardPoints: myReview.hard_points || [],
         content: myReview.content,
       })
@@ -199,11 +199,25 @@ export default function ReviewSection({ place, user, onLogin }) {
     await Promise.all([loadPublicReviews(), loadMyReview()])
   }
 
+  const requiredSelectionsComplete = Boolean(
+    form.childReaction
+    && form.revisitIntent
+    && form.childAgeGroup
+    && form.parkingDifficulty
+    && form.crowdLevel
+    && form.parentFatigueReview,
+  )
+  const reviewFormComplete = requiredSelectionsComplete && form.content.trim().length >= 10
+
   const submitReview = async (event) => {
     event.preventDefault()
     if (!supabase || !user) return
 
     const content = form.content.trim()
+    if (!requiredSelectionsComplete) {
+      setNotice('아이 반응부터 방문 연령까지 필수 항목을 모두 선택해 주세요.')
+      return
+    }
     if (content.length < 10) {
       setNotice('후기는 10자 이상 작성해 주세요.')
       return
@@ -314,7 +328,7 @@ export default function ReviewSection({ place, user, onLogin }) {
           <div><span>재방문 의사</span><strong>💚 {summary.revisitRate}%</strong></div>
         </div>
       ) : (
-        <p className="review-empty-summary">아직 후기가 없어요. 첫 가족 후기를 남겨주세요!</p>
+        <p className="review-empty-summary"><strong>아직 다녀온 가족 후기가 없어요.</strong><span>아이 반응을 남겨주시면 다음 가족에게 큰 도움이 돼요.</span></p>
       )}
 
       <p className="review-public-guide">허위 후기와 광고성 후기를 줄이기 위해 카카오 로그인 후 작성할 수 있어요. 닉네임, 아이 연령대, 평가와 후기 내용은 공개됩니다. 실명, 학교명, 연락처는 적지 마세요.</p>
@@ -361,6 +375,7 @@ export default function ReviewSection({ place, user, onLogin }) {
 
           <label className="review-age-label">방문 당시 아이 연령
             <select value={form.childAgeGroup} onChange={(event) => setForm({ ...form, childAgeGroup: event.target.value })}>
+              <option value="">선택해주세요</option>
               {ageOptions.map((age) => <option value={age} key={age}>{age}</option>)}
             </select>
           </label>
@@ -375,16 +390,17 @@ export default function ReviewSection({ place, user, onLogin }) {
             <span>{form.content.length} / 500</span>
           </label>
           <p className="review-privacy-note">닉네임, 아이 연령대, 평가와 후기 내용은 공개돼요. 실명, 학교명, 연락처는 적지 마세요.</p>
+          {!reviewFormComplete && <p className="review-required-guide" id="review-required-guide">필수 평가 6개를 선택하고 후기를 10자 이상 작성하면 등록할 수 있어요.</p>}
 
           {notice && <p className="review-notice" role="status">{notice}</p>}
-          <button className="review-submit" type="submit" disabled={submitStatus === 'saving'}>{submitStatus === 'saving' ? '저장 중…' : myReview ? '후기 수정하기' : '후기 등록하기'}</button>
+          <button className="review-submit" type="submit" aria-describedby={!reviewFormComplete ? 'review-required-guide' : undefined} disabled={submitStatus === 'saving' || !reviewFormComplete}>{submitStatus === 'saving' ? '저장 중…' : myReview ? '후기 수정하기' : '후기 등록하기'}</button>
         </form>
       )}
 
       <div className="review-list" aria-live="polite">
         {status === 'loading' && <p className="review-state">후기를 불러오는 중…</p>}
         {status === 'error' && <p className="review-state error">후기를 불러오지 못했어요. 잠시 후 다시 확인해 주세요.</p>}
-        {status === 'ready' && reviews.length === 0 && <p className="review-state">등록된 후기가 아직 없어요.</p>}
+        {status === 'ready' && reviews.length === 0 && <p className="review-state">첫 가족 후기를 기다리고 있어요.</p>}
         {status === 'ready' && reviews.map((review) => {
           const isMine = myReview?.id === review.id
           return (

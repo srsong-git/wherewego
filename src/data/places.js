@@ -30,37 +30,82 @@ const themeRules = [
 
 let nextPlaceId = 1
 
+const fatigueReasonOverrides = {
+  롯데월드: '대기시간과 식사비, 인파 때문에 쉬는 시간을 꼭 넣는 게 좋아요.',
+  서울대공원: '걷는 거리가 길어 간식과 물, 쉬는 동선을 미리 잡는 게 좋아요.',
+  국립과천과학관: '실내라 편하지만 전시관이 넓어 관심 있는 구역만 골라 보는 게 좋아요.',
+}
+
+function getFatiguePreparationTip(name, indoorOutdoor, duration) {
+  if (fatigueReasonOverrides[name]) return fatigueReasonOverrides[name]
+  if (/롯데월드|서울랜드|에버랜드|쁘띠프랑스/.test(name)) {
+    return `${name}에서는 인기 시설의 대기 순서를 정하고 식사 시간을 피크보다 앞당기면 덜 지쳐요.`
+  }
+  if (/키자니아|잡월드/.test(name)) {
+    return `${name}에서는 체험 회차와 이동 순서를 먼저 정하고 중간에 간식 시간을 확보해 주세요.`
+  }
+  if (/플레이도시|물놀이|경정/.test(name)) {
+    return `${name}에서는 여벌 옷과 젖은 짐을 담을 가방을 챙기고 샤워·휴식 시간을 넉넉히 잡아 주세요.`
+  }
+  if (/아쿠아|생물자원관|동물|팜랜드|농촌|어촌/.test(name)) {
+    return `${name}에서는 아이가 보고 싶은 생물을 먼저 고르고 먹이·공연 시간을 확인하면 불필요한 이동을 줄일 수 있어요.`
+  }
+  if (/동굴/.test(name)) {
+    return `${name}에서는 미끄럽지 않은 신발과 얇은 겉옷을 준비하면 온도 차와 계단 이동에 대처하기 쉬워요.`
+  }
+  if (/출렁다리|화석산지|화성|행궁|궁$|민속촌/.test(name)) {
+    return `${name}에서는 울퉁불퉁한 길을 고려해 편한 신발과 물을 챙기고 짧은 관람 구간부터 잡아 주세요.`
+  }
+  if (/공원|숲|수목원|한강|청계천|식물원|정원|세미원|화담/.test(name)) {
+    return `${name}에서는 그늘과 화장실 위치를 먼저 보고 물·간식과 편한 신발을 준비하면 쉬어 가기 좋아요.`
+  }
+  if (/도서관|출판/.test(name)) {
+    return `${name}에서는 아이가 볼 책과 머물 시간을 미리 정하고 붐비는 주말에는 앉을 자리를 먼저 확인해 주세요.`
+  }
+  if (/미술|공예|디자인|아트|예술|세라피아/.test(name)) {
+    return `${name}에서는 아이가 흥미로워할 작품 한두 구역만 먼저 골라 보면 관람 피로를 줄일 수 있어요.`
+  }
+  if (/박물관|기념관|과학|센터|뮤지엄|로보|모터스튜디오|미니어처/.test(name)) {
+    return `${name}에서는 체험·전시 위치를 먼저 확인하고 관심 있는 층부터 보면 넓은 실내 동선을 줄일 수 있어요.`
+  }
+  if (indoorOutdoor === '실내') {
+    return `${name}에서는 입장 직후 화장실과 휴식 공간을 확인하고 ${duration} 안에 볼 구역을 정하면 여유로워요.`
+  }
+  return `${name}에서는 날씨와 그늘을 확인하고 ${duration} 일정 중 아이가 쉴 지점을 미리 정해 두면 좋아요.`
+}
+
 function getParentFatigue(indoorOutdoor, duration, name) {
   const longWaitPlace = /롯데월드|서울랜드|에버랜드|키자니아|플레이도시|팜랜드|서울대공원/
   const longWalkPlace = /공원|수목원|숲|한강|궁|화성|행궁|민속촌|아트밸리|화석산지|갯골|출렁다리/
+  const reason = getFatiguePreparationTip(name, indoorOutdoor, duration)
 
   if (duration === '하루' || longWaitPlace.test(name)) {
     return {
       level: 'high',
-      reason: '넓은 동선과 대기 시간을 생각해 중간중간 쉬는 계획이 필요해요.',
+      reason,
     }
   }
   if (indoorOutdoor === '실내' && duration === '1~2시간') {
     return {
       level: 'low',
-      reason: '실내에서 짧게 둘러볼 수 있어 이동 부담이 비교적 적어요.',
+      reason,
     }
   }
   if (longWalkPlace.test(name)) {
     return {
       level: 'medium',
-      reason: '걷는 구간이 있어 편한 신발과 짧은 휴식이 있으면 좋아요.',
+      reason,
     }
   }
   if (indoorOutdoor === '실내') {
     return {
       level: 'low',
-      reason: '날씨 영향을 덜 받고 실내에서 동선을 조절하기 쉬워요.',
+      reason,
     }
   }
   return {
     level: 'medium',
-    reason: '야외 이동이 있어 날씨와 아이 컨디션에 맞춘 조절이 필요해요.',
+    reason,
   }
 }
 
