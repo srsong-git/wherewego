@@ -6,6 +6,8 @@
 
 - 날씨, 아이 연령, 소요 시간, 비용, 테마 검색
 - 100개 장소 데이터와 결과 내 필터
+- 현재 조건에서 바로 고르는 `오늘의 추천 TOP 3`
+- 장소별 엄마 피로도와 추천·비추천 가족 안내
 - 현재 위치 기준 직선거리 계산 및 가까운 순 정렬
 - 장소 상세보기와 랜덤 추천
 - 카카오맵 목적지 길찾기와 지도 바로가기
@@ -16,6 +18,7 @@
 - 브라우저에 저장되는 찜하기
 - 카카오 로그인과 장소별 가족 후기
 - 우리 아이 반응, 재방문 의사, 아이 연령별 후기 요약
+- 주차·혼잡도·부모 피로도·힘들었던 점을 담는 가족 후기
 - 공개 후기의 사용자 UUID 비공개 처리
 - 후기 신고, 20초 저장 간격 제한, 개인정보 작성 경고
 - 개인정보·이용 안내와 회원 탈퇴 요청
@@ -52,6 +55,7 @@ VITE_KAKAO_MAP_KEY=발급받은_JavaScript_키
 
 1. `supabase/migrations/202608210001_create_reviews.sql`
 2. `supabase/migrations/202608210002_public_beta_safety.sql`
+3. `supabase/migrations/202608240001_expand_family_reviews.sql`
 
 Supabase 프로젝트의 Authentication > Providers > Kakao에서 다음 값을 등록합니다.
 

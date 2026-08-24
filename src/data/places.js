@@ -30,21 +30,107 @@ const themeRules = [
 
 let nextPlaceId = 1
 
-const place = (name, area, latitude, longitude, indoorOutdoor, ageGroups, duration, priceCategory, description) => ({
-  id: `place-${String(nextPlaceId++).padStart(3, '0')}`,
-  name,
-  area,
-  region: area.split(' ')[0],
-  subRegion: area.split(' ').slice(1).join(' '),
-  latitude,
-  longitude,
-  indoorOutdoor,
-  ageGroups,
-  duration,
-  priceCategory,
-  description,
-  themes: themeRules.filter(([, pattern]) => pattern.test(`${name} ${description}`)).map(([theme]) => theme),
-})
+function getParentFatigue(indoorOutdoor, duration, name) {
+  const longWaitPlace = /롯데월드|서울랜드|에버랜드|키자니아|플레이도시|팜랜드|서울대공원/
+  const longWalkPlace = /공원|수목원|숲|한강|궁|화성|행궁|민속촌|아트밸리|화석산지|갯골|출렁다리/
+
+  if (duration === '하루' || longWaitPlace.test(name)) {
+    return {
+      level: 'high',
+      reason: '넓은 동선과 대기 시간을 생각해 중간중간 쉬는 계획이 필요해요.',
+    }
+  }
+  if (indoorOutdoor === '실내' && duration === '1~2시간') {
+    return {
+      level: 'low',
+      reason: '실내에서 짧게 둘러볼 수 있어 이동 부담이 비교적 적어요.',
+    }
+  }
+  if (longWalkPlace.test(name)) {
+    return {
+      level: 'medium',
+      reason: '걷는 구간이 있어 편한 신발과 짧은 휴식이 있으면 좋아요.',
+    }
+  }
+  if (indoorOutdoor === '실내') {
+    return {
+      level: 'low',
+      reason: '날씨 영향을 덜 받고 실내에서 동선을 조절하기 쉬워요.',
+    }
+  }
+  return {
+    level: 'medium',
+    reason: '야외 이동이 있어 날씨와 아이 컨디션에 맞춘 조절이 필요해요.',
+  }
+}
+
+function getFamilyFit(indoorOutdoor, ageGroups, duration, priceCategory, themes, fatigueLevel) {
+  const primaryTheme = themes[0]
+  const themeRecommendation = {
+    놀이: '몸을 움직이고 신나게 노는 걸 좋아하는 아이가 있어요.',
+    과학: '직접 보고 만지며 원리를 알아가는 아이가 있어요.',
+    '미술·전시': '그림과 전시를 보며 차분히 이야기하는 시간을 원해요.',
+    '역사·박물관': '이야기와 유물을 통해 역사를 접하게 해주고 싶어요.',
+    '자연·산책': '바깥에서 걷고 뛰며 에너지를 쓰고 싶어요.',
+    동물: '동물과 생물을 가까이 보는 걸 좋아하는 아이가 있어요.',
+    '책·도서관': '조용히 책을 보고 쉬어 가는 나들이를 원해요.',
+    체험: '구경만 하기보다 직접 해보는 활동을 좋아해요.',
+    쇼핑: '식사와 휴식을 한 공간에서 해결하고 싶어요.',
+    '물놀이·스포츠': '활동량이 많은 아이와 신나게 움직이고 싶어요.',
+  }
+
+  const recommendFor = [
+    themeRecommendation[primaryTheme] || '아이와 새로운 공간을 가볍게 경험하고 싶어요.',
+    ageGroups.length === 3
+      ? '나이가 다른 형제자매가 함께 즐길 곳을 찾고 있어요.'
+      : `${ageGroups.join('·')} 아이 눈높이에 맞는 장소를 찾고 있어요.`,
+    duration === '1~2시간'
+      ? '긴 일정 대신 짧고 알찬 외출을 원해요.'
+      : duration === '반나절'
+        ? '식사 전후로 여유 있게 반나절을 보내고 싶어요.'
+        : '하루를 넉넉히 써서 제대로 즐기고 싶어요.',
+  ]
+
+  const notRecommendFor = [
+    indoorOutdoor === '야외'
+      ? '비·폭염·한파처럼 오래 걷기 힘든 날이에요.'
+      : '아이가 야외에서 마음껏 뛰어노는 일정만 원해요.',
+    fatigueLevel === 'high'
+      ? '대기나 긴 동선 없이 가볍게 다녀오고 싶어요.'
+      : '아이와 오래 걷는 큰 규모의 나들이를 기대해요.',
+    priceCategory === '상관없음'
+      ? '입장료와 식비까지 예산을 아주 낮게 잡았어요.'
+      : '예약·휴무 여부를 확인할 여유 없이 바로 출발해야 해요.',
+  ]
+
+  return { recommendFor, notRecommendFor }
+}
+
+const place = (name, area, latitude, longitude, indoorOutdoor, ageGroups, duration, priceCategory, description) => {
+  const themes = themeRules.filter(([, pattern]) => pattern.test(`${name} ${description}`)).map(([theme]) => theme)
+  const fatigue = getParentFatigue(indoorOutdoor, duration, name)
+  const familyFit = getFamilyFit(indoorOutdoor, ageGroups, duration, priceCategory, themes, fatigue.level)
+
+  return {
+    id: `place-${String(nextPlaceId++).padStart(3, '0')}`,
+    name,
+    area,
+    region: area.split(' ')[0],
+    subRegion: area.split(' ').slice(1).join(' '),
+    latitude,
+    longitude,
+    indoorOutdoor,
+    ageGroups,
+    duration,
+    priceCategory,
+    description,
+    themes,
+    parentFatigueLevel: fatigue.level,
+    parentFatigueReason: fatigue.reason,
+    recommendFor: familyFit.recommendFor,
+    notRecommendFor: familyFit.notRecommendFor,
+  }
+}
 
 export const places = [
   // 서울 45곳

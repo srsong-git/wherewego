@@ -10,8 +10,9 @@ const initialResultFilters = { region: '전체', themes: [], environment: '전�
 const regionOptions = ['전체', '서울', '경기', '인천']
 const environmentOptions = ['전체', '실내', '야외', '실내+야외']
 const themeLabelMap = Object.fromEntries(themeOptions.map(({ value, label }) => [value, label]))
+const fatigueLabelMap = { low: '낮음', medium: '보통', high: '높음' }
 const RESULT_PAGE_SIZE = 12
-const PLACE_DATA_UPDATED_AT = '2026.08.23'
+const PLACE_DATA_UPDATED_AT = '2026.08.24'
 const dialogFocusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
 function formatDistance(distance) {
@@ -24,6 +25,50 @@ function getKakaoMapLink(place, type = 'map') {
 
 function toggleValue(values, value) {
   return values.includes(value) ? values.filter((item) => item !== value) : [...values, value]
+}
+
+function getTopRecommendations(items) {
+  const childFriendlyThemes = ['놀이', '동물', '체험', '과학', '물놀이·스포츠']
+  const fatigueScore = { low: 3, medium: 1, high: 0 }
+  const durationScore = { '1~2시간': 3, 반나절: 2, 하루: 0 }
+  const definitions = [
+    {
+      type: 'balanced',
+      icon: '✨',
+      title: '오늘 가장 무난해요',
+      score: (place) => place.ageGroups.length * 2 + fatigueScore[place.parentFatigueLevel] + durationScore[place.duration]
+        + (place.indoorOutdoor === '실내' ? 2 : 0) + (place.priceCategory === '무료' ? 1 : 0),
+      reason: (place) => `${place.ageGroups.length === 3 ? '여러 연령이 함께 즐기기 좋고' : `${place.ageGroups.join('·')} 눈높이에 잘 맞고`}, ${place.duration} 일정으로 부담 없이 계획하기 좋아요.`,
+    },
+    {
+      type: 'child',
+      icon: '🤩',
+      title: '아이 반응이 좋을 것 같아요',
+      score: (place) => place.themes.filter((theme) => childFriendlyThemes.includes(theme)).length * 5
+        + place.ageGroups.length + (place.description.match(/체험|놀이|동물|직접|만지/g)?.length || 0),
+      reason: (place) => `${place.themes.slice(0, 2).map((theme) => themeLabelMap[theme]).join('·') || '새로운 공간'} 중심이라 아이가 직접 보고 움직이며 몰입하기 좋아요.`,
+    },
+    {
+      type: 'easy',
+      icon: '🌿',
+      title: '엄마가 덜 힘들어요',
+      score: (place) => fatigueScore[place.parentFatigueLevel] * 5 + durationScore[place.duration]
+        + (place.indoorOutdoor === '실내' ? 3 : 0),
+      reason: (place) => place.parentFatigueReason,
+    },
+  ]
+  const usedIds = new Set()
+
+  return definitions.flatMap((definition) => {
+    const candidate = items
+      .filter(({ place }) => !usedIds.has(place.id))
+      .map((item) => ({ item, score: definition.score(item.place) }))
+      .sort((a, b) => b.score - a.score || a.item.recommendationIndex - b.item.recommendationIndex)[0]?.item
+
+    if (!candidate) return []
+    usedIds.add(candidate.place.id)
+    return [{ ...candidate, ...definition, reason: definition.reason(candidate.place) }]
+  })
 }
 
 function useDialogFocusTrap(containerRef, initialFocusRef, onClose) {
@@ -228,9 +273,42 @@ function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
         <span>👧 {place.ageGroups.join(' · ')}</span>
         <span>⏱ {place.duration}</span>
         <span>💰 {place.priceCategory}</span>
+        <span className={`fatigue-badge ${place.parentFatigueLevel}`}>🌿 엄마 피로도: {fatigueLabelMap[place.parentFatigueLevel]}</span>
       </div>
+      <p className="fatigue-reason">{place.parentFatigueReason}</p>
       <button className="detail-button" type="button" onClick={() => onOpen(place)}>자세히 보기 <span>→</span></button>
     </article>
+  )
+}
+
+function TopRecommendations({ items, onOpen }) {
+  if (!items.length) return null
+
+  return (
+    <section className="top-recommendations" aria-labelledby="top-recommendations-title">
+      <div className="top-recommendations-heading">
+        <div>
+          <p className="step">TODAY'S PICK</p>
+          <h3 id="top-recommendations-title">오늘의 추천 TOP 3</h3>
+        </div>
+        <p>지금 고른 조건에서 결정하기 쉬운 세 곳만 먼저 골랐어요.</p>
+      </div>
+      <div className="top-recommendation-grid">
+        {items.map(({ place, type, icon, title, reason }) => (
+          <article className={`top-recommendation-card ${type}`} key={place.id}>
+            <p className="top-recommendation-type"><span aria-hidden="true">{icon}</span> {title}</p>
+            <h4>{place.name}</h4>
+            <div className="top-recommendation-tags">
+              <span>{place.indoorOutdoor === '실내' ? '☔' : '☀️'} {place.indoorOutdoor}</span>
+              <span>⏱ {place.duration}</span>
+              <span>🌿 피로도 {fatigueLabelMap[place.parentFatigueLevel]}</span>
+            </div>
+            <p className="top-recommendation-reason">{reason}</p>
+            <button type="button" onClick={() => onOpen(place)}>이 장소 자세히 보기 <span aria-hidden="true">→</span></button>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
 
@@ -346,7 +424,18 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
             <div><dt>👧 추천 연령</dt><dd>{place.ageGroups.join(' · ')}</dd></div>
             <div><dt>⏱ 예상 시간</dt><dd>{place.duration}</dd></div>
             <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
+            <div><dt>🌿 엄마 피로도</dt><dd><strong>{fatigueLabelMap[place.parentFatigueLevel]}</strong><small>{place.parentFatigueReason}</small></dd></div>
           </dl>
+          <div className="family-fit-grid">
+            <section className="family-fit recommend" aria-labelledby="recommend-for-title">
+              <h3 id="recommend-for-title">👍 이런 가족에게 추천해요</h3>
+              <ul>{place.recommendFor.map((reason) => <li key={reason}>{reason}</li>)}</ul>
+            </section>
+            <section className="family-fit caution" aria-labelledby="not-recommend-for-title">
+              <h3 id="not-recommend-for-title">🤔 이런 경우엔 비추예요</h3>
+              <ul>{place.notRecommendFor.map((reason) => <li key={reason}>{reason}</li>)}</ul>
+            </section>
+          </div>
           <div className="place-info-status">
             <strong>방문 전 최신 정보를 확인해 주세요</strong>
             <p>현재 표시된 소요시간과 비용은 추천용 구분이며 실시간 운영정보가 아니에요. 정확한 주소, 운영시간, 휴무일, 실제 요금은 카카오맵 장소정보와 해당 장소의 공식 채널에서 확인해 주세요.</p>
@@ -492,6 +581,7 @@ export default function App() {
     () => displayedResults.slice(0, visibleResultCount),
     [displayedResults, visibleResultCount],
   )
+  const topRecommendations = useMemo(() => getTopRecommendations(displayedResults), [displayedResults])
   const itemListJsonLd = useMemo(() => results ? ({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -586,6 +676,7 @@ export default function App() {
               {locationStatus === 'loading' ? '위치 확인 중…' : location ? '✓ 내 위치 확인됨' : '내 위치로 거리 보기'}
             </button>
           </div>
+          <p className="location-distance-note">거리는 현재 위치 기준 직선거리이며, 실제 이동시간과 다를 수 있어요. 위치정보는 저장하지 않아요.</p>
           {(locationStatus === 'error' || locationStatus === 'unsupported') && <p className="location-error" role="alert">위치를 확인하지 못했어요. 브라우저의 위치 권한을 확인해 주세요.</p>}
           <div className="filters">
             {filterOptions.map((group) => <FilterGroup key={group.key} group={group} selected={filters[group.key]} onSelect={(value) => setFilters({ ...filters, [group.key]: value })} />)}
@@ -621,6 +712,8 @@ export default function App() {
                 </div>
               )}
             </div>
+
+            <TopRecommendations items={topRecommendations} onOpen={setSelectedPlace} />
 
             <ResultFilters
               filters={resultFilters}
@@ -667,7 +760,7 @@ export default function App() {
       <footer>
         <div><strong>오늘 어디가지? 👟</strong><span>가족의 즐거운 오늘을 응원해요.</span></div>
         <div className="footer-links">
-          <button type="button" onClick={() => setInfoModal('privacy')}>개인정보·이용 안내</button>
+          <button type="button" onClick={() => setInfoModal('privacy')}>개인정보처리방침</button>
           <button type="button" onClick={openAccountManager}>계정 관리·탈퇴</button>
         </div>
       </footer>
@@ -677,7 +770,7 @@ export default function App() {
       )}
 
       {infoModal === 'privacy' && (
-        <InfoModal title="개인정보·이용 안내" onClose={() => setInfoModal(null)}>
+        <InfoModal title="개인정보처리방침" onClose={() => setInfoModal(null)}>
           <PrivacyContent />
         </InfoModal>
       )}

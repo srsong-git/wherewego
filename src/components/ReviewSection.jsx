@@ -15,9 +15,38 @@ const revisitOptions = [
   { value: 1, emoji: '🤔', label: '잘 모르겠어요' },
 ]
 
+const parkingOptions = [
+  { value: 'easy', emoji: '🚗', label: '주차 쉬웠어요' },
+  { value: 'normal', emoji: '🅿️', label: '보통이에요' },
+  { value: 'hard', emoji: '😵', label: '힘들었어요' },
+]
+
+const crowdOptions = [
+  { value: 'quiet', emoji: '🌿', label: '한산했어요' },
+  { value: 'normal', emoji: '🙂', label: '보통이에요' },
+  { value: 'crowded', emoji: '👥', label: '너무 붐볐어요' },
+]
+
+const parentFatigueOptions = [
+  { value: 'low', emoji: '😊', label: '부모 피로도 낮음' },
+  { value: 'normal', emoji: '🙂', label: '보통' },
+  { value: 'high', emoji: '🥵', label: '높음' },
+]
+
+const hardPointOptions = ['많이 걸어요', '대기 길어요', '주차 어려워요', '음식 비싸요', '초고학년은 심심해요', '저학년은 힘들어해요', '특별히 없어요']
+
 const reportReasons = ['개인정보 노출', '광고 또는 도배', '욕설 또는 부적절한 내용', '사실과 다른 정보', '기타']
 const ageOptions = ['유아', '초등 저학년', '초등 고학년']
-const emptyForm = { childReaction: 5, revisitIntent: 3, childAgeGroup: '유아', content: '' }
+const emptyForm = {
+  childReaction: 5,
+  revisitIntent: 3,
+  childAgeGroup: '유아',
+  parkingDifficulty: 'normal',
+  crowdLevel: 'normal',
+  parentFatigueReview: 'normal',
+  hardPoints: [],
+  content: '',
+}
 const emptyReport = { reason: reportReasons[0], details: '' }
 
 function formatReviewDate(date) {
@@ -51,6 +80,31 @@ function RatingChoices({ legend, options, value, onChange }) {
   )
 }
 
+function HardPointChoices({ values, onChange }) {
+  const togglePoint = (point) => {
+    if (point === '특별히 없어요') {
+      onChange(values.includes(point) ? [] : [point])
+      return
+    }
+
+    const current = values.filter((value) => value !== '특별히 없어요')
+    onChange(current.includes(point) ? current.filter((value) => value !== point) : [...current, point])
+  }
+
+  return (
+    <fieldset className="review-rating-group review-hard-points">
+      <legend>힘들었던 점 <span>여러 개 선택 가능</span></legend>
+      <div className="review-hard-point-choices">
+        {hardPointOptions.map((point) => (
+          <button className={values.includes(point) ? 'active' : ''} type="button" aria-pressed={values.includes(point)} onClick={() => togglePoint(point)} key={point}>
+            {values.includes(point) ? '✓ ' : ''}{point}
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  )
+}
+
 export default function ReviewSection({ place, user, onLogin }) {
   const [reviews, setReviews] = useState([])
   const [myReview, setMyReview] = useState(null)
@@ -67,7 +121,7 @@ export default function ReviewSection({ place, user, onLogin }) {
   const loadPublicReviews = useCallback(async () => {
     if (!supabase) return
     setStatus('loading')
-    const { data, error } = await supabase.rpc('get_public_reviews', { target_place_id: place.id })
+    const { data, error } = await supabase.rpc('get_public_reviews_v2', { target_place_id: place.id })
 
     if (error) {
       console.error('후기 조회 실패', error)
@@ -87,7 +141,7 @@ export default function ReviewSection({ place, user, onLogin }) {
 
     const { data, error } = await supabase
       .from('reviews')
-      .select('id, place_id, user_id, author_name, child_reaction, revisit_intent, child_age_group, content, created_at, updated_at')
+      .select('id, place_id, user_id, author_name, child_reaction, revisit_intent, child_age_group, parking_difficulty, crowd_level, parent_fatigue_review, hard_points, content, created_at, updated_at')
       .eq('place_id', place.id)
       .eq('user_id', user.id)
       .maybeSingle()
@@ -113,6 +167,10 @@ export default function ReviewSection({ place, user, onLogin }) {
         childReaction: myReview.child_reaction,
         revisitIntent: myReview.revisit_intent,
         childAgeGroup: myReview.child_age_group,
+        parkingDifficulty: myReview.parking_difficulty || 'normal',
+        crowdLevel: myReview.crowd_level || 'normal',
+        parentFatigueReview: myReview.parent_fatigue_review || 'normal',
+        hardPoints: myReview.hard_points || [],
         content: myReview.content,
       })
     } else {
@@ -160,6 +218,10 @@ export default function ReviewSection({ place, user, onLogin }) {
       child_reaction: form.childReaction,
       revisit_intent: form.revisitIntent,
       child_age_group: form.childAgeGroup,
+      parking_difficulty: form.parkingDifficulty,
+      crowd_level: form.crowdLevel,
+      parent_fatigue_review: form.parentFatigueReview,
+      hard_points: form.hardPoints,
       content,
     }
 
@@ -255,6 +317,8 @@ export default function ReviewSection({ place, user, onLogin }) {
         <p className="review-empty-summary">아직 후기가 없어요. 첫 가족 후기를 남겨주세요!</p>
       )}
 
+      <p className="review-public-guide">허위 후기와 광고성 후기를 줄이기 위해 카카오 로그인 후 작성할 수 있어요. 닉네임, 아이 연령대, 평가와 후기 내용은 공개됩니다. 실명, 학교명, 연락처는 적지 마세요.</p>
+
       {!isSupabaseConfigured ? (
         <div className="review-login-card" role="status">
           <strong>후기 기능 연결을 준비하고 있어요.</strong>
@@ -288,6 +352,12 @@ export default function ReviewSection({ place, user, onLogin }) {
 
           <RatingChoices legend="우리 아이 반응" options={reactionOptions} value={form.childReaction} onChange={(childReaction) => setForm({ ...form, childReaction })} />
           <RatingChoices legend="재방문 의사" options={revisitOptions} value={form.revisitIntent} onChange={(revisitIntent) => setForm({ ...form, revisitIntent })} />
+          <div className="review-context-grid">
+            <RatingChoices legend="주차는 어땠나요?" options={parkingOptions} value={form.parkingDifficulty} onChange={(parkingDifficulty) => setForm({ ...form, parkingDifficulty })} />
+            <RatingChoices legend="사람은 얼마나 많았나요?" options={crowdOptions} value={form.crowdLevel} onChange={(crowdLevel) => setForm({ ...form, crowdLevel })} />
+          </div>
+          <RatingChoices legend="부모 피로도는 어땠나요?" options={parentFatigueOptions} value={form.parentFatigueReview} onChange={(parentFatigueReview) => setForm({ ...form, parentFatigueReview })} />
+          <HardPointChoices values={form.hardPoints} onChange={(hardPoints) => setForm({ ...form, hardPoints })} />
 
           <label className="review-age-label">방문 당시 아이 연령
             <select value={form.childAgeGroup} onChange={(event) => setForm({ ...form, childAgeGroup: event.target.value })}>
@@ -304,7 +374,7 @@ export default function ReviewSection({ place, user, onLogin }) {
             />
             <span>{form.content.length} / 500</span>
           </label>
-          <p className="review-privacy-note">후기와 닉네임은 모든 방문자에게 공개돼요. 실명, 연락처, 학교명 등 개인정보는 작성하지 마세요.</p>
+          <p className="review-privacy-note">닉네임, 아이 연령대, 평가와 후기 내용은 공개돼요. 실명, 학교명, 연락처는 적지 마세요.</p>
 
           {notice && <p className="review-notice" role="status">{notice}</p>}
           <button className="review-submit" type="submit" disabled={submitStatus === 'saving'}>{submitStatus === 'saving' ? '저장 중…' : myReview ? '후기 수정하기' : '후기 등록하기'}</button>
@@ -327,6 +397,10 @@ export default function ReviewSection({ place, user, onLogin }) {
                 <span>아이 반응 {optionLabel(reactionOptions, review.child_reaction)}</span>
                 <span>재방문 {optionLabel(revisitOptions, review.revisit_intent)}</span>
                 <span>👧 {review.child_age_group}</span>
+                {review.parking_difficulty && <span>{optionLabel(parkingOptions, review.parking_difficulty)}</span>}
+                {review.crowd_level && <span>혼잡도 {optionLabel(crowdOptions, review.crowd_level)}</span>}
+                {review.parent_fatigue_review && <span>{optionLabel(parentFatigueOptions, review.parent_fatigue_review)}</span>}
+                {(review.hard_points || []).map((point) => <span className="hard-point" key={point}>⚠️ {point}</span>)}
               </div>
               <p>{review.content}</p>
               {!isMine && <button className="review-report-button" type="button" onClick={() => openReport(review.id)}>신고</button>}
