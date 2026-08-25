@@ -746,7 +746,7 @@ export default function App() {
                     <button className={viewMode === 'list' ? 'active' : ''} type="button" aria-pressed={viewMode === 'list'} onClick={() => setViewMode('list')}>▦ 목록 보기</button>
                     <button className={viewMode === 'map' ? 'active' : ''} type="button" aria-pressed={viewMode === 'map'} onClick={() => setViewMode('map')}>📍 지도 보기</button>
                   </div>
-                  <button className="random-button" type="button" onClick={chooseRandom}>🎲 아무 데나 골라줘</button>
+                  <button className="random-button" type="button" onClick={chooseRandom}>🎲 오늘 하나 골라줘</button>
                 </div>
               )}
             </div>
