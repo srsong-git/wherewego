@@ -192,6 +192,8 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .place-info-status > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 11px; padding-top: 10px; border-top: 1px solid #e6dcc5; }
 .place-info-status span { color: #625a49; font-size: .68rem; }
 .place-info-status a { flex: none; color: #315b41; font-size: .72rem; font-weight: 800; text-underline-offset: 3px; }
+.route-fallback-notice { display: flex; align-items: center; justify-content: center; gap: 8px; flex: none; margin: 0; padding: 9px 14px; border-top: 1px solid #e9e1ca; color: #625a49; background: #fff9e8; font-size: .7rem; }
+.route-fallback-notice a { color: #315b41; font-weight: 800; text-underline-offset: 3px; }
 .modal-cta-bar { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 8px; flex: none; padding: 13px clamp(16px, 4vw, 28px); border-top: 1px solid #e4ded2; background: rgba(255, 254, 250, .97); box-shadow: 0 -8px 24px rgba(43, 55, 46, .08); }
 .modal-cta-bar a, .modal-cta-bar button { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 10px 12px; border: 1px solid #d6d5cb; border-radius: 11px; color: #405047; background: #fff; cursor: pointer; font-size: .75rem; font-weight: 800; text-align: center; text-decoration: none; }
 .modal-cta-bar a.route { border-color: #fee500; color: #191919; background: #fee500; }
@@ -370,6 +372,7 @@ footer > div:first-child { display: flex; flex-direction: column; gap: 5px; }
   .place-info-status > div { align-items: flex-start; flex-direction: column; }
   .modal-cta-bar { grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)); padding: 10px 12px max(10px, env(safe-area-inset-bottom)); }
   .modal-cta-bar a, .modal-cta-bar button { min-width: 0; min-height: 44px; padding-inline: 6px; font-size: .72rem; }
+  .route-fallback-notice { flex-wrap: wrap; row-gap: 3px; padding: 8px 12px; font-size: .72rem; }
   .detail-list div { grid-template-columns: 100px 1fr; }
   .detail-list dt { font-size: .8rem; }
   .detail-list dd { min-width: 0; font-size: .86rem; }

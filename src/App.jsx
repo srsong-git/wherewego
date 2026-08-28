@@ -3,6 +3,7 @@ import KakaoMap from './components/KakaoMap.jsx'
 import ReviewSection from './components/ReviewSection.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
 import { getUserDisplayName, isSupabaseConfigured, supabase } from './lib/supabase.js'
+import { getKakaoDirectionsLinks, getKakaoMapLink } from './utils/kakaoLinks.js'
 import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
 const initialFilters = { weather: '', age: '', duration: '', price: '', themes: [] }
@@ -18,10 +19,6 @@ const dialogFocusableSelector = 'a[href], button:not([disabled]), input:not([dis
 
 function formatDistance(distance) {
   return distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`
-}
-
-function getKakaoMapLink(place, type = 'map') {
-  return `https://map.kakao.com/link/${type}/${encodeURIComponent(place.name)},${place.latitude},${place.longitude}`
 }
 
 function toggleValue(values, value) {
@@ -423,7 +420,15 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, 
 function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
+  const [showRouteFallback, setShowRouteFallback] = useState(false)
+  const directionsLinks = getKakaoDirectionsLinks(place)
   useDialogFocusTrap(modalRef, closeButtonRef, onClose)
+
+  const handleDirectionsClick = () => {
+    if (directionsLinks.mode === 'mobile') {
+      setShowRouteFallback(true)
+    }
+  }
 
   return (
     <div className="modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
@@ -465,8 +470,24 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
           </div>
           <ReviewSection place={place} user={user} onLogin={onLogin} />
         </div>
+        {showRouteFallback && (
+          <p className="route-fallback-notice" role="status">
+            앱에서 목적지가 보이지 않나요?
+            <a href={directionsLinks.webFallbackUrl} target="_blank" rel="noreferrer">웹 길찾기로 열기</a>
+          </p>
+        )}
         <div className="modal-cta-bar" aria-label="장소 바로가기">
-          <a className="route" href={getKakaoMapLink(place, 'to')} target="_blank" rel="noreferrer" aria-label={`${place.name} 카카오맵 길찾기 새 창`}>🧭 길찾기</a>
+          <a
+            className="route"
+            href={directionsLinks.primaryUrl}
+            data-mobile-route-url={directionsLinks.mode === 'mobile' ? directionsLinks.primaryUrl : undefined}
+            data-web-fallback-url={directionsLinks.webFallbackUrl}
+            data-place-fallback-url={directionsLinks.placeFallbackUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${place.name} 카카오맵에서 길찾기 새 창`}
+            onClick={handleDirectionsClick}
+          >🧭 길찾기</a>
           <a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.name} 카카오맵에서 보기 새 창`}>📍 지도 보기</a>
           <button type="button" onClick={(event) => event.currentTarget.closest('.place-modal')?.querySelector('.review-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>💬 후기 보기</button>
         </div>
