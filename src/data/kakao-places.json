@@ -179,14 +179,14 @@
     "verified": false,
     "needsReview": false
   },
-  "서울애니메이션센터": {
-    "id": null,
-    "name": null,
-    "url": null,
-    "searchKeyword": "서울애니메이션센터",
-    "address": null,
-    "verified": false,
-    "needsReview": true
+  "서울로봇인공지능과학관": {
+    "id": "1258334839",
+    "name": "서울로봇인공지능과학관",
+    "url": "https://place.map.kakao.com/1258334839",
+    "searchKeyword": "서울로봇인공지능과학관",
+    "address": "서울 도봉구 마들로13길 56",
+    "verified": true,
+    "needsReview": false
   },
   "서울새활용플라자": {
     "id": "1727961587",
