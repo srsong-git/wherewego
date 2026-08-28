@@ -47,13 +47,22 @@ export function getKakaoSearchLink(place) {
   return encodedName ? `https://map.kakao.com/link/search/${encodedName}` : 'https://map.kakao.com/'
 }
 
-export function getKakaoMapLink(place) {
+function getKakaoWebMapLink(place) {
   const placeId = getKakaoPlaceId(place)
   if (placeId) return `https://map.kakao.com/link/map/${placeId}`
   if (!hasValidCoordinates(place)) return getKakaoSearchLink(place)
 
   const encodedName = getEncodedPlaceName(place)
   return `https://map.kakao.com/link/map/${encodedName},${Number(place.latitude)},${Number(place.longitude)}`
+}
+
+export function getKakaoMapLink(place, deviceInfo) {
+  const placeId = getKakaoPlaceId(place)
+  if (placeId && isMobileDevice(deviceInfo)) {
+    return `http://m.map.kakao.com/scheme/place?id=${placeId}`
+  }
+
+  return getKakaoWebMapLink(place)
 }
 
 export function getKakaoPlaceDetailLink(place) {
@@ -63,11 +72,11 @@ export function getKakaoPlaceDetailLink(place) {
   const placeId = getKakaoPlaceId(place)
   if (placeId) return `https://place.map.kakao.com/${placeId}`
 
-  return getKakaoMapLink(place)
+  return getKakaoWebMapLink(place)
 }
 
 export function getKakaoDirectionsLinks(place, deviceInfo) {
-  const placeFallbackUrl = getKakaoMapLink(place)
+  const placeFallbackUrl = getKakaoWebMapLink(place)
   const placeId = getKakaoPlaceId(place)
 
   if (!hasValidCoordinates(place) || !String(place?.name || '').trim()) {
