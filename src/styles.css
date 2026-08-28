@@ -396,3 +396,58 @@ footer > div:first-child { display: flex; flex-direction: column; gap: 5px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+main.kakao-debug { max-width: 1680px; margin: 0 auto; padding: 42px 28px 80px; color: #27342c; }
+.kakao-debug-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.kakao-debug-header h1 { max-width: none; margin: 0; color: #27342c; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; text-shadow: none; }
+.kakao-debug-header p:not(.kakao-debug-eyebrow) { max-width: 760px; margin: 14px 0 0; color: #59645c; line-height: 1.7; }
+.kakao-debug-eyebrow { margin: 0 0 8px; color: #8a6825; font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.kakao-debug-home { flex: none; padding: 11px 15px; border: 1px solid #cfd8ce; border-radius: 10px; color: #315b41; background: #fffefa; text-decoration: none; font-size: .8rem; font-weight: 800; }
+.kakao-debug-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.kakao-debug-summary div { padding: 18px; border: 1px solid #e3dfd3; border-radius: 14px; background: #fffefa; }
+.kakao-debug-summary strong { display: block; color: #315b41; font-size: 1.7rem; }
+.kakao-debug-summary span { color: #626c64; font-size: .75rem; }
+.kakao-debug-priority, .kakao-debug-table-section { margin-top: 20px; padding: 24px; border: 1px solid #e3dfd3; border-radius: 18px; background: #fffefa; box-shadow: 0 10px 28px rgba(50, 63, 53, .05); }
+.kakao-debug-section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.kakao-debug-section-heading h2 { margin: 0; }
+.kakao-debug-section-heading > span { flex: none; padding: 7px 10px; border-radius: 999px; color: #315b41; background: #e5efe6; font-size: .75rem; font-weight: 800; }
+.kakao-debug-priority > p { margin: 12px 0 16px; color: #59645c; font-size: .82rem; }
+.kakao-debug-priority details { border-top: 1px solid #ebe6da; padding-top: 14px; }
+.kakao-debug-priority details + details { margin-top: 14px; }
+.kakao-debug-priority summary { cursor: pointer; color: #315b41; font-size: .82rem; font-weight: 800; }
+.kakao-debug-name-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+.kakao-debug-name-list span { padding: 6px 8px; border-radius: 8px; color: #5f5143; background: #f4efe7; font-size: .72rem; }
+.kakao-debug-missing { margin-top: 16px; padding: 13px 15px; border-radius: 10px; color: #824538; background: #fff0eb; font-size: .78rem; }
+.kakao-debug-missing p { margin: 5px 0 0; }
+.kakao-debug-table-wrap { overflow: auto; max-height: 74vh; margin-top: 18px; border: 1px solid #ddd9ce; border-radius: 12px; background: #fff; }
+.kakao-debug-table-wrap:focus-visible { outline-offset: 3px; }
+.kakao-debug table { width: 100%; min-width: 1900px; border-collapse: collapse; font-size: .76rem; }
+.kakao-debug caption { position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(0 0 0 0); white-space: nowrap; }
+.kakao-debug th, .kakao-debug td { padding: 13px 12px; border-right: 1px solid #eeeae0; border-bottom: 1px solid #eeeae0; text-align: left; vertical-align: top; }
+.kakao-debug thead th { position: sticky; z-index: 2; top: 0; color: #fff; background: #335e45; }
+.kakao-debug tbody th { min-width: 150px; color: #27342c; background: #fcfaf4; }
+.kakao-debug td { min-width: 150px; }
+.kakao-debug td:nth-child(3) { min-width: 220px; }
+.kakao-debug td:nth-child(4), .kakao-debug td:nth-child(5), .kakao-debug td:nth-child(6) { min-width: 250px; }
+.kakao-debug td > small { display: block; overflow-wrap: anywhere; margin-top: 6px; color: #69736b; line-height: 1.5; }
+.kakao-debug code { overflow-wrap: anywhere; font-family: Consolas, monospace; font-size: .7rem; }
+.kakao-debug-url-cell { display: grid; gap: 8px; }
+.kakao-debug-url-cell code { display: -webkit-box; overflow: hidden; color: #59645c; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.kakao-debug-url-cell a { width: max-content; padding: 7px 9px; border: 1px solid #bfd0c0; border-radius: 8px; color: #315b41; background: #f1f7ef; text-decoration: none; font-size: .7rem; font-weight: 800; }
+.kakao-debug-empty { color: #9a574b; }
+.kakao-debug-statuses { display: flex; flex-wrap: wrap; gap: 5px; min-width: 170px; }
+.kakao-debug-status { padding: 5px 7px; border-radius: 7px; font-size: .66rem; font-weight: 800; white-space: nowrap; }
+.kakao-debug-status.danger { color: #8d3f36; background: #ffe8e4; }
+.kakao-debug-status.warning { color: #84621f; background: #fff1cb; }
+.kakao-debug-status.info { color: #31587a; background: #e7f2fb; }
+.kakao-debug-status.success { color: #2f6542; background: #e5f3e8; }
+.kakao-debug-status.neutral { color: #5f665f; background: #eceee9; }
+
+@media (max-width: 720px) {
+  main.kakao-debug { margin: 0; padding: 24px 14px 54px; }
+  .kakao-debug-header { flex-direction: column; }
+  .kakao-debug-home { width: 100%; text-align: center; }
+  .kakao-debug-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kakao-debug-priority, .kakao-debug-table-section { padding: 18px 14px; border-radius: 14px; }
+  .kakao-debug-table-wrap { max-height: 68vh; }
+}

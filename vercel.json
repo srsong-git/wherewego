@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/debug/kakao-links", "destination": "/" }
+  ]
+}
