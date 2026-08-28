@@ -421,14 +421,14 @@ main.kakao-debug { max-width: 1680px; margin: 0 auto; padding: 42px 28px 80px; c
 .kakao-debug-missing p { margin: 5px 0 0; }
 .kakao-debug-table-wrap { overflow: auto; max-height: 74vh; margin-top: 18px; border: 1px solid #ddd9ce; border-radius: 12px; background: #fff; }
 .kakao-debug-table-wrap:focus-visible { outline-offset: 3px; }
-.kakao-debug table { width: 100%; min-width: 1900px; border-collapse: collapse; font-size: .76rem; }
+.kakao-debug table { width: 100%; min-width: 2240px; border-collapse: collapse; font-size: .76rem; }
 .kakao-debug caption { position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(0 0 0 0); white-space: nowrap; }
 .kakao-debug th, .kakao-debug td { padding: 13px 12px; border-right: 1px solid #eeeae0; border-bottom: 1px solid #eeeae0; text-align: left; vertical-align: top; }
 .kakao-debug thead th { position: sticky; z-index: 2; top: 0; color: #fff; background: #335e45; }
 .kakao-debug tbody th { min-width: 150px; color: #27342c; background: #fcfaf4; }
 .kakao-debug td { min-width: 150px; }
-.kakao-debug td:nth-child(3) { min-width: 220px; }
-.kakao-debug td:nth-child(4), .kakao-debug td:nth-child(5), .kakao-debug td:nth-child(6) { min-width: 250px; }
+.kakao-debug td:nth-child(4) { min-width: 220px; }
+.kakao-debug td:nth-child(7), .kakao-debug td:nth-child(8), .kakao-debug td:nth-child(9) { min-width: 250px; }
 .kakao-debug td > small { display: block; overflow-wrap: anywhere; margin-top: 6px; color: #69736b; line-height: 1.5; }
 .kakao-debug code { overflow-wrap: anywhere; font-family: Consolas, monospace; font-size: .7rem; }
 .kakao-debug-url-cell { display: grid; gap: 8px; }

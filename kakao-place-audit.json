@@ -1,0 +1,4438 @@
+{
+  "generatedAt": "2026-08-28T22:02:41.266Z",
+  "source": "https://dapi.kakao.com/v2/local/search/keyword.json",
+  "total": 100,
+  "linked": 99,
+  "needsReview": 1,
+  "entries": [
+    {
+      "id": "place-001",
+      "name": "국립중앙박물관",
+      "address": "서울 용산구 서빙고로 137",
+      "latitude": 37.5239,
+      "longitude": 126.9803,
+      "kakaoSearchKeyword": "국립중앙박물관",
+      "selectedKakaoPlaceName": "국립중앙박물관",
+      "selectedKakaoPlaceId": "8830150",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8830150",
+      "candidates": [
+        {
+          "place_name": "국립중앙박물관",
+          "id": "8830150",
+          "place_url": "https://place.map.kakao.com/8830150",
+          "address_name": "서울 용산구 용산동6가 168-6",
+          "road_address_name": "서울 용산구 서빙고로 137",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 10,
+          "score": 100
+        },
+        {
+          "place_name": "국립중앙박물관 상설전시관",
+          "id": "17558259",
+          "place_url": "https://place.map.kakao.com/17558259",
+          "address_name": "서울 용산구 용산동6가 168-6",
+          "road_address_name": "서울 용산구 서빙고로 137",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 55,
+          "score": 79
+        },
+        {
+          "place_name": "국립중앙박물관 대강당",
+          "id": "1969680356",
+          "place_url": "https://place.map.kakao.com/1969680356",
+          "address_name": "서울 용산구 용산동6가 168-6",
+          "road_address_name": "서울 용산구 서빙고로 137",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 58,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·용산구·서빙고로·137·용산 일치 · 기존 좌표에서 10m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-002",
+      "name": "코엑스 아쿠아리움",
+      "address": "서울 강남구 영동대로 513",
+      "latitude": 37.5134,
+      "longitude": 127.0588,
+      "kakaoSearchKeyword": "코엑스 아쿠아리움",
+      "selectedKakaoPlaceName": "코엑스 아쿠아리움",
+      "selectedKakaoPlaceId": "12860036",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12860036",
+      "candidates": [
+        {
+          "place_name": "코엑스 아쿠아리움",
+          "id": "12860036",
+          "place_url": "https://place.map.kakao.com/12860036",
+          "address_name": "서울 강남구 삼성동 159",
+          "road_address_name": "서울 강남구 영동대로 513",
+          "category_name": "문화,예술 > 문화시설 > 아쿠아리움",
+          "distance": 28,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·강남구·영동대로·513·강남 일치 · 기존 좌표에서 28m · 카테고리 아쿠아리움 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-003",
+      "name": "롯데월드",
+      "address": "서울 송파구 올림픽로 240",
+      "latitude": 37.5111,
+      "longitude": 127.0982,
+      "kakaoSearchKeyword": "롯데월드 어드벤처",
+      "selectedKakaoPlaceName": "롯데월드 어드벤처",
+      "selectedKakaoPlaceId": "27560699",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27560699",
+      "candidates": [
+        {
+          "place_name": "롯데월드 어드벤처",
+          "id": "27560699",
+          "place_url": "https://place.map.kakao.com/27560699",
+          "address_name": "서울 송파구 잠실동 40-1",
+          "road_address_name": "서울 송파구 올림픽로 240",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 7,
+          "score": 100
+        },
+        {
+          "place_name": "롯데월드 어드벤처 메이플아일랜드",
+          "id": "1473759919",
+          "place_url": "https://place.map.kakao.com/1473759919",
+          "address_name": "서울 송파구 잠실동 47-1",
+          "road_address_name": "서울 송파구 송파나루길 15",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 272,
+          "score": 76
+        },
+        {
+          "place_name": "퍼틴 롯데월드점",
+          "id": "1233410107",
+          "place_url": "https://place.map.kakao.com/1233410107",
+          "address_name": "서울 송파구 잠실동 40-1",
+          "road_address_name": "서울 송파구 올림픽로 240",
+          "category_name": "음식점 > 아시아음식 > 동남아음식 > 베트남음식",
+          "distance": 15,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·송파구·올림픽로·240·송파 일치 · 기존 좌표에서 7m · 카테고리 테마파크 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-004",
+      "name": "서울어린이대공원",
+      "address": "서울 광진구 능동로 216",
+      "latitude": 37.5494,
+      "longitude": 127.0811,
+      "kakaoSearchKeyword": "서울어린이대공원",
+      "selectedKakaoPlaceName": "서울어린이대공원",
+      "selectedKakaoPlaceId": "1512054004",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1512054004",
+      "candidates": [
+        {
+          "place_name": "서울어린이대공원",
+          "id": "1512054004",
+          "place_url": "https://place.map.kakao.com/1512054004",
+          "address_name": "서울 광진구 능동 18",
+          "road_address_name": "서울 광진구 능동로 216",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 99,
+          "score": 100
+        },
+        {
+          "place_name": "서울어린이대공원 식물원",
+          "id": "7993544",
+          "place_url": "https://place.map.kakao.com/7993544",
+          "address_name": "서울 광진구 능동 18-40",
+          "road_address_name": "서울 광진구 광나루로 441",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 84,
+          "score": 79
+        },
+        {
+          "place_name": "서울어린이대공원 동물원",
+          "id": "17556470",
+          "place_url": "https://place.map.kakao.com/17556470",
+          "address_name": "서울 광진구 능동 18",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 동물원",
+          "distance": 168,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·광진구·능동로·216·광진 일치 · 기존 좌표에서 99m · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-005",
+      "name": "서울식물원",
+      "address": "서울 강서구 마곡동로 161",
+      "latitude": 37.5694,
+      "longitude": 126.835,
+      "kakaoSearchKeyword": "서울식물원",
+      "selectedKakaoPlaceName": "서울식물원",
+      "selectedKakaoPlaceId": "1164966384",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1164966384",
+      "candidates": [
+        {
+          "place_name": "서울식물원",
+          "id": "1164966384",
+          "place_url": "https://place.map.kakao.com/1164966384",
+          "address_name": "서울 강서구 마곡동 727-256",
+          "road_address_name": "서울 강서구 마곡동로 161",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 3,
+          "score": 100
+        },
+        {
+          "place_name": "서울식물원 식물문화센터",
+          "id": "1825513490",
+          "place_url": "https://place.map.kakao.com/1825513490",
+          "address_name": "서울 강서구 마곡동 727-256",
+          "road_address_name": "서울 강서구 마곡동로 161",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 3,
+          "score": 65
+        },
+        {
+          "place_name": "서울식물원 식물문화센터 지하주차장",
+          "id": "1090811713",
+          "place_url": "https://place.map.kakao.com/1090811713",
+          "address_name": "서울 강서구 마곡동 812",
+          "road_address_name": "서울 강서구 마곡동로 161",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 6,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·강서구·마곡동로·161·강서 일치 · 기존 좌표에서 3m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-006",
+      "name": "서대문자연사박물관",
+      "address": "서울 서대문구 연희로32길 51",
+      "latitude": 37.5767,
+      "longitude": 126.9379,
+      "kakaoSearchKeyword": "서대문자연사박물관",
+      "selectedKakaoPlaceName": "서대문자연사박물관",
+      "selectedKakaoPlaceId": "11139995",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11139995",
+      "candidates": [
+        {
+          "place_name": "서대문자연사박물관",
+          "id": "11139995",
+          "place_url": "https://place.map.kakao.com/11139995",
+          "address_name": "서울 서대문구 연희동 141-52",
+          "road_address_name": "서울 서대문구 연희로32길 51",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 6,
+          "score": 100
+        },
+        {
+          "place_name": "서대문자연사박물관 전시교육팀",
+          "id": "9105315",
+          "place_url": "https://place.map.kakao.com/9105315",
+          "address_name": "서울 서대문구 연희동 141-52",
+          "road_address_name": "서울 서대문구 연희로32길 51",
+          "category_name": "서비스,산업 > 관리,운영 > 문화시설관리운영",
+          "distance": 6,
+          "score": 79
+        },
+        {
+          "place_name": "서대문자연사박물관 주차장",
+          "id": "20590581",
+          "place_url": "https://place.map.kakao.com/20590581",
+          "address_name": "서울 서대문구 연희동 141-52",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 28,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·서대문구·연희로32길·51·서대문 일치 · 기존 좌표에서 6m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-007",
+      "name": "서울숲",
+      "address": "서울 성동구 성수동1가 678-1",
+      "latitude": 37.5444,
+      "longitude": 127.0374,
+      "kakaoSearchKeyword": "서울숲",
+      "selectedKakaoPlaceName": "서울숲",
+      "selectedKakaoPlaceId": "11331488",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11331488",
+      "candidates": [
+        {
+          "place_name": "서울숲",
+          "id": "11331488",
+          "place_url": "https://place.map.kakao.com/11331488",
+          "address_name": "서울 성동구 성수동1가 678-1",
+          "road_address_name": "",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 21,
+          "score": 100
+        },
+        {
+          "place_name": "서울형키즈카페 시립 서울숲점",
+          "id": "2081050390",
+          "place_url": "https://place.map.kakao.com/2081050390",
+          "address_name": "서울 성동구 성수동1가 720",
+          "road_address_name": "",
+          "category_name": "가정,생활 > 유아 > 놀이시설 > 키즈카페 > 서울형키즈카페",
+          "distance": 203,
+          "score": 62
+        },
+        {
+          "place_name": "서울숲씨어터",
+          "id": "1772440780",
+          "place_url": "https://place.map.kakao.com/1772440780",
+          "address_name": "서울 성동구 성수동1가 685-696",
+          "road_address_name": "서울 성동구 서울숲2길 32-14",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 507,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·성동구·성수동1가·6781·성동 일치 · 기존 좌표에서 21m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-008",
+      "name": "국립어린이과학관",
+      "address": "서울 종로구 창경궁로 215",
+      "latitude": 37.5812,
+      "longitude": 126.9975,
+      "kakaoSearchKeyword": "국립어린이과학관",
+      "selectedKakaoPlaceName": "국립어린이과학관",
+      "selectedKakaoPlaceId": "1955379751",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1955379751",
+      "candidates": [
+        {
+          "place_name": "국립어린이과학관",
+          "id": "1955379751",
+          "place_url": "https://place.map.kakao.com/1955379751",
+          "address_name": "서울 종로구 와룡동 2-70",
+          "road_address_name": "서울 종로구 창경궁로 215",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 91,
+          "score": 100
+        },
+        {
+          "place_name": "국립어린이과학관 빛놀이터",
+          "id": "1842491908",
+          "place_url": "https://place.map.kakao.com/1842491908",
+          "address_name": "서울 종로구 와룡동 2-70",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 92,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·창경궁로·215·종로 일치 · 기존 좌표에서 91m · 카테고리 과학관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-009",
+      "name": "여의도한강공원",
+      "address": "서울 영등포구 여의도동 85",
+      "latitude": 37.5285,
+      "longitude": 126.9349,
+      "kakaoSearchKeyword": "여의도한강공원",
+      "selectedKakaoPlaceName": "여의도한강공원",
+      "selectedKakaoPlaceId": "10952963",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10952963",
+      "candidates": [
+        {
+          "place_name": "여의도한강공원",
+          "id": "10952963",
+          "place_url": "https://place.map.kakao.com/10952963",
+          "address_name": "서울 영등포구 여의도동 85",
+          "road_address_name": "",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 235,
+          "score": 100
+        },
+        {
+          "place_name": "여의도한강공원 이벤트광장",
+          "id": "17924712",
+          "place_url": "https://place.map.kakao.com/17924712",
+          "address_name": "서울 영등포구 여의도동 84-4",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 150,
+          "score": 76
+        },
+        {
+          "place_name": "여의도한강공원 멀티플라자",
+          "id": "25758412",
+          "place_url": "https://place.map.kakao.com/25758412",
+          "address_name": "서울 영등포구 여의도동 84-4",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 192,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·영등포구·여의도동·85·영등포 일치 · 기존 좌표에서 235m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-010",
+      "name": "별마당도서관",
+      "address": "서울 강남구 삼성동 159-9",
+      "latitude": 37.5101,
+      "longitude": 127.06,
+      "kakaoSearchKeyword": "별마당도서관",
+      "selectedKakaoPlaceName": "별마당도서관 스타필드코엑스몰",
+      "selectedKakaoPlaceId": "2104663194",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2104663194",
+      "candidates": [
+        {
+          "place_name": "별마당도서관 스타필드코엑스몰",
+          "id": "2104663194",
+          "place_url": "https://place.map.kakao.com/2104663194",
+          "address_name": "서울 강남구 삼성동 159-9",
+          "road_address_name": "",
+          "category_name": "교육,학문 > 학습시설 > 도서관",
+          "distance": 17,
+          "score": 100
+        },
+        {
+          "place_name": "퍼센트아라비카 1호점",
+          "id": "109565743",
+          "place_url": "https://place.map.kakao.com/109565743",
+          "address_name": "서울 강남구 삼성동 159-9",
+          "road_address_name": "",
+          "category_name": "음식점 > 카페",
+          "distance": 24,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·강남구·삼성동·1599·강남 일치 · 기존 좌표에서 17m · 카테고리 도서관 일치 · 기존 장소 ID 일치 · 2위와 66점 차이"
+    },
+    {
+      "id": "place-011",
+      "name": "서울역사박물관",
+      "address": "서울 종로구 새문안로 55",
+      "latitude": 37.5705,
+      "longitude": 126.9707,
+      "kakaoSearchKeyword": "서울역사박물관",
+      "selectedKakaoPlaceName": "서울역사박물관",
+      "selectedKakaoPlaceId": "7934135",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7934135",
+      "candidates": [
+        {
+          "place_name": "서울역사박물관",
+          "id": "7934135",
+          "place_url": "https://place.map.kakao.com/7934135",
+          "address_name": "서울 종로구 신문로2가 2-1",
+          "road_address_name": "서울 종로구 새문안로 55",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 13,
+          "score": 100
+        },
+        {
+          "place_name": "서울역사박물관 어린이박물관",
+          "id": "1741458115",
+          "place_url": "https://place.map.kakao.com/1741458115",
+          "address_name": "서울 종로구 신문로2가 2-1",
+          "road_address_name": "서울 종로구 새문안로 55",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 22,
+          "score": 79
+        },
+        {
+          "place_name": "서울역사박물관 주차장",
+          "id": "618986748",
+          "place_url": "https://place.map.kakao.com/618986748",
+          "address_name": "서울 종로구 신문로2가 1-126",
+          "road_address_name": "서울 종로구 새문안로 45",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 134,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·새문안로·55·종로 일치 · 기존 좌표에서 13m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-012",
+      "name": "서울공예박물관",
+      "address": "서울 종로구 율곡로3길 4",
+      "latitude": 37.5768,
+      "longitude": 126.9832,
+      "kakaoSearchKeyword": "서울공예박물관",
+      "selectedKakaoPlaceName": "서울공예박물관",
+      "selectedKakaoPlaceId": "1038056172",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1038056172",
+      "candidates": [
+        {
+          "place_name": "서울공예박물관",
+          "id": "1038056172",
+          "place_url": "https://place.map.kakao.com/1038056172",
+          "address_name": "서울 종로구 안국동 175-112",
+          "road_address_name": "서울 종로구 율곡로3길 4",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 19,
+          "score": 100
+        },
+        {
+          "place_name": "서울공예박물관 어린이박물관",
+          "id": "1395978192",
+          "place_url": "https://place.map.kakao.com/1395978192",
+          "address_name": "서울 종로구 안국동 175-112",
+          "road_address_name": "서울 종로구 율곡로3길 4",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 29,
+          "score": 79
+        },
+        {
+          "place_name": "서울공예박물관 직물보존연구센터",
+          "id": "133825377",
+          "place_url": "https://place.map.kakao.com/133825377",
+          "address_name": "서울 종로구 안국동 175-112",
+          "road_address_name": "서울 종로구 율곡로3길 4",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 80,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·율곡로3길·종로 일치 · 기존 좌표에서 19m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-013",
+      "name": "국립민속박물관",
+      "address": "서울 종로구 삼청로 37",
+      "latitude": 37.5814,
+      "longitude": 126.9788,
+      "kakaoSearchKeyword": "국립민속박물관 본관",
+      "selectedKakaoPlaceName": "국립민속박물관 본관",
+      "selectedKakaoPlaceId": "8191467",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8191467",
+      "candidates": [
+        {
+          "place_name": "국립민속박물관 본관",
+          "id": "8191467",
+          "place_url": "https://place.map.kakao.com/8191467",
+          "address_name": "서울 종로구 세종로 1-1",
+          "road_address_name": "서울 종로구 삼청로 37",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 38,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·종로구·삼청로·37·종로 일치 · 기존 좌표에서 38m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-014",
+      "name": "국립고궁박물관",
+      "address": "서울 종로구 효자로 12",
+      "latitude": 37.5766,
+      "longitude": 126.9749,
+      "kakaoSearchKeyword": "국립고궁박물관",
+      "selectedKakaoPlaceName": "국립고궁박물관",
+      "selectedKakaoPlaceId": "8214304",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8214304",
+      "candidates": [
+        {
+          "place_name": "국립고궁박물관",
+          "id": "8214304",
+          "place_url": "https://place.map.kakao.com/8214304",
+          "address_name": "서울 종로구 세종로 1-57",
+          "road_address_name": "서울 종로구 효자로 12",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 6,
+          "score": 100
+        },
+        {
+          "place_name": "국립고궁박물관 별관",
+          "id": "1054632204",
+          "place_url": "https://place.map.kakao.com/1054632204",
+          "address_name": "서울 종로구 세종로 1-1",
+          "road_address_name": "서울 종로구 사직로 161",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 149,
+          "score": 76
+        },
+        {
+          "place_name": "국립고궁박물관 전시동 1,2,지하1층 개방화장실",
+          "id": "26336002",
+          "place_url": "https://place.map.kakao.com/26336002",
+          "address_name": "서울 종로구 세종로 1-57",
+          "road_address_name": "서울 종로구 효자로 12",
+          "category_name": "가정,생활 > 화장실",
+          "distance": 5,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·효자로·12·종로 일치 · 기존 좌표에서 6m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-015",
+      "name": "전쟁기념관",
+      "address": "서울 용산구 이태원로 29",
+      "latitude": 37.5365,
+      "longitude": 126.977,
+      "kakaoSearchKeyword": "전쟁기념관",
+      "selectedKakaoPlaceName": "전쟁기념관",
+      "selectedKakaoPlaceId": "8077761",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8077761",
+      "candidates": [
+        {
+          "place_name": "전쟁기념관",
+          "id": "8077761",
+          "place_url": "https://place.map.kakao.com/8077761",
+          "address_name": "서울 용산구 용산동1가 8",
+          "road_address_name": "서울 용산구 이태원로 29",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 63,
+          "score": 100
+        },
+        {
+          "place_name": "전쟁기념관 기획전시실",
+          "id": "12421790",
+          "place_url": "https://place.map.kakao.com/12421790",
+          "address_name": "서울 용산구 용산동1가 8",
+          "road_address_name": "서울 용산구 이태원로 29",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 49,
+          "score": 79
+        },
+        {
+          "place_name": "전쟁기념관 이병형홀",
+          "id": "11163836",
+          "place_url": "https://place.map.kakao.com/11163836",
+          "address_name": "서울 용산구 용산동1가 8",
+          "road_address_name": "서울 용산구 이태원로 29",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 90,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·용산구·이태원로·29·용산 일치 · 기존 좌표에서 63m · 카테고리 기념관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-016",
+      "name": "대한민국역사박물관",
+      "address": "서울 종로구 세종대로 198",
+      "latitude": 37.5739,
+      "longitude": 126.9783,
+      "kakaoSearchKeyword": "대한민국역사박물관",
+      "selectedKakaoPlaceName": "대한민국역사박물관",
+      "selectedKakaoPlaceId": "15104327",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/15104327",
+      "candidates": [
+        {
+          "place_name": "대한민국역사박물관",
+          "id": "15104327",
+          "place_url": "https://place.map.kakao.com/15104327",
+          "address_name": "서울 종로구 세종로 82-1",
+          "road_address_name": "서울 종로구 세종대로 198",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 40,
+          "score": 100
+        },
+        {
+          "place_name": "대한민국역사박물관 주차장",
+          "id": "26458507",
+          "place_url": "https://place.map.kakao.com/26458507",
+          "address_name": "서울 종로구 세종로 82-1",
+          "road_address_name": "서울 종로구 세종대로 198",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 21,
+          "score": 65
+        },
+        {
+          "place_name": "대한민국역사박물관1층 개방화장실",
+          "id": "26335721",
+          "place_url": "https://place.map.kakao.com/26335721",
+          "address_name": "서울 종로구 세종로 82-1",
+          "road_address_name": "서울 종로구 세종대로 198",
+          "category_name": "가정,생활 > 화장실",
+          "distance": 40,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·세종대로·198·종로 일치 · 기존 좌표에서 40m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-017",
+      "name": "서울상상나라",
+      "address": "서울 광진구 능동로 216",
+      "latitude": 37.5495,
+      "longitude": 127.0857,
+      "kakaoSearchKeyword": "서울상상나라",
+      "selectedKakaoPlaceName": "서울상상나라",
+      "selectedKakaoPlaceId": "1612238355",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1612238355",
+      "candidates": [
+        {
+          "place_name": "서울상상나라",
+          "id": "1612238355",
+          "place_url": "https://place.map.kakao.com/1612238355",
+          "address_name": "서울 광진구 능동 18",
+          "road_address_name": "서울 광진구 능동로 216",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 732,
+          "score": 100
+        },
+        {
+          "place_name": "서울형키즈카페 시립 서울상상나라점",
+          "id": "1077861142",
+          "place_url": "https://place.map.kakao.com/1077861142",
+          "address_name": "서울 광진구 능동 18",
+          "road_address_name": "서울 광진구 능동로 216",
+          "category_name": "가정,생활 > 유아 > 놀이시설 > 키즈카페 > 서울형키즈카페",
+          "distance": 731,
+          "score": 71
+        },
+        {
+          "place_name": "행복플러스가게 서울상상나라점",
+          "id": "21546818",
+          "place_url": "https://place.map.kakao.com/21546818",
+          "address_name": "서울 광진구 능동 18",
+          "road_address_name": "서울 광진구 능동로 216",
+          "category_name": "음식점 > 카페",
+          "distance": 722,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·광진구·능동로·216·광진 일치 · 기존 좌표에서 732m · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-018",
+      "name": "서울시립과학관",
+      "address": "서울 노원구 한글비석로 160",
+      "latitude": 37.6425,
+      "longitude": 127.0775,
+      "kakaoSearchKeyword": "서울시립과학관",
+      "selectedKakaoPlaceName": "서울시립과학관",
+      "selectedKakaoPlaceId": "30041527",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/30041527",
+      "candidates": [
+        {
+          "place_name": "서울시립과학관",
+          "id": "30041527",
+          "place_url": "https://place.map.kakao.com/30041527",
+          "address_name": "서울 노원구 하계동 21",
+          "road_address_name": "서울 노원구 한글비석로 160",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 74,
+          "score": 100
+        },
+        {
+          "place_name": "서울시립과학관 주차장",
+          "id": "1813190063",
+          "place_url": "https://place.map.kakao.com/1813190063",
+          "address_name": "서울 노원구 하계동 21",
+          "road_address_name": "서울 노원구 한글비석로 160",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 56,
+          "score": 65
+        },
+        {
+          "place_name": "서울시 노원구 서울시립과학관 전기차충전소",
+          "id": "161459096",
+          "place_url": "https://place.map.kakao.com/161459096",
+          "address_name": "서울 노원구 하계동 21",
+          "road_address_name": "서울 노원구 한글비석로 160",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 56,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·노원구·한글비석로·160·노원 일치 · 기존 좌표에서 74m · 카테고리 과학관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-019",
+      "name": "국립항공박물관",
+      "address": "서울 강서구 하늘길 177",
+      "latitude": 37.5569,
+      "longitude": 126.8088,
+      "kakaoSearchKeyword": "국립항공박물관",
+      "selectedKakaoPlaceName": "국립항공박물관",
+      "selectedKakaoPlaceId": "1873127229",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1873127229",
+      "candidates": [
+        {
+          "place_name": "국립항공박물관",
+          "id": "1873127229",
+          "place_url": "https://place.map.kakao.com/1873127229",
+          "address_name": "서울 강서구 공항동 1373-5",
+          "road_address_name": "서울 강서구 하늘길 177",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 6,
+          "score": 100
+        },
+        {
+          "place_name": "국립항공박물관 전기차충전소",
+          "id": "1567189690",
+          "place_url": "https://place.map.kakao.com/1567189690",
+          "address_name": "서울 강서구 공항동 1373-5",
+          "road_address_name": "서울 강서구 하늘길 177",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 7,
+          "score": 65
+        },
+        {
+          "place_name": "국립항공박물관 항공배움놀이터",
+          "id": "2008449848",
+          "place_url": "https://place.map.kakao.com/2008449848",
+          "address_name": "서울 강서구 공항동 1373-5",
+          "road_address_name": "서울 강서구 하늘길 177",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 14,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·강서구·하늘길·177·강서 일치 · 기존 좌표에서 6m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-020",
+      "name": "뮤지엄김치간",
+      "address": "서울 종로구 인사동길 35-4",
+      "latitude": 37.5742,
+      "longitude": 126.9849,
+      "kakaoSearchKeyword": "뮤지엄김치간",
+      "selectedKakaoPlaceName": "뮤지엄김치간",
+      "selectedKakaoPlaceId": "26601040",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26601040",
+      "candidates": [
+        {
+          "place_name": "뮤지엄김치간",
+          "id": "26601040",
+          "place_url": "https://place.map.kakao.com/26601040",
+          "address_name": "서울 종로구 관훈동 192-15",
+          "road_address_name": "서울 종로구 인사동길 35-4",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 66,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": true,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·인사동길·354·종로 일치 · 기존 좌표에서 66m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-021",
+      "name": "서울애니메이션센터",
+      "address": "서울 중구",
+      "latitude": 37.5608,
+      "longitude": 126.9879,
+      "kakaoSearchKeyword": "서울애니메이션센터",
+      "selectedKakaoPlaceName": null,
+      "selectedKakaoPlaceId": null,
+      "selectedKakaoPlaceUrl": null,
+      "candidates": [],
+      "confidenceScore": 0,
+      "kakaoNeedsReview": true,
+      "priorityReview": false,
+      "reason": "자동 반영 보류 · 3km 내 검색 후보 없음"
+    },
+    {
+      "id": "place-022",
+      "name": "서울새활용플라자",
+      "address": "서울 성동구 자동차시장길 49",
+      "latitude": 37.5586,
+      "longitude": 127.0574,
+      "kakaoSearchKeyword": "서울새활용플라자",
+      "selectedKakaoPlaceName": "서울새활용플라자",
+      "selectedKakaoPlaceId": "1727961587",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1727961587",
+      "candidates": [
+        {
+          "place_name": "서울새활용플라자",
+          "id": "1727961587",
+          "place_url": "https://place.map.kakao.com/1727961587",
+          "address_name": "서울 성동구 용답동 250-14",
+          "road_address_name": "서울 성동구 자동차시장길 49",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 37,
+          "score": 100
+        },
+        {
+          "place_name": "서울새활용플라자 주차장",
+          "id": "225743458",
+          "place_url": "https://place.map.kakao.com/225743458",
+          "address_name": "서울 성동구 용답동 250-14",
+          "road_address_name": "서울 성동구 자동차시장길 49",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 31,
+          "score": 65
+        },
+        {
+          "place_name": "서울새활용플라자 전기차충전소",
+          "id": "1381704141",
+          "place_url": "https://place.map.kakao.com/1381704141",
+          "address_name": "서울 성동구 용답동 250-14",
+          "road_address_name": "서울 성동구 자동차시장길 49",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 31,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·성동구·자동차시장길·49·성동 일치 · 기존 좌표에서 37m · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-023",
+      "name": "서울에너지드림센터",
+      "address": "서울 마포구 증산로 14",
+      "latitude": 37.5631,
+      "longitude": 126.8947,
+      "kakaoSearchKeyword": "서울에너지드림센터",
+      "selectedKakaoPlaceName": "서울에너지드림센터",
+      "selectedKakaoPlaceId": "19190782",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/19190782",
+      "candidates": [
+        {
+          "place_name": "서울에너지드림센터",
+          "id": "19190782",
+          "place_url": "https://place.map.kakao.com/19190782",
+          "address_name": "서울 마포구 상암동 1535-3",
+          "road_address_name": "서울 마포구 증산로 14",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 290,
+          "score": 100
+        },
+        {
+          "place_name": "서울특별시환경교육센터",
+          "id": "297854574",
+          "place_url": "https://place.map.kakao.com/297854574",
+          "address_name": "서울 마포구 상암동 1535-3",
+          "road_address_name": "서울 마포구 증산로 14",
+          "category_name": "교육,학문 > 교육단체",
+          "distance": 286,
+          "score": 31
+        },
+        {
+          "place_name": "서울시탄소중립체험관",
+          "id": "937348553",
+          "place_url": "https://place.map.kakao.com/937348553",
+          "address_name": "서울 마포구 상암동 1535-3",
+          "road_address_name": "서울 마포구 증산로 14",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 289,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·마포구·증산로·14·마포 일치 · 기존 좌표에서 290m · 카테고리 전시관 일치 · 기존 장소 ID 일치 · 2위와 69점 차이"
+    },
+    {
+      "id": "place-024",
+      "name": "서울하수도과학관",
+      "address": "서울 성동구 자동차시장3길 64",
+      "latitude": 37.5593,
+      "longitude": 127.0626,
+      "kakaoSearchKeyword": "서울하수도과학관",
+      "selectedKakaoPlaceName": "서울하수도과학관",
+      "selectedKakaoPlaceId": "324009424",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/324009424",
+      "candidates": [
+        {
+          "place_name": "서울하수도과학관",
+          "id": "324009424",
+          "place_url": "https://place.map.kakao.com/324009424",
+          "address_name": "서울 성동구 용답동 250-7",
+          "road_address_name": "서울 성동구 자동차시장3길 64",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 448,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·성동구·자동차시장3길·64·성동 일치 · 기존 좌표에서 448m · 카테고리 과학관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-025",
+      "name": "서울시립미술관 서소문본관",
+      "address": "서울 중구 덕수궁길 61",
+      "latitude": 37.5641,
+      "longitude": 126.9738,
+      "kakaoSearchKeyword": "서울시립미술관 서소문본관",
+      "selectedKakaoPlaceName": "서울시립미술관 서소문본관",
+      "selectedKakaoPlaceId": "10507051",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10507051",
+      "candidates": [
+        {
+          "place_name": "서울시립미술관 서소문본관",
+          "id": "10507051",
+          "place_url": "https://place.map.kakao.com/10507051",
+          "address_name": "서울 중구 서소문동 37",
+          "road_address_name": "서울 중구 덕수궁길 61",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 8,
+          "score": 100
+        },
+        {
+          "place_name": "서울시립미술관 서소문본관 주차장",
+          "id": "14535368",
+          "place_url": "https://place.map.kakao.com/14535368",
+          "address_name": "서울 중구 서소문동 37",
+          "road_address_name": "서울 중구 덕수궁길 15",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 35,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·중구·덕수궁길·61 일치 · 기존 좌표에서 8m · 카테고리 미술관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-026",
+      "name": "서울시립 북서울미술관",
+      "address": "서울 노원구 동일로 1238",
+      "latitude": 37.6409,
+      "longitude": 127.0668,
+      "kakaoSearchKeyword": "서울시립 북서울미술관",
+      "selectedKakaoPlaceName": "서울시립 북서울미술관",
+      "selectedKakaoPlaceId": "21748070",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/21748070",
+      "candidates": [
+        {
+          "place_name": "서울시립 북서울미술관",
+          "id": "21748070",
+          "place_url": "https://place.map.kakao.com/21748070",
+          "address_name": "서울 노원구 중계동 508",
+          "road_address_name": "서울 노원구 동일로 1238",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 26,
+          "score": 100
+        },
+        {
+          "place_name": "서울시립북서울미술관 주차장",
+          "id": "326482790",
+          "place_url": "https://place.map.kakao.com/326482790",
+          "address_name": "서울 노원구 중계동 508",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장 > 공영주차장",
+          "distance": 47,
+          "score": 65
+        },
+        {
+          "place_name": "북서울시립미술관 전기차충전소",
+          "id": "1606182401",
+          "place_url": "https://place.map.kakao.com/1606182401",
+          "address_name": "서울 노원구 중계동 508",
+          "road_address_name": "서울 노원구 동일로 1238",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 6,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·노원구·동일로·1238·노원 일치 · 기존 좌표에서 26m · 카테고리 미술관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-027",
+      "name": "서대문형무소역사관",
+      "address": "서울 서대문구 통일로 251",
+      "latitude": 37.5746,
+      "longitude": 126.9579,
+      "kakaoSearchKeyword": "서대문형무소역사관",
+      "selectedKakaoPlaceName": "서대문형무소역사관",
+      "selectedKakaoPlaceId": "7936297",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7936297",
+      "candidates": [
+        {
+          "place_name": "서대문형무소역사관",
+          "id": "7936297",
+          "place_url": "https://place.map.kakao.com/7936297",
+          "address_name": "서울 서대문구 현저동 101",
+          "road_address_name": "서울 서대문구 통일로 251",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 202,
+          "score": 100
+        },
+        {
+          "place_name": "서대문형무소역사관 격벽장",
+          "id": "155905691",
+          "place_url": "https://place.map.kakao.com/155905691",
+          "address_name": "서울 서대문구 현저동 101",
+          "road_address_name": "서울 서대문구 통일로 251",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 146,
+          "score": 76
+        },
+        {
+          "place_name": "서대문형무소역사관 중앙사",
+          "id": "379500557",
+          "place_url": "https://place.map.kakao.com/379500557",
+          "address_name": "서울 서대문구 현저동 101",
+          "road_address_name": "서울 서대문구 통일로 251",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 173,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·서대문구·통일로·251·서대문 일치 · 기존 좌표에서 202m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-028",
+      "name": "돈의문박물관마을",
+      "address": "서울 종로구 송월길 2",
+      "latitude": 37.5688,
+      "longitude": 126.9685,
+      "kakaoSearchKeyword": "돈의문박물관마을",
+      "selectedKakaoPlaceName": "돈의문박물관마을",
+      "selectedKakaoPlaceId": "329694495",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/329694495",
+      "candidates": [
+        {
+          "place_name": "돈의문박물관마을",
+          "id": "329694495",
+          "place_url": "https://place.map.kakao.com/329694495",
+          "address_name": "서울 종로구 신문로2가 170",
+          "road_address_name": "서울 종로구 송월길 2",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 56,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·송월길·종로 일치 · 기존 좌표에서 56m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-029",
+      "name": "남산공원",
+      "address": "서울 중구 남산공원길 125-54",
+      "latitude": 37.5509,
+      "longitude": 126.9909,
+      "kakaoSearchKeyword": "남산공원",
+      "selectedKakaoPlaceName": "남산공원",
+      "selectedKakaoPlaceId": "8246129",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8246129",
+      "candidates": [
+        {
+          "place_name": "남산공원",
+          "id": "8246129",
+          "place_url": "https://place.map.kakao.com/8246129",
+          "address_name": "서울 중구 예장동 산 5-6",
+          "road_address_name": "서울 중구 남산공원길 125-54",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 225,
+          "score": 100
+        },
+        {
+          "place_name": "남산공원",
+          "id": "117988874",
+          "place_url": "https://place.map.kakao.com/117988874",
+          "address_name": "서울 중구 남창동 205-4",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 1319,
+          "score": 84
+        },
+        {
+          "place_name": "남산공원 팔각안내센터",
+          "id": "1337262760",
+          "place_url": "https://place.map.kakao.com/1337262760",
+          "address_name": "서울 용산구 용산동2가 산 1-3",
+          "road_address_name": "서울 용산구 남산공원길 126",
+          "category_name": "여행 > 관광,명소 > 관광안내소",
+          "distance": 12,
+          "score": 63
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·중구·남산공원길·12554 일치 · 기존 좌표에서 225m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 16점 차이"
+    },
+    {
+      "id": "place-030",
+      "name": "북서울꿈의숲",
+      "address": "서울 강북구 월계로 173",
+      "latitude": 37.6203,
+      "longitude": 127.0416,
+      "kakaoSearchKeyword": "북서울꿈의숲",
+      "selectedKakaoPlaceName": "북서울꿈의숲",
+      "selectedKakaoPlaceId": "11321061",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11321061",
+      "candidates": [
+        {
+          "place_name": "북서울꿈의숲",
+          "id": "11321061",
+          "place_url": "https://place.map.kakao.com/11321061",
+          "address_name": "서울 강북구 번동 90",
+          "road_address_name": "서울 강북구 월계로 173",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 367,
+          "score": 100
+        },
+        {
+          "place_name": "북서울꿈의숲 방문자센터",
+          "id": "17558359",
+          "place_url": "https://place.map.kakao.com/17558359",
+          "address_name": "서울 강북구 번동 90",
+          "road_address_name": "서울 강북구 월계로 173",
+          "category_name": "여행 > 공원시설물",
+          "distance": 238,
+          "score": 76
+        },
+        {
+          "place_name": "북서울꿈의숲 계절수목원",
+          "id": "17559147",
+          "place_url": "https://place.map.kakao.com/17559147",
+          "address_name": "서울 강북구 번동 115-5",
+          "road_address_name": "서울 강북구 월계로 173",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 238,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·강북구·월계로·173·강북 일치 · 기존 좌표에서 367m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-031",
+      "name": "월드컵공원",
+      "address": "서울 마포구 상암동 481-72",
+      "latitude": 37.5683,
+      "longitude": 126.8813,
+      "kakaoSearchKeyword": "월드컵공원",
+      "selectedKakaoPlaceName": "월드컵공원",
+      "selectedKakaoPlaceId": "27217950",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27217950",
+      "candidates": [
+        {
+          "place_name": "월드컵공원",
+          "id": "27217950",
+          "place_url": "https://place.map.kakao.com/27217950",
+          "address_name": "서울 마포구 상암동 481-72",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 801,
+          "score": 100
+        },
+        {
+          "place_name": "월드컵공원",
+          "id": "11346534",
+          "place_url": "https://place.map.kakao.com/11346534",
+          "address_name": "서울 마포구 성산동 390-1",
+          "road_address_name": "서울 마포구 월드컵로 243-60",
+          "category_name": "여행 > 공원",
+          "distance": 1550,
+          "score": 81
+        },
+        {
+          "place_name": "월드컵공원 장미원",
+          "id": "1969052475",
+          "place_url": "https://place.map.kakao.com/1969052475",
+          "address_name": "서울 마포구 상암동 1535",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 1139,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·마포구·상암동·48172·마포 일치 · 기존 좌표에서 801m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 19점 차이"
+    },
+    {
+      "id": "place-032",
+      "name": "문화비축기지",
+      "address": "서울 마포구 증산로 87",
+      "latitude": 37.5703,
+      "longitude": 126.895,
+      "kakaoSearchKeyword": "문화비축기지",
+      "selectedKakaoPlaceName": "문화비축기지",
+      "selectedKakaoPlaceId": "27459153",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27459153",
+      "candidates": [
+        {
+          "place_name": "문화비축기지",
+          "id": "27459153",
+          "place_url": "https://place.map.kakao.com/27459153",
+          "address_name": "서울 마포구 성산동 661",
+          "road_address_name": "서울 마포구 증산로 87",
+          "category_name": "여행 > 공원",
+          "distance": 109,
+          "score": 100
+        },
+        {
+          "place_name": "문화비축기지 공연장",
+          "id": "1138497290",
+          "place_url": "https://place.map.kakao.com/1138497290",
+          "address_name": "서울 마포구 성산동 670",
+          "road_address_name": "서울 마포구 증산로 87",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 284,
+          "score": 76
+        },
+        {
+          "place_name": "서울테마산책길 문화비축기지 산책로",
+          "id": "946539824",
+          "place_url": "https://place.map.kakao.com/946539824",
+          "address_name": "서울 마포구 성산동 661",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 도보여행",
+          "distance": 63,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·마포구·증산로·87·마포 일치 · 기존 좌표에서 109m · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-033",
+      "name": "올림픽공원",
+      "address": "서울 송파구 올림픽로 424",
+      "latitude": 37.5207,
+      "longitude": 127.1215,
+      "kakaoSearchKeyword": "올림픽공원",
+      "selectedKakaoPlaceName": "올림픽공원",
+      "selectedKakaoPlaceId": "8023565",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8023565",
+      "candidates": [
+        {
+          "place_name": "올림픽공원",
+          "id": "8023565",
+          "place_url": "https://place.map.kakao.com/8023565",
+          "address_name": "서울 송파구 방이동 88-3",
+          "road_address_name": "서울 송파구 올림픽로 424",
+          "category_name": "여행 > 공원",
+          "distance": 63,
+          "score": 100
+        },
+        {
+          "place_name": "올림픽공원 올림픽회관",
+          "id": "18049512",
+          "place_url": "https://place.map.kakao.com/18049512",
+          "address_name": "서울 송파구 방이동 88",
+          "road_address_name": "서울 송파구 올림픽로 424",
+          "category_name": "여행 > 공원시설물",
+          "distance": 533,
+          "score": 71
+        },
+        {
+          "place_name": "올림픽공원 몽촌토성",
+          "id": "8313691",
+          "place_url": "https://place.map.kakao.com/8313691",
+          "address_name": "서울 송파구 방이동 88",
+          "road_address_name": "서울 송파구 올림픽로 424",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 산성,성곽",
+          "distance": 327,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·송파구·올림픽로·424·송파 일치 · 기존 좌표에서 63m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-034",
+      "name": "석촌호수",
+      "address": "서울 송파구 잠실동 47",
+      "latitude": 37.5087,
+      "longitude": 127.1009,
+      "kakaoSearchKeyword": "석촌호수 서호",
+      "selectedKakaoPlaceName": "석촌호수 서호",
+      "selectedKakaoPlaceId": "7947003",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7947003",
+      "candidates": [
+        {
+          "place_name": "석촌호수 서호",
+          "id": "7947003",
+          "place_url": "https://place.map.kakao.com/7947003",
+          "address_name": "서울 송파구 잠실동 47",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 호수",
+          "distance": 194,
+          "score": 100
+        },
+        {
+          "place_name": "컴포즈커피 석촌호수서호입구점",
+          "id": "1044610636",
+          "place_url": "https://place.map.kakao.com/1044610636",
+          "address_name": "서울 송파구 삼전동 130-6",
+          "road_address_name": "서울 송파구 삼학사로19길 2",
+          "category_name": "음식점 > 카페 > 커피전문점 > 컴포즈커피",
+          "distance": 466,
+          "score": 57
+        },
+        {
+          "place_name": "서호1공영주차장",
+          "id": "988471834",
+          "place_url": "https://place.map.kakao.com/988471834",
+          "address_name": "서울 송파구 잠실동 47",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장 > 공영주차장",
+          "distance": 200,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·송파구·잠실동·47·송파 일치 · 기존 좌표에서 194m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-035",
+      "name": "보라매공원",
+      "address": "서울 동작구 신대방동 722",
+      "latitude": 37.4927,
+      "longitude": 126.9199,
+      "kakaoSearchKeyword": "보라매공원",
+      "selectedKakaoPlaceName": "보라매공원",
+      "selectedKakaoPlaceId": "11338178",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11338178",
+      "candidates": [
+        {
+          "place_name": "보라매공원",
+          "id": "11338178",
+          "place_url": "https://place.map.kakao.com/11338178",
+          "address_name": "서울 동작구 신대방동 722",
+          "road_address_name": "",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 84,
+          "score": 100
+        },
+        {
+          "place_name": "보라매공원 중앙잔디광장",
+          "id": "17556321",
+          "place_url": "https://place.map.kakao.com/17556321",
+          "address_name": "서울 동작구 신대방동 395",
+          "road_address_name": "서울 동작구 보라매로5길 28",
+          "category_name": "여행 > 공원시설물",
+          "distance": 15,
+          "score": 79
+        },
+        {
+          "place_name": "보라매공원 관리사무소",
+          "id": "7892033",
+          "place_url": "https://place.map.kakao.com/7892033",
+          "address_name": "서울 동작구 신대방동 722",
+          "road_address_name": "서울 동작구 여의대방로20길 33",
+          "category_name": "서비스,산업 > 관리,운영 > 공원관리운영",
+          "distance": 245,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·동작구·신대방동·722·동작 일치 · 기존 좌표에서 84m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-036",
+      "name": "선유도공원",
+      "address": "서울 영등포구 선유로 343",
+      "latitude": 37.5439,
+      "longitude": 126.9006,
+      "kakaoSearchKeyword": "선유도공원",
+      "selectedKakaoPlaceName": "선유도공원",
+      "selectedKakaoPlaceId": "17163566",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17163566",
+      "candidates": [
+        {
+          "place_name": "선유도공원",
+          "id": "17163566",
+          "place_url": "https://place.map.kakao.com/17163566",
+          "address_name": "서울 영등포구 당산동 1",
+          "road_address_name": "서울 영등포구 선유로 343",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 70,
+          "score": 100
+        },
+        {
+          "place_name": "선유도 공원 수생식물원",
+          "id": "17562795",
+          "place_url": "https://place.map.kakao.com/17562795",
+          "address_name": "서울 영등포구 당산동 1",
+          "road_address_name": "서울 영등포구 선유로 343",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 59,
+          "score": 79
+        },
+        {
+          "place_name": "선유도공원 녹색기둥의정원",
+          "id": "17559122",
+          "place_url": "https://place.map.kakao.com/17559122",
+          "address_name": "서울 영등포구 당산동 1",
+          "road_address_name": "서울 영등포구 선유로 343",
+          "category_name": "여행 > 공원시설물",
+          "distance": 72,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·영등포구·선유로·343·영등포 일치 · 기존 좌표에서 70m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-037",
+      "name": "노들섬",
+      "address": "서울 용산구 양녕로 445",
+      "latitude": 37.5178,
+      "longitude": 126.9585,
+      "kakaoSearchKeyword": "노들섬",
+      "selectedKakaoPlaceName": "노들섬",
+      "selectedKakaoPlaceId": "8252248",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8252248",
+      "candidates": [
+        {
+          "place_name": "노들섬",
+          "id": "8252248",
+          "place_url": "https://place.map.kakao.com/8252248",
+          "address_name": "서울 용산구 이촌동 302-146",
+          "road_address_name": "서울 용산구 양녕로 445",
+          "category_name": "여행 > 관광,명소 > 섬 > 섬(내륙)",
+          "distance": 43,
+          "score": 100
+        },
+        {
+          "place_name": "노들섬라이브하우스",
+          "id": "164775369",
+          "place_url": "https://place.map.kakao.com/164775369",
+          "address_name": "서울 용산구 이촌동 302-146",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 38,
+          "score": 65
+        },
+        {
+          "place_name": "노들섬 노들라운지",
+          "id": "1806877428",
+          "place_url": "https://place.map.kakao.com/1806877428",
+          "address_name": "서울 용산구 이촌동 302-146",
+          "road_address_name": "서울 용산구 양녕로 445",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 43,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·용산구·양녕로·445·용산 일치 · 기존 좌표에서 43m · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-038",
+      "name": "경의선숲길",
+      "address": "서울 마포구 동교동 190-1",
+      "latitude": 37.5565,
+      "longitude": 126.9296,
+      "kakaoSearchKeyword": "경의선숲길",
+      "selectedKakaoPlaceName": "경의선숲길",
+      "selectedKakaoPlaceId": "1158487374",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1158487374",
+      "candidates": [
+        {
+          "place_name": "경의선숲길",
+          "id": "1158487374",
+          "place_url": "https://place.map.kakao.com/1158487374",
+          "address_name": "서울 마포구 동교동 190-1",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 455,
+          "score": 100
+        },
+        {
+          "place_name": "경의선숲길",
+          "id": "27388917",
+          "place_url": "https://place.map.kakao.com/27388917",
+          "address_name": "서울 마포구 연남동 375",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 806,
+          "score": 86
+        },
+        {
+          "place_name": "경의선숲길",
+          "id": "1524861109",
+          "place_url": "https://place.map.kakao.com/1524861109",
+          "address_name": "서울 마포구 대흥동 325-82",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 1652,
+          "score": 81
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·마포구·동교동·1901·마포 일치 · 기존 좌표에서 455m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 14점 차이"
+    },
+    {
+      "id": "place-039",
+      "name": "서울스카이",
+      "address": "서울 송파구 올림픽로 300",
+      "latitude": 37.5126,
+      "longitude": 127.1025,
+      "kakaoSearchKeyword": "서울스카이",
+      "selectedKakaoPlaceName": "서울스카이",
+      "selectedKakaoPlaceId": "680691609",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/680691609",
+      "candidates": [
+        {
+          "place_name": "서울스카이",
+          "id": "680691609",
+          "place_url": "https://place.map.kakao.com/680691609",
+          "address_name": "서울 송파구 신천동 29",
+          "road_address_name": "서울 송파구 올림픽로 300",
+          "category_name": "여행 > 관광,명소 > 전망대",
+          "distance": 11,
+          "score": 100
+        },
+        {
+          "place_name": "서울스카이 123라운지",
+          "id": "1277414055",
+          "place_url": "https://place.map.kakao.com/1277414055",
+          "address_name": "서울 송파구 신천동 29",
+          "road_address_name": "서울 송파구 올림픽로 300",
+          "category_name": "음식점 > 양식",
+          "distance": 7,
+          "score": 65
+        },
+        {
+          "place_name": "모찌이야기 잠실롯데월드몰 서울스카이점",
+          "id": "1473291422",
+          "place_url": "https://place.map.kakao.com/1473291422",
+          "address_name": "서울 송파구 신천동 29",
+          "road_address_name": "서울 송파구 올림픽로 300",
+          "category_name": "음식점 > 카페 > 테마카페 > 디저트카페",
+          "distance": 10,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·송파구·올림픽로·300·송파 일치 · 기존 좌표에서 11m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-040",
+      "name": "키자니아 서울",
+      "address": "서울 송파구 올림픽로 240",
+      "latitude": 37.5113,
+      "longitude": 127.0957,
+      "kakaoSearchKeyword": "키자니아 서울",
+      "selectedKakaoPlaceName": "키자니아 서울",
+      "selectedKakaoPlaceId": "17735905",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17735905",
+      "candidates": [
+        {
+          "place_name": "키자니아 서울",
+          "id": "17735905",
+          "place_url": "https://place.map.kakao.com/17735905",
+          "address_name": "서울 송파구 잠실동 40-1",
+          "road_address_name": "서울 송파구 올림픽로 240",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 117,
+          "score": 100
+        },
+        {
+          "place_name": "키자니아 응급의학센터",
+          "id": "254797991",
+          "place_url": "https://place.map.kakao.com/254797991",
+          "address_name": "서울 송파구 잠실동 40-1",
+          "road_address_name": "서울 송파구 올림픽로 240",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 117,
+          "score": 31
+        },
+        {
+          "place_name": "키자니아 약국",
+          "id": "564161207",
+          "place_url": "https://place.map.kakao.com/564161207",
+          "address_name": "서울 송파구 잠실동 40-1",
+          "road_address_name": "서울 송파구 올림픽로 240",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 117,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 서울·송파구·올림픽로·240·송파 일치 · 기존 좌표에서 117m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-041",
+      "name": "동대문디자인플라자",
+      "address": "서울 중구 을지로 281",
+      "latitude": 37.5665,
+      "longitude": 127.0092,
+      "kakaoSearchKeyword": "동대문디자인플라자",
+      "selectedKakaoPlaceName": "동대문디자인플라자",
+      "selectedKakaoPlaceId": "25022134",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25022134",
+      "candidates": [
+        {
+          "place_name": "동대문디자인플라자",
+          "id": "25022134",
+          "place_url": "https://place.map.kakao.com/25022134",
+          "address_name": "서울 중구 을지로7가 2-1",
+          "road_address_name": "서울 중구 을지로 281",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 98,
+          "score": 100
+        },
+        {
+          "place_name": "동대문디자인플라자 디자인전시관",
+          "id": "25753389",
+          "place_url": "https://place.map.kakao.com/25753389",
+          "address_name": "서울 중구 을지로7가 2-1",
+          "road_address_name": "서울 중구 을지로 281",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 44,
+          "score": 79
+        },
+        {
+          "place_name": "동대문디자인플라자 뮤지엄",
+          "id": "1842526609",
+          "place_url": "https://place.map.kakao.com/1842526609",
+          "address_name": "서울 중구 을지로7가 143",
+          "road_address_name": "서울 중구 을지로 281",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 46,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·중구·을지로·281 일치 · 기존 좌표에서 98m · 카테고리 문화시설 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-042",
+      "name": "청계천",
+      "address": "서울 종로구 서린동 148",
+      "latitude": 37.569,
+      "longitude": 126.9787,
+      "kakaoSearchKeyword": "청계천",
+      "selectedKakaoPlaceName": "청계천",
+      "selectedKakaoPlaceId": "10849847",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10849847",
+      "candidates": [
+        {
+          "place_name": "청계천",
+          "id": "10849847",
+          "place_url": "https://place.map.kakao.com/10849847",
+          "address_name": "서울 종로구 서린동 148",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 하천",
+          "distance": 17,
+          "score": 100
+        },
+        {
+          "place_name": "청계천",
+          "id": "25730252",
+          "place_url": "https://place.map.kakao.com/25730252",
+          "address_name": "서울 종로구 관수동",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 하천",
+          "distance": 941,
+          "score": 72
+        },
+        {
+          "place_name": "청계천한빛공원",
+          "id": "24974768",
+          "place_url": "https://place.map.kakao.com/24974768",
+          "address_name": "서울 중구 삼각동 118",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 572,
+          "score": 64
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·서린동·148·종로 일치 · 기존 좌표에서 17m · 기존 장소 ID 일치 · 2위와 28점 차이"
+    },
+    {
+      "id": "place-043",
+      "name": "경복궁",
+      "address": "서울 종로구 사직로 161",
+      "latitude": 37.5796,
+      "longitude": 126.977,
+      "kakaoSearchKeyword": "경복궁",
+      "selectedKakaoPlaceName": "경복궁",
+      "selectedKakaoPlaceId": "18619553",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/18619553",
+      "candidates": [
+        {
+          "place_name": "경복궁",
+          "id": "18619553",
+          "place_url": "https://place.map.kakao.com/18619553",
+          "address_name": "서울 종로구 세종로 1-1",
+          "road_address_name": "서울 종로구 사직로 161",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 고궁,궁",
+          "distance": 220,
+          "score": 100
+        },
+        {
+          "place_name": "경복궁 경회루",
+          "id": "18619551",
+          "place_url": "https://place.map.kakao.com/18619551",
+          "address_name": "서울 종로구 세종로 1-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 87,
+          "score": 65
+        },
+        {
+          "place_name": "경복궁 근정전",
+          "id": "17343711",
+          "place_url": "https://place.map.kakao.com/17343711",
+          "address_name": "서울 종로구 세종로 1-1",
+          "road_address_name": "서울 종로구 사직로 161",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 114,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·사직로·161·종로 일치 · 기존 좌표에서 220m · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-044",
+      "name": "창덕궁",
+      "address": "서울 종로구 율곡로 99",
+      "latitude": 37.5794,
+      "longitude": 126.991,
+      "kakaoSearchKeyword": "창덕궁",
+      "selectedKakaoPlaceName": "창덕궁",
+      "selectedKakaoPlaceId": "10771162",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10771162",
+      "candidates": [
+        {
+          "place_name": "창덕궁",
+          "id": "10771162",
+          "place_url": "https://place.map.kakao.com/10771162",
+          "address_name": "서울 종로구 와룡동 2-71",
+          "road_address_name": "서울 종로구 율곡로 99",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 고궁,궁",
+          "distance": 27,
+          "score": 100
+        },
+        {
+          "place_name": "창덕궁 금호문",
+          "id": "8236759",
+          "place_url": "https://place.map.kakao.com/8236759",
+          "address_name": "서울 종로구 와룡동 2-71",
+          "road_address_name": "서울 종로구 율곡로 99",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 문",
+          "distance": 169,
+          "score": 62
+        },
+        {
+          "place_name": "창덕궁 후원 입구",
+          "id": "972331115",
+          "place_url": "https://place.map.kakao.com/972331115",
+          "address_name": "서울 종로구 와룡동 2-71",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 입출구",
+          "distance": 173,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·율곡로·99·종로 일치 · 기존 좌표에서 27m · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-045",
+      "name": "국립현대미술관 서울",
+      "address": "서울 종로구 삼청로 30",
+      "latitude": 37.5786,
+      "longitude": 126.9805,
+      "kakaoSearchKeyword": "국립현대미술관 서울",
+      "selectedKakaoPlaceName": "국립현대미술관 서울",
+      "selectedKakaoPlaceId": "17952661",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17952661",
+      "candidates": [
+        {
+          "place_name": "국립현대미술관 서울",
+          "id": "17952661",
+          "place_url": "https://place.map.kakao.com/17952661",
+          "address_name": "서울 종로구 소격동 165-10",
+          "road_address_name": "서울 종로구 삼청로 30",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 35,
+          "score": 100
+        },
+        {
+          "place_name": "국립현대미술관 서울 교육동 아이공간",
+          "id": "132577394",
+          "place_url": "https://place.map.kakao.com/132577394",
+          "address_name": "서울 종로구 소격동 165",
+          "road_address_name": "서울 종로구 삼청로 30",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 116,
+          "score": 76
+        },
+        {
+          "place_name": "테라로사 국립현대미술관서울점",
+          "id": "749467532",
+          "place_url": "https://place.map.kakao.com/749467532",
+          "address_name": "서울 종로구 소격동 165",
+          "road_address_name": "서울 종로구 삼청로 30",
+          "category_name": "음식점 > 카페 > 커피전문점",
+          "distance": 34,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 서울·종로구·삼청로·30·종로 일치 · 기존 좌표에서 35m · 카테고리 미술관 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-046",
+      "name": "국립과천과학관",
+      "address": "경기 과천시 상하벌로 110",
+      "latitude": 37.4383,
+      "longitude": 127.0057,
+      "kakaoSearchKeyword": "국립과천과학관",
+      "selectedKakaoPlaceName": "국립과천과학관",
+      "selectedKakaoPlaceId": "11374610",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11374610",
+      "candidates": [
+        {
+          "place_name": "국립과천과학관",
+          "id": "11374610",
+          "place_url": "https://place.map.kakao.com/11374610",
+          "address_name": "경기 과천시 과천동 758",
+          "road_address_name": "경기 과천시 상하벌로 110",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 28,
+          "score": 100
+        },
+        {
+          "place_name": "국립과천과학관 자연사관",
+          "id": "663396323",
+          "place_url": "https://place.map.kakao.com/663396323",
+          "address_name": "경기 과천시 과천동 758",
+          "road_address_name": "경기 과천시 상하벌로 110",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 46,
+          "score": 79
+        },
+        {
+          "place_name": "국립과천과학관 천체투영관",
+          "id": "17566665",
+          "place_url": "https://place.map.kakao.com/17566665",
+          "address_name": "경기 과천시 과천동 758",
+          "road_address_name": "경기 과천시 상하벌로 110",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 103,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·과천시·상하벌로·110·과천 일치 · 기존 좌표에서 28m · 카테고리 과학관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-047",
+      "name": "서울랜드",
+      "address": "경기 과천시 광명로 181",
+      "latitude": 37.4359,
+      "longitude": 127.0197,
+      "kakaoSearchKeyword": "서울랜드",
+      "selectedKakaoPlaceName": "서울랜드",
+      "selectedKakaoPlaceId": "8360993",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8360993",
+      "candidates": [
+        {
+          "place_name": "서울랜드",
+          "id": "8360993",
+          "place_url": "https://place.map.kakao.com/8360993",
+          "address_name": "경기 과천시 막계동 108",
+          "road_address_name": "경기 과천시 광명로 181",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 238,
+          "score": 100
+        },
+        {
+          "place_name": "서울랜드 삼천리대극장",
+          "id": "17807358",
+          "place_url": "https://place.map.kakao.com/17807358",
+          "address_name": "경기 과천시 막계동 131-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 74,
+          "score": 79
+        },
+        {
+          "place_name": "서울랜드 드라이브코스",
+          "id": "717117117",
+          "place_url": "https://place.map.kakao.com/717117117",
+          "address_name": "경기 과천시 막계동 산 25-2",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 드라이브코스",
+          "distance": 38,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·과천시·광명로·181·과천 일치 · 기존 좌표에서 238m · 카테고리 테마파크 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-048",
+      "name": "서울대공원",
+      "address": "경기 과천시 막계동 890-1",
+      "latitude": 37.4277,
+      "longitude": 127.017,
+      "kakaoSearchKeyword": "서울대공원 서울동물원",
+      "selectedKakaoPlaceName": "서울대공원 서울동물원",
+      "selectedKakaoPlaceId": "971122014",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/971122014",
+      "candidates": [
+        {
+          "place_name": "서울대공원 서울동물원",
+          "id": "971122014",
+          "place_url": "https://place.map.kakao.com/971122014",
+          "address_name": "경기 과천시 막계동 890-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 동물원",
+          "distance": 336,
+          "score": 100
+        },
+        {
+          "place_name": "서울대공원 제1아프리카관",
+          "id": "17575724",
+          "place_url": "https://place.map.kakao.com/17575724",
+          "address_name": "경기 과천시 막계동 639-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 동물원",
+          "distance": 98,
+          "score": 79
+        },
+        {
+          "place_name": "서울대공원 어린이동물원",
+          "id": "27364325",
+          "place_url": "https://place.map.kakao.com/27364325",
+          "address_name": "경기 과천시 막계동 623",
+          "road_address_name": "경기 과천시 대공원광장로 102",
+          "category_name": "여행 > 관광,명소 > 동물원",
+          "distance": 249,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·과천시·막계동·8901·과천 일치 · 기존 좌표에서 336m · 카테고리 동물원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-049",
+      "name": "국립현대미술관 과천",
+      "address": "경기 과천시 광명로 313",
+      "latitude": 37.431,
+      "longitude": 127.0198,
+      "kakaoSearchKeyword": "국립현대미술관 과천",
+      "selectedKakaoPlaceName": "국립현대미술관 과천",
+      "selectedKakaoPlaceId": "8218715",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8218715",
+      "candidates": [
+        {
+          "place_name": "국립현대미술관 과천",
+          "id": "8218715",
+          "place_url": "https://place.map.kakao.com/8218715",
+          "address_name": "경기 과천시 막계동 산 48-3",
+          "road_address_name": "경기 과천시 광명로 313",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 40,
+          "score": 100
+        },
+        {
+          "place_name": "국립현대미술관 과천관 도서자료실",
+          "id": "10137397",
+          "place_url": "https://place.map.kakao.com/10137397",
+          "address_name": "경기 과천시 막계동 산 48-3",
+          "road_address_name": "경기 과천시 광명로 313",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 37,
+          "score": 79
+        },
+        {
+          "place_name": "국립현대미술관 과천 미술도서실",
+          "id": "403687783",
+          "place_url": "https://place.map.kakao.com/403687783",
+          "address_name": "경기 과천시 막계동 산 58-4",
+          "road_address_name": "경기 과천시 광명로 313",
+          "category_name": "교육,학문 > 학습시설 > 도서관",
+          "distance": 36,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·과천시·광명로·313·과천 일치 · 기존 좌표에서 40m · 카테고리 미술관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-050",
+      "name": "에버랜드",
+      "address": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+      "latitude": 37.2938,
+      "longitude": 127.2021,
+      "kakaoSearchKeyword": "에버랜드",
+      "selectedKakaoPlaceName": "에버랜드",
+      "selectedKakaoPlaceId": "784414359",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/784414359",
+      "candidates": [
+        {
+          "place_name": "에버랜드",
+          "id": "784414359",
+          "place_url": "https://place.map.kakao.com/784414359",
+          "address_name": "경기 용인시 처인구 포곡읍 전대리 310",
+          "road_address_name": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 77,
+          "score": 100
+        },
+        {
+          "place_name": "에버랜드 판다월드",
+          "id": "17573502",
+          "place_url": "https://place.map.kakao.com/17573502",
+          "address_name": "경기 용인시 처인구 포곡읍 전대리 519-19",
+          "road_address_name": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 100,
+          "score": 79
+        },
+        {
+          "place_name": "에버랜드 스피드웨이",
+          "id": "682445665",
+          "place_url": "https://place.map.kakao.com/682445665",
+          "address_name": "경기 용인시 처인구 포곡읍 유운리 537-1",
+          "road_address_name": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 513,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·용인시·처인구·포곡읍·에버랜드로·199·용인 일치 · 기존 좌표에서 77m · 카테고리 테마파크 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-051",
+      "name": "한국민속촌",
+      "address": "경기 용인시 기흥구 민속촌로 90",
+      "latitude": 37.2584,
+      "longitude": 127.119,
+      "kakaoSearchKeyword": "한국민속촌",
+      "selectedKakaoPlaceName": "한국민속촌",
+      "selectedKakaoPlaceId": "8135083",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8135083",
+      "candidates": [
+        {
+          "place_name": "한국민속촌",
+          "id": "8135083",
+          "place_url": "https://place.map.kakao.com/8135083",
+          "address_name": "경기 용인시 기흥구 보라동 35",
+          "road_address_name": "경기 용인시 기흥구 민속촌로 90",
+          "category_name": "여행 > 관광,명소 > 민속촌",
+          "distance": 152,
+          "score": 100
+        },
+        {
+          "place_name": "한국민속촌 박물관",
+          "id": "17576367",
+          "place_url": "https://place.map.kakao.com/17576367",
+          "address_name": "경기 용인시 기흥구 보라동 35",
+          "road_address_name": "경기 용인시 기흥구 민속촌로 90",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 225,
+          "score": 76
+        },
+        {
+          "place_name": "한국민속촌 놀이마을",
+          "id": "17576648",
+          "place_url": "https://place.map.kakao.com/17576648",
+          "address_name": "경기 용인시 기흥구 보라동 35",
+          "road_address_name": "경기 용인시 기흥구 민속촌로 90",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 109,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·용인시·기흥구·민속촌로·90·용인 일치 · 기존 좌표에서 152m · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-052",
+      "name": "경기도어린이박물관",
+      "address": "경기 용인시 기흥구 상갈로 6",
+      "latitude": 37.2681,
+      "longitude": 127.108,
+      "kakaoSearchKeyword": "경기도어린이박물관",
+      "selectedKakaoPlaceName": "경기도어린이박물관",
+      "selectedKakaoPlaceId": "14747809",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/14747809",
+      "candidates": [
+        {
+          "place_name": "경기도어린이박물관",
+          "id": "14747809",
+          "place_url": "https://place.map.kakao.com/14747809",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 168,
+          "score": 100
+        },
+        {
+          "place_name": "경기도어린이박물관 (급) 전기차충전소",
+          "id": "2120782639",
+          "place_url": "https://place.map.kakao.com/2120782639",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 141,
+          "score": 62
+        },
+        {
+          "place_name": "경기도어린이박물관 주차장",
+          "id": "1426825904",
+          "place_url": "https://place.map.kakao.com/1426825904",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 164,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·용인시·기흥구·상갈로·용인 일치 · 기존 좌표에서 168m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-053",
+      "name": "삼성화재 모빌리티뮤지엄",
+      "address": "경기 용인시 처인구 포곡읍 에버랜드로376번길 171",
+      "latitude": 37.299,
+      "longitude": 127.2161,
+      "kakaoSearchKeyword": "삼성화재 모빌리티뮤지엄",
+      "selectedKakaoPlaceName": "삼성화재 모빌리티뮤지엄",
+      "selectedKakaoPlaceId": "23817394",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23817394",
+      "candidates": [
+        {
+          "place_name": "삼성화재 모빌리티뮤지엄",
+          "id": "23817394",
+          "place_url": "https://place.map.kakao.com/23817394",
+          "address_name": "경기 용인시 처인구 포곡읍 유운리 432",
+          "road_address_name": "경기 용인시 처인구 포곡읍 에버랜드로376번길 171",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 167,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·용인시·처인구·포곡읍·에버랜드로376번길·171·용인 일치 · 기존 좌표에서 167m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-054",
+      "name": "용인농촌테마파크",
+      "address": "경기 용인시 처인구 원삼면 농촌파크로 80-1",
+      "latitude": 37.1645,
+      "longitude": 127.308,
+      "kakaoSearchKeyword": "용인농촌테마파크",
+      "selectedKakaoPlaceName": "용인농촌테마파크",
+      "selectedKakaoPlaceId": "1125507111",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1125507111",
+      "candidates": [
+        {
+          "place_name": "용인농촌테마파크",
+          "id": "1125507111",
+          "place_url": "https://place.map.kakao.com/1125507111",
+          "address_name": "경기 용인시 처인구 원삼면 사암리 871-3",
+          "road_address_name": "경기 용인시 처인구 원삼면 농촌파크로 80-1",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 1233,
+          "score": 100
+        },
+        {
+          "place_name": "용인농촌테마파크 들꽃단지",
+          "id": "17579269",
+          "place_url": "https://place.map.kakao.com/17579269",
+          "address_name": "경기 용인시 처인구 원삼면 사암리 871-3",
+          "road_address_name": "경기 용인시 처인구 원삼면 농촌파크로 80-1",
+          "category_name": "여행 > 관광,명소",
+          "distance": 1139,
+          "score": 51
+        },
+        {
+          "place_name": "용인농촌테마파크 아취덩굴터널",
+          "id": "17576519",
+          "place_url": "https://place.map.kakao.com/17576519",
+          "address_name": "경기 용인시 처인구 원삼면 사암리 871-3",
+          "road_address_name": "경기 용인시 처인구 원삼면 농촌파크로 80-1",
+          "category_name": "여행 > 관광,명소",
+          "distance": 1166,
+          "score": 51
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·용인시·처인구·원삼면·농촌파크로·801·용인 일치 · 기존 좌표에서 1233m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-055",
+      "name": "한국잡월드",
+      "address": "경기 성남시 분당구 분당수서로 501",
+      "latitude": 37.3928,
+      "longitude": 127.1065,
+      "kakaoSearchKeyword": "한국잡월드",
+      "selectedKakaoPlaceName": "한국잡월드",
+      "selectedKakaoPlaceId": "12372993",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12372993",
+      "candidates": [
+        {
+          "place_name": "한국잡월드",
+          "id": "12372993",
+          "place_url": "https://place.map.kakao.com/12372993",
+          "address_name": "경기 성남시 분당구 정자동 4-6",
+          "road_address_name": "경기 성남시 분당구 분당수서로 501",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 1588,
+          "score": 100
+        },
+        {
+          "place_name": "한국잡월드 청소년체험관",
+          "id": "968068443",
+          "place_url": "https://place.map.kakao.com/968068443",
+          "address_name": "경기 성남시 분당구 정자동 4-6",
+          "road_address_name": "경기 성남시 분당구 분당수서로 501",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 1584,
+          "score": 46
+        },
+        {
+          "place_name": "한국잡월드 어린이체험관",
+          "id": "1648236637",
+          "place_url": "https://place.map.kakao.com/1648236637",
+          "address_name": "경기 성남시 분당구 정자동 4-6",
+          "road_address_name": "경기 성남시 분당구 분당수서로 501",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 1586,
+          "score": 46
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·성남시·분당구·분당수서로·501·성남 일치 · 기존 좌표에서 1588m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-056",
+      "name": "율동공원",
+      "address": "경기 성남시 분당구 문정로 145",
+      "latitude": 37.3797,
+      "longitude": 127.1504,
+      "kakaoSearchKeyword": "율동공원",
+      "selectedKakaoPlaceName": "율동공원",
+      "selectedKakaoPlaceId": "12455726",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12455726",
+      "candidates": [
+        {
+          "place_name": "율동공원",
+          "id": "12455726",
+          "place_url": "https://place.map.kakao.com/12455726",
+          "address_name": "경기 성남시 분당구 율동 318",
+          "road_address_name": "경기 성남시 분당구 문정로 145",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 151,
+          "score": 100
+        },
+        {
+          "place_name": "율동공원 만남의광장",
+          "id": "17385289",
+          "place_url": "https://place.map.kakao.com/17385289",
+          "address_name": "경기 성남시 분당구 율동 318",
+          "road_address_name": "경기 성남시 분당구 문정로 145",
+          "category_name": "여행 > 공원시설물",
+          "distance": 136,
+          "score": 76
+        },
+        {
+          "place_name": "율동공원 관리사무소",
+          "id": "17563469",
+          "place_url": "https://place.map.kakao.com/17563469",
+          "address_name": "경기 성남시 분당구 율동 318",
+          "road_address_name": "경기 성남시 분당구 문정로 145",
+          "category_name": "서비스,산업 > 관리,운영 > 공원관리운영",
+          "distance": 330,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·성남시·분당구·문정로·145·성남 일치 · 기존 좌표에서 151m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-057",
+      "name": "광명동굴",
+      "address": "경기 광명시 가학동 34-1",
+      "latitude": 37.4253,
+      "longitude": 126.8646,
+      "kakaoSearchKeyword": "광명동굴",
+      "selectedKakaoPlaceName": "광명동굴",
+      "selectedKakaoPlaceId": "26314882",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26314882",
+      "candidates": [
+        {
+          "place_name": "광명동굴",
+          "id": "26314882",
+          "place_url": "https://place.map.kakao.com/26314882",
+          "address_name": "경기 광명시 가학동 34-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 동굴",
+          "distance": 163,
+          "score": 100
+        },
+        {
+          "place_name": "광명동굴 보물탐험",
+          "id": "1552244899",
+          "place_url": "https://place.map.kakao.com/1552244899",
+          "address_name": "경기 광명시 가학동 산 7",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 127,
+          "score": 76
+        },
+        {
+          "place_name": "광명동굴딸기스마트팜",
+          "id": "1790634452",
+          "place_url": "https://place.map.kakao.com/1790634452",
+          "address_name": "경기 광명시 가학동 27",
+          "road_address_name": "경기 광명시 가학로85번길 142",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 106,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·광명시·가학동·341·광명 일치 · 기존 좌표에서 163m · 카테고리 동굴 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-058",
+      "name": "철도박물관",
+      "address": "경기 의왕시 철도박물관로 142",
+      "latitude": 37.3149,
+      "longitude": 126.9511,
+      "kakaoSearchKeyword": "철도박물관",
+      "selectedKakaoPlaceName": "철도박물관",
+      "selectedKakaoPlaceId": "10844769",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10844769",
+      "candidates": [
+        {
+          "place_name": "철도박물관",
+          "id": "10844769",
+          "place_url": "https://place.map.kakao.com/10844769",
+          "address_name": "경기 의왕시 월암동 374-1",
+          "road_address_name": "경기 의왕시 철도박물관로 142",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 92,
+          "score": 100
+        },
+        {
+          "place_name": "철도박물관 야외전시장",
+          "id": "23815208",
+          "place_url": "https://place.map.kakao.com/23815208",
+          "address_name": "경기 의왕시 월암동 374-1",
+          "road_address_name": "경기 의왕시 철도박물관로 142",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 147,
+          "score": 76
+        },
+        {
+          "place_name": "철도박물관 정문",
+          "id": "110239645",
+          "place_url": "https://place.map.kakao.com/110239645",
+          "address_name": "경기 의왕시 월암동 374-1",
+          "road_address_name": "경기 의왕시 철도박물관로 142",
+          "category_name": "교통,수송 > 입출구",
+          "distance": 137,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·의왕시·철도박물관로·142·의왕 일치 · 기존 좌표에서 92m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-059",
+      "name": "왕송호수공원",
+      "address": "경기 의왕시 왕송못동로 307",
+      "latitude": 37.307,
+      "longitude": 126.9491,
+      "kakaoSearchKeyword": "왕송호수공원",
+      "selectedKakaoPlaceName": "왕송호수공원",
+      "selectedKakaoPlaceId": "2087376551",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2087376551",
+      "candidates": [
+        {
+          "place_name": "왕송호수공원",
+          "id": "2087376551",
+          "place_url": "https://place.map.kakao.com/2087376551",
+          "address_name": "경기 의왕시 월암동 543-3",
+          "road_address_name": "경기 의왕시 왕송못동로 307",
+          "category_name": "여행 > 공원",
+          "distance": 267,
+          "score": 100
+        },
+        {
+          "place_name": "왕송호수공원 시민정원",
+          "id": "1101964388",
+          "place_url": "https://place.map.kakao.com/1101964388",
+          "address_name": "경기 의왕시 월암동 543-3",
+          "road_address_name": "경기 의왕시 왕송못동로 307",
+          "category_name": "여행 > 공원시설물",
+          "distance": 306,
+          "score": 71
+        },
+        {
+          "place_name": "왕송호수공원 KTX쉼터",
+          "id": "1391432441",
+          "place_url": "https://place.map.kakao.com/1391432441",
+          "address_name": "경기 의왕시 월암동 543-3",
+          "road_address_name": "경기 의왕시 왕송못동로 307",
+          "category_name": "여행 > 공원시설물",
+          "distance": 327,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·의왕시·왕송못동로·307·의왕 일치 · 기존 좌표에서 267m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-060",
+      "name": "수원화성",
+      "address": "경기 수원시 장안구 영화동 320-2",
+      "latitude": 37.2876,
+      "longitude": 127.0136,
+      "kakaoSearchKeyword": "수원화성",
+      "selectedKakaoPlaceName": "수원화성",
+      "selectedKakaoPlaceId": "17985162",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17985162",
+      "candidates": [
+        {
+          "place_name": "수원화성",
+          "id": "17985162",
+          "place_url": "https://place.map.kakao.com/17985162",
+          "address_name": "경기 수원시 장안구 영화동 320-2",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 산성,성곽",
+          "distance": 175,
+          "score": 100
+        },
+        {
+          "place_name": "수원화성 장안문",
+          "id": "8062847",
+          "place_url": "https://place.map.kakao.com/8062847",
+          "address_name": "경기 수원시 팔달구 장안동 329",
+          "road_address_name": "경기 수원시 팔달구 정조로 910",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 문",
+          "distance": 151,
+          "score": 76
+        },
+        {
+          "place_name": "수원화성 화홍문",
+          "id": "11387143",
+          "place_url": "https://place.map.kakao.com/11387143",
+          "address_name": "경기 수원시 팔달구 북수동 9000-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 문",
+          "distance": 357,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·수원시·장안구·영화동·3202·수원 일치 · 기존 좌표에서 175m · 카테고리 문화유적 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-061",
+      "name": "화성행궁",
+      "address": "경기 수원시 팔달구 정조로 825",
+      "latitude": 37.2819,
+      "longitude": 127.0142,
+      "kakaoSearchKeyword": "화성행궁",
+      "selectedKakaoPlaceName": "화성행궁",
+      "selectedKakaoPlaceId": "8175657",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8175657",
+      "candidates": [
+        {
+          "place_name": "화성행궁",
+          "id": "8175657",
+          "place_url": "https://place.map.kakao.com/8175657",
+          "address_name": "경기 수원시 팔달구 남창동 6-2",
+          "road_address_name": "경기 수원시 팔달구 정조로 825",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 고궁,궁",
+          "distance": 14,
+          "score": 100
+        },
+        {
+          "place_name": "화성행궁 매표소",
+          "id": "1761093347",
+          "place_url": "https://place.map.kakao.com/1761093347",
+          "address_name": "경기 수원시 팔달구 남창동 6-2",
+          "road_address_name": "경기 수원시 팔달구 정조로 825",
+          "category_name": "서비스,산업 > 관리,운영 > 매표소",
+          "distance": 46,
+          "score": 65
+        },
+        {
+          "place_name": "화성행궁광장 관광안내소",
+          "id": "11204832",
+          "place_url": "https://place.map.kakao.com/11204832",
+          "address_name": "경기 수원시 팔달구 남창동 6-2",
+          "road_address_name": "경기 수원시 팔달구 정조로 825",
+          "category_name": "여행 > 관광,명소 > 관광안내소",
+          "distance": 99,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·수원시·팔달구·정조로·825·수원 일치 · 기존 좌표에서 14m · 카테고리 문화유적 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-062",
+      "name": "수원광교박물관",
+      "address": "경기 수원시 영통구 광교로 182",
+      "latitude": 37.2965,
+      "longitude": 127.0517,
+      "kakaoSearchKeyword": "수원광교박물관",
+      "selectedKakaoPlaceName": "수원광교박물관",
+      "selectedKakaoPlaceId": "17083416",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17083416",
+      "candidates": [
+        {
+          "place_name": "수원광교박물관",
+          "id": "17083416",
+          "place_url": "https://place.map.kakao.com/17083416",
+          "address_name": "경기 수원시 영통구 이의동 403-2",
+          "road_address_name": "경기 수원시 영통구 광교로 182",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 29,
+          "score": 100
+        },
+        {
+          "place_name": "수원광교박물관 주차장",
+          "id": "23352332",
+          "place_url": "https://place.map.kakao.com/23352332",
+          "address_name": "경기 수원시 영통구 이의동 433",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 144,
+          "score": 62
+        },
+        {
+          "place_name": "시화연풍",
+          "id": "419468702",
+          "place_url": "https://place.map.kakao.com/419468702",
+          "address_name": "경기 수원시 영통구 이의동 403-2",
+          "road_address_name": "경기 수원시 영통구 광교로 182",
+          "category_name": "음식점 > 카페",
+          "distance": 40,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·수원시·영통구·광교로·182·수원 일치 · 기존 좌표에서 29m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-063",
+      "name": "경기도박물관",
+      "address": "경기 용인시 기흥구 상갈로 6",
+      "latitude": 37.2686,
+      "longitude": 127.1088,
+      "kakaoSearchKeyword": "경기도박물관",
+      "selectedKakaoPlaceName": "경기도박물관",
+      "selectedKakaoPlaceId": "21800626",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/21800626",
+      "candidates": [
+        {
+          "place_name": "경기도박물관",
+          "id": "21800626",
+          "place_url": "https://place.map.kakao.com/21800626",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 47,
+          "score": 100
+        },
+        {
+          "place_name": "경기도박물관 주차장",
+          "id": "20513025",
+          "place_url": "https://place.map.kakao.com/20513025",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 32,
+          "score": 65
+        },
+        {
+          "place_name": "경기도박물관 주차장2",
+          "id": "17570778",
+          "place_url": "https://place.map.kakao.com/17570778",
+          "address_name": "경기 용인시 기흥구 상갈동 496",
+          "road_address_name": "경기 용인시 기흥구 상갈로 6",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 34,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·용인시·기흥구·상갈로·용인 일치 · 기존 좌표에서 47m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-064",
+      "name": "한국만화박물관",
+      "address": "경기 부천시 원미구 길주로 1",
+      "latitude": 37.508,
+      "longitude": 126.742,
+      "kakaoSearchKeyword": "한국만화박물관",
+      "selectedKakaoPlaceName": "한국만화박물관",
+      "selectedKakaoPlaceId": "11356267",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11356267",
+      "candidates": [
+        {
+          "place_name": "한국만화박물관",
+          "id": "11356267",
+          "place_url": "https://place.map.kakao.com/11356267",
+          "address_name": "경기 부천시 원미구 상동 529-2",
+          "road_address_name": "경기 부천시 원미구 길주로 1",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 71,
+          "score": 100
+        },
+        {
+          "place_name": "한국만화박물관(부천) 전기차충전소",
+          "id": "147130010",
+          "place_url": "https://place.map.kakao.com/147130010",
+          "address_name": "경기 부천시 원미구 상동 529-2",
+          "road_address_name": "경기 부천시 원미구 길주로 1",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 342,
+          "score": 57
+        },
+        {
+          "place_name": "부천국제만화축제",
+          "id": "25599183",
+          "place_url": "https://place.map.kakao.com/25599183",
+          "address_name": "경기 부천시 원미구 상동 529-2",
+          "road_address_name": "경기 부천시 원미구 길주로 1",
+          "category_name": "이슈 > 이벤트 > 페스티벌",
+          "distance": 67,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·부천시·원미구·길주로·부천 일치 · 기존 좌표에서 71m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 43점 차이"
+    },
+    {
+      "id": "place-065",
+      "name": "부천로보파크",
+      "address": "경기 부천시 원미구 평천로 655",
+      "latitude": 37.5182,
+      "longitude": 126.7631,
+      "kakaoSearchKeyword": "부천로보파크",
+      "selectedKakaoPlaceName": "부천로보파크",
+      "selectedKakaoPlaceId": "10462987",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10462987",
+      "candidates": [
+        {
+          "place_name": "부천로보파크",
+          "id": "10462987",
+          "place_url": "https://place.map.kakao.com/10462987",
+          "address_name": "경기 부천시 원미구 약대동 193",
+          "road_address_name": "경기 부천시 원미구 평천로 655",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 153,
+          "score": 100
+        },
+        {
+          "place_name": "로보파크 전기차충전소",
+          "id": "1756895617",
+          "place_url": "https://place.map.kakao.com/1756895617",
+          "address_name": "경기 부천시 원미구 약대동 193",
+          "road_address_name": "경기 부천시 원미구 평천로 655",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 180,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·부천시·원미구·평천로·655·부천 일치 · 기존 좌표에서 153m · 카테고리 전시관 일치 · 기존 장소 ID 일치 · 2위와 69점 차이"
+    },
+    {
+      "id": "place-066",
+      "name": "웅진플레이도시",
+      "address": "경기 부천시 원미구 조마루로 2",
+      "latitude": 37.4991,
+      "longitude": 126.7441,
+      "kakaoSearchKeyword": "웅진플레이도시",
+      "selectedKakaoPlaceName": "웅진플레이도시",
+      "selectedKakaoPlaceId": "17183821",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17183821",
+      "candidates": [
+        {
+          "place_name": "웅진플레이도시",
+          "id": "17183821",
+          "place_url": "https://place.map.kakao.com/17183821",
+          "address_name": "경기 부천시 원미구 상동 572-1",
+          "road_address_name": "경기 부천시 원미구 조마루로 2",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 워터테마파크",
+          "distance": 93,
+          "score": 100
+        },
+        {
+          "place_name": "웅진플레이도시 워터파크&온천스파",
+          "id": "611505585",
+          "place_url": "https://place.map.kakao.com/611505585",
+          "address_name": "경기 부천시 원미구 상동 572-1",
+          "road_address_name": "경기 부천시 원미구 조마루로 2",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 워터테마파크",
+          "distance": 174,
+          "score": 76
+        },
+        {
+          "place_name": "웅진플레이도시 4주차장",
+          "id": "1727226164",
+          "place_url": "https://place.map.kakao.com/1727226164",
+          "address_name": "경기 부천시 원미구 상동 572-1",
+          "road_address_name": "경기 부천시 원미구 조마루로 2",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 73,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·부천시·원미구·조마루로·부천 일치 · 기존 좌표에서 93m · 카테고리 테마파크 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-067",
+      "name": "고양어린이박물관",
+      "address": "경기 고양시 덕양구 화중로 26",
+      "latitude": 37.6285,
+      "longitude": 126.8306,
+      "kakaoSearchKeyword": "고양어린이박물관",
+      "selectedKakaoPlaceName": "고양어린이박물관",
+      "selectedKakaoPlaceId": "27408630",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27408630",
+      "candidates": [
+        {
+          "place_name": "고양어린이박물관",
+          "id": "27408630",
+          "place_url": "https://place.map.kakao.com/27408630",
+          "address_name": "경기 고양시 덕양구 화정동 1003",
+          "road_address_name": "경기 고양시 덕양구 화중로 26",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 112,
+          "score": 100
+        },
+        {
+          "place_name": "고양어린이박물관 전기차충전소",
+          "id": "1280123107",
+          "place_url": "https://place.map.kakao.com/1280123107",
+          "address_name": "경기 고양시 덕양구 화정동 1003",
+          "road_address_name": "경기 고양시 덕양구 화중로 26",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 113,
+          "score": 62
+        },
+        {
+          "place_name": "고양어린이박물관 주차장",
+          "id": "1257891735",
+          "place_url": "https://place.map.kakao.com/1257891735",
+          "address_name": "경기 고양시 덕양구 화정동 1003",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 118,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·화중로·26·고양 일치 · 기존 좌표에서 112m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-068",
+      "name": "아쿠아플라넷 일산",
+      "address": "경기 고양시 일산서구 한류월드로 282",
+      "latitude": 37.6633,
+      "longitude": 126.7555,
+      "kakaoSearchKeyword": "아쿠아플라넷 일산",
+      "selectedKakaoPlaceName": "아쿠아플라넷 일산",
+      "selectedKakaoPlaceId": "23738256",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23738256",
+      "candidates": [
+        {
+          "place_name": "아쿠아플라넷 일산",
+          "id": "23738256",
+          "place_url": "https://place.map.kakao.com/23738256",
+          "address_name": "경기 고양시 일산서구 대화동 2606-1",
+          "road_address_name": "경기 고양시 일산서구 한류월드로 282",
+          "category_name": "문화,예술 > 문화시설 > 아쿠아리움",
+          "distance": 54,
+          "score": 100
+        },
+        {
+          "place_name": "아쿠아플라넷일산 주차장",
+          "id": "27609267",
+          "place_url": "https://place.map.kakao.com/27609267",
+          "address_name": "경기 고양시 일산서구 대화동 2606-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 45,
+          "score": 65
+        },
+        {
+          "place_name": "아쿠아플라넷일산 주차장3",
+          "id": "1937763059",
+          "place_url": "https://place.map.kakao.com/1937763059",
+          "address_name": "경기 고양시 일산서구 대화동 2606-1",
+          "road_address_name": "경기 고양시 일산서구 한류월드로 282",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 49,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·고양시·일산서구·한류월드로·282·고양 일치 · 기존 좌표에서 54m · 카테고리 아쿠아리움 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-069",
+      "name": "현대 모터스튜디오 고양",
+      "address": "경기 고양시 일산서구 킨텍스로 217-6",
+      "latitude": 37.6628,
+      "longitude": 126.7532,
+      "kakaoSearchKeyword": "현대 모터스튜디오 고양",
+      "selectedKakaoPlaceName": "현대 모터스튜디오 고양",
+      "selectedKakaoPlaceId": "1338515380",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1338515380",
+      "candidates": [
+        {
+          "place_name": "현대 모터스튜디오 고양",
+          "id": "1338515380",
+          "place_url": "https://place.map.kakao.com/1338515380",
+          "address_name": "경기 고양시 일산서구 대화동 2601",
+          "road_address_name": "경기 고양시 일산서구 킨텍스로 217-6",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 634,
+          "score": 100
+        },
+        {
+          "place_name": "현대모터스튜디오 고양카페",
+          "id": "357278643",
+          "place_url": "https://place.map.kakao.com/357278643",
+          "address_name": "경기 고양시 일산서구 대화동 2601",
+          "road_address_name": "경기 고양시 일산서구 킨텍스로 217-6",
+          "category_name": "음식점 > 카페",
+          "distance": 562,
+          "score": 57
+        },
+        {
+          "place_name": "현대모터스튜디오 고양 전기차충전소",
+          "id": "107879249",
+          "place_url": "https://place.map.kakao.com/107879249",
+          "address_name": "경기 고양시 일산서구 대화동 2601",
+          "road_address_name": "경기 고양시 일산서구 킨텍스로 217-6",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 570,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·일산서구·킨텍스로·2176·고양 일치 · 기존 좌표에서 634m · 카테고리 전시관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-070",
+      "name": "일산호수공원",
+      "address": "경기 고양시 일산동구 호수로 595",
+      "latitude": 37.6605,
+      "longitude": 126.7624,
+      "kakaoSearchKeyword": "일산호수공원",
+      "selectedKakaoPlaceName": "일산호수공원",
+      "selectedKakaoPlaceId": "26298671",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26298671",
+      "candidates": [
+        {
+          "place_name": "일산호수공원",
+          "id": "26298671",
+          "place_url": "https://place.map.kakao.com/26298671",
+          "address_name": "경기 고양시 일산동구 장항동 906",
+          "road_address_name": "경기 고양시 일산동구 호수로 595",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 508,
+          "score": 100
+        },
+        {
+          "place_name": "일산호수공원 한울광장",
+          "id": "17560090",
+          "place_url": "https://place.map.kakao.com/17560090",
+          "address_name": "경기 고양시 일산동구 장항동 906",
+          "road_address_name": "경기 고양시 일산동구 호수로 595",
+          "category_name": "여행 > 공원시설물",
+          "distance": 516,
+          "score": 71
+        },
+        {
+          "place_name": "일산호수공원 메타세쿼이아길",
+          "id": "1087984035",
+          "place_url": "https://place.map.kakao.com/1087984035",
+          "address_name": "경기 고양시 일산동구 장항동 906",
+          "road_address_name": "경기 고양시 일산동구 호수로 595",
+          "category_name": "여행 > 공원",
+          "distance": 646,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·고양시·일산동구·호수로·595·고양 일치 · 기존 좌표에서 508m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-071",
+      "name": "파주출판도시",
+      "address": "경기 파주시 회동길 145",
+      "latitude": 37.708,
+      "longitude": 126.6877,
+      "kakaoSearchKeyword": "파주출판도시",
+      "selectedKakaoPlaceName": "파주출판도시",
+      "selectedKakaoPlaceId": "8120867",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8120867",
+      "candidates": [
+        {
+          "place_name": "파주출판도시",
+          "id": "8120867",
+          "place_url": "https://place.map.kakao.com/8120867",
+          "address_name": "경기 파주시 문발동 524-3",
+          "road_address_name": "경기 파주시 회동길 145",
+          "category_name": "부동산 > 부지",
+          "distance": 152,
+          "score": 100
+        },
+        {
+          "place_name": "파주출판도시 자유로휴게소 주유소",
+          "id": "13337628",
+          "place_url": "https://place.map.kakao.com/13337628",
+          "address_name": "경기 파주시 문발동 495-137",
+          "road_address_name": "경기 파주시 자유로 2212",
+          "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+          "distance": 927,
+          "score": 51
+        },
+        {
+          "place_name": "파주출판도시 자유로휴게소",
+          "id": "420473965",
+          "place_url": "https://place.map.kakao.com/420473965",
+          "address_name": "경기 파주시 문발동 495-122",
+          "road_address_name": "경기 파주시 자유로 2210",
+          "category_name": "교통,수송 > 휴게소",
+          "distance": 985,
+          "score": 51
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·파주시·회동길·145·파주 일치 · 기존 좌표에서 152m · 기존 장소 ID 일치 · 2위와 49점 차이"
+    },
+    {
+      "id": "place-072",
+      "name": "헤이리예술마을",
+      "address": "경기 파주시 탄현면 헤이리마을길 70-21",
+      "latitude": 37.788,
+      "longitude": 126.6997,
+      "kakaoSearchKeyword": "헤이리예술마을",
+      "selectedKakaoPlaceName": "헤이리예술마을",
+      "selectedKakaoPlaceId": "8616522",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8616522",
+      "candidates": [
+        {
+          "place_name": "헤이리예술마을",
+          "id": "8616522",
+          "place_url": "https://place.map.kakao.com/8616522",
+          "address_name": "경기 파주시 탄현면 법흥리 1652-239",
+          "road_address_name": "경기 파주시 탄현면 헤이리마을길 70-21",
+          "category_name": "여행 > 관광,명소 > 관광단지",
+          "distance": 35,
+          "score": 100
+        },
+        {
+          "place_name": "헤이리예술마을 주차장10",
+          "id": "1755925201",
+          "place_url": "https://place.map.kakao.com/1755925201",
+          "address_name": "경기 파주시 탄현면 법흥리 1652-495",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 149,
+          "score": 62
+        },
+        {
+          "place_name": "헤이리예술마을 주차장9",
+          "id": "1005076254",
+          "place_url": "https://place.map.kakao.com/1005076254",
+          "address_name": "경기 파주시 탄현면 법흥리 1652-221",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 160,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·파주시·탄현면·헤이리마을길·7021·파주 일치 · 기존 좌표에서 35m · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-073",
+      "name": "마장호수 출렁다리",
+      "address": "경기 파주시 광탄면 기산리 481-1",
+      "latitude": 37.774,
+      "longitude": 126.9243,
+      "kakaoSearchKeyword": "마장호수 출렁다리",
+      "selectedKakaoPlaceName": "마장호수출렁다리",
+      "selectedKakaoPlaceId": "2028327937",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2028327937",
+      "candidates": [
+        {
+          "place_name": "마장호수출렁다리",
+          "id": "2028327937",
+          "place_url": "https://place.map.kakao.com/2028327937",
+          "address_name": "경기 파주시 광탄면 기산리 481-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 도로시설 > 육교",
+          "distance": 392,
+          "score": 100
+        },
+        {
+          "place_name": "출렁다리쌈밥 마장호수본점",
+          "id": "60206549",
+          "place_url": "https://place.map.kakao.com/60206549",
+          "address_name": "경기 파주시 광탄면 기산리 527-1",
+          "road_address_name": "경기 파주시 광탄면 기산로186번길 8",
+          "category_name": "음식점 > 한식 > 쌈밥",
+          "distance": 584,
+          "score": 26
+        },
+        {
+          "place_name": "출렁다리바베큐",
+          "id": "1906455172",
+          "place_url": "https://place.map.kakao.com/1906455172",
+          "address_name": "경기 양주시 백석읍 기산리 384",
+          "road_address_name": "경기 양주시 백석읍 기산로 414-13",
+          "category_name": "음식점 > 한식 > 육류,고기",
+          "distance": 1164,
+          "score": 18
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·파주시·광탄면·기산리·4811·파주 일치 · 기존 좌표에서 392m · 기존 장소 ID 일치 · 2위와 74점 차이"
+    },
+    {
+      "id": "place-074",
+      "name": "국립수목원",
+      "address": "경기 포천시 소흘읍 광릉수목원로 415",
+      "latitude": 37.7548,
+      "longitude": 127.1663,
+      "kakaoSearchKeyword": "국립수목원",
+      "selectedKakaoPlaceName": "국립수목원",
+      "selectedKakaoPlaceId": "7915027",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7915027",
+      "candidates": [
+        {
+          "place_name": "국립수목원",
+          "id": "7915027",
+          "place_url": "https://place.map.kakao.com/7915027",
+          "address_name": "경기 포천시 소흘읍 직동리 산 50-18",
+          "road_address_name": "경기 포천시 소흘읍 광릉수목원로 415",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 378,
+          "score": 100
+        },
+        {
+          "place_name": "국립수목원 관상식물원",
+          "id": "17579749",
+          "place_url": "https://place.map.kakao.com/17579749",
+          "address_name": "경기 포천시 소흘읍 직동리 51-2",
+          "road_address_name": "경기 포천시 소흘읍 광릉수목원로 415",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 22,
+          "score": 79
+        },
+        {
+          "place_name": "국립수목원 덩굴식물원",
+          "id": "17582131",
+          "place_url": "https://place.map.kakao.com/17582131",
+          "address_name": "경기 포천시 소흘읍 직동리 산 50-18",
+          "road_address_name": "경기 포천시 소흘읍 광릉수목원로 415",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 128,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·포천시·소흘읍·광릉수목원로·415·포천 일치 · 기존 좌표에서 378m · 카테고리 수목원 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-075",
+      "name": "포천아트밸리",
+      "address": "경기 포천시 신북면 아트밸리로 234",
+      "latitude": 37.9236,
+      "longitude": 127.2367,
+      "kakaoSearchKeyword": "포천아트밸리",
+      "selectedKakaoPlaceName": "포천아트밸리",
+      "selectedKakaoPlaceId": "11520510",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11520510",
+      "candidates": [
+        {
+          "place_name": "포천아트밸리",
+          "id": "11520510",
+          "place_url": "https://place.map.kakao.com/11520510",
+          "address_name": "경기 포천시 신북면 기지리 282",
+          "road_address_name": "경기 포천시 신북면 아트밸리로 234",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 67,
+          "score": 100
+        },
+        {
+          "place_name": "포천아트밸리 천문과학관",
+          "id": "25493548",
+          "place_url": "https://place.map.kakao.com/25493548",
+          "address_name": "경기 포천시 신북면 기지리 282",
+          "road_address_name": "경기 포천시 신북면 아트밸리로 234",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 607,
+          "score": 71
+        },
+        {
+          "place_name": "포천아트밸리 주차장",
+          "id": "17573330",
+          "place_url": "https://place.map.kakao.com/17573330",
+          "address_name": "경기 포천시 신북면 기지리 282",
+          "road_address_name": "경기 포천시 신북면 아트밸리로 234",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 23,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·포천시·신북면·아트밸리로·234·포천 일치 · 기존 좌표에서 67m · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-076",
+      "name": "포천 허브아일랜드",
+      "address": "경기 포천시 신북면 청신로947번길 35",
+      "latitude": 37.9653,
+      "longitude": 127.1319,
+      "kakaoSearchKeyword": "허브아일랜드",
+      "selectedKakaoPlaceName": "허브아일랜드",
+      "selectedKakaoPlaceId": "17282868",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17282868",
+      "candidates": [
+        {
+          "place_name": "허브아일랜드",
+          "id": "17282868",
+          "place_url": "https://place.map.kakao.com/17282868",
+          "address_name": "경기 포천시 신북면 삼정리 386",
+          "road_address_name": "경기 포천시 신북면 청신로947번길 35",
+          "category_name": "여행 > 관광,명소 > 관광농원",
+          "distance": 22,
+          "score": 100
+        },
+        {
+          "place_name": "허브아일랜드 허브카페",
+          "id": "17576332",
+          "place_url": "https://place.map.kakao.com/17576332",
+          "address_name": "경기 포천시 신북면 삼정리 517-2",
+          "road_address_name": "경기 포천시 신북면 청신로947번길 35",
+          "category_name": "음식점 > 카페",
+          "distance": 22,
+          "score": 65
+        },
+        {
+          "place_name": "허브아일랜드국밥집",
+          "id": "1713970859",
+          "place_url": "https://place.map.kakao.com/1713970859",
+          "address_name": "경기 포천시 신북면 삼정리 386",
+          "road_address_name": "경기 포천시 신북면 청신로947번길 35",
+          "category_name": "음식점 > 한식 > 국밥",
+          "distance": 22,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·포천시·신북면·청신로947번길·35·포천 일치 · 기존 좌표에서 22m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-077",
+      "name": "아침고요수목원",
+      "address": "경기 가평군 상면 수목원로 427",
+      "latitude": 37.743,
+      "longitude": 127.3526,
+      "kakaoSearchKeyword": "아침고요수목원",
+      "selectedKakaoPlaceName": "아침고요수목원",
+      "selectedKakaoPlaceId": "25855305",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25855305",
+      "candidates": [
+        {
+          "place_name": "아침고요수목원",
+          "id": "25855305",
+          "place_url": "https://place.map.kakao.com/25855305",
+          "address_name": "경기 가평군 상면 행현리 622-4",
+          "road_address_name": "경기 가평군 상면 수목원로 427",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 82,
+          "score": 100
+        },
+        {
+          "place_name": "아침고요수목원 하늘정원",
+          "id": "17556198",
+          "place_url": "https://place.map.kakao.com/17556198",
+          "address_name": "경기 가평군 상면 행현리 622-4",
+          "road_address_name": "경기 가평군 상면 수목원로 427",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 243,
+          "score": 76
+        },
+        {
+          "place_name": "아침고요수목원 수국전시회",
+          "id": "1715949609",
+          "place_url": "https://place.map.kakao.com/1715949609",
+          "address_name": "경기 가평군 상면 행현리 622-4",
+          "road_address_name": "경기 가평군 상면 수목원로 427",
+          "category_name": "문화,예술 > 전시회,박람회",
+          "distance": 83,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·가평군·상면·수목원로·427·가평 일치 · 기존 좌표에서 82m · 카테고리 수목원 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-078",
+      "name": "쁘띠프랑스",
+      "address": "경기 가평군 청평면 호반로 1063",
+      "latitude": 37.715,
+      "longitude": 127.4905,
+      "kakaoSearchKeyword": "쁘띠프랑스",
+      "selectedKakaoPlaceName": "쁘띠프랑스",
+      "selectedKakaoPlaceId": "7920064",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7920064",
+      "candidates": [
+        {
+          "place_name": "쁘띠프랑스",
+          "id": "7920064",
+          "place_url": "https://place.map.kakao.com/7920064",
+          "address_name": "경기 가평군 청평면 고성리 616-2",
+          "road_address_name": "경기 가평군 청평면 호반로 1063",
+          "category_name": "여행 > 관광,명소",
+          "distance": 3,
+          "score": 100
+        },
+        {
+          "place_name": "쁘띠프랑스 오르골하우스",
+          "id": "17578101",
+          "place_url": "https://place.map.kakao.com/17578101",
+          "address_name": "경기 가평군 청평면 고성리 616-2",
+          "road_address_name": "경기 가평군 청평면 호반로 1063",
+          "category_name": "여행 > 관광,명소",
+          "distance": 13,
+          "score": 65
+        },
+        {
+          "place_name": "쁘띠프랑스 리조트",
+          "id": "1032505156",
+          "place_url": "https://place.map.kakao.com/1032505156",
+          "address_name": "경기 가평군 청평면 고성리 616-2",
+          "road_address_name": "경기 가평군 청평면 호반로 1063",
+          "category_name": "교육,학문 > 교육단체 > 청소년수련시설",
+          "distance": 19,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·가평군·청평면·호반로·1063·가평 일치 · 기존 좌표에서 3m · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-079",
+      "name": "세미원",
+      "address": "경기 양평군 양서면 양수로 93",
+      "latitude": 37.5384,
+      "longitude": 127.3231,
+      "kakaoSearchKeyword": "세미원",
+      "selectedKakaoPlaceName": "세미원",
+      "selectedKakaoPlaceId": "7949686",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7949686",
+      "candidates": [
+        {
+          "place_name": "세미원",
+          "id": "7949686",
+          "place_url": "https://place.map.kakao.com/7949686",
+          "address_name": "경기 양평군 양서면 용담리 428-8",
+          "road_address_name": "경기 양평군 양서면 양수로 93",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 291,
+          "score": 100
+        },
+        {
+          "place_name": "세미원 화장실",
+          "id": "1341680614",
+          "place_url": "https://place.map.kakao.com/1341680614",
+          "address_name": "경기 양평군 양서면 용담리 430-8",
+          "road_address_name": "",
+          "category_name": "가정,생활 > 화장실",
+          "distance": 257,
+          "score": 62
+        },
+        {
+          "place_name": "세미원연꽃문화제",
+          "id": "1056638418",
+          "place_url": "https://place.map.kakao.com/1056638418",
+          "address_name": "경기 양평군 양서면 용담리 428-8",
+          "road_address_name": "경기 양평군 양서면 양수로 93",
+          "category_name": "이슈 > 이벤트 > 페스티벌",
+          "distance": 291,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·양평군·양서면·양수로·93·양평 일치 · 기존 좌표에서 291m · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-080",
+      "name": "이천세라피아",
+      "address": "경기 이천시 경충대로2697번길 263",
+      "latitude": 37.2776,
+      "longitude": 127.4266,
+      "kakaoSearchKeyword": "이천세계도자센터 세라피아",
+      "selectedKakaoPlaceName": "이천세계도자센터 세라피아",
+      "selectedKakaoPlaceId": "27547284",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27547284",
+      "candidates": [
+        {
+          "place_name": "이천세계도자센터 세라피아",
+          "id": "27547284",
+          "place_url": "https://place.map.kakao.com/27547284",
+          "address_name": "경기 이천시 관고동 435-1",
+          "road_address_name": "경기 이천시 경충대로2697번길 263",
+          "category_name": "여행 > 관광,명소 > 도자기,도예촌",
+          "distance": 306,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·이천시·경충대로2697번길·263·이천 일치 · 기존 좌표에서 306m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-081",
+      "name": "경기도자박물관",
+      "address": "경기 광주시 곤지암읍 경충대로 727",
+      "latitude": 37.3517,
+      "longitude": 127.3279,
+      "kakaoSearchKeyword": "경기도자박물관",
+      "selectedKakaoPlaceName": "경기도자박물관",
+      "selectedKakaoPlaceId": "17807469",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17807469",
+      "candidates": [
+        {
+          "place_name": "경기도자박물관",
+          "id": "17807469",
+          "place_url": "https://place.map.kakao.com/17807469",
+          "address_name": "경기 광주시 곤지암읍 삼리 72-1",
+          "road_address_name": "경기 광주시 곤지암읍 경충대로 727",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 132,
+          "score": 100
+        },
+        {
+          "place_name": "경기도자박물관 클레이플레이 교육센터",
+          "id": "1230340388",
+          "place_url": "https://place.map.kakao.com/1230340388",
+          "address_name": "경기 광주시 곤지암읍 삼리 72-1",
+          "road_address_name": "경기 광주시 곤지암읍 경충대로 727",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 58,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·광주시·곤지암읍·경충대로·727·광주 일치 · 기존 좌표에서 132m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-082",
+      "name": "화담숲",
+      "address": "경기 광주시 도척면 도웅리 산 33",
+      "latitude": 37.3402,
+      "longitude": 127.2904,
+      "kakaoSearchKeyword": "화담숲",
+      "selectedKakaoPlaceName": "화담숲",
+      "selectedKakaoPlaceId": "15582723",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/15582723",
+      "candidates": [
+        {
+          "place_name": "화담숲",
+          "id": "15582723",
+          "place_url": "https://place.map.kakao.com/15582723",
+          "address_name": "경기 광주시 도척면 도웅리 산 33",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 169,
+          "score": 100
+        },
+        {
+          "place_name": "화담숲 자수화단",
+          "id": "1372085464",
+          "place_url": "https://place.map.kakao.com/1372085464",
+          "address_name": "경기 광주시 도척면 도웅리 산 33",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 214,
+          "score": 76
+        },
+        {
+          "place_name": "화담숲 자생식물원",
+          "id": "19291018",
+          "place_url": "https://place.map.kakao.com/19291018",
+          "address_name": "경기 광주시 도척면 도웅리 산 35-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 373,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·광주시·도척면·도웅리·33·광주 일치 · 기존 좌표에서 169m · 카테고리 수목원 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-083",
+      "name": "안양예술공원",
+      "address": "경기 안양시 만안구 예술공원로 131",
+      "latitude": 37.419,
+      "longitude": 126.9192,
+      "kakaoSearchKeyword": "안양예술공원",
+      "selectedKakaoPlaceName": "안양예술공원",
+      "selectedKakaoPlaceId": "10582302",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10582302",
+      "candidates": [
+        {
+          "place_name": "안양예술공원",
+          "id": "10582302",
+          "place_url": "https://place.map.kakao.com/10582302",
+          "address_name": "경기 안양시 만안구 석수동 240-18",
+          "road_address_name": "경기 안양시 만안구 예술공원로 131",
+          "category_name": "여행 > 공원",
+          "distance": 51,
+          "score": 100
+        },
+        {
+          "place_name": "안양예술공원 공영주차장",
+          "id": "20518958",
+          "place_url": "https://place.map.kakao.com/20518958",
+          "address_name": "경기 안양시 만안구 석수동 240-18",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장 > 공영주차장",
+          "distance": 65,
+          "score": 65
+        },
+        {
+          "place_name": "안양예술공원 음식문화거리",
+          "id": "12273389",
+          "place_url": "https://place.map.kakao.com/12273389",
+          "address_name": "경기 안양시 만안구 안양동 1320",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마거리",
+          "distance": 87,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·안양시·만안구·예술공원로·131·안양 일치 · 기존 좌표에서 51m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-084",
+      "name": "경기도미술관",
+      "address": "경기 안산시 단원구 동산로 268",
+      "latitude": 37.3258,
+      "longitude": 126.8108,
+      "kakaoSearchKeyword": "경기도미술관",
+      "selectedKakaoPlaceName": "경기도미술관",
+      "selectedKakaoPlaceId": "26472936",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26472936",
+      "candidates": [
+        {
+          "place_name": "경기도미술관",
+          "id": "26472936",
+          "place_url": "https://place.map.kakao.com/26472936",
+          "address_name": "경기 안산시 단원구 초지동 667",
+          "road_address_name": "경기 안산시 단원구 동산로 268",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 280,
+          "score": 100
+        },
+        {
+          "place_name": "커피언스 경기도미술관점",
+          "id": "2030308017",
+          "place_url": "https://place.map.kakao.com/2030308017",
+          "address_name": "경기 안산시 단원구 초지동 667",
+          "road_address_name": "경기 안산시 단원구 동산로 268",
+          "category_name": "음식점 > 카페 > 커피전문점",
+          "distance": 278,
+          "score": 62
+        },
+        {
+          "place_name": "안산문화예술의전당 화랑미술관",
+          "id": "17574757",
+          "place_url": "https://place.map.kakao.com/17574757",
+          "address_name": "경기 안산시 단원구 고잔동 817",
+          "road_address_name": "경기 안산시 단원구 화랑로 312",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 1125,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·안산시·단원구·동산로·268·안산 일치 · 기존 좌표에서 280m · 카테고리 미술관 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-085",
+      "name": "안산어촌민속박물관",
+      "address": "경기 안산시 단원구 대부황금로 7",
+      "latitude": 37.1927,
+      "longitude": 126.6472,
+      "kakaoSearchKeyword": "안산어촌민속박물관",
+      "selectedKakaoPlaceName": "안산어촌민속박물관",
+      "selectedKakaoPlaceId": "19174891",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/19174891",
+      "candidates": [
+        {
+          "place_name": "안산어촌민속박물관",
+          "id": "19174891",
+          "place_url": "https://place.map.kakao.com/19174891",
+          "address_name": "경기 안산시 단원구 선감동 717",
+          "road_address_name": "경기 안산시 단원구 대부황금로 7",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 100,
+          "score": 100
+        },
+        {
+          "place_name": "안산어촌민속박물관 제3주차장",
+          "id": "17570773",
+          "place_url": "https://place.map.kakao.com/17570773",
+          "address_name": "경기 안산시 단원구 선감동 산 160",
+          "road_address_name": "경기 안산시 단원구 대부황금로 7",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 81,
+          "score": 65
+        },
+        {
+          "place_name": "안산어촌민속박물관 제2주차장",
+          "id": "17577667",
+          "place_url": "https://place.map.kakao.com/17577667",
+          "address_name": "경기 안산시 단원구 선감동 717-3",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 210,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·안산시·단원구·대부황금로·안산 일치 · 기존 좌표에서 100m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-086",
+      "name": "화성 공룡알 화석산지",
+      "address": "경기 화성시 만세구 송산면 공룡로 659",
+      "latitude": 37.2643,
+      "longitude": 126.7458,
+      "kakaoSearchKeyword": "공룡알화석산지 방문자센터",
+      "selectedKakaoPlaceName": "공룡알화석산지 방문자센터",
+      "selectedKakaoPlaceId": "17382344",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17382344",
+      "candidates": [
+        {
+          "place_name": "공룡알화석산지 방문자센터",
+          "id": "17382344",
+          "place_url": "https://place.map.kakao.com/17382344",
+          "address_name": "경기 화성시 만세구 송산면 고정리",
+          "road_address_name": "경기 화성시 만세구 송산면 공룡로 659",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 243,
+          "score": 100
+        },
+        {
+          "place_name": "공룡알화석산지 방문자센터 주차장",
+          "id": "1793737886",
+          "place_url": "https://place.map.kakao.com/1793737886",
+          "address_name": "경기 화성시 만세구 송산면 고정리 산 6",
+          "road_address_name": "경기 화성시 만세구 송산면 공룡로 659",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 266,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·화성시·만세구·송산면·공룡로·659·화성 일치 · 기존 좌표에서 243m · 카테고리 문화시설 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-087",
+      "name": "오산미니어처빌리지",
+      "address": "경기 오산시 북삼미로 12",
+      "latitude": 37.1597,
+      "longitude": 127.077,
+      "kakaoSearchKeyword": "오산미니어처빌리지",
+      "selectedKakaoPlaceName": "오산미니어처빌리지",
+      "selectedKakaoPlaceId": "1669494896",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1669494896",
+      "candidates": [
+        {
+          "place_name": "오산미니어처빌리지",
+          "id": "1669494896",
+          "place_url": "https://place.map.kakao.com/1669494896",
+          "address_name": "경기 오산시 내삼미동 250-5",
+          "road_address_name": "경기 오산시 북삼미로 12",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 2337,
+          "score": 100
+        },
+        {
+          "place_name": "오산미니어처빌리지 미니빌 신나는 놀이터",
+          "id": "281120731",
+          "place_url": "https://place.map.kakao.com/281120731",
+          "address_name": "경기 오산시 내삼미동 907",
+          "road_address_name": "경기 오산시 북삼미로 12",
+          "category_name": "가정,생활 > 유아 > 놀이시설",
+          "distance": 2334,
+          "score": 46
+        },
+        {
+          "place_name": "오산 미니어처빌리지 주차장 전기차충전소",
+          "id": "1313706573",
+          "place_url": "https://place.map.kakao.com/1313706573",
+          "address_name": "경기 오산시 내삼미동 908",
+          "road_address_name": "경기 오산시 북삼미로 22",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 2355,
+          "score": 46
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·오산시·북삼미로·12·오산 일치 · 기존 좌표에서 2337m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-088",
+      "name": "시흥갯골생태공원",
+      "address": "경기 시흥시 동서로 287",
+      "latitude": 37.3904,
+      "longitude": 126.7803,
+      "kakaoSearchKeyword": "시흥갯골생태공원",
+      "selectedKakaoPlaceName": "시흥갯골생태공원",
+      "selectedKakaoPlaceId": "7971967",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7971967",
+      "candidates": [
+        {
+          "place_name": "시흥갯골생태공원",
+          "id": "7971967",
+          "place_url": "https://place.map.kakao.com/7971967",
+          "address_name": "경기 시흥시 장곡동 724-32",
+          "road_address_name": "경기 시흥시 동서로 287",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 68,
+          "score": 100
+        },
+        {
+          "place_name": "시흥갯골생태공원 매점",
+          "id": "1579673497",
+          "place_url": "https://place.map.kakao.com/1579673497",
+          "address_name": "경기 시흥시 장곡동 724-32",
+          "road_address_name": "경기 시흥시 동서로 287",
+          "category_name": "여행 > 공원시설물",
+          "distance": 63,
+          "score": 79
+        },
+        {
+          "place_name": "시흥갯골생태공원 야외무대",
+          "id": "1536133309",
+          "place_url": "https://place.map.kakao.com/1536133309",
+          "address_name": "경기 시흥시 장곡동 724-32",
+          "road_address_name": "경기 시흥시 동서로 287",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 142,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·시흥시·동서로·287·시흥 일치 · 기존 좌표에서 68m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-089",
+      "name": "미사경정공원",
+      "address": "경기 하남시 미사대로 505",
+      "latitude": 37.5527,
+      "longitude": 127.2115,
+      "kakaoSearchKeyword": "미사경정공원",
+      "selectedKakaoPlaceName": "미사경정공원",
+      "selectedKakaoPlaceId": "26369650",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26369650",
+      "candidates": [
+        {
+          "place_name": "미사경정공원",
+          "id": "26369650",
+          "place_url": "https://place.map.kakao.com/26369650",
+          "address_name": "경기 하남시 덕풍동 15",
+          "road_address_name": "경기 하남시 미사대로 505",
+          "category_name": "여행 > 공원",
+          "distance": 834,
+          "score": 100
+        },
+        {
+          "place_name": "미사경정공원 남문",
+          "id": "2016387226",
+          "place_url": "https://place.map.kakao.com/2016387226",
+          "address_name": "경기 하남시 신장동 281-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 입출구",
+          "distance": 109,
+          "score": 62
+        },
+        {
+          "place_name": "미사경정공원 쉼터매점",
+          "id": "1721807671",
+          "place_url": "https://place.map.kakao.com/1721807671",
+          "address_name": "경기 하남시 덕풍동 15",
+          "road_address_name": "경기 하남시 미사대로 505",
+          "category_name": "교통,수송 > 휴게소",
+          "distance": 169,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·하남시·미사대로·505·하남 일치 · 기존 좌표에서 834m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-090",
+      "name": "농협 안성팜랜드",
+      "address": "경기 안성시 공도읍 대신두길 28",
+      "latitude": 36.9918,
+      "longitude": 127.189,
+      "kakaoSearchKeyword": "농협 안성팜랜드",
+      "selectedKakaoPlaceName": "농협안성팜랜드",
+      "selectedKakaoPlaceId": "17202018",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17202018",
+      "candidates": [
+        {
+          "place_name": "농협안성팜랜드",
+          "id": "17202018",
+          "place_url": "https://place.map.kakao.com/17202018",
+          "address_name": "경기 안성시 공도읍 신두리 451",
+          "road_address_name": "경기 안성시 공도읍 대신두길 28",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 405,
+          "score": 100
+        },
+        {
+          "place_name": "농협안성팜랜드 놀이기구",
+          "id": "751257773",
+          "place_url": "https://place.map.kakao.com/751257773",
+          "address_name": "경기 안성시 공도읍 신두리 451",
+          "road_address_name": "경기 안성시 공도읍 대신두길 28",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 320,
+          "score": 71
+        },
+        {
+          "place_name": "농협안성팜랜드 팜피크닉",
+          "id": "735068556",
+          "place_url": "https://place.map.kakao.com/735068556",
+          "address_name": "경기 안성시 공도읍 신두리 451",
+          "road_address_name": "경기 안성시 공도읍 대신두길 28",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 370,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 경기·안성시·공도읍·대신두길·28·안성 일치 · 기존 좌표에서 405m · 카테고리 테마파크 일치 · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-091",
+      "name": "인천어린이박물관",
+      "address": "인천 미추홀구 매소홀로 618",
+      "latitude": 37.4373,
+      "longitude": 126.6869,
+      "kakaoSearchKeyword": "인천어린이박물관",
+      "selectedKakaoPlaceName": "인천어린이박물관",
+      "selectedKakaoPlaceId": "11167305",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11167305",
+      "candidates": [
+        {
+          "place_name": "인천어린이박물관",
+          "id": "11167305",
+          "place_url": "https://place.map.kakao.com/11167305",
+          "address_name": "인천 미추홀구 문학동 482",
+          "road_address_name": "인천 미추홀구 매소홀로 618",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 388,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·미추홀구·매소홀로·618·미추홀 일치 · 기존 좌표에서 388m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-092",
+      "name": "국립세계문자박물관",
+      "address": "인천 연수구 센트럴로 217",
+      "latitude": 37.3938,
+      "longitude": 126.6355,
+      "kakaoSearchKeyword": "국립세계문자박물관",
+      "selectedKakaoPlaceName": "국립세계문자박물관",
+      "selectedKakaoPlaceId": "27019618",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27019618",
+      "candidates": [
+        {
+          "place_name": "국립세계문자박물관",
+          "id": "27019618",
+          "place_url": "https://place.map.kakao.com/27019618",
+          "address_name": "인천 연수구 송도동 24-8",
+          "road_address_name": "인천 연수구 센트럴로 217",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 234,
+          "score": 100
+        },
+        {
+          "place_name": "인천연수국립세계문자박물관 전기차충전소",
+          "id": "1780159488",
+          "place_url": "https://place.map.kakao.com/1780159488",
+          "address_name": "인천 연수구 송도동 24-8",
+          "road_address_name": "인천 연수구 센트럴로 217",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 227,
+          "score": 62
+        },
+        {
+          "place_name": "국립세계문자박물관 씽크빅문자연구소",
+          "id": "672100528",
+          "place_url": "https://place.map.kakao.com/672100528",
+          "address_name": "인천 연수구 송도동 24-8",
+          "road_address_name": "인천 연수구 센트럴로 217",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 248,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·연수구·센트럴로·217·연수 일치 · 기존 좌표에서 234m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 38점 차이"
+    },
+    {
+      "id": "place-093",
+      "name": "인천시립박물관",
+      "address": "인천 연수구 청량로160번길 26",
+      "latitude": 37.4191,
+      "longitude": 126.6531,
+      "kakaoSearchKeyword": "인천광역시립박물관",
+      "selectedKakaoPlaceName": "인천광역시립박물관",
+      "selectedKakaoPlaceId": "8052890",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8052890",
+      "candidates": [
+        {
+          "place_name": "인천광역시립박물관",
+          "id": "8052890",
+          "place_url": "https://place.map.kakao.com/8052890",
+          "address_name": "인천 연수구 옥련동 525",
+          "road_address_name": "인천 연수구 청량로160번길 26",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 184,
+          "score": 100
+        },
+        {
+          "place_name": "인천광역시립박물관 야외주차장",
+          "id": "208880179",
+          "place_url": "https://place.map.kakao.com/208880179",
+          "address_name": "인천 연수구 옥련동 525",
+          "road_address_name": "인천 연수구 청량로160번길 26",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 161,
+          "score": 62
+        },
+        {
+          "place_name": "인천광역시립박물관 직원주차장",
+          "id": "17570705",
+          "place_url": "https://place.map.kakao.com/17570705",
+          "address_name": "인천 연수구 옥련동 525",
+          "road_address_name": "인천 연수구 청량로160번길 26",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 211,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 인천·연수구·청량로160번길·26·연수 일치 · 기존 좌표에서 184m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-094",
+      "name": "송도센트럴파크",
+      "address": "인천 연수구 송도동 24-5",
+      "latitude": 37.3927,
+      "longitude": 126.6373,
+      "kakaoSearchKeyword": "송도센트럴파크",
+      "selectedKakaoPlaceName": "송도센트럴파크",
+      "selectedKakaoPlaceId": "13577707",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/13577707",
+      "candidates": [
+        {
+          "place_name": "송도센트럴파크",
+          "id": "13577707",
+          "place_url": "https://place.map.kakao.com/13577707",
+          "address_name": "인천 연수구 송도동 24-5",
+          "road_address_name": "",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 124,
+          "score": 100
+        },
+        {
+          "place_name": "송도센트럴파크 산책정원",
+          "id": "18059866",
+          "place_url": "https://place.map.kakao.com/18059866",
+          "address_name": "인천 연수구 송도동 24-5",
+          "road_address_name": "인천 연수구 센트럴로 229",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 385,
+          "score": 71
+        },
+        {
+          "place_name": "송도센트럴파크호텔",
+          "id": "24613391",
+          "place_url": "https://place.map.kakao.com/24613391",
+          "address_name": "인천 연수구 송도동 38",
+          "road_address_name": "인천 연수구 테크노파크로 193",
+          "category_name": "여행 > 숙박 > 호텔",
+          "distance": 261,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·연수구·송도동·245·연수 일치 · 기존 좌표에서 124m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 29점 차이"
+    },
+    {
+      "id": "place-095",
+      "name": "인천대공원",
+      "address": "인천 남동구 무네미로 238",
+      "latitude": 37.4569,
+      "longitude": 126.7528,
+      "kakaoSearchKeyword": "인천대공원",
+      "selectedKakaoPlaceName": "인천대공원",
+      "selectedKakaoPlaceId": "11320114",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11320114",
+      "candidates": [
+        {
+          "place_name": "인천대공원",
+          "id": "11320114",
+          "place_url": "https://place.map.kakao.com/11320114",
+          "address_name": "인천 남동구 장수동 산 78",
+          "road_address_name": "인천 남동구 무네미로 238",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 691,
+          "score": 100
+        },
+        {
+          "place_name": "인천대공원 동문",
+          "id": "24662519",
+          "place_url": "https://place.map.kakao.com/24662519",
+          "address_name": "인천 남동구 장수동 77-1",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 1422,
+          "score": 65
+        },
+        {
+          "place_name": "인천대공원 제1주차장",
+          "id": "18071361",
+          "place_url": "https://place.map.kakao.com/18071361",
+          "address_name": "인천 남동구 장수동 산 78",
+          "road_address_name": "인천 남동구 무네미로 238",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 208,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·남동구·무네미로·238·남동 일치 · 기존 좌표에서 691m · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-096",
+      "name": "월미공원",
+      "address": "인천 제물포구 북성동1가 산 125",
+      "latitude": 37.4753,
+      "longitude": 126.6034,
+      "kakaoSearchKeyword": "월미공원",
+      "selectedKakaoPlaceName": "월미공원",
+      "selectedKakaoPlaceId": "24877789",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/24877789",
+      "candidates": [
+        {
+          "place_name": "월미공원",
+          "id": "24877789",
+          "place_url": "https://place.map.kakao.com/24877789",
+          "address_name": "인천 제물포구 북성동1가 산 125",
+          "road_address_name": "",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 203,
+          "score": 100
+        },
+        {
+          "place_name": "월미공원 만남의광장",
+          "id": "579101422",
+          "place_url": "https://place.map.kakao.com/579101422",
+          "address_name": "인천 제물포구 북성동1가 93",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 광장",
+          "distance": 14,
+          "score": 65
+        },
+        {
+          "place_name": "월미공원 화장실",
+          "id": "1540286443",
+          "place_url": "https://place.map.kakao.com/1540286443",
+          "address_name": "인천 제물포구 북성동1가 97-3",
+          "road_address_name": "인천 제물포구 월미로 131-50",
+          "category_name": "가정,생활 > 화장실",
+          "distance": 78,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·제물포구·북성동1가·125 일치 · 기존 좌표에서 203m · 카테고리 공원 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    },
+    {
+      "id": "place-097",
+      "name": "인천개항박물관",
+      "address": "인천 제물포구 신포로23번길 89",
+      "latitude": 37.4737,
+      "longitude": 126.6213,
+      "kakaoSearchKeyword": "인천개항박물관",
+      "selectedKakaoPlaceName": "인천개항박물관",
+      "selectedKakaoPlaceId": "12960848",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12960848",
+      "candidates": [
+        {
+          "place_name": "인천개항박물관",
+          "id": "12960848",
+          "place_url": "https://place.map.kakao.com/12960848",
+          "address_name": "인천 제물포구 중앙동1가 9-2",
+          "road_address_name": "인천 제물포구 신포로23번길 89",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 78,
+          "score": 100
+        },
+        {
+          "place_name": "인천개항박물관 기획전시실",
+          "id": "2061551017",
+          "place_url": "https://place.map.kakao.com/2061551017",
+          "address_name": "인천 제물포구 중앙동1가 9-2",
+          "road_address_name": "인천 제물포구 신포로23번길 89",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 81,
+          "score": 79
+        },
+        {
+          "place_name": "인천개항박물관 구,인천일본제1은행지점",
+          "id": "27004418",
+          "place_url": "https://place.map.kakao.com/27004418",
+          "address_name": "인천 제물포구 중앙동1가 9-2",
+          "road_address_name": "인천 제물포구 신포로23번길 89",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 80,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·제물포구·신포로23번길·89 일치 · 기존 좌표에서 78m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 21점 차이"
+    },
+    {
+      "id": "place-098",
+      "name": "짜장면박물관",
+      "address": "인천 제물포구 차이나타운로 56-14",
+      "latitude": 37.475,
+      "longitude": 126.6183,
+      "kakaoSearchKeyword": "짜장면박물관",
+      "selectedKakaoPlaceName": "짜장면박물관",
+      "selectedKakaoPlaceId": "19529404",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/19529404",
+      "candidates": [
+        {
+          "place_name": "짜장면박물관",
+          "id": "19529404",
+          "place_url": "https://place.map.kakao.com/19529404",
+          "address_name": "인천 제물포구 선린동 38-1",
+          "road_address_name": "인천 제물포구 차이나타운로 56-14",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 20,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·제물포구·차이나타운로·5614 일치 · 기존 좌표에서 20m · 카테고리 박물관 일치 · 기존 장소 ID 일치 · 2위와 100점 차이"
+    },
+    {
+      "id": "place-099",
+      "name": "국립생물자원관",
+      "address": "인천 서해구 환경로 42",
+      "latitude": 37.5683,
+      "longitude": 126.6401,
+      "kakaoSearchKeyword": "국립생물자원관",
+      "selectedKakaoPlaceName": "국립생물자원관",
+      "selectedKakaoPlaceId": "10145688",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10145688",
+      "candidates": [
+        {
+          "place_name": "국립생물자원관",
+          "id": "10145688",
+          "place_url": "https://place.map.kakao.com/10145688",
+          "address_name": "인천 서해구 경서동",
+          "road_address_name": "인천 서해구 환경로 42",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 318,
+          "score": 100
+        },
+        {
+          "place_name": "국립생물자원관 생생채움",
+          "id": "17575517",
+          "place_url": "https://place.map.kakao.com/17575517",
+          "address_name": "인천 서해구 경서동",
+          "road_address_name": "인천 서해구 환경로 42",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 289,
+          "score": 76
+        },
+        {
+          "place_name": "국립생물자원관 달빛마당",
+          "id": "17573233",
+          "place_url": "https://place.map.kakao.com/17573233",
+          "address_name": "인천 서해구 경서동",
+          "road_address_name": "인천 서해구 환경로 42",
+          "category_name": "서비스,산업 > 기업",
+          "distance": 66,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·서해구·환경로·42 일치 · 기존 좌표에서 318m · 카테고리 전시관 일치 · 기존 장소 ID 일치 · 2위와 24점 차이"
+    },
+    {
+      "id": "place-100",
+      "name": "옥토끼우주센터",
+      "address": "인천 강화군 불은면 강화동로 403",
+      "latitude": 37.6737,
+      "longitude": 126.4878,
+      "kakaoSearchKeyword": "옥토끼우주센터",
+      "selectedKakaoPlaceName": "옥토끼우주센터",
+      "selectedKakaoPlaceId": "9949315",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9949315",
+      "candidates": [
+        {
+          "place_name": "옥토끼우주센터",
+          "id": "9949315",
+          "place_url": "https://place.map.kakao.com/9949315",
+          "address_name": "인천 강화군 불은면 두운리 1026",
+          "road_address_name": "인천 강화군 불은면 강화동로 403",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 78,
+          "score": 100
+        },
+        {
+          "place_name": "옥토끼우주센터 은하수유수풀",
+          "id": "1494726407",
+          "place_url": "https://place.map.kakao.com/1494726407",
+          "address_name": "인천 강화군 불은면 두운리 1026",
+          "road_address_name": "인천 강화군 불은면 강화동로 403",
+          "category_name": "스포츠,레저 > 수영,수상 > 수영장",
+          "distance": 39,
+          "score": 65
+        },
+        {
+          "place_name": "옥토끼우주센터(인천) 전기차충전소",
+          "id": "310784267",
+          "place_url": "https://place.map.kakao.com/310784267",
+          "address_name": "인천 강화군 불은면 두운리 1026",
+          "road_address_name": "인천 강화군 불은면 강화동로 403",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 65,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "자동 매칭 승인 · 이름 정확히 일치 · 지역 인천·강화군·불은면·강화동로·403·강화 일치 · 기존 좌표에서 78m · 카테고리 과학관 일치 · 기존 장소 ID 일치 · 2위와 35점 차이"
+    }
+  ]
+}

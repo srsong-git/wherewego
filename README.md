@@ -49,6 +49,20 @@ VITE_KAKAO_MAP_KEY=발급받은_JavaScript_키
 
 환경변수를 추가하거나 변경한 뒤에는 개발 서버를 다시 시작해야 합니다. 배포 환경에서는 Vercel 프로젝트의 Environment Variables에도 같은 이름으로 등록합니다.
 
+### 카카오 장소 데이터 동기화
+
+카카오 Local API에 사용하는 REST API 키는 `.env.local`에만 저장합니다. 이 키에는 `VITE_` 접두사를 붙이지 않으며 브라우저 코드에서 사용하지 않습니다. 배포 중에는 실행되지 않으므로 Vercel 환경변수에도 등록하지 않습니다.
+
+```env
+KAKAO_REST_API_KEY=발급받은_REST_API_키
+```
+
+```bash
+pnpm sync:kakao
+```
+
+동기화가 끝나면 고신뢰 결과는 `src/data/kakao-places.json`에 반영되고, 후보 비교 자료는 `kakao-place-audit.json`과 `kakao-place-audit.csv`로 생성됩니다. 저신뢰 결과는 장소 ID를 자동 입력하지 않고 `kakaoNeedsReview: true`로 남깁니다.
+
 ## 카카오 로그인과 후기 데이터베이스 설정
 
 후기는 Supabase의 Auth와 PostgreSQL을 사용합니다. Supabase 프로젝트를 만든 뒤 SQL Editor에서 다음 파일을 순서대로 실행합니다.

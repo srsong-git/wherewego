@@ -1,3 +1,5 @@
+import kakaoPlaces from './kakao-places.json' with { type: 'json' }
+
 const ALL_AGES = ['유아', '초등 저학년', '초등 고학년']
 const YOUNG = ['유아', '초등 저학년']
 const SCHOOL = ['초등 저학년', '초등 고학년']
@@ -28,43 +30,28 @@ const themeRules = [
   ['물놀이·스포츠', /플레이도시|한강|경정|호수공원|센트럴파크/],
 ]
 
-// 카카오맵 장소 상세 페이지에서 장소명·주소를 직접 대조한 주요 POI입니다.
-const kakaoPlaceOverrides = {
-  국립중앙박물관: { id: '8830150', name: '국립중앙박물관', url: 'https://place.map.kakao.com/8830150', verified: true },
-  '국립중앙박물관 어린이박물관': { id: '8208781', name: '국립중앙박물관 어린이박물관', url: 'https://place.map.kakao.com/8208781', verified: true },
-  '코엑스 아쿠아리움': { id: '12860036', name: '코엑스 아쿠아리움', url: 'https://place.map.kakao.com/12860036', verified: true },
-  롯데월드: { id: '27560699', name: '롯데월드 어드벤처', url: 'https://place.map.kakao.com/27560699', verified: true },
-  서울식물원: { id: '1164966384', name: '서울식물원', url: 'https://place.map.kakao.com/1164966384', verified: true },
-  서울스카이: { id: '680691609', name: '서울스카이', url: 'https://place.map.kakao.com/680691609', verified: true },
-  '키자니아 서울': { id: '17735905', name: '키자니아 서울', url: 'https://place.map.kakao.com/17735905', verified: true },
-  국립과천과학관: { id: '11374610', name: '국립과천과학관', url: 'https://place.map.kakao.com/11374610', verified: true },
-  서울대공원: { id: '971122014', name: '서울대공원 서울동물원', url: 'https://place.map.kakao.com/971122014', verified: true },
-  광명동굴: { id: '26314882', name: '광명동굴', url: 'https://place.map.kakao.com/26314882', verified: true },
-  '스타필드 고양': { id: '627697814', name: '스타필드 고양', url: 'https://place.map.kakao.com/627697814', verified: true },
-  '현대 모터스튜디오 고양': { id: '1338515380', name: '현대 모터스튜디오 고양', url: 'https://place.map.kakao.com/1338515380', verified: true },
-}
-
 export const kakaoPriorityReviewNames = [
+  '서울역사박물관',
+  '서대문자연사박물관',
+  '서울숲',
+  '국립어린이과학관',
+  '여의도한강공원',
+  '별마당도서관',
+  '서울공예박물관',
+  '국립민속박물관',
+  '국립고궁박물관',
+  '전쟁기념관',
+  '대한민국역사박물관',
+  '서울상상나라',
+  '서울시립과학관',
+  '국립항공박물관',
+  '뮤지엄김치간',
+  '서울어린이대공원',
   '롯데월드',
   '코엑스 아쿠아리움',
-  '키자니아 서울',
-  '서울스카이',
-  '서울대공원',
-  '서울랜드',
-  '국립중앙박물관',
-  '국립중앙박물관 어린이박물관',
   '서울식물원',
-  '스타필드 고양',
-  '현대 모터스튜디오 고양',
-  '광명동굴',
-  '국립과천과학관',
-  '웅진플레이도시',
-  '아쿠아플라넷 광교',
-  '한국민속촌',
-  '에버랜드',
+  '국립중앙박물관',
 ]
-
-const kakaoPriorityReviewSet = new Set(kakaoPriorityReviewNames)
 
 let nextPlaceId = 1
 
@@ -193,18 +180,19 @@ const place = (name, area, latitude, longitude, indoorOutdoor, ageGroups, durati
   const themes = themeRules.filter(([, pattern]) => pattern.test(`${name} ${description}`)).map(([theme]) => theme)
   const fatigue = getParentFatigue(indoorOutdoor, duration, name)
   const familyFit = getFamilyFit(indoorOutdoor, ageGroups, duration, priceCategory, themes, fatigue.level)
-  const kakaoPlace = kakaoPlaceOverrides[name]
+  const kakaoPlace = kakaoPlaces[name]
 
   return {
     id: `place-${String(nextPlaceId++).padStart(3, '0')}`,
     name,
-    kakaoPlaceId: kakaoPlace?.id || '',
-    kakaoPlaceName: kakaoPlace?.name || name,
-    kakaoPlaceUrl: kakaoPlace?.url || (kakaoPlace?.id ? `https://place.map.kakao.com/${kakaoPlace.id}` : ''),
+    kakaoPlaceId: kakaoPlace?.id || null,
+    kakaoPlaceName: kakaoPlace?.name || null,
+    kakaoPlaceUrl: kakaoPlace?.url || (kakaoPlace?.id ? `https://place.map.kakao.com/${kakaoPlace.id}` : null),
+    kakaoSearchKeyword: kakaoPlace?.searchKeyword || null,
     kakaoVerified: Boolean(kakaoPlace?.verified),
-    kakaoNeedsReview: kakaoPriorityReviewSet.has(name),
+    kakaoNeedsReview: Boolean(kakaoPlace?.needsReview) || !kakaoPlace?.id,
     area,
-    address: '',
+    address: kakaoPlace?.address || null,
     region: area.split(' ')[0],
     subRegion: area.split(' ').slice(1).join(' '),
     latitude,

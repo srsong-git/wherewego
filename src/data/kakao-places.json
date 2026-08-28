@@ -1,0 +1,920 @@
+{
+  "국립중앙박물관": {
+    "id": "8830150",
+    "name": "국립중앙박물관",
+    "url": "https://place.map.kakao.com/8830150",
+    "searchKeyword": "국립중앙박물관",
+    "address": "서울 용산구 서빙고로 137",
+    "verified": true,
+    "needsReview": false
+  },
+  "코엑스 아쿠아리움": {
+    "id": "12860036",
+    "name": "코엑스 아쿠아리움",
+    "url": "https://place.map.kakao.com/12860036",
+    "searchKeyword": "코엑스 아쿠아리움",
+    "address": "서울 강남구 영동대로 513",
+    "verified": true,
+    "needsReview": false
+  },
+  "롯데월드": {
+    "id": "27560699",
+    "name": "롯데월드 어드벤처",
+    "url": "https://place.map.kakao.com/27560699",
+    "searchKeyword": "롯데월드 어드벤처",
+    "address": "서울 송파구 올림픽로 240",
+    "verified": true,
+    "needsReview": false
+  },
+  "서울어린이대공원": {
+    "id": "1512054004",
+    "name": "서울어린이대공원",
+    "url": "https://place.map.kakao.com/1512054004",
+    "searchKeyword": "서울어린이대공원",
+    "address": "서울 광진구 능동로 216",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울식물원": {
+    "id": "1164966384",
+    "name": "서울식물원",
+    "url": "https://place.map.kakao.com/1164966384",
+    "searchKeyword": "서울식물원",
+    "address": "서울 강서구 마곡동로 161",
+    "verified": true,
+    "needsReview": false
+  },
+  "서대문자연사박물관": {
+    "id": "11139995",
+    "name": "서대문자연사박물관",
+    "url": "https://place.map.kakao.com/11139995",
+    "searchKeyword": "서대문자연사박물관",
+    "address": "서울 서대문구 연희로32길 51",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울숲": {
+    "id": "11331488",
+    "name": "서울숲",
+    "url": "https://place.map.kakao.com/11331488",
+    "searchKeyword": "서울숲",
+    "address": "서울 성동구 성수동1가 678-1",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립어린이과학관": {
+    "id": "1955379751",
+    "name": "국립어린이과학관",
+    "url": "https://place.map.kakao.com/1955379751",
+    "searchKeyword": "국립어린이과학관",
+    "address": "서울 종로구 창경궁로 215",
+    "verified": false,
+    "needsReview": false
+  },
+  "여의도한강공원": {
+    "id": "10952963",
+    "name": "여의도한강공원",
+    "url": "https://place.map.kakao.com/10952963",
+    "searchKeyword": "여의도한강공원",
+    "address": "서울 영등포구 여의도동 85",
+    "verified": false,
+    "needsReview": false
+  },
+  "별마당도서관": {
+    "id": "2104663194",
+    "name": "별마당도서관 스타필드코엑스몰",
+    "url": "https://place.map.kakao.com/2104663194",
+    "searchKeyword": "별마당도서관",
+    "address": "서울 강남구 삼성동 159-9",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울역사박물관": {
+    "id": "7934135",
+    "name": "서울역사박물관",
+    "url": "https://place.map.kakao.com/7934135",
+    "searchKeyword": "서울역사박물관",
+    "address": "서울 종로구 새문안로 55",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울공예박물관": {
+    "id": "1038056172",
+    "name": "서울공예박물관",
+    "url": "https://place.map.kakao.com/1038056172",
+    "searchKeyword": "서울공예박물관",
+    "address": "서울 종로구 율곡로3길 4",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립민속박물관": {
+    "id": "8191467",
+    "name": "국립민속박물관 본관",
+    "url": "https://place.map.kakao.com/8191467",
+    "searchKeyword": "국립민속박물관 본관",
+    "address": "서울 종로구 삼청로 37",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립고궁박물관": {
+    "id": "8214304",
+    "name": "국립고궁박물관",
+    "url": "https://place.map.kakao.com/8214304",
+    "searchKeyword": "국립고궁박물관",
+    "address": "서울 종로구 효자로 12",
+    "verified": false,
+    "needsReview": false
+  },
+  "전쟁기념관": {
+    "id": "8077761",
+    "name": "전쟁기념관",
+    "url": "https://place.map.kakao.com/8077761",
+    "searchKeyword": "전쟁기념관",
+    "address": "서울 용산구 이태원로 29",
+    "verified": false,
+    "needsReview": false
+  },
+  "대한민국역사박물관": {
+    "id": "15104327",
+    "name": "대한민국역사박물관",
+    "url": "https://place.map.kakao.com/15104327",
+    "searchKeyword": "대한민국역사박물관",
+    "address": "서울 종로구 세종대로 198",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울상상나라": {
+    "id": "1612238355",
+    "name": "서울상상나라",
+    "url": "https://place.map.kakao.com/1612238355",
+    "searchKeyword": "서울상상나라",
+    "address": "서울 광진구 능동로 216",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울시립과학관": {
+    "id": "30041527",
+    "name": "서울시립과학관",
+    "url": "https://place.map.kakao.com/30041527",
+    "searchKeyword": "서울시립과학관",
+    "address": "서울 노원구 한글비석로 160",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립항공박물관": {
+    "id": "1873127229",
+    "name": "국립항공박물관",
+    "url": "https://place.map.kakao.com/1873127229",
+    "searchKeyword": "국립항공박물관",
+    "address": "서울 강서구 하늘길 177",
+    "verified": false,
+    "needsReview": false
+  },
+  "뮤지엄김치간": {
+    "id": "26601040",
+    "name": "뮤지엄김치간",
+    "url": "https://place.map.kakao.com/26601040",
+    "searchKeyword": "뮤지엄김치간",
+    "address": "서울 종로구 인사동길 35-4",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울애니메이션센터": {
+    "id": null,
+    "name": null,
+    "url": null,
+    "searchKeyword": "서울애니메이션센터",
+    "address": null,
+    "verified": false,
+    "needsReview": true
+  },
+  "서울새활용플라자": {
+    "id": "1727961587",
+    "name": "서울새활용플라자",
+    "url": "https://place.map.kakao.com/1727961587",
+    "searchKeyword": "서울새활용플라자",
+    "address": "서울 성동구 자동차시장길 49",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울에너지드림센터": {
+    "id": "19190782",
+    "name": "서울에너지드림센터",
+    "url": "https://place.map.kakao.com/19190782",
+    "searchKeyword": "서울에너지드림센터",
+    "address": "서울 마포구 증산로 14",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울하수도과학관": {
+    "id": "324009424",
+    "name": "서울하수도과학관",
+    "url": "https://place.map.kakao.com/324009424",
+    "searchKeyword": "서울하수도과학관",
+    "address": "서울 성동구 자동차시장3길 64",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울시립미술관 서소문본관": {
+    "id": "10507051",
+    "name": "서울시립미술관 서소문본관",
+    "url": "https://place.map.kakao.com/10507051",
+    "searchKeyword": "서울시립미술관 서소문본관",
+    "address": "서울 중구 덕수궁길 61",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울시립 북서울미술관": {
+    "id": "21748070",
+    "name": "서울시립 북서울미술관",
+    "url": "https://place.map.kakao.com/21748070",
+    "searchKeyword": "서울시립 북서울미술관",
+    "address": "서울 노원구 동일로 1238",
+    "verified": false,
+    "needsReview": false
+  },
+  "서대문형무소역사관": {
+    "id": "7936297",
+    "name": "서대문형무소역사관",
+    "url": "https://place.map.kakao.com/7936297",
+    "searchKeyword": "서대문형무소역사관",
+    "address": "서울 서대문구 통일로 251",
+    "verified": false,
+    "needsReview": false
+  },
+  "돈의문박물관마을": {
+    "id": "329694495",
+    "name": "돈의문박물관마을",
+    "url": "https://place.map.kakao.com/329694495",
+    "searchKeyword": "돈의문박물관마을",
+    "address": "서울 종로구 송월길 2",
+    "verified": false,
+    "needsReview": false
+  },
+  "남산공원": {
+    "id": "8246129",
+    "name": "남산공원",
+    "url": "https://place.map.kakao.com/8246129",
+    "searchKeyword": "남산공원",
+    "address": "서울 중구 남산공원길 125-54",
+    "verified": false,
+    "needsReview": false
+  },
+  "북서울꿈의숲": {
+    "id": "11321061",
+    "name": "북서울꿈의숲",
+    "url": "https://place.map.kakao.com/11321061",
+    "searchKeyword": "북서울꿈의숲",
+    "address": "서울 강북구 월계로 173",
+    "verified": false,
+    "needsReview": false
+  },
+  "월드컵공원": {
+    "id": "27217950",
+    "name": "월드컵공원",
+    "url": "https://place.map.kakao.com/27217950",
+    "searchKeyword": "월드컵공원",
+    "address": "서울 마포구 상암동 481-72",
+    "verified": false,
+    "needsReview": false
+  },
+  "문화비축기지": {
+    "id": "27459153",
+    "name": "문화비축기지",
+    "url": "https://place.map.kakao.com/27459153",
+    "searchKeyword": "문화비축기지",
+    "address": "서울 마포구 증산로 87",
+    "verified": false,
+    "needsReview": false
+  },
+  "올림픽공원": {
+    "id": "8023565",
+    "name": "올림픽공원",
+    "url": "https://place.map.kakao.com/8023565",
+    "searchKeyword": "올림픽공원",
+    "address": "서울 송파구 올림픽로 424",
+    "verified": false,
+    "needsReview": false
+  },
+  "석촌호수": {
+    "id": "7947003",
+    "name": "석촌호수 서호",
+    "url": "https://place.map.kakao.com/7947003",
+    "searchKeyword": "석촌호수 서호",
+    "address": "서울 송파구 잠실동 47",
+    "verified": true,
+    "needsReview": false
+  },
+  "보라매공원": {
+    "id": "11338178",
+    "name": "보라매공원",
+    "url": "https://place.map.kakao.com/11338178",
+    "searchKeyword": "보라매공원",
+    "address": "서울 동작구 신대방동 722",
+    "verified": false,
+    "needsReview": false
+  },
+  "선유도공원": {
+    "id": "17163566",
+    "name": "선유도공원",
+    "url": "https://place.map.kakao.com/17163566",
+    "searchKeyword": "선유도공원",
+    "address": "서울 영등포구 선유로 343",
+    "verified": false,
+    "needsReview": false
+  },
+  "노들섬": {
+    "id": "8252248",
+    "name": "노들섬",
+    "url": "https://place.map.kakao.com/8252248",
+    "searchKeyword": "노들섬",
+    "address": "서울 용산구 양녕로 445",
+    "verified": false,
+    "needsReview": false
+  },
+  "경의선숲길": {
+    "id": "1158487374",
+    "name": "경의선숲길",
+    "url": "https://place.map.kakao.com/1158487374",
+    "searchKeyword": "경의선숲길",
+    "address": "서울 마포구 동교동 190-1",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울스카이": {
+    "id": "680691609",
+    "name": "서울스카이",
+    "url": "https://place.map.kakao.com/680691609",
+    "searchKeyword": "서울스카이",
+    "address": "서울 송파구 올림픽로 300",
+    "verified": true,
+    "needsReview": false
+  },
+  "키자니아 서울": {
+    "id": "17735905",
+    "name": "키자니아 서울",
+    "url": "https://place.map.kakao.com/17735905",
+    "searchKeyword": "키자니아 서울",
+    "address": "서울 송파구 올림픽로 240",
+    "verified": true,
+    "needsReview": false
+  },
+  "동대문디자인플라자": {
+    "id": "25022134",
+    "name": "동대문디자인플라자",
+    "url": "https://place.map.kakao.com/25022134",
+    "searchKeyword": "동대문디자인플라자",
+    "address": "서울 중구 을지로 281",
+    "verified": false,
+    "needsReview": false
+  },
+  "청계천": {
+    "id": "10849847",
+    "name": "청계천",
+    "url": "https://place.map.kakao.com/10849847",
+    "searchKeyword": "청계천",
+    "address": "서울 종로구 서린동 148",
+    "verified": false,
+    "needsReview": false
+  },
+  "경복궁": {
+    "id": "18619553",
+    "name": "경복궁",
+    "url": "https://place.map.kakao.com/18619553",
+    "searchKeyword": "경복궁",
+    "address": "서울 종로구 사직로 161",
+    "verified": false,
+    "needsReview": false
+  },
+  "창덕궁": {
+    "id": "10771162",
+    "name": "창덕궁",
+    "url": "https://place.map.kakao.com/10771162",
+    "searchKeyword": "창덕궁",
+    "address": "서울 종로구 율곡로 99",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립현대미술관 서울": {
+    "id": "17952661",
+    "name": "국립현대미술관 서울",
+    "url": "https://place.map.kakao.com/17952661",
+    "searchKeyword": "국립현대미술관 서울",
+    "address": "서울 종로구 삼청로 30",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립과천과학관": {
+    "id": "11374610",
+    "name": "국립과천과학관",
+    "url": "https://place.map.kakao.com/11374610",
+    "searchKeyword": "국립과천과학관",
+    "address": "경기 과천시 상하벌로 110",
+    "verified": true,
+    "needsReview": false
+  },
+  "서울랜드": {
+    "id": "8360993",
+    "name": "서울랜드",
+    "url": "https://place.map.kakao.com/8360993",
+    "searchKeyword": "서울랜드",
+    "address": "경기 과천시 광명로 181",
+    "verified": false,
+    "needsReview": false
+  },
+  "서울대공원": {
+    "id": "971122014",
+    "name": "서울대공원 서울동물원",
+    "url": "https://place.map.kakao.com/971122014",
+    "searchKeyword": "서울대공원 서울동물원",
+    "address": "경기 과천시 막계동 890-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립현대미술관 과천": {
+    "id": "8218715",
+    "name": "국립현대미술관 과천",
+    "url": "https://place.map.kakao.com/8218715",
+    "searchKeyword": "국립현대미술관 과천",
+    "address": "경기 과천시 광명로 313",
+    "verified": false,
+    "needsReview": false
+  },
+  "에버랜드": {
+    "id": "784414359",
+    "name": "에버랜드",
+    "url": "https://place.map.kakao.com/784414359",
+    "searchKeyword": "에버랜드",
+    "address": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+    "verified": false,
+    "needsReview": false
+  },
+  "한국민속촌": {
+    "id": "8135083",
+    "name": "한국민속촌",
+    "url": "https://place.map.kakao.com/8135083",
+    "searchKeyword": "한국민속촌",
+    "address": "경기 용인시 기흥구 민속촌로 90",
+    "verified": false,
+    "needsReview": false
+  },
+  "경기도어린이박물관": {
+    "id": "14747809",
+    "name": "경기도어린이박물관",
+    "url": "https://place.map.kakao.com/14747809",
+    "searchKeyword": "경기도어린이박물관",
+    "address": "경기 용인시 기흥구 상갈로 6",
+    "verified": false,
+    "needsReview": false
+  },
+  "삼성화재 모빌리티뮤지엄": {
+    "id": "23817394",
+    "name": "삼성화재 모빌리티뮤지엄",
+    "url": "https://place.map.kakao.com/23817394",
+    "searchKeyword": "삼성화재 모빌리티뮤지엄",
+    "address": "경기 용인시 처인구 포곡읍 에버랜드로376번길 171",
+    "verified": false,
+    "needsReview": false
+  },
+  "용인농촌테마파크": {
+    "id": "1125507111",
+    "name": "용인농촌테마파크",
+    "url": "https://place.map.kakao.com/1125507111",
+    "searchKeyword": "용인농촌테마파크",
+    "address": "경기 용인시 처인구 원삼면 농촌파크로 80-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "한국잡월드": {
+    "id": "12372993",
+    "name": "한국잡월드",
+    "url": "https://place.map.kakao.com/12372993",
+    "searchKeyword": "한국잡월드",
+    "address": "경기 성남시 분당구 분당수서로 501",
+    "verified": true,
+    "needsReview": false
+  },
+  "율동공원": {
+    "id": "12455726",
+    "name": "율동공원",
+    "url": "https://place.map.kakao.com/12455726",
+    "searchKeyword": "율동공원",
+    "address": "경기 성남시 분당구 문정로 145",
+    "verified": false,
+    "needsReview": false
+  },
+  "광명동굴": {
+    "id": "26314882",
+    "name": "광명동굴",
+    "url": "https://place.map.kakao.com/26314882",
+    "searchKeyword": "광명동굴",
+    "address": "경기 광명시 가학동 34-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "철도박물관": {
+    "id": "10844769",
+    "name": "철도박물관",
+    "url": "https://place.map.kakao.com/10844769",
+    "searchKeyword": "철도박물관",
+    "address": "경기 의왕시 철도박물관로 142",
+    "verified": false,
+    "needsReview": false
+  },
+  "왕송호수공원": {
+    "id": "2087376551",
+    "name": "왕송호수공원",
+    "url": "https://place.map.kakao.com/2087376551",
+    "searchKeyword": "왕송호수공원",
+    "address": "경기 의왕시 왕송못동로 307",
+    "verified": false,
+    "needsReview": false
+  },
+  "수원화성": {
+    "id": "17985162",
+    "name": "수원화성",
+    "url": "https://place.map.kakao.com/17985162",
+    "searchKeyword": "수원화성",
+    "address": "경기 수원시 장안구 영화동 320-2",
+    "verified": false,
+    "needsReview": false
+  },
+  "화성행궁": {
+    "id": "8175657",
+    "name": "화성행궁",
+    "url": "https://place.map.kakao.com/8175657",
+    "searchKeyword": "화성행궁",
+    "address": "경기 수원시 팔달구 정조로 825",
+    "verified": false,
+    "needsReview": false
+  },
+  "수원광교박물관": {
+    "id": "17083416",
+    "name": "수원광교박물관",
+    "url": "https://place.map.kakao.com/17083416",
+    "searchKeyword": "수원광교박물관",
+    "address": "경기 수원시 영통구 광교로 182",
+    "verified": false,
+    "needsReview": false
+  },
+  "경기도박물관": {
+    "id": "21800626",
+    "name": "경기도박물관",
+    "url": "https://place.map.kakao.com/21800626",
+    "searchKeyword": "경기도박물관",
+    "address": "경기 용인시 기흥구 상갈로 6",
+    "verified": false,
+    "needsReview": false
+  },
+  "한국만화박물관": {
+    "id": "11356267",
+    "name": "한국만화박물관",
+    "url": "https://place.map.kakao.com/11356267",
+    "searchKeyword": "한국만화박물관",
+    "address": "경기 부천시 원미구 길주로 1",
+    "verified": false,
+    "needsReview": false
+  },
+  "부천로보파크": {
+    "id": "10462987",
+    "name": "부천로보파크",
+    "url": "https://place.map.kakao.com/10462987",
+    "searchKeyword": "부천로보파크",
+    "address": "경기 부천시 원미구 평천로 655",
+    "verified": false,
+    "needsReview": false
+  },
+  "웅진플레이도시": {
+    "id": "17183821",
+    "name": "웅진플레이도시",
+    "url": "https://place.map.kakao.com/17183821",
+    "searchKeyword": "웅진플레이도시",
+    "address": "경기 부천시 원미구 조마루로 2",
+    "verified": false,
+    "needsReview": false
+  },
+  "고양어린이박물관": {
+    "id": "27408630",
+    "name": "고양어린이박물관",
+    "url": "https://place.map.kakao.com/27408630",
+    "searchKeyword": "고양어린이박물관",
+    "address": "경기 고양시 덕양구 화중로 26",
+    "verified": false,
+    "needsReview": false
+  },
+  "아쿠아플라넷 일산": {
+    "id": "23738256",
+    "name": "아쿠아플라넷 일산",
+    "url": "https://place.map.kakao.com/23738256",
+    "searchKeyword": "아쿠아플라넷 일산",
+    "address": "경기 고양시 일산서구 한류월드로 282",
+    "verified": false,
+    "needsReview": false
+  },
+  "현대 모터스튜디오 고양": {
+    "id": "1338515380",
+    "name": "현대 모터스튜디오 고양",
+    "url": "https://place.map.kakao.com/1338515380",
+    "searchKeyword": "현대 모터스튜디오 고양",
+    "address": "경기 고양시 일산서구 킨텍스로 217-6",
+    "verified": true,
+    "needsReview": false
+  },
+  "일산호수공원": {
+    "id": "26298671",
+    "name": "일산호수공원",
+    "url": "https://place.map.kakao.com/26298671",
+    "searchKeyword": "일산호수공원",
+    "address": "경기 고양시 일산동구 호수로 595",
+    "verified": false,
+    "needsReview": false
+  },
+  "파주출판도시": {
+    "id": "8120867",
+    "name": "파주출판도시",
+    "url": "https://place.map.kakao.com/8120867",
+    "searchKeyword": "파주출판도시",
+    "address": "경기 파주시 회동길 145",
+    "verified": false,
+    "needsReview": false
+  },
+  "헤이리예술마을": {
+    "id": "8616522",
+    "name": "헤이리예술마을",
+    "url": "https://place.map.kakao.com/8616522",
+    "searchKeyword": "헤이리예술마을",
+    "address": "경기 파주시 탄현면 헤이리마을길 70-21",
+    "verified": false,
+    "needsReview": false
+  },
+  "마장호수 출렁다리": {
+    "id": "2028327937",
+    "name": "마장호수출렁다리",
+    "url": "https://place.map.kakao.com/2028327937",
+    "searchKeyword": "마장호수 출렁다리",
+    "address": "경기 파주시 광탄면 기산리 481-1",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립수목원": {
+    "id": "7915027",
+    "name": "국립수목원",
+    "url": "https://place.map.kakao.com/7915027",
+    "searchKeyword": "국립수목원",
+    "address": "경기 포천시 소흘읍 광릉수목원로 415",
+    "verified": false,
+    "needsReview": false
+  },
+  "포천아트밸리": {
+    "id": "11520510",
+    "name": "포천아트밸리",
+    "url": "https://place.map.kakao.com/11520510",
+    "searchKeyword": "포천아트밸리",
+    "address": "경기 포천시 신북면 아트밸리로 234",
+    "verified": false,
+    "needsReview": false
+  },
+  "포천 허브아일랜드": {
+    "id": "17282868",
+    "name": "허브아일랜드",
+    "url": "https://place.map.kakao.com/17282868",
+    "searchKeyword": "허브아일랜드",
+    "address": "경기 포천시 신북면 청신로947번길 35",
+    "verified": true,
+    "needsReview": false
+  },
+  "아침고요수목원": {
+    "id": "25855305",
+    "name": "아침고요수목원",
+    "url": "https://place.map.kakao.com/25855305",
+    "searchKeyword": "아침고요수목원",
+    "address": "경기 가평군 상면 수목원로 427",
+    "verified": false,
+    "needsReview": false
+  },
+  "쁘띠프랑스": {
+    "id": "7920064",
+    "name": "쁘띠프랑스",
+    "url": "https://place.map.kakao.com/7920064",
+    "searchKeyword": "쁘띠프랑스",
+    "address": "경기 가평군 청평면 호반로 1063",
+    "verified": false,
+    "needsReview": false
+  },
+  "세미원": {
+    "id": "7949686",
+    "name": "세미원",
+    "url": "https://place.map.kakao.com/7949686",
+    "searchKeyword": "세미원",
+    "address": "경기 양평군 양서면 양수로 93",
+    "verified": false,
+    "needsReview": false
+  },
+  "이천세라피아": {
+    "id": "27547284",
+    "name": "이천세계도자센터 세라피아",
+    "url": "https://place.map.kakao.com/27547284",
+    "searchKeyword": "이천세계도자센터 세라피아",
+    "address": "경기 이천시 경충대로2697번길 263",
+    "verified": true,
+    "needsReview": false
+  },
+  "경기도자박물관": {
+    "id": "17807469",
+    "name": "경기도자박물관",
+    "url": "https://place.map.kakao.com/17807469",
+    "searchKeyword": "경기도자박물관",
+    "address": "경기 광주시 곤지암읍 경충대로 727",
+    "verified": false,
+    "needsReview": false
+  },
+  "화담숲": {
+    "id": "15582723",
+    "name": "화담숲",
+    "url": "https://place.map.kakao.com/15582723",
+    "searchKeyword": "화담숲",
+    "address": "경기 광주시 도척면 도웅리 산 33",
+    "verified": false,
+    "needsReview": false
+  },
+  "안양예술공원": {
+    "id": "10582302",
+    "name": "안양예술공원",
+    "url": "https://place.map.kakao.com/10582302",
+    "searchKeyword": "안양예술공원",
+    "address": "경기 안양시 만안구 예술공원로 131",
+    "verified": false,
+    "needsReview": false
+  },
+  "경기도미술관": {
+    "id": "26472936",
+    "name": "경기도미술관",
+    "url": "https://place.map.kakao.com/26472936",
+    "searchKeyword": "경기도미술관",
+    "address": "경기 안산시 단원구 동산로 268",
+    "verified": false,
+    "needsReview": false
+  },
+  "안산어촌민속박물관": {
+    "id": "19174891",
+    "name": "안산어촌민속박물관",
+    "url": "https://place.map.kakao.com/19174891",
+    "searchKeyword": "안산어촌민속박물관",
+    "address": "경기 안산시 단원구 대부황금로 7",
+    "verified": false,
+    "needsReview": false
+  },
+  "화성 공룡알 화석산지": {
+    "id": "17382344",
+    "name": "공룡알화석산지 방문자센터",
+    "url": "https://place.map.kakao.com/17382344",
+    "searchKeyword": "공룡알화석산지 방문자센터",
+    "address": "경기 화성시 만세구 송산면 공룡로 659",
+    "verified": true,
+    "needsReview": false
+  },
+  "오산미니어처빌리지": {
+    "id": "1669494896",
+    "name": "오산미니어처빌리지",
+    "url": "https://place.map.kakao.com/1669494896",
+    "searchKeyword": "오산미니어처빌리지",
+    "address": "경기 오산시 북삼미로 12",
+    "verified": true,
+    "needsReview": false
+  },
+  "시흥갯골생태공원": {
+    "id": "7971967",
+    "name": "시흥갯골생태공원",
+    "url": "https://place.map.kakao.com/7971967",
+    "searchKeyword": "시흥갯골생태공원",
+    "address": "경기 시흥시 동서로 287",
+    "verified": false,
+    "needsReview": false
+  },
+  "미사경정공원": {
+    "id": "26369650",
+    "name": "미사경정공원",
+    "url": "https://place.map.kakao.com/26369650",
+    "searchKeyword": "미사경정공원",
+    "address": "경기 하남시 미사대로 505",
+    "verified": false,
+    "needsReview": false
+  },
+  "농협 안성팜랜드": {
+    "id": "17202018",
+    "name": "농협안성팜랜드",
+    "url": "https://place.map.kakao.com/17202018",
+    "searchKeyword": "농협 안성팜랜드",
+    "address": "경기 안성시 공도읍 대신두길 28",
+    "verified": false,
+    "needsReview": false
+  },
+  "인천어린이박물관": {
+    "id": "11167305",
+    "name": "인천어린이박물관",
+    "url": "https://place.map.kakao.com/11167305",
+    "searchKeyword": "인천어린이박물관",
+    "address": "인천 미추홀구 매소홀로 618",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립세계문자박물관": {
+    "id": "27019618",
+    "name": "국립세계문자박물관",
+    "url": "https://place.map.kakao.com/27019618",
+    "searchKeyword": "국립세계문자박물관",
+    "address": "인천 연수구 센트럴로 217",
+    "verified": false,
+    "needsReview": false
+  },
+  "인천시립박물관": {
+    "id": "8052890",
+    "name": "인천광역시립박물관",
+    "url": "https://place.map.kakao.com/8052890",
+    "searchKeyword": "인천광역시립박물관",
+    "address": "인천 연수구 청량로160번길 26",
+    "verified": true,
+    "needsReview": false
+  },
+  "송도센트럴파크": {
+    "id": "13577707",
+    "name": "송도센트럴파크",
+    "url": "https://place.map.kakao.com/13577707",
+    "searchKeyword": "송도센트럴파크",
+    "address": "인천 연수구 송도동 24-5",
+    "verified": false,
+    "needsReview": false
+  },
+  "인천대공원": {
+    "id": "11320114",
+    "name": "인천대공원",
+    "url": "https://place.map.kakao.com/11320114",
+    "searchKeyword": "인천대공원",
+    "address": "인천 남동구 무네미로 238",
+    "verified": false,
+    "needsReview": false
+  },
+  "월미공원": {
+    "id": "24877789",
+    "name": "월미공원",
+    "url": "https://place.map.kakao.com/24877789",
+    "searchKeyword": "월미공원",
+    "address": "인천 제물포구 북성동1가 산 125",
+    "verified": false,
+    "needsReview": false
+  },
+  "인천개항박물관": {
+    "id": "12960848",
+    "name": "인천개항박물관",
+    "url": "https://place.map.kakao.com/12960848",
+    "searchKeyword": "인천개항박물관",
+    "address": "인천 제물포구 신포로23번길 89",
+    "verified": false,
+    "needsReview": false
+  },
+  "짜장면박물관": {
+    "id": "19529404",
+    "name": "짜장면박물관",
+    "url": "https://place.map.kakao.com/19529404",
+    "searchKeyword": "짜장면박물관",
+    "address": "인천 제물포구 차이나타운로 56-14",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립생물자원관": {
+    "id": "10145688",
+    "name": "국립생물자원관",
+    "url": "https://place.map.kakao.com/10145688",
+    "searchKeyword": "국립생물자원관",
+    "address": "인천 서해구 환경로 42",
+    "verified": false,
+    "needsReview": false
+  },
+  "옥토끼우주센터": {
+    "id": "9949315",
+    "name": "옥토끼우주센터",
+    "url": "https://place.map.kakao.com/9949315",
+    "searchKeyword": "옥토끼우주센터",
+    "address": "인천 강화군 불은면 강화동로 403",
+    "verified": false,
+    "needsReview": false
+  },
+  "국립중앙박물관 어린이박물관": {
+    "id": "8208781",
+    "name": "국립중앙박물관 어린이박물관",
+    "url": "https://place.map.kakao.com/8208781",
+    "searchKeyword": "국립중앙박물관 어린이박물관",
+    "address": null,
+    "verified": true,
+    "needsReview": false
+  },
+  "스타필드 고양": {
+    "id": "627697814",
+    "name": "스타필드 고양",
+    "url": "https://place.map.kakao.com/627697814",
+    "searchKeyword": "스타필드 고양",
+    "address": null,
+    "verified": true,
+    "needsReview": false
+  }
+}

@@ -12,6 +12,8 @@ const MOBILE_DEVICE = {
   maxTouchPoints: 5,
 }
 
+const priorityReviewNameSet = new Set(kakaoPriorityReviewNames)
+
 function normalizePlaceName(value) {
   return String(value || '').replace(/[^0-9A-Za-z가-힣]/g, '').toLowerCase()
 }
@@ -53,7 +55,7 @@ export default function KakaoLinksDebugPage() {
   const priorityPlaces = places.filter((place) => (
     !place.kakaoPlaceId || !place.kakaoPlaceUrl || place.kakaoNeedsReview
   ))
-  const namedPriorityPlaces = places.filter((place) => place.kakaoNeedsReview)
+  const namedPriorityPlaces = places.filter((place) => priorityReviewNameSet.has(place.name))
   const incompletePlaces = places.filter((place) => !place.kakaoPlaceId || !place.kakaoPlaceUrl)
   const currentNames = new Set(places.map((place) => place.name))
   const missingPriorityNames = kakaoPriorityReviewNames.filter((name) => !currentNames.has(name))
@@ -122,7 +124,10 @@ export default function KakaoLinksDebugPage() {
               <tr>
                 <th scope="col">서비스 표시명</th>
                 <th scope="col">카카오 연결명</th>
-                <th scope="col">Place ID / URL</th>
+                <th scope="col">Place ID</th>
+                <th scope="col">Place URL</th>
+                <th scope="col">검증됨</th>
+                <th scope="col">재검토</th>
                 <th scope="col">PC 지도보기 URL</th>
                 <th scope="col">모바일 지도보기 URL</th>
                 <th scope="col">최신 장소정보 URL</th>
@@ -142,10 +147,10 @@ export default function KakaoLinksDebugPage() {
                   <tr key={place.id}>
                     <th scope="row">{place.name}</th>
                     <td>{place.kakaoPlaceName || <span className="kakao-debug-empty">미등록</span>}</td>
-                    <td>
-                      <strong>{place.kakaoPlaceId || <span className="kakao-debug-empty">ID 없음</span>}</strong>
-                      <small>{place.kakaoPlaceUrl || 'URL 없음'}</small>
-                    </td>
+                    <td><strong>{place.kakaoPlaceId || <span className="kakao-debug-empty">ID 없음</span>}</strong></td>
+                    <td><small>{place.kakaoPlaceUrl || <span className="kakao-debug-empty">URL 없음</span>}</small></td>
+                    <td>{place.kakaoVerified ? 'true' : 'false'}</td>
+                    <td>{place.kakaoNeedsReview ? 'true' : 'false'}</td>
                     <td><UrlCell url={desktopMapUrl} label="PC 지도보기 열기" /></td>
                     <td><UrlCell url={mobileMapUrl} label="모바일 장소 열기" /></td>
                     <td><UrlCell url={placeInfoUrl} label="최신정보 열기" /></td>
