@@ -28,6 +28,22 @@ const themeRules = [
   ['물놀이·스포츠', /플레이도시|한강|경정|호수공원|센트럴파크/],
 ]
 
+// 카카오맵 장소 상세 페이지에서 장소명·주소를 직접 대조한 주요 POI입니다.
+const kakaoPlaceOverrides = {
+  국립중앙박물관: { id: '8830150', name: '국립중앙박물관', url: 'https://place.map.kakao.com/8830150' },
+  '국립중앙박물관 어린이박물관': { id: '8208781', name: '국립중앙박물관 어린이박물관', url: 'https://place.map.kakao.com/8208781' },
+  '코엑스 아쿠아리움': { id: '12860036', name: '코엑스 아쿠아리움', url: 'https://place.map.kakao.com/12860036' },
+  롯데월드: { id: '27560699', name: '롯데월드 어드벤처', url: 'https://place.map.kakao.com/27560699' },
+  서울식물원: { id: '1164966384', name: '서울식물원', url: 'https://place.map.kakao.com/1164966384' },
+  서울스카이: { id: '680691609', name: '서울스카이', url: 'https://place.map.kakao.com/680691609' },
+  '키자니아 서울': { id: '17735905', name: '키자니아 서울', url: 'https://place.map.kakao.com/17735905' },
+  국립과천과학관: { id: '11374610', name: '국립과천과학관', url: 'https://place.map.kakao.com/11374610' },
+  서울대공원: { id: '971122014', name: '서울대공원 서울동물원', url: 'https://place.map.kakao.com/971122014' },
+  광명동굴: { id: '26314882', name: '광명동굴', url: 'https://place.map.kakao.com/26314882' },
+  '스타필드 고양': { id: '627697814', name: '스타필드 고양', url: 'https://place.map.kakao.com/627697814' },
+  '현대 모터스튜디오 고양': { id: '1338515380', name: '현대 모터스튜디오 고양', url: 'https://place.map.kakao.com/1338515380' },
+}
+
 let nextPlaceId = 1
 
 const fatigueReasonOverrides = {
@@ -155,10 +171,14 @@ const place = (name, area, latitude, longitude, indoorOutdoor, ageGroups, durati
   const themes = themeRules.filter(([, pattern]) => pattern.test(`${name} ${description}`)).map(([theme]) => theme)
   const fatigue = getParentFatigue(indoorOutdoor, duration, name)
   const familyFit = getFamilyFit(indoorOutdoor, ageGroups, duration, priceCategory, themes, fatigue.level)
+  const kakaoPlace = kakaoPlaceOverrides[name]
 
   return {
     id: `place-${String(nextPlaceId++).padStart(3, '0')}`,
     name,
+    kakaoPlaceId: kakaoPlace?.id || '',
+    kakaoPlaceName: kakaoPlace?.name || name,
+    kakaoPlaceUrl: kakaoPlace?.url || '',
     area,
     region: area.split(' ')[0],
     subRegion: area.split(' ').slice(1).join(' '),

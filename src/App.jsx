@@ -3,7 +3,7 @@ import KakaoMap from './components/KakaoMap.jsx'
 import ReviewSection from './components/ReviewSection.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
 import { getUserDisplayName, isSupabaseConfigured, supabase } from './lib/supabase.js'
-import { getKakaoDirectionsLinks, getKakaoMapLink } from './utils/kakaoLinks.js'
+import { getKakaoDirectionsLinks, getKakaoMapLink, getKakaoPlaceDetailLink } from './utils/kakaoLinks.js'
 import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
 const initialFilters = { weather: '', age: '', duration: '', price: '', themes: [] }
@@ -466,7 +466,7 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
           <div className="place-info-status">
             <strong>방문 전 최신 정보를 확인해 주세요</strong>
             <p>현재 표시된 소요시간과 비용은 추천용 구분이며 실시간 운영정보가 아니에요. 정확한 주소, 운영시간, 휴무일, 실제 요금은 카카오맵 장소정보와 해당 장소의 공식 채널에서 확인해 주세요.</p>
-            <div><span>서비스 데이터 업데이트 {PLACE_DATA_UPDATED_AT}</span><a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.name} 최신 장소정보 확인 새 창`}>최신 장소정보 확인 ↗</a></div>
+            <div><span>서비스 데이터 업데이트 {PLACE_DATA_UPDATED_AT}</span><a href={getKakaoPlaceDetailLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.kakaoPlaceName || place.name} 최신 장소정보 확인 새 창`}>최신 장소정보 확인 ↗</a></div>
           </div>
           <ReviewSection place={place} user={user} onLogin={onLogin} />
         </div>
@@ -485,10 +485,11 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
             data-place-fallback-url={directionsLinks.placeFallbackUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${place.name} 카카오맵에서 길찾기 새 창`}
+            data-destination-name={place.kakaoPlaceName || place.name}
+            aria-label={`${place.kakaoPlaceName || place.name} 카카오맵에서 길찾기 새 창`}
             onClick={handleDirectionsClick}
           >🧭 길찾기</a>
-          <a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.name} 카카오맵에서 보기 새 창`}>📍 지도 보기</a>
+          <a href={getKakaoMapLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.kakaoPlaceName || place.name} 카카오맵에서 보기 새 창`}>📍 지도 보기</a>
           <button type="button" onClick={(event) => event.currentTarget.closest('.place-modal')?.querySelector('.review-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>💬 후기 보기</button>
         </div>
       </section>
