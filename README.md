@@ -83,6 +83,11 @@ Supabase Authentication의 Redirect URL 허용 목록에는 다음 주소를 등
 
 ```text
 http://127.0.0.1:5173/
+http://localhost:5173/
+https://oneulwhere.kr/
+https://www.oneulwhere.kr/
+https://oneulwhere.com/
+https://www.oneulwhere.com/
 https://wherewego-zeta.vercel.app/
 ```
 
@@ -94,6 +99,60 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 ```
 
 `service_role` 키와 카카오 Client Secret은 프런트엔드 환경변수나 GitHub에 넣지 않습니다.
+
+## 정식 도메인 연결 체크리스트
+
+대표 공개 주소는 `https://oneulwhere.kr`입니다. canonical, Open Graph, Twitter Card, WebSite 구조화 데이터, `sitemap.xml`, `robots.txt`는 이 주소를 기준으로 설정되어 있습니다. `SITE_URL` 또는 `NEXT_PUBLIC_SITE_URL` 환경변수는 현재 Vite 앱에서 사용하지 않습니다.
+
+### Vercel Domains
+
+Vercel 프로젝트의 Settings > Domains에서 다음 도메인을 추가합니다.
+
+```text
+oneulwhere.kr
+www.oneulwhere.kr
+oneulwhere.com
+www.oneulwhere.com
+```
+
+- `oneulwhere.kr`을 Production의 대표 도메인으로 사용합니다.
+- 나머지 세 도메인은 Vercel Domains의 Redirect 설정에서 `https://oneulwhere.kr`로 영구 리다이렉트합니다.
+- DNS 설정은 Vercel이 각 도메인에 안내하는 레코드를 도메인 구입처에 그대로 등록합니다.
+- `wherewego-zeta.vercel.app`은 개발·복구 확인용 주소로만 남기고 공개 링크로 공유하지 않습니다. 이 주소로 접속해도 HTML의 canonical과 SNS 메타데이터는 `oneulwhere.kr`을 가리킵니다.
+
+호스트별 리다이렉트는 `vercel.json`에 중복 작성하지 않고 Vercel의 Domains 설정에서 관리합니다. 도메인 연결 전에는 `oneulwhere.kr` DNS가 아직 열리지 않을 수 있습니다.
+
+### Kakao Developers
+
+앱 설정 > 플랫폼 키 > JavaScript 키의 JavaScript SDK 도메인에 다음 주소를 등록합니다.
+
+```text
+https://oneulwhere.kr
+https://www.oneulwhere.kr
+https://oneulwhere.com
+https://www.oneulwhere.com
+```
+
+로컬 개발과 Vercel 백업 주소에서 지도를 계속 테스트하려면 기존 `http://localhost:5173`, `http://127.0.0.1:5173`, `https://wherewego-zeta.vercel.app`도 유지합니다. 카카오톡 공유 링크를 사용한다면 앱 설정 > 제품 링크 > 웹 도메인에도 위 네 개의 정식 도메인을 등록합니다.
+
+Supabase로 카카오 로그인을 처리할 때 Kakao Developers의 Redirect URI에는 공개 사이트 주소가 아니라 Supabase Authentication > Providers > Kakao에 표시되는 Callback URL을 그대로 등록합니다. 키나 Callback URL을 코드에 하드코딩하지 않습니다.
+
+### Supabase Auth
+
+Supabase Dashboard의 Authentication > URL Configuration에서 다음을 설정합니다.
+
+- Site URL: `https://oneulwhere.kr`
+- Redirect URLs: 위의 `Supabase Authentication의 Redirect URL 허용 목록`에 적힌 주소
+
+앱은 로그인 후 돌아갈 주소를 현재 접속 origin으로 계산합니다. 따라서 사용할 정식·보조·개발 주소는 Supabase Redirect URLs에 각각 정확히 등록해야 합니다.
+
+### 공개 전 확인
+
+1. `https://oneulwhere.kr`에서 홈 화면, 지도, 카카오 로그인, 후기 작성이 정상인지 확인합니다.
+2. 세 보조 도메인이 `https://oneulwhere.kr`로 이동하는지 확인합니다.
+3. `https://oneulwhere.kr/robots.txt`와 `https://oneulwhere.kr/sitemap.xml`이 열리는지 확인합니다.
+4. 카카오톡에 대표 주소를 새로 공유해 제목·설명·이미지를 확인합니다.
+5. GitHub와 Vercel에는 브라우저 공개를 전제로 한 Kakao JavaScript 키와 Supabase publishable 키만 두고, Supabase `service_role`, Kakao REST API 키, Kakao Client Secret은 올리지 않습니다.
 
 ## 공개 베타 운영
 
