@@ -8,7 +8,7 @@ import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilt
 
 const initialFilters = { weather: '', age: '', duration: '', price: '', themes: [] }
 const initialResultFilters = { region: '전체', themes: [], environment: '전체', sort: 'default', favoritesOnly: false }
-const regionOptions = ['전체', '서울', '경기', '인천']
+const regionOptions = ['전체', '서울', '경기', '인천', '충청', '강원', '부산', '제주']
 const environmentOptions = ['전체', '실내', '야외', '실내+야외']
 const themeLabelMap = Object.fromEntries(themeOptions.map(({ value, label }) => [value, label]))
 const fatigueLabelMap = { low: '낮음', medium: '보통', high: '높음' }

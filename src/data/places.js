@@ -1,4 +1,8 @@
 import kakaoPlaces from './kakao-places.json' with { type: 'json' }
+import familyExpansionBatch01 from './family-expansion-batch-01.json' with { type: 'json' }
+import familyExpansionBatch02 from './family-expansion-batch-02.js'
+import familyExpansionBatch03 from './family-expansion-batch-03.js'
+import familyExpansionBatch04 from './family-expansion-batch-04.js'
 
 const ALL_AGES = ['유아', '초등 저학년', '초등 고학년']
 const YOUNG = ['유아', '초등 저학년']
@@ -210,7 +214,7 @@ const place = (name, area, latitude, longitude, indoorOutdoor, ageGroups, durati
   }
 }
 
-export const places = [
+const originalPlaces = [
   // 서울 45곳
   place('국립중앙박물관', '서울 용산', 37.5239, 126.9803, '실내', ALL_AGES, '반나절', '무료', '넓은 전시실에서 우리 역사와 문화를 차분히 만나요.'),
   place('코엑스 아쿠아리움', '서울 강남', 37.5134, 127.0588, '실내', ALL_AGES, '1~2시간', '상관없음', '도심 속에서 신비로운 바닷속 생물을 가까이 만나요.'),
@@ -317,6 +321,8 @@ export const places = [
   place('국립생물자원관', '인천 서구', 37.5683, 126.6401, '실내', ALL_AGES, '반나절', '무료', '우리나라의 다양한 생물과 생태계를 살펴봐요.'),
   place('옥토끼우주센터', '인천 강화', 37.6737, 126.4878, '실내', ALL_AGES, '하루', '상관없음', '우주과학 체험과 야외 테마공원을 함께 즐겨요.'),
 ]
+
+export const places = [...originalPlaces, ...familyExpansionBatch01, ...familyExpansionBatch02, ...familyExpansionBatch03, ...familyExpansionBatch04]
 
 export const filterOptions = [
   { key: 'weather', label: '날씨', icon: '🌤️', options: [{ value: 'outdoor', label: '☀️ 야외도 좋아요' }, { value: 'indoor', label: '☔ 실내만' }] },

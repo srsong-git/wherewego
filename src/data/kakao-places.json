@@ -899,6 +899,1761 @@
     "verified": false,
     "needsReview": false
   },
+  "판교박물관": {
+    "id": "19265257",
+    "name": "판교박물관",
+    "url": "https://place.map.kakao.com/19265257",
+    "searchKeyword": "판교박물관",
+    "address": "경기 성남시 분당구 판교로 191",
+    "verified": true,
+    "needsReview": false
+  },
+  "성남큐브미술관": {
+    "id": "15229989",
+    "name": "성남큐브미술관",
+    "url": "https://place.map.kakao.com/15229989",
+    "searchKeyword": "성남큐브미술관",
+    "address": "경기 성남시 분당구 성남대로 808",
+    "verified": true,
+    "needsReview": false
+  },
+  "신구대학교식물원": {
+    "id": "7964551",
+    "name": "신구대학교식물원",
+    "url": "https://place.map.kakao.com/7964551",
+    "searchKeyword": "신구대학교식물원",
+    "address": "경기 성남시 수정구 상적동 123-5",
+    "verified": true,
+    "needsReview": false
+  },
+  "판교환경생태학습원": {
+    "id": "15242648",
+    "name": "판교환경생태학습원",
+    "url": "https://place.map.kakao.com/15242648",
+    "searchKeyword": "판교환경생태학습원",
+    "address": "경기 성남시 분당구 대왕판교로645번길 21",
+    "verified": true,
+    "needsReview": false
+  },
+  "맹산환경생태학습원": {
+    "id": "14585622",
+    "name": "맹산환경생태학습원",
+    "url": "https://place.map.kakao.com/14585622",
+    "searchKeyword": "맹산환경생태학습원",
+    "address": "경기 성남시 분당구 판교로 628",
+    "verified": true,
+    "needsReview": false
+  },
+  "성남시민농원": {
+    "id": "1938467362",
+    "name": "성남시민농원",
+    "url": "https://place.map.kakao.com/1938467362",
+    "searchKeyword": "성남시민농원",
+    "address": "경기 성남시 중원구 성남동 4827",
+    "verified": true,
+    "needsReview": false
+  },
+  "성남시 책테마파크도서관": {
+    "id": "11917359",
+    "name": "성남시 책테마파크도서관",
+    "url": "https://place.map.kakao.com/11917359",
+    "searchKeyword": "성남시 책테마파크도서관",
+    "address": "경기 성남시 분당구 문정로 145",
+    "verified": true,
+    "needsReview": false
+  },
+  "화랑공원": {
+    "id": "15214855",
+    "name": "화랑공원",
+    "url": "https://place.map.kakao.com/15214855",
+    "searchKeyword": "화랑공원 판교",
+    "address": "경기 성남시 분당구 대왕판교로645번길 21",
+    "verified": true,
+    "needsReview": false
+  },
+  "분당중앙공원": {
+    "id": "21385097",
+    "name": "분당중앙공원",
+    "url": "https://place.map.kakao.com/21385097",
+    "searchKeyword": "분당중앙공원",
+    "address": "경기 성남시 분당구 수내동 65",
+    "verified": true,
+    "needsReview": false
+  },
+  "탄천민물고기습지생태원": {
+    "id": "24351059",
+    "name": "탄천민물고기습지생태원",
+    "url": "https://place.map.kakao.com/24351059",
+    "searchKeyword": "탄천민물고기습지생태원",
+    "address": "경기 성남시 수정구 태평동 7027-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "현대어린이책미술관": {
+    "id": "27477964",
+    "name": "현대어린이책미술관",
+    "url": "https://place.map.kakao.com/27477964",
+    "searchKeyword": "현대어린이책미술관",
+    "address": "경기 성남시 분당구 판교역로146번길 20",
+    "verified": true,
+    "needsReview": false
+  },
+  "중원어린이도서관": {
+    "id": "12754280",
+    "name": "중원어린이도서관",
+    "url": "https://place.map.kakao.com/12754280",
+    "searchKeyword": "중원어린이도서관",
+    "address": "경기 성남시 중원구 산성대로408번길 42",
+    "verified": true,
+    "needsReview": false
+  },
+  "용인자연휴양림": {
+    "id": "11337761",
+    "name": "용인자연휴양림",
+    "url": "https://place.map.kakao.com/11337761",
+    "searchKeyword": "용인자연휴양림",
+    "address": "경기 용인시 처인구 모현읍 초부로 220",
+    "verified": true,
+    "needsReview": false
+  },
+  "한택식물원": {
+    "id": "24063430",
+    "name": "한택식물원",
+    "url": "https://place.map.kakao.com/24063430",
+    "searchKeyword": "한택식물원",
+    "address": "경기 용인시 처인구 백암면 한택로 2",
+    "verified": true,
+    "needsReview": false
+  },
+  "백남준아트센터": {
+    "id": "7887532",
+    "name": "백남준아트센터",
+    "url": "https://place.map.kakao.com/7887532",
+    "searchKeyword": "백남준아트센터",
+    "address": "경기 용인시 기흥구 백남준로 10",
+    "verified": true,
+    "needsReview": false
+  },
+  "호암미술관": {
+    "id": "8156072",
+    "name": "호암미술관",
+    "url": "https://place.map.kakao.com/8156072",
+    "searchKeyword": "호암미술관",
+    "address": "경기 용인시 처인구 포곡읍 에버랜드로562번길 38",
+    "verified": true,
+    "needsReview": false
+  },
+  "용인대장금테마파크": {
+    "id": "11344902",
+    "name": "용인대장금테마파크",
+    "url": "https://place.map.kakao.com/11344902",
+    "searchKeyword": "용인대장금테마파크",
+    "address": "경기 용인시 처인구 백암면 용천드라마길 25",
+    "verified": true,
+    "needsReview": false
+  },
+  "용인어린이상상의숲": {
+    "id": "262113903",
+    "name": "용인어린이상상의숲",
+    "url": "https://place.map.kakao.com/262113903",
+    "searchKeyword": "용인어린이상상의숲",
+    "address": "경기 용인시 처인구 동백죽전대로 61",
+    "verified": true,
+    "needsReview": false
+  },
+  "용인시박물관": {
+    "id": "11539798",
+    "name": "용인시박물관",
+    "url": "https://place.map.kakao.com/11539798",
+    "searchKeyword": "용인시박물관",
+    "address": "경기 용인시 기흥구 동백3로 79",
+    "verified": true,
+    "needsReview": false
+  },
+  "한국등잔박물관": {
+    "id": "10861192",
+    "name": "한국등잔박물관",
+    "url": "https://place.map.kakao.com/10861192",
+    "searchKeyword": "한국등잔박물관",
+    "address": "경기 용인시 처인구 모현읍 능곡로56번길 8",
+    "verified": true,
+    "needsReview": false
+  },
+  "단국대학교 석주선기념박물관": {
+    "id": "11972561",
+    "name": "단국대학교 석주선기념박물관",
+    "url": "https://place.map.kakao.com/11972561",
+    "searchKeyword": "단국대학교 석주선기념박물관",
+    "address": "경기 용인시 수지구 죽전로 152",
+    "verified": true,
+    "needsReview": false
+  },
+  "캐리비안베이": {
+    "id": "8004914",
+    "name": "캐리비안베이",
+    "url": "https://place.map.kakao.com/8004914",
+    "searchKeyword": "캐리비안베이",
+    "address": "경기 용인시 처인구 포곡읍 에버랜드로 199",
+    "verified": true,
+    "needsReview": false
+  },
+  "플라이스테이션코리아": {
+    "id": "785804057",
+    "name": "플라이스테이션코리아",
+    "url": "https://place.map.kakao.com/785804057",
+    "searchKeyword": "플라이스테이션코리아",
+    "address": "경기 용인시 처인구 포곡읍 성산로 521",
+    "verified": true,
+    "needsReview": false
+  },
+  "뮤지엄그라운드": {
+    "id": "564452597",
+    "name": "뮤지엄그라운드",
+    "url": "https://place.map.kakao.com/564452597",
+    "searchKeyword": "뮤지엄그라운드",
+    "address": "경기 용인시 수지구 샘말로 122",
+    "verified": true,
+    "needsReview": false
+  },
+  "벗이미술관": {
+    "id": "27367059",
+    "name": "벗이미술관",
+    "url": "https://place.map.kakao.com/27367059",
+    "searchKeyword": "벗이미술관",
+    "address": "경기 용인시 처인구 양지읍 학촌로53번길 4",
+    "verified": true,
+    "needsReview": false
+  },
+  "한국미술관": {
+    "id": "8587364",
+    "name": "한국미술관",
+    "url": "https://place.map.kakao.com/8587364",
+    "searchKeyword": "한국미술관 용인",
+    "address": "경기 용인시 기흥구 마북로 244-2",
+    "verified": true,
+    "needsReview": false
+  },
+  "농도원목장": {
+    "id": "14615405",
+    "name": "농도원목장",
+    "url": "https://place.map.kakao.com/14615405",
+    "searchKeyword": "농도원목장",
+    "address": "경기 용인시 처인구 원삼면 원양로377번길 1-34",
+    "verified": true,
+    "needsReview": false
+  },
+  "청계목장": {
+    "id": "8109326",
+    "name": "청계목장",
+    "url": "https://place.map.kakao.com/8109326",
+    "searchKeyword": "청계목장 용인",
+    "address": "경기 용인시 처인구 백암면 청계로104번길 20",
+    "verified": true,
+    "needsReview": false
+  },
+  "용인곤충테마파크": {
+    "id": "27318757",
+    "name": "용인곤충테마파크",
+    "url": "https://place.map.kakao.com/27318757",
+    "searchKeyword": "용인곤충테마파크",
+    "address": "경기 용인시 처인구 백암면 삼백로835번길 38",
+    "verified": true,
+    "needsReview": false
+  },
+  "안젤리미술관": {
+    "id": "26612542",
+    "name": "안젤리미술관",
+    "url": "https://place.map.kakao.com/26612542",
+    "searchKeyword": "안젤리미술관",
+    "address": "경기 용인시 처인구 이동읍 이원로 244",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원박물관": {
+    "id": "7958133",
+    "name": "수원박물관",
+    "url": "https://place.map.kakao.com/7958133",
+    "searchKeyword": "수원박물관",
+    "address": "경기 수원시 영통구 창룡대로 265",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원화성박물관": {
+    "id": "12027576",
+    "name": "수원화성박물관",
+    "url": "https://place.map.kakao.com/12027576",
+    "searchKeyword": "수원화성박물관",
+    "address": "경기 수원시 팔달구 창룡대로 21",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원시립미술관": {
+    "id": "26935263",
+    "name": "수원시립미술관",
+    "url": "https://place.map.kakao.com/26935263",
+    "searchKeyword": "수원시립미술관",
+    "address": "경기 수원시 팔달구 정조로 833",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립농업박물관": {
+    "id": "1802170966",
+    "name": "국립농업박물관",
+    "url": "https://place.map.kakao.com/1802170966",
+    "searchKeyword": "국립농업박물관",
+    "address": "경기 수원시 권선구 수인로 154",
+    "verified": true,
+    "needsReview": false
+  },
+  "아쿠아플라넷 광교": {
+    "id": "1482138481",
+    "name": "아쿠아플라넷 광교",
+    "url": "https://place.map.kakao.com/1482138481",
+    "searchKeyword": "아쿠아플라넷 광교",
+    "address": "경기 수원시 영통구 광교호수공원로 300",
+    "verified": true,
+    "needsReview": false
+  },
+  "일월수목원": {
+    "id": "380088639",
+    "name": "일월수목원",
+    "url": "https://place.map.kakao.com/380088639",
+    "searchKeyword": "일월수목원",
+    "address": "경기 수원시 장안구 일월로 61",
+    "verified": true,
+    "needsReview": false
+  },
+  "영흥수목원": {
+    "id": "1665097801",
+    "name": "영흥수목원",
+    "url": "https://place.map.kakao.com/1665097801",
+    "searchKeyword": "영흥수목원",
+    "address": "경기 수원시 영통구 영통로 435",
+    "verified": true,
+    "needsReview": false
+  },
+  "광교호수공원": {
+    "id": "15099364",
+    "name": "광교호수공원",
+    "url": "https://place.map.kakao.com/15099364",
+    "searchKeyword": "광교호수공원",
+    "address": "경기 수원시 영통구 하동 1020",
+    "verified": true,
+    "needsReview": false
+  },
+  "해우재": {
+    "id": "717961044",
+    "name": "해우재",
+    "url": "https://place.map.kakao.com/717961044",
+    "searchKeyword": "해우재",
+    "address": "경기 수원시 장안구 장안로458번길 9",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원시기후변화체험교육관 두드림": {
+    "id": "23831636",
+    "name": "수원시기후변화체험교육관 두드림",
+    "url": "https://place.map.kakao.com/23831636",
+    "searchKeyword": "수원시기후변화체험교육관 두드림",
+    "address": "경기 수원시 권선구 호매실로 46-38",
+    "verified": true,
+    "needsReview": false
+  },
+  "경기상상캠퍼스": {
+    "id": "1982560219",
+    "name": "경기상상캠퍼스",
+    "url": "https://place.map.kakao.com/1982560219",
+    "searchKeyword": "경기상상캠퍼스",
+    "address": "경기 수원시 권선구 서둔로 166",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원월드컵경기장 축구박물관": {
+    "id": "17572778",
+    "name": "수원월드컵경기장 축구박물관",
+    "url": "https://place.map.kakao.com/17572778",
+    "searchKeyword": "수원월드컵경기장 축구박물관",
+    "address": "경기 수원시 팔달구 월드컵로 310",
+    "verified": true,
+    "needsReview": false
+  },
+  "수원시립아트스페이스 광교": {
+    "id": "779311259",
+    "name": "수원시립아트스페이스 광교",
+    "url": "https://place.map.kakao.com/779311259",
+    "searchKeyword": "수원시립아트스페이스 광교",
+    "address": "경기 수원시 영통구 광교중앙로 140",
+    "verified": true,
+    "needsReview": false
+  },
+  "플라잉수원": {
+    "id": "1141207437",
+    "name": "플라잉수원",
+    "url": "https://place.map.kakao.com/1141207437",
+    "searchKeyword": "플라잉수원",
+    "address": "경기 수원시 팔달구 경수대로 697",
+    "verified": true,
+    "needsReview": false
+  },
+  "화성시어린이문화센터": {
+    "id": "107708346",
+    "name": "화성시어린이문화센터",
+    "url": "https://place.map.kakao.com/107708346",
+    "searchKeyword": "화성시어린이문화센터",
+    "address": "경기 화성시 효행구 봉담읍 동화길 146",
+    "verified": true,
+    "needsReview": false
+  },
+  "화성시우리꽃식물원": {
+    "id": "11487287",
+    "name": "화성시우리꽃식물원",
+    "url": "https://place.map.kakao.com/11487287",
+    "searchKeyword": "화성시우리꽃식물원",
+    "address": "경기 화성시 만세구 팔탄면 3.1만세로 777-17",
+    "verified": true,
+    "needsReview": false
+  },
+  "화성시역사박물관": {
+    "id": "11973856",
+    "name": "화성시역사박물관",
+    "url": "https://place.map.kakao.com/11973856",
+    "searchKeyword": "화성시역사박물관",
+    "address": "경기 화성시 만세구 향남읍 행정동로 96",
+    "verified": true,
+    "needsReview": false
+  },
+  "시립반석산에코스쿨": {
+    "id": "742850767",
+    "name": "시립반석산에코스쿨",
+    "url": "https://place.map.kakao.com/742850767",
+    "searchKeyword": "시립반석산에코스쿨",
+    "address": "경기 화성시 동탄구 노작로 158",
+    "verified": true,
+    "needsReview": false
+  },
+  "동탄호수공원": {
+    "id": "27305931",
+    "name": "동탄호수공원",
+    "url": "https://place.map.kakao.com/27305931",
+    "searchKeyword": "동탄호수공원",
+    "address": "경기 화성시 동탄구 동탄순환대로 69",
+    "verified": true,
+    "needsReview": false
+  },
+  "화성시독립운동기념관": {
+    "id": "10714405",
+    "name": "화성시독립운동기념관",
+    "url": "https://place.map.kakao.com/10714405",
+    "searchKeyword": "화성시독립운동기념관",
+    "address": "경기 화성시 만세구 향남읍 제암고주로 34",
+    "verified": true,
+    "needsReview": false
+  },
+  "행주산성": {
+    "id": "8143171",
+    "name": "행주산성",
+    "url": "https://place.map.kakao.com/8143171",
+    "searchKeyword": "행주산성",
+    "address": "경기 고양시 덕양구 행주로15번길 89",
+    "verified": true,
+    "needsReview": false
+  },
+  "서오릉": {
+    "id": "18384905",
+    "name": "서오릉",
+    "url": "https://place.map.kakao.com/18384905",
+    "searchKeyword": "서오릉",
+    "address": "경기 고양시 덕양구 서오릉로 334-32",
+    "verified": true,
+    "needsReview": false
+  },
+  "서삼릉": {
+    "id": "7947620",
+    "name": "서삼릉",
+    "url": "https://place.map.kakao.com/7947620",
+    "searchKeyword": "서삼릉",
+    "address": "경기 고양시 덕양구 서삼릉길 233-126",
+    "verified": true,
+    "needsReview": false
+  },
+  "중남미문화원 부설박물관": {
+    "id": "11529204",
+    "name": "중남미문화원 부설박물관",
+    "url": "https://place.map.kakao.com/11529204",
+    "searchKeyword": "중남미문화원 부설박물관",
+    "address": "경기 고양시 덕양구 대양로285번길 33-15",
+    "verified": true,
+    "needsReview": false
+  },
+  "한국항공대학교 항공우주박물관": {
+    "id": "8152382",
+    "name": "한국항공대학교 항공우주박물관",
+    "url": "https://place.map.kakao.com/8152382",
+    "searchKeyword": "한국항공대학교 항공우주박물관",
+    "address": "경기 고양시 덕양구 항공대학로 76-9",
+    "verified": true,
+    "needsReview": false
+  },
+  "고양생태공원": {
+    "id": "2036439940",
+    "name": "고양생태공원",
+    "url": "https://place.map.kakao.com/2036439940",
+    "searchKeyword": "고양생태공원",
+    "address": "경기 고양시 일산서구 대화로 315",
+    "verified": true,
+    "needsReview": false
+  },
+  "람사르 고양 장항습지생태관": {
+    "id": "704651358",
+    "name": "람사르 고양 장항습지생태관",
+    "url": "https://place.map.kakao.com/704651358",
+    "searchKeyword": "람사르 고양 장항습지생태관",
+    "address": "경기 고양시 일산동구 장대들길 401",
+    "verified": true,
+    "needsReview": false
+  },
+  "고양아람누리 아람미술관": {
+    "id": "17569807",
+    "name": "고양아람누리 아람미술관",
+    "url": "https://place.map.kakao.com/17569807",
+    "searchKeyword": "고양아람누리 아람미술관",
+    "address": "경기 고양시 일산동구 중앙로 1286",
+    "verified": true,
+    "needsReview": false
+  },
+  "밤가시초가": {
+    "id": "13099532",
+    "name": "밤가시초가",
+    "url": "https://place.map.kakao.com/13099532",
+    "searchKeyword": "일산밤가시초가",
+    "address": "경기 고양시 일산동구 햇살로105번길 36-7",
+    "verified": true,
+    "needsReview": false
+  },
+  "임진각관광지": {
+    "id": "8055098",
+    "name": "임진각관광지",
+    "url": "https://place.map.kakao.com/8055098",
+    "searchKeyword": "임진각관광지",
+    "address": "경기 파주시 문산읍 마정리 1325-2",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립민속박물관 파주": {
+    "id": "2028606569",
+    "name": "국립민속박물관 파주",
+    "url": "https://place.map.kakao.com/2028606569",
+    "searchKeyword": "국립민속박물관 파주",
+    "address": "경기 파주시 탄현면 헤이리로 30",
+    "verified": true,
+    "needsReview": false
+  },
+  "오두산통일전망대": {
+    "id": "12458133",
+    "name": "오두산통일전망대",
+    "url": "https://place.map.kakao.com/12458133",
+    "searchKeyword": "오두산통일전망대",
+    "address": "경기 파주시 탄현면 필승로 369",
+    "verified": true,
+    "needsReview": false
+  },
+  "파주장릉": {
+    "id": "8052831",
+    "name": "파주장릉",
+    "url": "https://place.map.kakao.com/8052831",
+    "searchKeyword": "파주 장릉",
+    "address": "경기 파주시 탄현면 장릉로 90",
+    "verified": true,
+    "needsReview": false
+  },
+  "벽초지수목원": {
+    "id": "7892614",
+    "name": "벽초지수목원",
+    "url": "https://place.map.kakao.com/7892614",
+    "searchKeyword": "벽초지수목원",
+    "address": "경기 파주시 광탄면 부흥로 242",
+    "verified": true,
+    "needsReview": false
+  },
+  "퍼스트가든": {
+    "id": "560886206",
+    "name": "퍼스트가든",
+    "url": "https://place.map.kakao.com/560886206",
+    "searchKeyword": "퍼스트가든",
+    "address": "경기 파주시 탑삭골길 260",
+    "verified": true,
+    "needsReview": false
+  },
+  "미메시스 아트 뮤지엄": {
+    "id": "13272490",
+    "name": "미메시스 아트 뮤지엄",
+    "url": "https://place.map.kakao.com/13272490",
+    "searchKeyword": "미메시스 아트 뮤지엄",
+    "address": "경기 파주시 문발로 253",
+    "verified": true,
+    "needsReview": false
+  },
+  "파주놀이구름": {
+    "id": "1036875303",
+    "name": "파주놀이구름",
+    "url": "https://place.map.kakao.com/1036875303",
+    "searchKeyword": "파주놀이구름",
+    "address": "경기 파주시 와석순환로 500",
+    "verified": true,
+    "needsReview": false
+  },
+  "파주장단콩웰빙마루": {
+    "id": "1428038156",
+    "name": "파주장단콩웰빙마루",
+    "url": "https://place.map.kakao.com/1428038156",
+    "searchKeyword": "파주장단콩웰빙마루",
+    "address": "경기 파주시 탄현면 필승로 396",
+    "verified": true,
+    "needsReview": false
+  },
+  "애기봉평화생태공원": {
+    "id": "1747926381",
+    "name": "애기봉평화생태공원",
+    "url": "https://place.map.kakao.com/1747926381",
+    "searchKeyword": "애기봉평화생태공원",
+    "address": "경기 김포시 하성면 가금리 193-7",
+    "verified": true,
+    "needsReview": false
+  },
+  "김포함상공원": {
+    "id": "12601465",
+    "name": "김포함상공원",
+    "url": "https://place.map.kakao.com/12601465",
+    "searchKeyword": "김포함상공원",
+    "address": "경기 김포시 대곶면 대명항1로 110-36",
+    "verified": true,
+    "needsReview": false
+  },
+  "김포아트빌리지": {
+    "id": "669705582",
+    "name": "김포아트빌리지",
+    "url": "https://place.map.kakao.com/669705582",
+    "searchKeyword": "김포아트빌리지",
+    "address": "경기 김포시 모담공원로 170",
+    "verified": true,
+    "needsReview": false
+  },
+  "태산패밀리파크": {
+    "id": "26348803",
+    "name": "태산패밀리파크",
+    "url": "https://place.map.kakao.com/26348803",
+    "searchKeyword": "태산패밀리파크",
+    "address": "경기 김포시 하성면 하성로 585",
+    "verified": true,
+    "needsReview": false
+  },
+  "김포국제조각공원": {
+    "id": "1893122565",
+    "name": "김포국제조각공원",
+    "url": "https://place.map.kakao.com/1893122565",
+    "searchKeyword": "김포국제조각공원",
+    "address": "경기 김포시 월곶면 용강로13번길 38",
+    "verified": true,
+    "needsReview": false
+  },
+  "김포한강야생조류생태공원": {
+    "id": "1770973566",
+    "name": "김포한강야생조류생태공원",
+    "url": "https://place.map.kakao.com/1770973566",
+    "searchKeyword": "김포한강야생조류생태공원",
+    "address": "경기 김포시 운양동 1246-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "덕포진교육박물관": {
+    "id": "7836470",
+    "name": "덕포진교육박물관",
+    "url": "https://place.map.kakao.com/7836470",
+    "searchKeyword": "덕포진교육박물관",
+    "address": "경기 김포시 대곶면 덕포진로103번길 90",
+    "verified": true,
+    "needsReview": false
+  },
+  "정약용유적지": {
+    "id": "26870903",
+    "name": "정약용유적지",
+    "url": "https://place.map.kakao.com/26870903",
+    "searchKeyword": "정약용유적지",
+    "address": "경기 남양주시 조안면 다산로747번길 11",
+    "verified": true,
+    "needsReview": false
+  },
+  "실학박물관": {
+    "id": "9194877",
+    "name": "실학박물관",
+    "url": "https://place.map.kakao.com/9194877",
+    "searchKeyword": "실학박물관",
+    "address": "경기 남양주시 조안면 다산로747번길 16",
+    "verified": true,
+    "needsReview": false
+  },
+  "남양주시립박물관": {
+    "id": "1552402156",
+    "name": "남양주시립박물관",
+    "url": "https://place.map.kakao.com/1552402156",
+    "searchKeyword": "남양주시립박물관",
+    "address": "경기 남양주시 와부읍 팔당로 121",
+    "verified": true,
+    "needsReview": false
+  },
+  "남양주 어린이비전센터": {
+    "id": "19782634",
+    "name": "어린이비전센터",
+    "url": "https://place.map.kakao.com/19782634",
+    "searchKeyword": "남양주 어린이비전센터",
+    "address": "경기 남양주시 진접읍 금곡리 1077",
+    "verified": true,
+    "needsReview": false
+  },
+  "물맑음수목원": {
+    "id": "25118890",
+    "name": "물맑음수목원",
+    "url": "https://place.map.kakao.com/25118890",
+    "searchKeyword": "물맑음수목원",
+    "address": "경기 남양주시 수동면 지둔로307번길 47-4",
+    "verified": true,
+    "needsReview": false
+  },
+  "물의정원": {
+    "id": "25672066",
+    "name": "물의정원",
+    "url": "https://place.map.kakao.com/25672066",
+    "searchKeyword": "물의정원",
+    "address": "경기 남양주시 조안면 북한강로 398",
+    "verified": true,
+    "needsReview": false
+  },
+  "다산생태공원": {
+    "id": "414029752",
+    "name": "다산생태공원",
+    "url": "https://place.map.kakao.com/414029752",
+    "searchKeyword": "다산생태공원",
+    "address": "경기 남양주시 조안면 다산로 767",
+    "verified": true,
+    "needsReview": false
+  },
+  "우석헌자연사박물관": {
+    "id": "8060517",
+    "name": "우석헌자연사박물관",
+    "url": "https://place.map.kakao.com/8060517",
+    "searchKeyword": "우석헌자연사박물관",
+    "address": "경기 남양주시 진접읍 금강로 1095",
+    "verified": true,
+    "needsReview": false
+  },
+  "홍릉과 유릉": {
+    "id": "8161990",
+    "name": "홍릉과유릉",
+    "url": "https://place.map.kakao.com/8161990",
+    "searchKeyword": "남양주 홍릉과 유릉",
+    "address": "경기 남양주시 홍유릉로 352-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "모란미술관": {
+    "id": "7868766",
+    "name": "모란미술관",
+    "url": "https://place.map.kakao.com/7868766",
+    "searchKeyword": "모란미술관",
+    "address": "경기 남양주시 화도읍 경춘로2110번길 8",
+    "verified": true,
+    "needsReview": false
+  },
+  "자라섬": {
+    "id": "8059024",
+    "name": "자라섬",
+    "url": "https://place.map.kakao.com/8059024",
+    "searchKeyword": "자라섬",
+    "address": "경기 가평군 가평읍 달전리 30",
+    "verified": true,
+    "needsReview": false
+  },
+  "잣향기푸른숲": {
+    "id": "21878880",
+    "name": "잣향기푸른숲",
+    "url": "https://place.map.kakao.com/21878880",
+    "searchKeyword": "경기도 잣향기푸른숲",
+    "address": "경기 가평군 상면 축령로 289-146",
+    "verified": true,
+    "needsReview": false
+  },
+  "가평레일파크": {
+    "id": "27092396",
+    "name": "가평레일파크",
+    "url": "https://place.map.kakao.com/27092396",
+    "searchKeyword": "가평레일파크",
+    "address": "경기 가평군 가평읍 장터길 14",
+    "verified": true,
+    "needsReview": false
+  },
+  "가평사계절썰매장": {
+    "id": "10115400",
+    "name": "가평사계절썰매장",
+    "url": "https://place.map.kakao.com/10115400",
+    "searchKeyword": "가평사계절썰매장",
+    "address": "경기 가평군 상면 깃대봉길 5-20",
+    "verified": true,
+    "needsReview": false
+  },
+  "음악역1939": {
+    "id": "330641640",
+    "name": "음악역1939",
+    "url": "https://place.map.kakao.com/330641640",
+    "searchKeyword": "음악역1939",
+    "address": "경기 가평군 가평읍 석봉로 100",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립유명산자연휴양림": {
+    "id": "8033003",
+    "name": "국립유명산자연휴양림",
+    "url": "https://place.map.kakao.com/8033003",
+    "searchKeyword": "국립유명산자연휴양림",
+    "address": "경기 가평군 설악면 유명산길 79-53",
+    "verified": true,
+    "needsReview": false
+  },
+  "칼봉산자연휴양림": {
+    "id": "9490110",
+    "name": "칼봉산자연휴양림",
+    "url": "https://place.map.kakao.com/9490110",
+    "searchKeyword": "칼봉산자연휴양림",
+    "address": "경기 가평군 가평읍 경반안로 454",
+    "verified": true,
+    "needsReview": false
+  },
+  "두물머리": {
+    "id": "7845373",
+    "name": "두물머리",
+    "url": "https://place.map.kakao.com/7845373",
+    "searchKeyword": "두물머리",
+    "address": "경기 양평군 양서면 양수리",
+    "verified": true,
+    "needsReview": false
+  },
+  "양평곤충박물관": {
+    "id": "18276489",
+    "name": "양평곤충박물관",
+    "url": "https://place.map.kakao.com/18276489",
+    "searchKeyword": "양평곤충박물관",
+    "address": "경기 양평군 옥천면 경강로 1496",
+    "verified": true,
+    "needsReview": false
+  },
+  "양평군립미술관": {
+    "id": "17025360",
+    "name": "양평군립미술관",
+    "url": "https://place.map.kakao.com/17025360",
+    "searchKeyword": "양평군립미술관",
+    "address": "경기 양평군 양평읍 문화복지길 2",
+    "verified": true,
+    "needsReview": false
+  },
+  "황순원문학촌 소나기마을": {
+    "id": "9917052",
+    "name": "황순원문학촌 소나기마을",
+    "url": "https://place.map.kakao.com/9917052",
+    "searchKeyword": "황순원문학촌 소나기마을",
+    "address": "경기 양평군 서종면 소나기마을길 24",
+    "verified": true,
+    "needsReview": false
+  },
+  "몽양기념관": {
+    "id": "14933024",
+    "name": "몽양기념관",
+    "url": "https://place.map.kakao.com/14933024",
+    "searchKeyword": "몽양여운형기념관",
+    "address": "경기 양평군 양서면 몽양길 66",
+    "verified": true,
+    "needsReview": false
+  },
+  "양평 친환경농업박물관": {
+    "id": "12678366",
+    "name": "양평 친환경농업박물관",
+    "url": "https://place.map.kakao.com/12678366",
+    "searchKeyword": "양평친환경농업박물관",
+    "address": "경기 양평군 용문면 용문산로 670",
+    "verified": true,
+    "needsReview": false
+  },
+  "쉬자파크": {
+    "id": "23580186",
+    "name": "쉬자파크",
+    "url": "https://place.map.kakao.com/23580186",
+    "searchKeyword": "쉬자파크",
+    "address": "경기 양평군 양평읍 쉬자파크길 193",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립산음자연휴양림": {
+    "id": "24058442",
+    "name": "국립산음자연휴양림",
+    "url": "https://place.map.kakao.com/24058442",
+    "searchKeyword": "국립산음자연휴양림",
+    "address": "경기 양평군 단월면 고북길 347",
+    "verified": true,
+    "needsReview": false
+  },
+  "독립기념관": {
+    "id": "7834305",
+    "name": "독립기념관",
+    "url": "https://place.map.kakao.com/7834305",
+    "searchKeyword": "독립기념관",
+    "address": "충남 천안시 동남구 목천읍 독립기념관로 1",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안박물관": {
+    "id": "8539185",
+    "name": "천안박물관",
+    "url": "https://place.map.kakao.com/8539185",
+    "searchKeyword": "천안박물관",
+    "address": "충남 천안시 동남구 천안삼거리길 27",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안흥타령관": {
+    "id": "23490999",
+    "name": "천안흥타령관",
+    "url": "https://place.map.kakao.com/23490999",
+    "searchKeyword": "천안흥타령관",
+    "address": "충남 천안시 동남구 천안대로 412",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안시립미술관": {
+    "id": "1411453355",
+    "name": "천안시립미술관",
+    "url": "https://place.map.kakao.com/1411453355",
+    "searchKeyword": "천안시립미술관",
+    "address": "충남 천안시 동남구 성남면 종합휴양지로 185",
+    "verified": true,
+    "needsReview": false
+  },
+  "유관순열사기념관": {
+    "id": "8036605",
+    "name": "유관순열사기념관",
+    "url": "https://place.map.kakao.com/8036605",
+    "searchKeyword": "유관순열사기념관",
+    "address": "충남 천안시 동남구 병천면 유관순길 38",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안홍대용과학관": {
+    "id": "24870795",
+    "name": "천안홍대용과학관",
+    "url": "https://place.map.kakao.com/24870795",
+    "searchKeyword": "천안홍대용과학관",
+    "address": "충남 천안시 동남구 수신면 장산서길 113",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안어린이꿈누리터": {
+    "id": "2130696707",
+    "name": "천안어린이꿈누리터",
+    "url": "https://place.map.kakao.com/2130696707",
+    "searchKeyword": "천안어린이꿈누리터",
+    "address": "충남 천안시 동남구 옛시청길 39",
+    "verified": true,
+    "needsReview": false
+  },
+  "태조산공원": {
+    "id": "8571684",
+    "name": "태조산공원",
+    "url": "https://place.map.kakao.com/8571684",
+    "searchKeyword": "태조산공원",
+    "address": "충남 천안시 동남구 태조산길 261",
+    "verified": true,
+    "needsReview": false
+  },
+  "아름다운정원 화수목": {
+    "id": "27089265",
+    "name": "아름다운정원 화수목",
+    "url": "https://place.map.kakao.com/27089265",
+    "searchKeyword": "아름다운정원 화수목",
+    "address": "충남 천안시 동남구 목천읍 교천지산길 175",
+    "verified": true,
+    "needsReview": false
+  },
+  "천안삼거리공원": {
+    "id": "8094335",
+    "name": "천안삼거리공원",
+    "url": "https://place.map.kakao.com/8094335",
+    "searchKeyword": "천안삼거리공원",
+    "address": "충남 천안시 동남구 충절로 410",
+    "verified": true,
+    "needsReview": false
+  },
+  "장영실과학관": {
+    "id": "14577428",
+    "name": "장영실과학관",
+    "url": "https://place.map.kakao.com/14577428",
+    "searchKeyword": "장영실과학관",
+    "address": "충남 아산시 실옥로 222",
+    "verified": true,
+    "needsReview": false
+  },
+  "아산시생태곤충원": {
+    "id": "18133029",
+    "name": "아산시시설관리공단 아산시생태곤충원",
+    "url": "https://place.map.kakao.com/18133029",
+    "searchKeyword": "아산생태곤충원",
+    "address": "충남 아산시 실옥로 216",
+    "verified": true,
+    "needsReview": false
+  },
+  "아산환경과학공원": {
+    "id": "17111018",
+    "name": "아산 환경과학공원",
+    "url": "https://place.map.kakao.com/17111018",
+    "searchKeyword": "아산 환경과학공원",
+    "address": "충남 아산시 실옥로 216",
+    "verified": true,
+    "needsReview": false
+  },
+  "현충사": {
+    "id": "23976998",
+    "name": "현충사",
+    "url": "https://place.map.kakao.com/23976998",
+    "searchKeyword": "현충사",
+    "address": "충남 아산시 염치읍 현충사길 48",
+    "verified": true,
+    "needsReview": false
+  },
+  "온양민속박물관": {
+    "id": "15424981",
+    "name": "온양민속박물관",
+    "url": "https://place.map.kakao.com/15424981",
+    "searchKeyword": "온양민속박물관",
+    "address": "충남 아산시 충무로 123",
+    "verified": true,
+    "needsReview": false
+  },
+  "외암민속마을": {
+    "id": "17112656",
+    "name": "외암민속마을",
+    "url": "https://place.map.kakao.com/17112656",
+    "searchKeyword": "외암민속마을",
+    "address": "충남 아산시 송악면 외암민속길 34",
+    "verified": true,
+    "needsReview": false
+  },
+  "피나클랜드 수목원": {
+    "id": "13302536",
+    "name": "피나클랜드 수목원",
+    "url": "https://place.map.kakao.com/13302536",
+    "searchKeyword": "피나클랜드 수목원",
+    "address": "충남 아산시 영인면 월선길 20-42",
+    "verified": true,
+    "needsReview": false
+  },
+  "세계꽃식물원": {
+    "id": "7947747",
+    "name": "세계꽃식물원",
+    "url": "https://place.map.kakao.com/7947747",
+    "searchKeyword": "세계꽃식물원",
+    "address": "충남 아산시 도고면 아산만로 37-37",
+    "verified": true,
+    "needsReview": false
+  },
+  "곡교천 은행나무길": {
+    "id": "2057873831",
+    "name": "곡교천 은행나무길",
+    "url": "https://place.map.kakao.com/2057873831",
+    "searchKeyword": "곡교천 은행나무길",
+    "address": "충남 아산시 염치읍 백암리 502-3",
+    "verified": true,
+    "needsReview": false
+  },
+  "아산레일바이크": {
+    "id": "19251321",
+    "name": "아산레일바이크",
+    "url": "https://place.map.kakao.com/19251321",
+    "searchKeyword": "아산레일바이크",
+    "address": "충남 아산시 도고면 아산만로 199-7",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립춘천박물관": {
+    "id": "8208782",
+    "name": "국립춘천박물관",
+    "url": "https://place.map.kakao.com/8208782",
+    "searchKeyword": "국립춘천박물관",
+    "address": "강원특별자치도 춘천시 우석로 70",
+    "verified": true,
+    "needsReview": false
+  },
+  "애니메이션박물관": {
+    "id": "8429539",
+    "name": "애니메이션박물관",
+    "url": "https://place.map.kakao.com/8429539",
+    "searchKeyword": "춘천 애니메이션박물관",
+    "address": "강원특별자치도 춘천시 서면 박사로 854",
+    "verified": true,
+    "needsReview": false
+  },
+  "토이로봇관": {
+    "id": "42724154",
+    "name": "토이로봇관",
+    "url": "https://place.map.kakao.com/42724154",
+    "searchKeyword": "토이로봇관",
+    "address": "강원특별자치도 춘천시 서면 박사로 854",
+    "verified": true,
+    "needsReview": false
+  },
+  "강원특별자치도립화목원": {
+    "id": "11046971",
+    "name": "강원특별자치도립화목원",
+    "url": "https://place.map.kakao.com/11046971",
+    "searchKeyword": "강원특별자치도립화목원",
+    "address": "강원특별자치도 춘천시 화목원길 24",
+    "verified": true,
+    "needsReview": false
+  },
+  "춘천막국수체험박물관": {
+    "id": "21217710",
+    "name": "춘천막국수체험박물관",
+    "url": "https://place.map.kakao.com/21217710",
+    "searchKeyword": "춘천막국수체험박물관",
+    "address": "강원특별자치도 춘천시 신북읍 신북로 264",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립춘천숲체원": {
+    "id": "1158129196",
+    "name": "국립춘천숲체원",
+    "url": "https://place.map.kakao.com/1158129196",
+    "searchKeyword": "국립춘천숲체원",
+    "address": "강원특별자치도 춘천시 신북읍 발산리 산 32-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "김유정문학촌": {
+    "id": "1641336553",
+    "name": "김유정문학촌",
+    "url": "https://place.map.kakao.com/1641336553",
+    "searchKeyword": "김유정문학촌",
+    "address": "강원특별자치도 춘천시 신동면 김유정로 1430-14",
+    "verified": true,
+    "needsReview": false
+  },
+  "레고랜드 코리아 리조트": {
+    "id": "27204421",
+    "name": "레고랜드코리아리조트",
+    "url": "https://place.map.kakao.com/27204421",
+    "searchKeyword": "레고랜드코리아리조트",
+    "address": "강원특별자치도 춘천시 하중도길 128",
+    "verified": true,
+    "needsReview": false
+  },
+  "춘천 삼악산 호수케이블카": {
+    "id": "1147568611",
+    "name": "춘천삼악산호수케이블카",
+    "url": "https://place.map.kakao.com/1147568611",
+    "searchKeyword": "춘천삼악산호수케이블카",
+    "address": "강원특별자치도 춘천시 스포츠타운길 245",
+    "verified": true,
+    "needsReview": false
+  },
+  "춘천꿈자람어린이공원": {
+    "id": "24663581",
+    "name": "춘천꿈자람어린이공원",
+    "url": "https://place.map.kakao.com/24663581",
+    "searchKeyword": "춘천 꿈자람어린이공원",
+    "address": "강원특별자치도 춘천시 평화로 26",
+    "verified": true,
+    "needsReview": false
+  },
+  "뮤지엄산": {
+    "id": "21674777",
+    "name": "뮤지엄산",
+    "url": "https://place.map.kakao.com/21674777",
+    "searchKeyword": "뮤지엄산",
+    "address": "강원특별자치도 원주시 지정면 오크밸리2길 260",
+    "verified": true,
+    "needsReview": false
+  },
+  "원주한지테마파크": {
+    "id": "14918317",
+    "name": "원주한지테마파크",
+    "url": "https://place.map.kakao.com/14918317",
+    "searchKeyword": "원주한지테마파크",
+    "address": "강원특별자치도 원주시 한지공원길 151",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립횡성숲체원": {
+    "id": "24505294",
+    "name": "국립횡성숲체원",
+    "url": "https://place.map.kakao.com/24505294",
+    "searchKeyword": "국립횡성숲체원",
+    "address": "강원특별자치도 횡성군 둔내면 청태산로 777",
+    "verified": true,
+    "needsReview": false
+  },
+  "아르떼뮤지엄 강릉": {
+    "id": "2115731103",
+    "name": "아르떼뮤지엄 강릉",
+    "url": "https://place.map.kakao.com/2115731103",
+    "searchKeyword": "아르떼뮤지엄 강릉",
+    "address": "강원특별자치도 강릉시 난설헌로 131",
+    "verified": true,
+    "needsReview": false
+  },
+  "강릉시립박물관": {
+    "id": "12464549",
+    "name": "강릉시립박물관",
+    "url": "https://place.map.kakao.com/12464549",
+    "searchKeyword": "오죽헌시립박물관",
+    "address": "강원특별자치도 강릉시 율곡로3139번길 24",
+    "verified": true,
+    "needsReview": false
+  },
+  "강릉솔향수목원": {
+    "id": "25856200",
+    "name": "강릉솔향수목원",
+    "url": "https://place.map.kakao.com/25856200",
+    "searchKeyword": "강릉솔향수목원",
+    "address": "강원특별자치도 강릉시 구정면 수목원길 156",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립산악박물관": {
+    "id": "25625906",
+    "name": "국립산악박물관",
+    "url": "https://place.map.kakao.com/25625906",
+    "searchKeyword": "국립산악박물관",
+    "address": "강원특별자치도 속초시 미시령로 3054",
+    "verified": true,
+    "needsReview": false
+  },
+  "속초시립박물관": {
+    "id": "9158247",
+    "name": "속초시립박물관",
+    "url": "https://place.map.kakao.com/9158247",
+    "searchKeyword": "속초시립박물관",
+    "address": "강원특별자치도 속초시 신흥2길 16",
+    "verified": true,
+    "needsReview": false
+  },
+  "DMZ박물관": {
+    "id": "23794385",
+    "name": "DMZ박물관",
+    "url": "https://place.map.kakao.com/23794385",
+    "searchKeyword": "DMZ박물관 고성",
+    "address": "강원특별자치도 고성군 현내면 통일전망대로 369",
+    "verified": true,
+    "needsReview": false
+  },
+  "천곡황금박쥐동굴": {
+    "id": "8100113",
+    "name": "천곡황금박쥐동굴",
+    "url": "https://place.map.kakao.com/8100113",
+    "searchKeyword": "천곡황금박쥐동굴",
+    "address": "강원특별자치도 동해시 동굴로 50",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립해양박물관": {
+    "id": "17657287",
+    "name": "국립해양박물관",
+    "url": "https://place.map.kakao.com/17657287",
+    "searchKeyword": "국립해양박물관",
+    "address": "부산 영도구 해양로301번길 45",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립부산과학관": {
+    "id": "26923074",
+    "name": "국립부산과학관",
+    "url": "https://place.map.kakao.com/26923074",
+    "searchKeyword": "국립부산과학관",
+    "address": "부산 기장군 기장읍 동부산관광6로 59",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산박물관": {
+    "id": "9037691",
+    "name": "부산박물관",
+    "url": "https://place.map.kakao.com/9037691",
+    "searchKeyword": "부산시립박물관",
+    "address": "부산 남구 유엔평화로 63",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산현대미술관": {
+    "id": "1257896804",
+    "name": "부산현대미술관",
+    "url": "https://place.map.kakao.com/1257896804",
+    "searchKeyword": "부산현대미술관",
+    "address": "부산 사하구 낙동남로 1191",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산해양자연사박물관": {
+    "id": "10465316",
+    "name": "부산해양자연사박물관",
+    "url": "https://place.map.kakao.com/10465316",
+    "searchKeyword": "부산해양자연사박물관",
+    "address": "부산 동래구 우장춘로 175",
+    "verified": true,
+    "needsReview": false
+  },
+  "씨라이프 부산아쿠아리움": {
+    "id": "7906241",
+    "name": "씨라이프 부산아쿠아리움",
+    "url": "https://place.map.kakao.com/7906241",
+    "searchKeyword": "SEA LIFE 부산아쿠아리움",
+    "address": "부산 해운대구 해운대해변로 266",
+    "verified": true,
+    "needsReview": false
+  },
+  "키자니아 부산": {
+    "id": "27456980",
+    "name": "키자니아 부산점",
+    "url": "https://place.map.kakao.com/27456980",
+    "searchKeyword": "키자니아 부산점",
+    "address": "부산 해운대구 센텀4로 15",
+    "verified": true,
+    "needsReview": false
+  },
+  "롯데월드 어드벤처 부산": {
+    "id": "401380860",
+    "name": "롯데월드 어드벤처 부산",
+    "url": "https://place.map.kakao.com/401380860",
+    "searchKeyword": "롯데월드 어드벤처 부산",
+    "address": "부산 기장군 기장읍 동부산관광로 42",
+    "verified": true,
+    "needsReview": false
+  },
+  "해운대수목원": {
+    "id": "457869538",
+    "name": "해운대수목원",
+    "url": "https://place.map.kakao.com/457869538",
+    "searchKeyword": "해운대수목원",
+    "address": "부산 해운대구 석대동 26",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산어린이대공원": {
+    "id": "12572854",
+    "name": "부산어린이대공원",
+    "url": "https://place.map.kakao.com/12572854",
+    "searchKeyword": "부산어린이대공원",
+    "address": "부산 부산진구 새싹로 295",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산영화체험박물관": {
+    "id": "773629847",
+    "name": "부산영화체험박물관",
+    "url": "https://place.map.kakao.com/773629847",
+    "searchKeyword": "부산영화체험박물관",
+    "address": "부산 중구 대청로126번길 12",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산근현대역사관 본관": {
+    "id": "999813771",
+    "name": "부산근현대역사관 본관",
+    "url": "https://place.map.kakao.com/999813771",
+    "searchKeyword": "부산근현대역사관 본관",
+    "address": "부산 중구 대청로 112",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립일제강제동원역사관": {
+    "id": "1822480182",
+    "name": "국립일제강제동원역사관",
+    "url": "https://place.map.kakao.com/1822480182",
+    "searchKeyword": "국립일제강제동원역사관",
+    "address": "부산 남구 홍곡로320번길 100",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산어촌민속관": {
+    "id": "9807027",
+    "name": "부산어촌민속관",
+    "url": "https://place.map.kakao.com/9807027",
+    "searchKeyword": "부산어촌민속관",
+    "address": "부산 북구 학사로 128",
+    "verified": true,
+    "needsReview": false
+  },
+  "복천박물관": {
+    "id": "12631035",
+    "name": "복천박물관",
+    "url": "https://place.map.kakao.com/12631035",
+    "searchKeyword": "복천박물관",
+    "address": "부산 동래구 복천로 63",
+    "verified": true,
+    "needsReview": false
+  },
+  "정관박물관": {
+    "id": "26479723",
+    "name": "정관박물관",
+    "url": "https://place.map.kakao.com/26479723",
+    "searchKeyword": "정관박물관",
+    "address": "부산 기장군 정관읍 정관중앙로 122",
+    "verified": true,
+    "needsReview": false
+  },
+  "동삼동패총전시관": {
+    "id": "8112090",
+    "name": "동삼동패총전시관",
+    "url": "https://place.map.kakao.com/8112090",
+    "searchKeyword": "동삼동패총전시관",
+    "address": "부산 영도구 태종로 729",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산과학체험관": {
+    "id": "27094257",
+    "name": "부산과학체험관",
+    "url": "https://place.map.kakao.com/27094257",
+    "searchKeyword": "부산과학체험관",
+    "address": "부산 동구 중앙대로260번길 11",
+    "verified": true,
+    "needsReview": false
+  },
+  "낙동강하구에코센터": {
+    "id": "63050831",
+    "name": "낙동강하구에코센터",
+    "url": "https://place.map.kakao.com/63050831",
+    "searchKeyword": "낙동강하구에코센터",
+    "address": "부산 사하구 낙동남로 1240",
+    "verified": true,
+    "needsReview": false
+  },
+  "국회부산도서관": {
+    "id": "1000608800",
+    "name": "국회부산도서관",
+    "url": "https://place.map.kakao.com/1000608800",
+    "searchKeyword": "국회부산도서관",
+    "address": "부산 강서구 명지국제1로 161",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산시민공원": {
+    "id": "11585715",
+    "name": "부산시민공원",
+    "url": "https://place.map.kakao.com/11585715",
+    "searchKeyword": "부산시민공원",
+    "address": "부산 부산진구 시민공원로 73",
+    "verified": true,
+    "needsReview": false
+  },
+  "태종대유원지": {
+    "id": "8111808",
+    "name": "태종대유원지",
+    "url": "https://place.map.kakao.com/8111808",
+    "searchKeyword": "태종대유원지",
+    "address": "부산 영도구 동삼동 산 29-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "감천문화마을": {
+    "id": "21362956",
+    "name": "감천문화마을",
+    "url": "https://place.map.kakao.com/21362956",
+    "searchKeyword": "감천문화마을",
+    "address": "부산 사하구 감천동 1-17",
+    "verified": true,
+    "needsReview": false
+  },
+  "송도해상케이블카": {
+    "id": "1878852238",
+    "name": "송도해상케이블카",
+    "url": "https://place.map.kakao.com/1878852238",
+    "searchKeyword": "송도해상케이블카",
+    "address": "부산 서구 송도해변로 171",
+    "verified": true,
+    "needsReview": false
+  },
+  "해운대블루라인파크 미포정거장": {
+    "id": "188403018",
+    "name": "해운대블루라인파크 미포정거장",
+    "url": "https://place.map.kakao.com/188403018",
+    "searchKeyword": "해운대블루라인파크 미포정거장",
+    "address": "부산 해운대구 달맞이길62번길 13",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산엑스더스카이": {
+    "id": "1431820215",
+    "name": "부산엑스더스카이",
+    "url": "https://place.map.kakao.com/1431820215",
+    "searchKeyword": "부산엑스더스카이",
+    "address": "부산 해운대구 달맞이길 30",
+    "verified": true,
+    "needsReview": false
+  },
+  "영화의전당": {
+    "id": "23210864",
+    "name": "영화의전당",
+    "url": "https://place.map.kakao.com/23210864",
+    "searchKeyword": "영화의전당",
+    "address": "부산 해운대구 수영강변대로 120",
+    "verified": true,
+    "needsReview": false
+  },
+  "F1963": {
+    "id": "1440701601",
+    "name": "F1963",
+    "url": "https://place.map.kakao.com/1440701601",
+    "searchKeyword": "F1963",
+    "address": "부산 수영구 구락로123번길 20",
+    "verified": true,
+    "needsReview": false
+  },
+  "부산화명수목원": {
+    "id": "19292019",
+    "name": "부산화명수목원",
+    "url": "https://place.map.kakao.com/19292019",
+    "searchKeyword": "화명수목원",
+    "address": "부산 북구 산성로 299",
+    "verified": true,
+    "needsReview": false
+  },
+  "오륙도스카이워크": {
+    "id": "22250028",
+    "name": "오륙도스카이워크",
+    "url": "https://place.map.kakao.com/22250028",
+    "searchKeyword": "오륙도스카이워크",
+    "address": "부산 남구 오륙도로 137",
+    "verified": true,
+    "needsReview": false
+  },
+  "국립제주박물관": {
+    "id": "8192179",
+    "name": "국립제주박물관",
+    "url": "https://place.map.kakao.com/8192179",
+    "searchKeyword": "국립제주박물관",
+    "address": "제주특별자치도 제주시 일주동로 17",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주특별자치도 민속자연사박물관": {
+    "id": "8067497",
+    "name": "제주특별자치도 민속자연사박물관",
+    "url": "https://place.map.kakao.com/8067497",
+    "searchKeyword": "제주민속자연사박물관",
+    "address": "제주특별자치도 제주시 삼성로 40",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주도립미술관": {
+    "id": "10801589",
+    "name": "제주도립미술관",
+    "url": "https://place.map.kakao.com/10801589",
+    "searchKeyword": "제주도립미술관",
+    "address": "제주특별자치도 제주시 1100로 2894-78",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주현대미술관": {
+    "id": "15786539",
+    "name": "제주현대미술관",
+    "url": "https://place.map.kakao.com/15786539",
+    "searchKeyword": "제주현대미술관",
+    "address": "제주특별자치도 제주시 한경면 저지14길 35",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주항공우주박물관": {
+    "id": "19585161",
+    "name": "제주항공우주박물관",
+    "url": "https://place.map.kakao.com/19585161",
+    "searchKeyword": "제주항공우주박물관",
+    "address": "제주특별자치도 서귀포시 안덕면 항공우주로 83",
+    "verified": true,
+    "needsReview": false
+  },
+  "넥슨뮤지엄": {
+    "id": "20303776",
+    "name": "넥슨뮤지엄",
+    "url": "https://place.map.kakao.com/20303776",
+    "searchKeyword": "넥슨컴퓨터박물관",
+    "address": "제주특별자치도 제주시 노형동 86",
+    "verified": true,
+    "needsReview": false
+  },
+  "아쿠아플라넷 제주": {
+    "id": "23150855",
+    "name": "아쿠아플라넷 제주",
+    "url": "https://place.map.kakao.com/23150855",
+    "searchKeyword": "아쿠아플라넷 제주",
+    "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 95",
+    "verified": true,
+    "needsReview": false
+  },
+  "헬로키티아일랜드": {
+    "id": "26608807",
+    "name": "헬로키티아일랜드",
+    "url": "https://place.map.kakao.com/26608807",
+    "searchKeyword": "헬로키티아일랜드",
+    "address": "제주특별자치도 서귀포시 안덕면 한창로 340",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주 뽀로로앤타요 테마파크": {
+    "id": "1155988847",
+    "name": "제주 뽀로로앤타요 테마파크",
+    "url": "https://place.map.kakao.com/1155988847",
+    "searchKeyword": "뽀로로앤타요 테마파크 제주",
+    "address": "제주특별자치도 서귀포시 안덕면 병악로 269",
+    "verified": true,
+    "needsReview": false
+  },
+  "스누피가든": {
+    "id": "852041742",
+    "name": "스누피가든",
+    "url": "https://place.map.kakao.com/852041742",
+    "searchKeyword": "스누피가든",
+    "address": "제주특별자치도 제주시 구좌읍 금백조로 930",
+    "verified": true,
+    "needsReview": false
+  },
+  "신화테마파크": {
+    "id": "1214707005",
+    "name": "신화테마파크",
+    "url": "https://place.map.kakao.com/1214707005",
+    "searchKeyword": "신화테마파크",
+    "address": "제주특별자치도 서귀포시 안덕면 신화역사로304번길 98",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주레일바이크": {
+    "id": "21777957",
+    "name": "제주레일바이크",
+    "url": "https://place.map.kakao.com/21777957",
+    "searchKeyword": "제주레일바이크",
+    "address": "제주특별자치도 제주시 구좌읍 용눈이오름로 641",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주목 관아": {
+    "id": "10805294",
+    "name": "제주목 관아",
+    "url": "https://place.map.kakao.com/10805294",
+    "searchKeyword": "제주목관아",
+    "address": "제주특별자치도 제주시 관덕로 25",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주돌문화공원": {
+    "id": "13322621",
+    "name": "제주돌문화공원",
+    "url": "https://place.map.kakao.com/13322621",
+    "searchKeyword": "제주돌문화공원",
+    "address": "제주특별자치도 제주시 조천읍 남조로 2023",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주세계자연유산센터": {
+    "id": "9995571",
+    "name": "제주세계자연유산센터",
+    "url": "https://place.map.kakao.com/9995571",
+    "searchKeyword": "제주세계자연유산센터",
+    "address": "제주특별자치도 제주시 조천읍 선교로 569-36",
+    "verified": true,
+    "needsReview": false
+  },
+  "성산일출봉": {
+    "id": "25285071",
+    "name": "성산일출봉",
+    "url": "https://place.map.kakao.com/25285071",
+    "searchKeyword": "성산일출봉",
+    "address": "제주특별자치도 서귀포시 성산읍 성산리 78",
+    "verified": true,
+    "needsReview": false
+  },
+  "비자림": {
+    "id": "7912085",
+    "name": "비자림",
+    "url": "https://place.map.kakao.com/7912085",
+    "searchKeyword": "비자림",
+    "address": "제주특별자치도 제주시 구좌읍 비자숲길 55",
+    "verified": true,
+    "needsReview": false
+  },
+  "한라수목원": {
+    "id": "8641180",
+    "name": "한라수목원",
+    "url": "https://place.map.kakao.com/8641180",
+    "searchKeyword": "한라수목원",
+    "address": "제주특별자치도 제주시 수목원길 72",
+    "verified": true,
+    "needsReview": false
+  },
+  "사려니숲길": {
+    "id": "26319779",
+    "name": "사려니숲길",
+    "url": "https://place.map.kakao.com/26319779",
+    "searchKeyword": "사려니숲길",
+    "address": "제주특별자치도 제주시 조천읍 교래리 산 137-1",
+    "verified": true,
+    "needsReview": false
+  },
+  "휴애리자연생활공원": {
+    "id": "27581976",
+    "name": "휴애리자연생활공원",
+    "url": "https://place.map.kakao.com/27581976",
+    "searchKeyword": "휴애리 자연생활공원",
+    "address": "제주특별자치도 서귀포시 남원읍 신례동로 256",
+    "verified": true,
+    "needsReview": false
+  },
+  "카멜리아힐": {
+    "id": "9461977",
+    "name": "카멜리아힐",
+    "url": "https://place.map.kakao.com/9461977",
+    "searchKeyword": "카멜리아힐",
+    "address": "제주특별자치도 서귀포시 안덕면 병악로 166",
+    "verified": true,
+    "needsReview": false
+  },
+  "아침미소목장": {
+    "id": "12697401",
+    "name": "아침미소목장",
+    "url": "https://place.map.kakao.com/12697401",
+    "searchKeyword": "아침미소목장",
+    "address": "제주특별자치도 제주시 첨단동길 160-30",
+    "verified": true,
+    "needsReview": false
+  },
+  "해녀박물관": {
+    "id": "17600341",
+    "name": "해녀박물관",
+    "url": "https://place.map.kakao.com/17600341",
+    "searchKeyword": "제주해녀박물관",
+    "address": "제주특별자치도 제주시 구좌읍 해녀박물관길 26",
+    "verified": true,
+    "needsReview": false
+  },
+  "제주별빛누리공원": {
+    "id": "17360759",
+    "name": "제주별빛누리공원",
+    "url": "https://place.map.kakao.com/17360759",
+    "searchKeyword": "제주별빛누리공원",
+    "address": "제주특별자치도 제주시 선돌목동길 60",
+    "verified": true,
+    "needsReview": false
+  },
+  "에코랜드 테마파크": {
+    "id": "17184223",
+    "name": "에코랜드 테마파크",
+    "url": "https://place.map.kakao.com/17184223",
+    "searchKeyword": "에코랜드 테마파크",
+    "address": "제주특별자치도 제주시 조천읍 남조로 1982",
+    "verified": true,
+    "needsReview": false
+  },
   "국립중앙박물관 어린이박물관": {
     "id": "8208781",
     "name": "국립중앙박물관 어린이박물관",

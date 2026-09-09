@@ -7,6 +7,18 @@ const ROOT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'
 const GENERATED_DATA_PATH = path.join(ROOT_DIR, 'src', 'data', 'kakao-places.json')
 const AUDIT_JSON_PATH = path.join(ROOT_DIR, 'kakao-place-audit.json')
 const AUDIT_CSV_PATH = path.join(ROOT_DIR, 'kakao-place-audit.csv')
+const BATCH_01_SOURCE_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-01-source-review.json')
+const BATCH_01_AUDIT_JSON_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-01-kakao-audit.json')
+const BATCH_01_AUDIT_CSV_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-01-kakao-audit.csv')
+const BATCH_02_SOURCE_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-02-source-review.json')
+const BATCH_02_AUDIT_JSON_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-02-kakao-audit.json')
+const BATCH_02_AUDIT_CSV_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-02-kakao-audit.csv')
+const BATCH_03_SOURCE_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-03-source-review.json')
+const BATCH_03_AUDIT_JSON_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-03-kakao-audit.json')
+const BATCH_03_AUDIT_CSV_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-03-kakao-audit.csv')
+const BATCH_04_SOURCE_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-04-source-review.json')
+const BATCH_04_AUDIT_JSON_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-04-kakao-audit.json')
+const BATCH_04_AUDIT_CSV_PATH = path.join(ROOT_DIR, 'data', 'family', 'batch-04-kakao-audit.csv')
 const API_URL = 'https://dapi.kakao.com/v2/local/search/keyword.json'
 const ACCEPT_SCORE = 76
 const ACCEPT_MARGIN = 8
@@ -157,6 +169,7 @@ function makeCandidateAudit(candidate) {
 function makeCsv(auditEntries) {
   const headers = [
     'id', 'name', 'address', 'latitude', 'longitude', 'kakaoSearchKeyword',
+    'officialSourceName', 'officialSourceUrl', 'verifiedAt',
     'selectedKakaoPlaceName', 'selectedKakaoPlaceId', 'selectedKakaoPlaceUrl',
     'confidenceScore', 'kakaoNeedsReview', 'reason',
   ]
@@ -175,6 +188,7 @@ function makeCsv(auditEntries) {
   const rows = auditEntries.map((entry) => {
     const base = [
       entry.id, entry.name, entry.address, entry.latitude, entry.longitude, entry.kakaoSearchKeyword,
+      entry.officialSourceName, entry.officialSourceUrl, entry.verifiedAt,
       entry.selectedKakaoPlaceName, entry.selectedKakaoPlaceId, entry.selectedKakaoPlaceUrl,
       entry.confidenceScore, entry.kakaoNeedsReview, entry.reason,
     ]
@@ -207,13 +221,42 @@ async function main() {
   }
 
   const currentRecords = JSON.parse(fs.readFileSync(GENERATED_DATA_PATH, 'utf8'))
+  const batchNumber = process.argv.includes('--scope=batch-1') ? 1
+    : process.argv.includes('--scope=batch-2') ? 2
+      : process.argv.includes('--scope=batch-3') ? 3
+        : process.argv.includes('--scope=batch-4') ? 4
+          : null
+  const batchConfig = batchNumber === 1
+    ? { sourcePath: BATCH_01_SOURCE_PATH, auditJsonPath: BATCH_01_AUDIT_JSON_PATH, auditCsvPath: BATCH_01_AUDIT_CSV_PATH }
+    : batchNumber === 2
+      ? { sourcePath: BATCH_02_SOURCE_PATH, auditJsonPath: BATCH_02_AUDIT_JSON_PATH, auditCsvPath: BATCH_02_AUDIT_CSV_PATH }
+      : batchNumber === 3
+        ? { sourcePath: BATCH_03_SOURCE_PATH, auditJsonPath: BATCH_03_AUDIT_JSON_PATH, auditCsvPath: BATCH_03_AUDIT_CSV_PATH }
+        : batchNumber === 4
+          ? { sourcePath: BATCH_04_SOURCE_PATH, auditJsonPath: BATCH_04_AUDIT_JSON_PATH, auditCsvPath: BATCH_04_AUDIT_CSV_PATH }
+          : null
+  const batchReview = batchConfig ? JSON.parse(fs.readFileSync(batchConfig.sourcePath, 'utf8')) : null
+  const batchSourceById = new Map((batchReview?.accepted || []).map((entry) => [entry.id, entry]))
+  const placesToSync = batchConfig ? places.filter((place) => batchSourceById.has(place.id)) : places
+  const auditJsonPath = batchConfig?.auditJsonPath || AUDIT_JSON_PATH
+  const auditCsvPath = batchConfig?.auditCsvPath || AUDIT_CSV_PATH
   const nextRecords = { ...currentRecords }
   const auditEntries = []
 
-  for (const [index, place] of places.entries()) {
-    const currentEntry = currentRecords[place.name] || {}
+  for (const [index, place] of placesToSync.entries()) {
+    const embeddedEntry = place.kakaoPlaceId ? {
+      id: String(place.kakaoPlaceId),
+      name: place.kakaoPlaceName || place.name,
+      url: place.kakaoPlaceUrl || normalizePlaceUrl(place.kakaoPlaceId),
+      searchKeyword: place.kakaoSearchKeyword || place.kakaoPlaceName || place.name,
+      address: place.address || null,
+      verified: Boolean(place.kakaoVerified),
+      needsReview: Boolean(place.kakaoNeedsReview),
+    } : {}
+    const currentEntry = currentRecords[place.name] || embeddedEntry
+    const sourceReview = batchSourceById.get(place.id) || {}
     const query = place.kakaoSearchKeyword || place.kakaoPlaceName || place.name
-    process.stdout.write(`[${index + 1}/${places.length}] ${place.name} 검색 중... `)
+    process.stdout.write(`[${index + 1}/${placesToSync.length}] ${place.name} 검색 중... `)
 
     try {
       const documents = await searchPlace(place, query, apiKey)
@@ -275,6 +318,9 @@ async function main() {
         latitude: place.latitude,
         longitude: place.longitude,
         kakaoSearchKeyword: query,
+        officialSourceName: sourceReview.officialSourceName || null,
+        officialSourceUrl: sourceReview.officialSourceUrl || null,
+        verifiedAt: batchReview?.verifiedAt || null,
         selectedKakaoPlaceName: selectedEntry.name,
         selectedKakaoPlaceId: selectedEntry.id,
         selectedKakaoPlaceUrl: selectedEntry.url,
@@ -300,6 +346,9 @@ async function main() {
         latitude: place.latitude,
         longitude: place.longitude,
         kakaoSearchKeyword: query,
+        officialSourceName: sourceReview.officialSourceName || null,
+        officialSourceUrl: sourceReview.officialSourceUrl || null,
+        verifiedAt: batchReview?.verifiedAt || null,
         selectedKakaoPlaceName: currentEntry.name || null,
         selectedKakaoPlaceId: currentEntry.id || null,
         selectedKakaoPlaceUrl: currentEntry.id ? normalizePlaceUrl(currentEntry.id) : null,
@@ -318,19 +367,22 @@ async function main() {
   const audit = {
     generatedAt: new Date().toISOString(),
     source: API_URL,
+    scope: batchNumber ? `family-expansion-batch-${String(batchNumber).padStart(2, '0')}` : 'all-family-places',
     total: auditEntries.length,
     linked: auditEntries.filter((entry) => entry.selectedKakaoPlaceId).length,
     needsReview: auditEntries.filter((entry) => entry.kakaoNeedsReview).length,
+    duplicatesExcluded: batchReview?.duplicatesExcluded || [],
+    excluded: batchReview?.excluded || [],
     entries: auditEntries,
   }
 
   fs.writeFileSync(GENERATED_DATA_PATH, `${JSON.stringify(orderedEntries(nextRecords), null, 2)}\n`)
-  fs.writeFileSync(AUDIT_JSON_PATH, `${JSON.stringify(audit, null, 2)}\n`)
-  fs.writeFileSync(AUDIT_CSV_PATH, makeCsv(auditEntries))
+  fs.writeFileSync(auditJsonPath, `${JSON.stringify(audit, null, 2)}\n`)
+  fs.writeFileSync(auditCsvPath, makeCsv(auditEntries))
 
   console.log(`\n완료: 연결 ${audit.linked}/${audit.total}, 수동 확인 ${audit.needsReview}`)
   console.log(`데이터: ${path.relative(ROOT_DIR, GENERATED_DATA_PATH)}`)
-  console.log(`감사: ${path.relative(ROOT_DIR, AUDIT_JSON_PATH)}, ${path.relative(ROOT_DIR, AUDIT_CSV_PATH)}`)
+  console.log(`감사: ${path.relative(ROOT_DIR, auditJsonPath)}, ${path.relative(ROOT_DIR, auditCsvPath)}`)
 }
 
 main().catch((error) => {

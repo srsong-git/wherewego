@@ -1,0 +1,2251 @@
+{
+  "generatedAt": "2026-09-09T08:41:22.692Z",
+  "source": "https://dapi.kakao.com/v2/local/search/keyword.json",
+  "scope": "family-expansion-batch-03",
+  "total": 50,
+  "linked": 50,
+  "needsReview": 0,
+  "duplicatesExcluded": [],
+  "excluded": [
+    {
+      "name": "성성호수공원",
+      "reason": "Kakao Local API에서 공원 자체의 명확한 POI 대신 방문자센터 중심 결과만 확인되어 정확한 연결을 보류",
+      "needsReview": true,
+      "runtimeIncluded": false
+    },
+    {
+      "name": "신정호수공원",
+      "reason": "Kakao Local API에서 공원 전체를 대표하는 단일 POI를 확정하기 어려워 정확한 연결을 보류",
+      "needsReview": true,
+      "runtimeIncluded": false
+    },
+    {
+      "name": "부산시립미술관",
+      "reason": "Kakao 장소명이 현재 '휴관중'으로 표시되어 운영 재개 전까지 제외",
+      "needsReview": true,
+      "runtimeIncluded": false
+    }
+  ],
+  "entries": [
+    {
+      "id": "place-201",
+      "name": "독립기념관",
+      "address": "충남 천안시 동남구 목천읍 독립기념관로 1",
+      "latitude": 36.78366949071773,
+      "longitude": 127.22280833066404,
+      "kakaoSearchKeyword": "독립기념관",
+      "officialSourceName": "독립기념관",
+      "officialSourceUrl": "https://i815.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "독립기념관",
+      "selectedKakaoPlaceId": "7834305",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7834305",
+      "candidates": [
+        {
+          "place_name": "독립기념관",
+          "id": "7834305",
+          "place_url": "https://place.map.kakao.com/7834305",
+          "address_name": "충남 천안시 동남구 목천읍 남화리 230-1",
+          "road_address_name": "충남 천안시 동남구 목천읍 독립기념관로 1",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "독립기념관 겨레의집",
+          "id": "25637220",
+          "place_url": "https://place.map.kakao.com/25637220",
+          "address_name": "충남 천안시 동남구 목천읍 남화리 230-1",
+          "road_address_name": "충남 천안시 동남구 목천읍 독립기념관로 1",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 31,
+          "score": 79
+        },
+        {
+          "place_name": "독립기념관 겨레의큰마당",
+          "id": "17350502",
+          "place_url": "https://place.map.kakao.com/17350502",
+          "address_name": "충남 천안시 동남구 목천읍 남화리 230-1",
+          "road_address_name": "충남 천안시 동남구 목천읍 독립기념관로 1",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 130,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·목천읍·독립기념관로·천안 일치 · 기존 좌표에서 0m · 카테고리 기념관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-202",
+      "name": "천안박물관",
+      "address": "충남 천안시 동남구 천안삼거리길 27",
+      "latitude": 36.786760408169656,
+      "longitude": 127.16334367496806,
+      "kakaoSearchKeyword": "천안박물관",
+      "officialSourceName": "천안시 천안박물관",
+      "officialSourceUrl": "https://www.cheonan.go.kr/museum.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안박물관",
+      "selectedKakaoPlaceId": "8539185",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8539185",
+      "candidates": [
+        {
+          "place_name": "천안박물관",
+          "id": "8539185",
+          "place_url": "https://place.map.kakao.com/8539185",
+          "address_name": "충남 천안시 동남구 삼룡동 261-10",
+          "road_address_name": "충남 천안시 동남구 천안삼거리길 27",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "천안박물관 다다어린이체험관",
+          "id": "1684807316",
+          "place_url": "https://place.map.kakao.com/1684807316",
+          "address_name": "충남 천안시 동남구 삼룡동 261-10",
+          "road_address_name": "충남 천안시 동남구 천안삼거리길 27",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 8,
+          "score": 65
+        },
+        {
+          "place_name": "천안박물관 주차장",
+          "id": "652892797",
+          "place_url": "https://place.map.kakao.com/652892797",
+          "address_name": "충남 천안시 동남구 삼룡동 265-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 127,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·천안삼거리길·27·천안 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-203",
+      "name": "천안흥타령관",
+      "address": "충남 천안시 동남구 천안대로 412",
+      "latitude": 36.7849713328683,
+      "longitude": 127.165562553075,
+      "kakaoSearchKeyword": "천안흥타령관",
+      "officialSourceName": "천안시 천안박물관",
+      "officialSourceUrl": "https://www.cheonan.go.kr/museum.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안흥타령관",
+      "selectedKakaoPlaceId": "23490999",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23490999",
+      "candidates": [
+        {
+          "place_name": "천안흥타령관",
+          "id": "23490999",
+          "place_url": "https://place.map.kakao.com/23490999",
+          "address_name": "충남 천안시 동남구 삼룡동 320-10",
+          "road_address_name": "충남 천안시 동남구 천안대로 412",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·천안대로·412·천안 일치 · 기존 좌표에서 0m · 카테고리 전시관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-204",
+      "name": "천안시립미술관",
+      "address": "충남 천안시 동남구 성남면 종합휴양지로 185",
+      "latitude": 36.756495331040746,
+      "longitude": 127.22621703746373,
+      "kakaoSearchKeyword": "천안시립미술관",
+      "officialSourceName": "천안문화재단 천안시립미술관",
+      "officialSourceUrl": "https://www.camoa.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안시립미술관",
+      "selectedKakaoPlaceId": "1411453355",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1411453355",
+      "candidates": [
+        {
+          "place_name": "천안시립미술관",
+          "id": "1411453355",
+          "place_url": "https://place.map.kakao.com/1411453355",
+          "address_name": "충남 천안시 동남구 성남면 용원리 710",
+          "road_address_name": "충남 천안시 동남구 성남면 종합휴양지로 185",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·성남면·종합휴양지로·185·천안 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-205",
+      "name": "유관순열사기념관",
+      "address": "충남 천안시 동남구 병천면 유관순길 38",
+      "latitude": 36.7598808843551,
+      "longitude": 127.308416611664,
+      "kakaoSearchKeyword": "유관순열사기념관",
+      "officialSourceName": "천안시 사적관리소",
+      "officialSourceUrl": "https://www.cheonan.go.kr/yugwansun.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "유관순열사기념관",
+      "selectedKakaoPlaceId": "8036605",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8036605",
+      "candidates": [
+        {
+          "place_name": "유관순열사기념관",
+          "id": "8036605",
+          "place_url": "https://place.map.kakao.com/8036605",
+          "address_name": "충남 천안시 동남구 병천면 탑원리 252",
+          "road_address_name": "충남 천안시 동남구 병천면 유관순길 38",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·병천면·유관순길·38·천안 일치 · 기존 좌표에서 0m · 카테고리 기념관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-206",
+      "name": "천안홍대용과학관",
+      "address": "충남 천안시 동남구 수신면 장산서길 113",
+      "latitude": 36.7396202645372,
+      "longitude": 127.29559853754,
+      "kakaoSearchKeyword": "천안홍대용과학관",
+      "officialSourceName": "천안시 문화관광",
+      "officialSourceUrl": "https://www.cheonan.go.kr/tour.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안홍대용과학관",
+      "selectedKakaoPlaceId": "24870795",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/24870795",
+      "candidates": [
+        {
+          "place_name": "천안홍대용과학관",
+          "id": "24870795",
+          "place_url": "https://place.map.kakao.com/24870795",
+          "address_name": "충남 천안시 동남구 수신면 장산리 646-9",
+          "road_address_name": "충남 천안시 동남구 수신면 장산서길 113",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "천안홍대용과학관 주차장",
+          "id": "1867920810",
+          "place_url": "https://place.map.kakao.com/1867920810",
+          "address_name": "충남 천안시 동남구 수신면 장산리 646-9",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 35,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·수신면·장산서길·113·천안 일치 · 기존 좌표에서 0m · 카테고리 과학관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-207",
+      "name": "천안어린이꿈누리터",
+      "address": "충남 천안시 동남구 옛시청길 39",
+      "latitude": 36.806716933983424,
+      "longitude": 127.15068386193343,
+      "kakaoSearchKeyword": "천안어린이꿈누리터",
+      "officialSourceName": "천안어린이꿈누리터",
+      "officialSourceUrl": "https://www.cachildren.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안어린이꿈누리터",
+      "selectedKakaoPlaceId": "2130696707",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2130696707",
+      "candidates": [
+        {
+          "place_name": "천안어린이꿈누리터",
+          "id": "2130696707",
+          "place_url": "https://place.map.kakao.com/2130696707",
+          "address_name": "충남 천안시 동남구 문화동 112-1",
+          "road_address_name": "충남 천안시 동남구 옛시청길 39",
+          "category_name": "교육,학문 > 유아교육 > 놀이교육",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "온어스 천안꿈누리터점",
+          "id": "631506313",
+          "place_url": "https://place.map.kakao.com/631506313",
+          "address_name": "충남 천안시 동남구 문화동 112-1",
+          "road_address_name": "충남 천안시 동남구 옛시청길 39",
+          "category_name": "음식점 > 카페",
+          "distance": 4,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·옛시청길·39·천안 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-208",
+      "name": "태조산공원",
+      "address": "충남 천안시 동남구 태조산길 261",
+      "latitude": 36.82369851322098,
+      "longitude": 127.19129803995972,
+      "kakaoSearchKeyword": "태조산공원",
+      "officialSourceName": "천안시 문화관광",
+      "officialSourceUrl": "https://www.cheonan.go.kr/tour.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "태조산공원",
+      "selectedKakaoPlaceId": "8571684",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8571684",
+      "candidates": [
+        {
+          "place_name": "태조산공원",
+          "id": "8571684",
+          "place_url": "https://place.map.kakao.com/8571684",
+          "address_name": "충남 천안시 동남구 유량동 6",
+          "road_address_name": "충남 천안시 동남구 태조산길 261",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "태조산공원 관리사무소",
+          "id": "26525617",
+          "place_url": "https://place.map.kakao.com/26525617",
+          "address_name": "충남 천안시 동남구 유량동 6",
+          "road_address_name": "충남 천안시 동남구 태조산길 261",
+          "category_name": "서비스,산업 > 관리,운영 > 공원관리운영",
+          "distance": 61,
+          "score": 79
+        },
+        {
+          "place_name": "태조산공원 상징탑",
+          "id": "27587971",
+          "place_url": "https://place.map.kakao.com/27587971",
+          "address_name": "충남 천안시 동남구 유량동 22-1",
+          "road_address_name": "충남 천안시 동남구 태조산길 261",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 탑,비석",
+          "distance": 23,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·태조산길·261·천안 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-209",
+      "name": "아름다운정원 화수목",
+      "address": "충남 천안시 동남구 목천읍 교천지산길 175",
+      "latitude": 36.78336884498643,
+      "longitude": 127.19380463666909,
+      "kakaoSearchKeyword": "아름다운정원 화수목",
+      "officialSourceName": "천안시 문화관광",
+      "officialSourceUrl": "https://www.cheonan.go.kr/tour.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "아름다운정원 화수목",
+      "selectedKakaoPlaceId": "27089265",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27089265",
+      "candidates": [
+        {
+          "place_name": "아름다운정원 화수목",
+          "id": "27089265",
+          "place_url": "https://place.map.kakao.com/27089265",
+          "address_name": "충남 천안시 동남구 목천읍 교천리 211-1",
+          "road_address_name": "충남 천안시 동남구 목천읍 교천지산길 175",
+          "category_name": "여행 > 관광,명소 > 관광농원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "아름다운정원 화수목 탐라식물원",
+          "id": "1719568837",
+          "place_url": "https://place.map.kakao.com/1719568837",
+          "address_name": "충남 천안시 동남구 목천읍 교천리 211-1",
+          "road_address_name": "충남 천안시 동남구 목천읍 교천지산길 175",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 117,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·목천읍·교천지산길·175·천안 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-210",
+      "name": "천안삼거리공원",
+      "address": "충남 천안시 동남구 충절로 410",
+      "latitude": 36.7830245423585,
+      "longitude": 127.168403855354,
+      "kakaoSearchKeyword": "천안삼거리공원",
+      "officialSourceName": "천안시 문화관광",
+      "officialSourceUrl": "https://www.cheonan.go.kr/tour.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천안삼거리공원",
+      "selectedKakaoPlaceId": "8094335",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8094335",
+      "candidates": [
+        {
+          "place_name": "천안삼거리공원",
+          "id": "8094335",
+          "place_url": "https://place.map.kakao.com/8094335",
+          "address_name": "충남 천안시 동남구 삼룡동 299-1",
+          "road_address_name": "충남 천안시 동남구 충절로 410",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "천안삼거리공원 공연장",
+          "id": "17014403",
+          "place_url": "https://place.map.kakao.com/17014403",
+          "address_name": "충남 천안시 동남구 삼룡동 291-4",
+          "road_address_name": "충남 천안시 동남구 충절로 410",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 263,
+          "score": 76
+        },
+        {
+          "place_name": "천안삼거리공원 주차장",
+          "id": "17562328",
+          "place_url": "https://place.map.kakao.com/17562328",
+          "address_name": "충남 천안시 동남구 삼룡동 117-1",
+          "road_address_name": "충남 천안시 동남구 충절로 410",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 162,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·천안시·동남구·충절로·410·천안 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-211",
+      "name": "장영실과학관",
+      "address": "충남 아산시 실옥로 222",
+      "latitude": 36.7977504140157,
+      "longitude": 126.977155501911,
+      "kakaoSearchKeyword": "장영실과학관",
+      "officialSourceName": "아산시시설관리공단",
+      "officialSourceUrl": "https://www.asanfmc.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "장영실과학관",
+      "selectedKakaoPlaceId": "14577428",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/14577428",
+      "candidates": [
+        {
+          "place_name": "장영실과학관",
+          "id": "14577428",
+          "place_url": "https://place.map.kakao.com/14577428",
+          "address_name": "충남 아산시 배미동 5-4",
+          "road_address_name": "충남 아산시 실옥로 222",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "장영실과학관 주차장",
+          "id": "1369138841",
+          "place_url": "https://place.map.kakao.com/1369138841",
+          "address_name": "충남 아산시 배미동 5-4",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 55,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·실옥로·222·아산 일치 · 기존 좌표에서 0m · 카테고리 과학관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-212",
+      "name": "아산시생태곤충원",
+      "address": "충남 아산시 실옥로 216",
+      "latitude": 36.79886278178725,
+      "longitude": 126.9793099000582,
+      "kakaoSearchKeyword": "아산생태곤충원",
+      "officialSourceName": "아산시시설관리공단",
+      "officialSourceUrl": "https://www.asanfmc.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "아산시시설관리공단 아산시생태곤충원",
+      "selectedKakaoPlaceId": "18133029",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/18133029",
+      "candidates": [
+        {
+          "place_name": "아산시시설관리공단 아산시생태곤충원",
+          "id": "18133029",
+          "place_url": "https://place.map.kakao.com/18133029",
+          "address_name": "충남 아산시 배미동 5-11",
+          "road_address_name": "충남 아산시 실옥로 216",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·실옥로·216·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-213",
+      "name": "아산환경과학공원",
+      "address": "충남 아산시 실옥로 216",
+      "latitude": 36.7975739380867,
+      "longitude": 126.977908520145,
+      "kakaoSearchKeyword": "아산 환경과학공원",
+      "officialSourceName": "아산시 문화관광",
+      "officialSourceUrl": "https://www.asan.go.kr/tour/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "아산 환경과학공원",
+      "selectedKakaoPlaceId": "17111018",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17111018",
+      "candidates": [
+        {
+          "place_name": "아산 환경과학공원",
+          "id": "17111018",
+          "place_url": "https://place.map.kakao.com/17111018",
+          "address_name": "충남 아산시 배미동 5-4",
+          "road_address_name": "충남 아산시 실옥로 216",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "아산 환경과학공원 놀이터",
+          "id": "1522307106",
+          "place_url": "https://place.map.kakao.com/1522307106",
+          "address_name": "충남 아산시 배미동 5-4",
+          "road_address_name": "충남 아산시 실옥로 216",
+          "category_name": "가정,생활 > 유아 > 놀이시설 > 놀이터",
+          "distance": 27,
+          "score": 65
+        },
+        {
+          "place_name": "아산환경과학공원 주차장",
+          "id": "1235936229",
+          "place_url": "https://place.map.kakao.com/1235936229",
+          "address_name": "충남 아산시 배미동 5-4",
+          "road_address_name": "충남 아산시 실옥로 216",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 69,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·실옥로·216·아산 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-214",
+      "name": "현충사",
+      "address": "충남 아산시 염치읍 현충사길 48",
+      "latitude": 36.80848930555538,
+      "longitude": 127.03293796552498,
+      "kakaoSearchKeyword": "현충사",
+      "officialSourceName": "국가유산청 현충사관리소",
+      "officialSourceUrl": "https://hcs.khs.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "현충사",
+      "selectedKakaoPlaceId": "23976998",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23976998",
+      "candidates": [
+        {
+          "place_name": "현충사",
+          "id": "23976998",
+          "place_url": "https://place.map.kakao.com/23976998",
+          "address_name": "충남 아산시 염치읍 백암리 286-2",
+          "road_address_name": "충남 아산시 염치읍 현충사길 48",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 사당,제단",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "현충사 관리소",
+          "id": "9256411",
+          "place_url": "https://place.map.kakao.com/9256411",
+          "address_name": "충남 아산시 염치읍 백암리 298-1",
+          "road_address_name": "충남 아산시 염치읍 현충사길 126",
+          "category_name": "서비스,산업 > 관리,운영 > 문화시설관리운영",
+          "distance": 242,
+          "score": 76
+        },
+        {
+          "place_name": "현충사 충무공이순신기념관",
+          "id": "17573512",
+          "place_url": "https://place.map.kakao.com/17573512",
+          "address_name": "충남 아산시 염치읍 백암리 298-1",
+          "road_address_name": "충남 아산시 염치읍 현충사길 126",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 323,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·염치읍·현충사길·48·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-215",
+      "name": "온양민속박물관",
+      "address": "충남 아산시 충무로 123",
+      "latitude": 36.7920429855642,
+      "longitude": 127.00629667236,
+      "kakaoSearchKeyword": "온양민속박물관",
+      "officialSourceName": "온양민속박물관",
+      "officialSourceUrl": "https://onyangmuseum.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "온양민속박물관",
+      "selectedKakaoPlaceId": "15424981",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/15424981",
+      "candidates": [
+        {
+          "place_name": "온양민속박물관",
+          "id": "15424981",
+          "place_url": "https://place.map.kakao.com/15424981",
+          "address_name": "충남 아산시 권곡동 403-1",
+          "road_address_name": "충남 아산시 충무로 123",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "온양민속박물관 구정아트센터",
+          "id": "492733396",
+          "place_url": "https://place.map.kakao.com/492733396",
+          "address_name": "충남 아산시 권곡동 403-1",
+          "road_address_name": "충남 아산시 충무로 123",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 9,
+          "score": 79
+        },
+        {
+          "place_name": "온양민속박물관 주차장1",
+          "id": "17571705",
+          "place_url": "https://place.map.kakao.com/17571705",
+          "address_name": "충남 아산시 권곡동 403-1",
+          "road_address_name": "충남 아산시 충무로 123",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 99,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·충무로·123·아산 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-216",
+      "name": "외암민속마을",
+      "address": "충남 아산시 송악면 외암민속길 34",
+      "latitude": 36.730227051957094,
+      "longitude": 127.01661346257764,
+      "kakaoSearchKeyword": "외암민속마을",
+      "officialSourceName": "아산 외암마을",
+      "officialSourceUrl": "https://www.oeam.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "외암민속마을",
+      "selectedKakaoPlaceId": "17112656",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17112656",
+      "candidates": [
+        {
+          "place_name": "외암민속마을",
+          "id": "17112656",
+          "place_url": "https://place.map.kakao.com/17112656",
+          "address_name": "충남 아산시 송악면 외암리 188",
+          "road_address_name": "충남 아산시 송악면 외암민속길 34",
+          "category_name": "여행 > 체험여행 > 정보화,체험마을",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "외암민속마을 저잣거리",
+          "id": "27124079",
+          "place_url": "https://place.map.kakao.com/27124079",
+          "address_name": "충남 아산시 송악면 역촌리 84-10",
+          "road_address_name": "충남 아산시 송악면 외암로 1030-14",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 436,
+          "score": 71
+        },
+        {
+          "place_name": "외암민속마을 참봉댁",
+          "id": "27479977",
+          "place_url": "https://place.map.kakao.com/27479977",
+          "address_name": "충남 아산시 송악면 외암리 82",
+          "road_address_name": "충남 아산시 송악면 외암민속길 44",
+          "category_name": "여행 > 관광,명소",
+          "distance": 144,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·송악면·외암민속길·34·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-217",
+      "name": "피나클랜드 수목원",
+      "address": "충남 아산시 영인면 월선길 20-42",
+      "latitude": 36.873708126936,
+      "longitude": 126.927275726003,
+      "kakaoSearchKeyword": "피나클랜드 수목원",
+      "officialSourceName": "피나클랜드",
+      "officialSourceUrl": "https://www.pinnacleland.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "피나클랜드 수목원",
+      "selectedKakaoPlaceId": "13302536",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/13302536",
+      "candidates": [
+        {
+          "place_name": "피나클랜드 수목원",
+          "id": "13302536",
+          "place_url": "https://place.map.kakao.com/13302536",
+          "address_name": "충남 아산시 영인면 월선리 346-2",
+          "road_address_name": "충남 아산시 영인면 월선길 20-42",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "피나클랜드 수목원 메타세콰이어로드",
+          "id": "17985206",
+          "place_url": "https://place.map.kakao.com/17985206",
+          "address_name": "충남 아산시 영인면 월선리 346-2",
+          "road_address_name": "충남 아산시 영인면 월선길 20-42",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 240,
+          "score": 62
+        },
+        {
+          "place_name": "피나클랜드수목원 제2주차장",
+          "id": "993272549",
+          "place_url": "https://place.map.kakao.com/993272549",
+          "address_name": "충남 아산시 영인면 월선리 154-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 388,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·영인면·월선길·2042·아산 일치 · 기존 좌표에서 0m · 카테고리 수목원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-218",
+      "name": "세계꽃식물원",
+      "address": "충남 아산시 도고면 아산만로 37-37",
+      "latitude": 36.74970989592836,
+      "longitude": 126.86058076715824,
+      "kakaoSearchKeyword": "세계꽃식물원",
+      "officialSourceName": "세계꽃식물원",
+      "officialSourceUrl": "https://www.asangarden.com/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "세계꽃식물원",
+      "selectedKakaoPlaceId": "7947747",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7947747",
+      "candidates": [
+        {
+          "place_name": "세계꽃식물원",
+          "id": "7947747",
+          "place_url": "https://place.map.kakao.com/7947747",
+          "address_name": "충남 아산시 도고면 봉농리 576-1",
+          "road_address_name": "충남 아산시 도고면 아산만로 37-37",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "아산아름다운정원 영농조합법인",
+          "id": "9256321",
+          "place_url": "https://place.map.kakao.com/9256321",
+          "address_name": "충남 아산시 도고면 봉농리 576",
+          "road_address_name": "충남 아산시 도고면 아산만로 37-37",
+          "category_name": "사회,공공기관 > 단체,협회",
+          "distance": 142,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·도고면·아산만로·3737·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-219",
+      "name": "곡교천 은행나무길",
+      "address": "충남 아산시 염치읍 백암리 502-3",
+      "latitude": 36.8000400529862,
+      "longitude": 127.018130026598,
+      "kakaoSearchKeyword": "곡교천 은행나무길",
+      "officialSourceName": "아산시 문화관광",
+      "officialSourceUrl": "https://www.asan.go.kr/tour/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "곡교천 은행나무길",
+      "selectedKakaoPlaceId": "2057873831",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2057873831",
+      "candidates": [
+        {
+          "place_name": "곡교천 은행나무길",
+          "id": "2057873831",
+          "place_url": "https://place.map.kakao.com/2057873831",
+          "address_name": "충남 아산시 염치읍 백암리 502-3",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마거리",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·염치읍·백암리·5023·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-220",
+      "name": "아산레일바이크",
+      "address": "충남 아산시 도고면 아산만로 199-7",
+      "latitude": 36.76097435471885,
+      "longitude": 126.86729912912867,
+      "kakaoSearchKeyword": "아산레일바이크",
+      "officialSourceName": "아산시 문화관광",
+      "officialSourceUrl": "https://www.asan.go.kr/tour/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "아산레일바이크",
+      "selectedKakaoPlaceId": "19251321",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/19251321",
+      "candidates": [
+        {
+          "place_name": "아산레일바이크",
+          "id": "19251321",
+          "place_url": "https://place.map.kakao.com/19251321",
+          "address_name": "충남 아산시 도고면 신언리 142-1",
+          "road_address_name": "충남 아산시 도고면 아산만로 199-7",
+          "category_name": "여행 > 체험여행",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 충남·아산시·도고면·아산만로·1997·아산 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-221",
+      "name": "국립춘천박물관",
+      "address": "강원특별자치도 춘천시 우석로 70",
+      "latitude": 37.86405886491146,
+      "longitude": 127.75378162617135,
+      "kakaoSearchKeyword": "국립춘천박물관",
+      "officialSourceName": "국립춘천박물관",
+      "officialSourceUrl": "https://chuncheon.museum.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립춘천박물관",
+      "selectedKakaoPlaceId": "8208782",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8208782",
+      "candidates": [
+        {
+          "place_name": "국립춘천박물관",
+          "id": "8208782",
+          "place_url": "https://place.map.kakao.com/8208782",
+          "address_name": "강원특별자치도 춘천시 석사동 95-3",
+          "road_address_name": "강원특별자치도 춘천시 우석로 70",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립춘천박물관 숲속배움터",
+          "id": "25969579",
+          "place_url": "https://place.map.kakao.com/25969579",
+          "address_name": "강원특별자치도 춘천시 석사동 95-3",
+          "road_address_name": "강원특별자치도 춘천시 우석로 70",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 70,
+          "score": 79
+        },
+        {
+          "place_name": "국립춘천박물관 어린이박물관",
+          "id": "1871643192",
+          "place_url": "https://place.map.kakao.com/1871643192",
+          "address_name": "강원특별자치도 춘천시 석사동 95-3",
+          "road_address_name": "강원특별자치도 춘천시 우석로 70",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 83,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·우석로·70·강원·춘천 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-222",
+      "name": "애니메이션박물관",
+      "address": "강원특별자치도 춘천시 서면 박사로 854",
+      "latitude": 37.89302159155976,
+      "longitude": 127.69192476486958,
+      "kakaoSearchKeyword": "춘천 애니메이션박물관",
+      "officialSourceName": "강원관광",
+      "officialSourceUrl": "https://www.gangwon.to/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "애니메이션박물관",
+      "selectedKakaoPlaceId": "8429539",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8429539",
+      "candidates": [
+        {
+          "place_name": "애니메이션박물관",
+          "id": "8429539",
+          "place_url": "https://place.map.kakao.com/8429539",
+          "address_name": "강원특별자치도 춘천시 서면 현암리 367-3",
+          "road_address_name": "강원특별자치도 춘천시 서면 박사로 854",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "애니메이션박물관 주차장",
+          "id": "1427440004",
+          "place_url": "https://place.map.kakao.com/1427440004",
+          "address_name": "강원특별자치도 춘천시 서면 현암리 367-3",
+          "road_address_name": "강원특별자치도 춘천시 서면 박사로 854",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 0,
+          "score": 65
+        },
+        {
+          "place_name": "춘천애니메이션박물관 전기차충전소",
+          "id": "479490693",
+          "place_url": "https://place.map.kakao.com/479490693",
+          "address_name": "강원특별자치도 춘천시 서면 현암리 367-3",
+          "road_address_name": "강원특별자치도 춘천시 서면 박사로 854",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 0,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·서면·박사로·854·강원·춘천 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-223",
+      "name": "토이로봇관",
+      "address": "강원특별자치도 춘천시 서면 박사로 854",
+      "latitude": 37.893061424064676,
+      "longitude": 127.691892168712,
+      "kakaoSearchKeyword": "토이로봇관",
+      "officialSourceName": "강원관광",
+      "officialSourceUrl": "https://www.gangwon.to/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "토이로봇관",
+      "selectedKakaoPlaceId": "42724154",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/42724154",
+      "candidates": [
+        {
+          "place_name": "토이로봇관",
+          "id": "42724154",
+          "place_url": "https://place.map.kakao.com/42724154",
+          "address_name": "강원특별자치도 춘천시 서면 현암리 367-3",
+          "road_address_name": "강원특별자치도 춘천시 서면 박사로 854",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "갤러리툰카페",
+          "id": "1647039388",
+          "place_url": "https://place.map.kakao.com/1647039388",
+          "address_name": "강원특별자치도 춘천시 서면 현암리 883",
+          "road_address_name": "강원특별자치도 춘천시 서면 박사로 854",
+          "category_name": "음식점 > 카페",
+          "distance": 7,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·서면·박사로·854·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-224",
+      "name": "강원특별자치도립화목원",
+      "address": "강원특별자치도 춘천시 화목원길 24",
+      "latitude": 37.9230317243535,
+      "longitude": 127.725688629876,
+      "kakaoSearchKeyword": "강원특별자치도립화목원",
+      "officialSourceName": "강원관광",
+      "officialSourceUrl": "https://www.gangwon.to/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "강원특별자치도립화목원",
+      "selectedKakaoPlaceId": "11046971",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11046971",
+      "candidates": [
+        {
+          "place_name": "강원특별자치도립화목원",
+          "id": "11046971",
+          "place_url": "https://place.map.kakao.com/11046971",
+          "address_name": "강원특별자치도 춘천시 사농동 644-1",
+          "road_address_name": "강원특별자치도 춘천시 화목원길 24",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "강원특별자치도립화목원 수생식물원",
+          "id": "2030765524",
+          "place_url": "https://place.map.kakao.com/2030765524",
+          "address_name": "강원특별자치도 춘천시 사농동 218-5",
+          "road_address_name": "강원특별자치도 춘천시 화목원길 24",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 57,
+          "score": 65
+        },
+        {
+          "place_name": "강원특별자치도립화목원 맨발로걷는길",
+          "id": "2027739321",
+          "place_url": "https://place.map.kakao.com/2027739321",
+          "address_name": "강원특별자치도 춘천시 사농동 218-5",
+          "road_address_name": "강원특별자치도 춘천시 화목원길 24",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 68,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·화목원길·24·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-225",
+      "name": "춘천막국수체험박물관",
+      "address": "강원특별자치도 춘천시 신북읍 신북로 264",
+      "latitude": 37.9487911091811,
+      "longitude": 127.749788495289,
+      "kakaoSearchKeyword": "춘천막국수체험박물관",
+      "officialSourceName": "강원관광",
+      "officialSourceUrl": "https://www.gangwon.to/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "춘천막국수체험박물관",
+      "selectedKakaoPlaceId": "21217710",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/21217710",
+      "candidates": [
+        {
+          "place_name": "춘천막국수체험박물관",
+          "id": "21217710",
+          "place_url": "https://place.map.kakao.com/21217710",
+          "address_name": "강원특별자치도 춘천시 신북읍 산천리 342-1",
+          "road_address_name": "강원특별자치도 춘천시 신북읍 신북로 264",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·신북읍·신북로·264·강원·춘천 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-226",
+      "name": "국립춘천숲체원",
+      "address": "강원특별자치도 춘천시 신북읍 발산리 산 32-1",
+      "latitude": 37.98028520538346,
+      "longitude": 127.77181434106932,
+      "kakaoSearchKeyword": "국립춘천숲체원",
+      "officialSourceName": "한국산림복지진흥원",
+      "officialSourceUrl": "https://www.fowi.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립춘천숲체원",
+      "selectedKakaoPlaceId": "1158129196",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1158129196",
+      "candidates": [
+        {
+          "place_name": "국립춘천숲체원",
+          "id": "1158129196",
+          "place_url": "https://place.map.kakao.com/1158129196",
+          "address_name": "강원특별자치도 춘천시 신북읍 발산리 산 32-1",
+          "road_address_name": "",
+          "category_name": "교육,학문 > 교육단체",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립춘천숲체원 맞이관",
+          "id": "1543053463",
+          "place_url": "https://place.map.kakao.com/1543053463",
+          "address_name": "강원특별자치도 춘천시 신북읍 발산리 산 32-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 관광안내소",
+          "distance": 1,
+          "score": 65
+        },
+        {
+          "place_name": "국립춘천숲체원 누리관",
+          "id": "2082955496",
+          "place_url": "https://place.map.kakao.com/2082955496",
+          "address_name": "강원특별자치도 춘천시 신북읍 발산리 산 32-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 24,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·신북읍·발산리·321·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-227",
+      "name": "김유정문학촌",
+      "address": "강원특별자치도 춘천시 신동면 김유정로 1430-14",
+      "latitude": 37.81830211687197,
+      "longitude": 127.71773877546438,
+      "kakaoSearchKeyword": "김유정문학촌",
+      "officialSourceName": "강원관광",
+      "officialSourceUrl": "https://www.gangwon.to/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "김유정문학촌",
+      "selectedKakaoPlaceId": "1641336553",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1641336553",
+      "candidates": [
+        {
+          "place_name": "김유정문학촌",
+          "id": "1641336553",
+          "place_url": "https://place.map.kakao.com/1641336553",
+          "address_name": "강원특별자치도 춘천시 신동면 증리 914-1",
+          "road_address_name": "강원특별자치도 춘천시 신동면 김유정로 1430-14",
+          "category_name": "여행 > 체험여행 > 정보화,체험마을",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "김유정문학촌 춘천문인의서재",
+          "id": "1708922815",
+          "place_url": "https://place.map.kakao.com/1708922815",
+          "address_name": "강원특별자치도 춘천시 신동면 증리 914-1",
+          "road_address_name": "강원특별자치도 춘천시 신동면 김유정로 1430-14",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 22,
+          "score": 65
+        },
+        {
+          "place_name": "김유정문학촌 려우도예",
+          "id": "1657272400",
+          "place_url": "https://place.map.kakao.com/1657272400",
+          "address_name": "강원특별자치도 춘천시 신동면 증리 914-1",
+          "road_address_name": "강원특별자치도 춘천시 신동면 김유정로 1430-14",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 46,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·신동면·김유정로·143014·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-228",
+      "name": "레고랜드 코리아 리조트",
+      "address": "강원특별자치도 춘천시 하중도길 128",
+      "latitude": 37.88418911470203,
+      "longitude": 127.69920240590257,
+      "kakaoSearchKeyword": "레고랜드코리아리조트",
+      "officialSourceName": "레고랜드 코리아 리조트",
+      "officialSourceUrl": "https://www.legoland.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "레고랜드코리아리조트",
+      "selectedKakaoPlaceId": "27204421",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27204421",
+      "candidates": [
+        {
+          "place_name": "레고랜드코리아리조트",
+          "id": "27204421",
+          "place_url": "https://place.map.kakao.com/27204421",
+          "address_name": "강원특별자치도 춘천시 중도동 603",
+          "road_address_name": "강원특별자치도 춘천시 하중도길 128",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "레고랜드코리아리조트 레고닌자고월드",
+          "id": "112612796",
+          "place_url": "https://place.map.kakao.com/112612796",
+          "address_name": "강원특별자치도 춘천시 중도동 568",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 289,
+          "score": 76
+        },
+        {
+          "place_name": "레고랜드코리아리조트 매표소",
+          "id": "139254702",
+          "place_url": "https://place.map.kakao.com/139254702",
+          "address_name": "강원특별자치도 춘천시 중도동 586-1",
+          "road_address_name": "",
+          "category_name": "서비스,산업 > 관리,운영 > 매표소",
+          "distance": 20,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·하중도길·128·강원·춘천 일치 · 기존 좌표에서 0m · 카테고리 테마파크 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-229",
+      "name": "춘천 삼악산 호수케이블카",
+      "address": "강원특별자치도 춘천시 스포츠타운길 245",
+      "latitude": 37.86433423002352,
+      "longitude": 127.69129278762853,
+      "kakaoSearchKeyword": "춘천삼악산호수케이블카",
+      "officialSourceName": "춘천 삼악산 호수케이블카",
+      "officialSourceUrl": "https://samaksancablecar.com/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "춘천삼악산호수케이블카",
+      "selectedKakaoPlaceId": "1147568611",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1147568611",
+      "candidates": [
+        {
+          "place_name": "춘천삼악산호수케이블카",
+          "id": "1147568611",
+          "place_url": "https://place.map.kakao.com/1147568611",
+          "address_name": "강원특별자치도 춘천시 삼천동 801",
+          "road_address_name": "강원특별자치도 춘천시 스포츠타운길 245",
+          "category_name": "여행 > 관광,명소 > 케이블카",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "춘천삼악산호수케이블카 주차장",
+          "id": "443133973",
+          "place_url": "https://place.map.kakao.com/443133973",
+          "address_name": "강원특별자치도 춘천시 삼천동 392-26",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 102,
+          "score": 62
+        },
+        {
+          "place_name": "삼악산 호수케이블카 주차장 전기차충전소",
+          "id": "159201446",
+          "place_url": "https://place.map.kakao.com/159201446",
+          "address_name": "강원특별자치도 춘천시 삼천동 801",
+          "road_address_name": "강원특별자치도 춘천시 스포츠타운길 245",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 45,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·스포츠타운길·245·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-230",
+      "name": "춘천꿈자람어린이공원",
+      "address": "강원특별자치도 춘천시 평화로 26",
+      "latitude": 37.885483141157124,
+      "longitude": 127.7214016130434,
+      "kakaoSearchKeyword": "춘천 꿈자람어린이공원",
+      "officialSourceName": "춘천도시공사 꿈자람어린이공원",
+      "officialSourceUrl": "https://www.cuc.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "춘천꿈자람어린이공원",
+      "selectedKakaoPlaceId": "24663581",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/24663581",
+      "candidates": [
+        {
+          "place_name": "춘천꿈자람어린이공원",
+          "id": "24663581",
+          "place_url": "https://place.map.kakao.com/24663581",
+          "address_name": "강원특별자치도 춘천시 근화동 175",
+          "road_address_name": "강원특별자치도 춘천시 평화로 26",
+          "category_name": "가정,생활 > 유아 > 놀이시설",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "춘천꿈자람어린이공원",
+          "id": "867200831",
+          "place_url": "https://place.map.kakao.com/867200831",
+          "address_name": "강원특별자치도 춘천시 근화동 203",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 123,
+          "score": 97
+        },
+        {
+          "place_name": "별초롱카페",
+          "id": "1256172948",
+          "place_url": "https://place.map.kakao.com/1256172948",
+          "address_name": "강원특별자치도 춘천시 근화동 175",
+          "road_address_name": "강원특별자치도 춘천시 평화로 26",
+          "category_name": "음식점 > 카페 > 테마카페 > 무인카페",
+          "distance": 17,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·춘천시·평화로·26·강원·춘천 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-231",
+      "name": "뮤지엄산",
+      "address": "강원특별자치도 원주시 지정면 오크밸리2길 260",
+      "latitude": 37.41535334300235,
+      "longitude": 127.82371307885592,
+      "kakaoSearchKeyword": "뮤지엄산",
+      "officialSourceName": "뮤지엄산",
+      "officialSourceUrl": "https://www.museumsan.org/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "뮤지엄산",
+      "selectedKakaoPlaceId": "21674777",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/21674777",
+      "candidates": [
+        {
+          "place_name": "뮤지엄산",
+          "id": "21674777",
+          "place_url": "https://place.map.kakao.com/21674777",
+          "address_name": "강원특별자치도 원주시 지정면 월송리 999-13",
+          "road_address_name": "강원특별자치도 원주시 지정면 오크밸리2길 260",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "뮤지엄산 주차장",
+          "id": "1935078800",
+          "place_url": "https://place.map.kakao.com/1935078800",
+          "address_name": "강원특별자치도 원주시 지정면 월송리 산 129-5",
+          "road_address_name": "강원특별자치도 원주시 지정면 오크밸리2길 260",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 0,
+          "score": 65
+        },
+        {
+          "place_name": "원주무튼",
+          "id": "184993391",
+          "place_url": "https://place.map.kakao.com/184993391",
+          "address_name": "강원특별자치도 원주시 지정면 월송리 904-71",
+          "road_address_name": "강원특별자치도 원주시 지정면 월송석화로 428-10",
+          "category_name": "음식점 > 양식 > 이탈리안",
+          "distance": 2342,
+          "score": 15
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·원주시·지정면·오크밸리2길·260·강원·원주 일치 · 기존 좌표에서 0m · 카테고리 전시관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-232",
+      "name": "원주한지테마파크",
+      "address": "강원특별자치도 원주시 한지공원길 151",
+      "latitude": 37.3351107501047,
+      "longitude": 127.935155361003,
+      "kakaoSearchKeyword": "원주한지테마파크",
+      "officialSourceName": "원주한지테마파크",
+      "officialSourceUrl": "https://www.hanjipark.com/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "원주한지테마파크",
+      "selectedKakaoPlaceId": "14918317",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/14918317",
+      "candidates": [
+        {
+          "place_name": "원주한지테마파크",
+          "id": "14918317",
+          "place_url": "https://place.map.kakao.com/14918317",
+          "address_name": "강원특별자치도 원주시 무실동 16",
+          "road_address_name": "강원특별자치도 원주시 한지공원길 151",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "원주한지테마파크 카페테리아",
+          "id": "21352730",
+          "place_url": "https://place.map.kakao.com/21352730",
+          "address_name": "강원특별자치도 원주시 무실동 16",
+          "road_address_name": "강원특별자치도 원주시 한지공원길 151",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 19,
+          "score": 65
+        },
+        {
+          "place_name": "원주한지테마파크 주차장2",
+          "id": "179898021",
+          "place_url": "https://place.map.kakao.com/179898021",
+          "address_name": "강원특별자치도 원주시 무실동 16",
+          "road_address_name": "강원특별자치도 원주시 한지공원길 151",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 50,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·원주시·한지공원길·151·강원·원주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-233",
+      "name": "국립횡성숲체원",
+      "address": "강원특별자치도 횡성군 둔내면 청태산로 777",
+      "latitude": 37.53686204455773,
+      "longitude": 128.2914602589216,
+      "kakaoSearchKeyword": "국립횡성숲체원",
+      "officialSourceName": "한국산림복지진흥원",
+      "officialSourceUrl": "https://www.fowi.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립횡성숲체원",
+      "selectedKakaoPlaceId": "24505294",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/24505294",
+      "candidates": [
+        {
+          "place_name": "국립횡성숲체원",
+          "id": "24505294",
+          "place_url": "https://place.map.kakao.com/24505294",
+          "address_name": "강원특별자치도 횡성군 둔내면 삽교리 1767-10",
+          "road_address_name": "강원특별자치도 횡성군 둔내면 청태산로 777",
+          "category_name": "여행 > 관광,명소 > 숲",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립횡성숲체원 방문자안내센터",
+          "id": "2044237292",
+          "place_url": "https://place.map.kakao.com/2044237292",
+          "address_name": "강원특별자치도 횡성군 둔내면 삽교리 1767-10",
+          "road_address_name": "강원특별자치도 횡성군 둔내면 청태산로 777",
+          "category_name": "여행 > 관광,명소 > 관광안내소",
+          "distance": 1,
+          "score": 65
+        },
+        {
+          "place_name": "국립횡성숲체원 사무실",
+          "id": "47004338",
+          "place_url": "https://place.map.kakao.com/47004338",
+          "address_name": "강원특별자치도 횡성군 둔내면 삽교리 1767-10",
+          "road_address_name": "강원특별자치도 횡성군 둔내면 청태산로 777",
+          "category_name": "서비스,산업 > 관리,운영 > 관광지관리운영",
+          "distance": 1,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·횡성군·둔내면·청태산로·777·강원·횡성 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-234",
+      "name": "아르떼뮤지엄 강릉",
+      "address": "강원특별자치도 강릉시 난설헌로 131",
+      "latitude": 37.791698395443404,
+      "longitude": 128.90753392583056,
+      "kakaoSearchKeyword": "아르떼뮤지엄 강릉",
+      "officialSourceName": "아르떼뮤지엄 강릉",
+      "officialSourceUrl": "https://kr.artemuseum.com/GANGNEUNG",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "아르떼뮤지엄 강릉",
+      "selectedKakaoPlaceId": "2115731103",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2115731103",
+      "candidates": [
+        {
+          "place_name": "아르떼뮤지엄 강릉",
+          "id": "2115731103",
+          "place_url": "https://place.map.kakao.com/2115731103",
+          "address_name": "강원특별자치도 강릉시 초당동 505",
+          "road_address_name": "강원특별자치도 강릉시 난설헌로 131",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "아르떼뮤지엄 강릉 주차장",
+          "id": "1419174390",
+          "place_url": "https://place.map.kakao.com/1419174390",
+          "address_name": "강원특별자치도 강릉시 초당동 505",
+          "road_address_name": "강원특별자치도 강릉시 난설헌로 131",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 75,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·강릉시·난설헌로·131·강원·강릉 일치 · 기존 좌표에서 0m · 카테고리 전시관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-235",
+      "name": "강릉시립박물관",
+      "address": "강원특별자치도 강릉시 율곡로3139번길 24",
+      "latitude": 37.77755036504631,
+      "longitude": 128.87722213176184,
+      "kakaoSearchKeyword": "오죽헌시립박물관",
+      "officialSourceName": "강릉시 오죽헌·시립박물관",
+      "officialSourceUrl": "https://www.gn.go.kr/museum/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "강릉시립박물관",
+      "selectedKakaoPlaceId": "12464549",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12464549",
+      "candidates": [
+        {
+          "place_name": "강릉시립박물관",
+          "id": "12464549",
+          "place_url": "https://place.map.kakao.com/12464549",
+          "address_name": "강원특별자치도 강릉시 죽헌동 177-4",
+          "road_address_name": "강원특별자치도 강릉시 율곡로3139번길 24",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "오죽헌시립박물관 학예연구",
+          "id": "12464379",
+          "place_url": "https://place.map.kakao.com/12464379",
+          "address_name": "강원특별자치도 강릉시 죽헌동 177-4",
+          "road_address_name": "강원특별자치도 강릉시 율곡로3139번길 24",
+          "category_name": "서비스,산업 > 관리,운영 > 문화시설관리운영",
+          "distance": 94,
+          "score": 79
+        },
+        {
+          "place_name": "강릉시 오죽헌시립박물관주차장 전기차충전소",
+          "id": "759535074",
+          "place_url": "https://place.map.kakao.com/759535074",
+          "address_name": "강원특별자치도 강릉시 죽헌동 177-4",
+          "road_address_name": "강원특별자치도 강릉시 율곡로3139번길 24",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 95,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·강릉시·율곡로3139번길·24·강원·강릉 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-236",
+      "name": "강릉솔향수목원",
+      "address": "강원특별자치도 강릉시 구정면 수목원길 156",
+      "latitude": 37.6978031751826,
+      "longitude": 128.861466745895,
+      "kakaoSearchKeyword": "강릉솔향수목원",
+      "officialSourceName": "강릉시 솔향수목원",
+      "officialSourceUrl": "https://www.gn.go.kr/solhyang/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "강릉솔향수목원",
+      "selectedKakaoPlaceId": "25856200",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25856200",
+      "candidates": [
+        {
+          "place_name": "강릉솔향수목원",
+          "id": "25856200",
+          "place_url": "https://place.map.kakao.com/25856200",
+          "address_name": "강원특별자치도 강릉시 구정면 구정리 산 147-1",
+          "road_address_name": "강원특별자치도 강릉시 구정면 수목원길 156",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "강릉솔향수목원 주차장",
+          "id": "20512874",
+          "place_url": "https://place.map.kakao.com/20512874",
+          "address_name": "강원특별자치도 강릉시 구정면 구정리 산 148",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 62,
+          "score": 65
+        },
+        {
+          "place_name": "강릉솔향수목원 유아숲체험원",
+          "id": "1572409148",
+          "place_url": "https://place.map.kakao.com/1572409148",
+          "address_name": "강원특별자치도 강릉시 구정면 구정리 산 141",
+          "road_address_name": "",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 1031,
+          "score": 51
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·강릉시·구정면·수목원길·156·강원·강릉 일치 · 기존 좌표에서 0m · 카테고리 수목원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-237",
+      "name": "국립산악박물관",
+      "address": "강원특별자치도 속초시 미시령로 3054",
+      "latitude": 38.2026859958039,
+      "longitude": 128.540612840004,
+      "kakaoSearchKeyword": "국립산악박물관",
+      "officialSourceName": "국립산악박물관",
+      "officialSourceUrl": "https://nmm.forest.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립산악박물관",
+      "selectedKakaoPlaceId": "25625906",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25625906",
+      "candidates": [
+        {
+          "place_name": "국립산악박물관",
+          "id": "25625906",
+          "place_url": "https://place.map.kakao.com/25625906",
+          "address_name": "강원특별자치도 속초시 노학동 735-3",
+          "road_address_name": "강원특별자치도 속초시 미시령로 3054",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립산악박물관 전기차충전소",
+          "id": "540323213",
+          "place_url": "https://place.map.kakao.com/540323213",
+          "address_name": "강원특별자치도 속초시 노학동 735-3",
+          "road_address_name": "강원특별자치도 속초시 미시령로 3054",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 58,
+          "score": 65
+        },
+        {
+          "place_name": "국립산악박물관 주차장",
+          "id": "25630681",
+          "place_url": "https://place.map.kakao.com/25630681",
+          "address_name": "강원특별자치도 속초시 노학동 735-3",
+          "road_address_name": "강원특별자치도 속초시 미시령로 3054",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 91,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·속초시·미시령로·3054·강원·속초 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-238",
+      "name": "속초시립박물관",
+      "address": "강원특별자치도 속초시 신흥2길 16",
+      "latitude": 38.2005722557991,
+      "longitude": 128.539408472698,
+      "kakaoSearchKeyword": "속초시립박물관",
+      "officialSourceName": "속초시립박물관",
+      "officialSourceUrl": "https://www.sokchomuse.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "속초시립박물관",
+      "selectedKakaoPlaceId": "9158247",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9158247",
+      "candidates": [
+        {
+          "place_name": "속초시립박물관",
+          "id": "9158247",
+          "place_url": "https://place.map.kakao.com/9158247",
+          "address_name": "강원특별자치도 속초시 노학동 736-1",
+          "road_address_name": "강원특별자치도 속초시 신흥2길 16",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "속초시립박물관 실향민문화촌",
+          "id": "11590047",
+          "place_url": "https://place.map.kakao.com/11590047",
+          "address_name": "강원특별자치도 속초시 노학동 736-1",
+          "road_address_name": "강원특별자치도 속초시 신흥2길 16",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 2,
+          "score": 79
+        },
+        {
+          "place_name": "속초시립박물관 학예연구실",
+          "id": "10555426",
+          "place_url": "https://place.map.kakao.com/10555426",
+          "address_name": "강원특별자치도 속초시 노학동 736-1",
+          "road_address_name": "강원특별자치도 속초시 신흥2길 16",
+          "category_name": "서비스,산업 > 관리,운영 > 문화시설관리운영",
+          "distance": 7,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·속초시·신흥2길·16·강원·속초 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-239",
+      "name": "DMZ박물관",
+      "address": "강원특별자치도 고성군 현내면 통일전망대로 369",
+      "latitude": 38.57625559782013,
+      "longitude": 128.38256802397572,
+      "kakaoSearchKeyword": "DMZ박물관 고성",
+      "officialSourceName": "강원특별자치도 DMZ박물관",
+      "officialSourceUrl": "https://www.dmzmuseum.com/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "DMZ박물관",
+      "selectedKakaoPlaceId": "23794385",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23794385",
+      "candidates": [
+        {
+          "place_name": "DMZ박물관",
+          "id": "23794385",
+          "place_url": "https://place.map.kakao.com/23794385",
+          "address_name": "강원특별자치도 고성군 현내면 송현리 212",
+          "road_address_name": "강원특별자치도 고성군 현내면 통일전망대로 369",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "강원고성 DMZ박물관 전기차충전소",
+          "id": "1994549185",
+          "place_url": "https://place.map.kakao.com/1994549185",
+          "address_name": "강원특별자치도 고성군 현내면 송현리 212",
+          "road_address_name": "강원특별자치도 고성군 현내면 통일전망대로 369",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 6,
+          "score": 65
+        },
+        {
+          "place_name": "DMZ박물관 전기차충전소",
+          "id": "2089914966",
+          "place_url": "https://place.map.kakao.com/2089914966",
+          "address_name": "강원특별자치도 고성군 현내면 송현리 212",
+          "road_address_name": "강원특별자치도 고성군 현내면 통일전망대로 369",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 62,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·고성군·현내면·통일전망대로·369·강원·고성 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-240",
+      "name": "천곡황금박쥐동굴",
+      "address": "강원특별자치도 동해시 동굴로 50",
+      "latitude": 37.51734570193119,
+      "longitude": 129.1101638324846,
+      "kakaoSearchKeyword": "천곡황금박쥐동굴",
+      "officialSourceName": "동해시시설관리공단 천곡황금박쥐동굴",
+      "officialSourceUrl": "https://www.dhsisul.org/pages/sub.htm?nav_code=che1497231324",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "천곡황금박쥐동굴",
+      "selectedKakaoPlaceId": "8100113",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8100113",
+      "candidates": [
+        {
+          "place_name": "천곡황금박쥐동굴",
+          "id": "8100113",
+          "place_url": "https://place.map.kakao.com/8100113",
+          "address_name": "강원특별자치도 동해시 천곡동 1003",
+          "road_address_name": "강원특별자치도 동해시 동굴로 50",
+          "category_name": "여행 > 관광,명소 > 동굴",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "동해시 천곡황금박쥐동굴주차장 전기차충전소",
+          "id": "1085317557",
+          "place_url": "https://place.map.kakao.com/1085317557",
+          "address_name": "강원특별자치도 동해시 천곡동 1003",
+          "road_address_name": "강원특별자치도 동해시 동굴로 50",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 96,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 강원특별자치도·동해시·동굴로·50·강원·동해 일치 · 기존 좌표에서 0m · 카테고리 동굴 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-241",
+      "name": "국립해양박물관",
+      "address": "부산 영도구 해양로301번길 45",
+      "latitude": 35.078517720104706,
+      "longitude": 129.08028722464732,
+      "kakaoSearchKeyword": "국립해양박물관",
+      "officialSourceName": "국립해양박물관",
+      "officialSourceUrl": "https://www.mmk.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립해양박물관",
+      "selectedKakaoPlaceId": "17657287",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17657287",
+      "candidates": [
+        {
+          "place_name": "국립해양박물관",
+          "id": "17657287",
+          "place_url": "https://place.map.kakao.com/17657287",
+          "address_name": "부산 영도구 동삼동 1156",
+          "road_address_name": "부산 영도구 해양로301번길 45",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립해양박물관 상설전시실",
+          "id": "372688725",
+          "place_url": "https://place.map.kakao.com/372688725",
+          "address_name": "부산 영도구 동삼동 1156",
+          "road_address_name": "부산 영도구 해양로301번길 45",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 2,
+          "score": 79
+        },
+        {
+          "place_name": "국립해양박물관 어린이박물관",
+          "id": "1444899506",
+          "place_url": "https://place.map.kakao.com/1444899506",
+          "address_name": "부산 영도구 동삼동 1156",
+          "road_address_name": "부산 영도구 해양로301번길 45",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 18,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·영도구·해양로301번길·45·영도 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-242",
+      "name": "국립부산과학관",
+      "address": "부산 기장군 기장읍 동부산관광6로 59",
+      "latitude": 35.20442157969581,
+      "longitude": 129.21259974946793,
+      "kakaoSearchKeyword": "국립부산과학관",
+      "officialSourceName": "국립부산과학관",
+      "officialSourceUrl": "https://www.sciport.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립부산과학관",
+      "selectedKakaoPlaceId": "26923074",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26923074",
+      "candidates": [
+        {
+          "place_name": "국립부산과학관",
+          "id": "26923074",
+          "place_url": "https://place.map.kakao.com/26923074",
+          "address_name": "부산 기장군 기장읍 석산리 293",
+          "road_address_name": "부산 기장군 기장읍 동부산관광6로 59",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립부산과학관 새싹누리관",
+          "id": "1278633572",
+          "place_url": "https://place.map.kakao.com/1278633572",
+          "address_name": "부산 기장군 기장읍 석산리 293",
+          "road_address_name": "부산 기장군 기장읍 동부산관광6로 59",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 38,
+          "score": 79
+        },
+        {
+          "place_name": "국립부산과학관 천체투영관",
+          "id": "1963481971",
+          "place_url": "https://place.map.kakao.com/1963481971",
+          "address_name": "부산 기장군 기장읍 석산리 293",
+          "road_address_name": "부산 기장군 기장읍 동부산관광6로 59",
+          "category_name": "문화,예술 > 문화시설 > 과학관",
+          "distance": 40,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·기장군·기장읍·동부산관광6로·59·기장 일치 · 기존 좌표에서 0m · 카테고리 과학관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-243",
+      "name": "부산박물관",
+      "address": "부산 남구 유엔평화로 63",
+      "latitude": 35.12955533767398,
+      "longitude": 129.09294128349777,
+      "kakaoSearchKeyword": "부산시립박물관",
+      "officialSourceName": "부산광역시 부산박물관",
+      "officialSourceUrl": "https://museum.busan.go.kr/busan/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "부산박물관",
+      "selectedKakaoPlaceId": "9037691",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9037691",
+      "candidates": [
+        {
+          "place_name": "부산박물관",
+          "id": "9037691",
+          "place_url": "https://place.map.kakao.com/9037691",
+          "address_name": "부산 남구 대연동 948-1",
+          "road_address_name": "부산 남구 유엔평화로 63",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·남구·유엔평화로·63 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-244",
+      "name": "부산현대미술관",
+      "address": "부산 사하구 낙동남로 1191",
+      "latitude": 35.1092509744478,
+      "longitude": 128.942723339212,
+      "kakaoSearchKeyword": "부산현대미술관",
+      "officialSourceName": "부산현대미술관",
+      "officialSourceUrl": "https://www.busan.go.kr/moca/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "부산현대미술관",
+      "selectedKakaoPlaceId": "1257896804",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1257896804",
+      "candidates": [
+        {
+          "place_name": "부산현대미술관",
+          "id": "1257896804",
+          "place_url": "https://place.map.kakao.com/1257896804",
+          "address_name": "부산 사하구 하단동 1149-37",
+          "road_address_name": "부산 사하구 낙동남로 1191",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "부산현대미술관 모카이브",
+          "id": "1689549271",
+          "place_url": "https://place.map.kakao.com/1689549271",
+          "address_name": "부산 사하구 하단동 1149-37",
+          "road_address_name": "부산 사하구 낙동남로 1191",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 31,
+          "score": 79
+        },
+        {
+          "place_name": "부산현대미술관 전기차충전소",
+          "id": "1937644715",
+          "place_url": "https://place.map.kakao.com/1937644715",
+          "address_name": "부산 사하구 하단동 1149-37",
+          "road_address_name": "부산 사하구 낙동남로 1191",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 9,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·사하구·낙동남로·1191·사하 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-245",
+      "name": "부산해양자연사박물관",
+      "address": "부산 동래구 우장춘로 175",
+      "latitude": 35.2218081163841,
+      "longitude": 129.075839921274,
+      "kakaoSearchKeyword": "부산해양자연사박물관",
+      "officialSourceName": "부산광역시 해양자연사박물관",
+      "officialSourceUrl": "https://www.busan.go.kr/sea/info11",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "부산해양자연사박물관",
+      "selectedKakaoPlaceId": "10465316",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10465316",
+      "candidates": [
+        {
+          "place_name": "부산해양자연사박물관",
+          "id": "10465316",
+          "place_url": "https://place.map.kakao.com/10465316",
+          "address_name": "부산 동래구 온천동 산 13-1",
+          "road_address_name": "부산 동래구 우장춘로 175",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·동래구·우장춘로·175·동래 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-246",
+      "name": "씨라이프 부산아쿠아리움",
+      "address": "부산 해운대구 해운대해변로 266",
+      "latitude": 35.159354377968754,
+      "longitude": 129.16099918602094,
+      "kakaoSearchKeyword": "SEA LIFE 부산아쿠아리움",
+      "officialSourceName": "SEA LIFE 부산아쿠아리움",
+      "officialSourceUrl": "https://www.visitsealife.com/busan/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "씨라이프 부산아쿠아리움",
+      "selectedKakaoPlaceId": "7906241",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7906241",
+      "candidates": [
+        {
+          "place_name": "씨라이프 부산아쿠아리움",
+          "id": "7906241",
+          "place_url": "https://place.map.kakao.com/7906241",
+          "address_name": "부산 해운대구 중동 1411-4",
+          "road_address_name": "부산 해운대구 해운대해변로 266",
+          "category_name": "문화,예술 > 문화시설 > 아쿠아리움",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "하나은행365 씨라이프부산아쿠아리움",
+          "id": "18385992",
+          "place_url": "https://place.map.kakao.com/18385992",
+          "address_name": "부산 해운대구 중동 1414-14",
+          "road_address_name": "부산 해운대구 해운대해변로 266",
+          "category_name": "금융,보험 > 금융서비스 > 은행 > ATM",
+          "distance": 8,
+          "score": 65
+        },
+        {
+          "place_name": "씨라이프부산아쿠아리움 전기차충전소",
+          "id": "1582000041",
+          "place_url": "https://place.map.kakao.com/1582000041",
+          "address_name": "부산 해운대구 중동 1411-4",
+          "road_address_name": "부산 해운대구 해운대해변로 266",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 16,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·해운대구·해운대해변로·266·해운대 일치 · 기존 좌표에서 0m · 카테고리 아쿠아리움 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-247",
+      "name": "키자니아 부산",
+      "address": "부산 해운대구 센텀4로 15",
+      "latitude": 35.1701229632415,
+      "longitude": 129.128493542677,
+      "kakaoSearchKeyword": "키자니아 부산점",
+      "officialSourceName": "키자니아 부산",
+      "officialSourceUrl": "https://www.kidzania.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "키자니아 부산점",
+      "selectedKakaoPlaceId": "27456980",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27456980",
+      "candidates": [
+        {
+          "place_name": "키자니아 부산점",
+          "id": "27456980",
+          "place_url": "https://place.map.kakao.com/27456980",
+          "address_name": "부산 해운대구 우동 1493",
+          "road_address_name": "부산 해운대구 센텀4로 15",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·해운대구·센텀4로·15·해운대 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-248",
+      "name": "롯데월드 어드벤처 부산",
+      "address": "부산 기장군 기장읍 동부산관광로 42",
+      "latitude": 35.19604352390804,
+      "longitude": 129.2132067508371,
+      "kakaoSearchKeyword": "롯데월드 어드벤처 부산",
+      "officialSourceName": "롯데월드 어드벤처 부산",
+      "officialSourceUrl": "https://adventurebusan.lotteworld.com/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "롯데월드 어드벤처 부산",
+      "selectedKakaoPlaceId": "401380860",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/401380860",
+      "candidates": [
+        {
+          "place_name": "롯데월드 어드벤처 부산",
+          "id": "401380860",
+          "place_url": "https://place.map.kakao.com/401380860",
+          "address_name": "부산 기장군 기장읍 시랑리 산 46",
+          "road_address_name": "부산 기장군 기장읍 동부산관광로 42",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "롯데월드 어드벤처 부산 회전그네",
+          "id": "2139115221",
+          "place_url": "https://place.map.kakao.com/2139115221",
+          "address_name": "부산 기장군 기장읍 시랑리 348-67",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 123,
+          "score": 76
+        },
+        {
+          "place_name": "롯데월드어드벤처 부산점 자이언트디거",
+          "id": "1049830969",
+          "place_url": "https://place.map.kakao.com/1049830969",
+          "address_name": "부산 기장군 기장읍 시랑리 산 45-7",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 테마파크 > 테마파크시설",
+          "distance": 151,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·기장군·기장읍·동부산관광로·42·기장 일치 · 기존 좌표에서 0m · 카테고리 테마파크 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-249",
+      "name": "해운대수목원",
+      "address": "부산 해운대구 석대동 26",
+      "latitude": 35.23007348305092,
+      "longitude": 129.13273203320423,
+      "kakaoSearchKeyword": "해운대수목원",
+      "officialSourceName": "부산광역시 해운대수목원",
+      "officialSourceUrl": "https://www.busan.go.kr/green/htguide",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "해운대수목원",
+      "selectedKakaoPlaceId": "457869538",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/457869538",
+      "candidates": [
+        {
+          "place_name": "해운대수목원",
+          "id": "457869538",
+          "place_url": "https://place.map.kakao.com/457869538",
+          "address_name": "부산 해운대구 석대동 26",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "해운대수목원 관리사무소",
+          "id": "443614427",
+          "place_url": "https://place.map.kakao.com/443614427",
+          "address_name": "부산 해운대구 석대동 산 114-8",
+          "road_address_name": "",
+          "category_name": "서비스,산업 > 관리,운영 > 공원관리운영",
+          "distance": 473,
+          "score": 71
+        },
+        {
+          "place_name": "해운대수목원 도시생활숲 (2029년 예정)",
+          "id": "627710513",
+          "place_url": "https://place.map.kakao.com/627710513",
+          "address_name": "부산 해운대구 석대동 371",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 668,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·해운대구·석대동·26·해운대 일치 · 기존 좌표에서 0m · 카테고리 수목원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-250",
+      "name": "부산어린이대공원",
+      "address": "부산 부산진구 새싹로 295",
+      "latitude": 35.1849136186692,
+      "longitude": 129.041575693763,
+      "kakaoSearchKeyword": "부산어린이대공원",
+      "officialSourceName": "부산시설공단 부산어린이대공원",
+      "officialSourceUrl": "https://www.bisco.or.kr/bschildpark/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "부산어린이대공원",
+      "selectedKakaoPlaceId": "12572854",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12572854",
+      "candidates": [
+        {
+          "place_name": "부산어린이대공원",
+          "id": "12572854",
+          "place_url": "https://place.map.kakao.com/12572854",
+          "address_name": "부산 부산진구 초읍동 43",
+          "road_address_name": "부산 부산진구 새싹로 295",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "부산어린이대공원 버즈캠프",
+          "id": "27600762",
+          "place_url": "https://place.map.kakao.com/27600762",
+          "address_name": "부산 부산진구 초읍동 43-13",
+          "road_address_name": "부산 부산진구 새싹로 295-1",
+          "category_name": "여행 > 공원시설물",
+          "distance": 354,
+          "score": 71
+        },
+        {
+          "place_name": "부산어린이대공원 동물농장",
+          "id": "27600764",
+          "place_url": "https://place.map.kakao.com/27600764",
+          "address_name": "부산 부산진구 초읍동 43-13",
+          "road_address_name": "부산 부산진구 새싹로 295-1",
+          "category_name": "여행 > 공원시설물",
+          "distance": 370,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 부산·부산진구·새싹로·295·부산진 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    }
+  ]
+}

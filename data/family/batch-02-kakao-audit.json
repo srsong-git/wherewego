@@ -1,0 +1,2328 @@
+{
+  "generatedAt": "2026-09-09T08:17:07.887Z",
+  "source": "https://dapi.kakao.com/v2/local/search/keyword.json",
+  "scope": "family-expansion-batch-02",
+  "total": 50,
+  "linked": 50,
+  "needsReview": 0,
+  "duplicatesExcluded": [
+    {
+      "name": "고양어린이박물관",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "아쿠아플라넷 일산",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "현대 모터스튜디오 고양",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "일산호수공원",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "파주출판도시",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "헤이리예술마을",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "마장호수 출렁다리",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "아침고요수목원",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "쁘띠프랑스",
+      "reason": "기존 Family 런타임에 이미 존재"
+    },
+    {
+      "name": "세미원",
+      "reason": "기존 Family 런타임에 이미 존재"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "국립수목원",
+      "reason": "Batch 2 목표 지역이 아닌 포천 소재이며 기존 Family 런타임에도 존재",
+      "needsReview": true,
+      "runtimeIncluded": false
+    },
+    {
+      "name": "프라움악기박물관",
+      "reason": "Kakao Local API에서 박물관 본관이 아닌 콘서트홀 POI만 확인되어 정확한 연결을 보류",
+      "needsReview": true,
+      "runtimeIncluded": false
+    },
+    {
+      "name": "미호박물관",
+      "reason": "현재 운영 상태를 독립된 공식 운영 채널에서 확인하지 못함",
+      "needsReview": true,
+      "runtimeIncluded": false
+    },
+    {
+      "name": "가평양떼목장",
+      "reason": "현재 운영 근거를 공식 운영 채널에서 충분히 확인하지 못함",
+      "needsReview": true,
+      "runtimeIncluded": false
+    }
+  ],
+  "entries": [
+    {
+      "id": "place-151",
+      "name": "행주산성",
+      "address": "경기 고양시 덕양구 행주로15번길 89",
+      "latitude": 37.596101261945115,
+      "longitude": 126.8287096301388,
+      "kakaoSearchKeyword": "행주산성",
+      "officialSourceName": "고양특례시 행주산성",
+      "officialSourceUrl": "https://www.goyang.go.kr/haengju/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "행주산성",
+      "selectedKakaoPlaceId": "8143171",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8143171",
+      "candidates": [
+        {
+          "place_name": "행주산성",
+          "id": "8143171",
+          "place_url": "https://place.map.kakao.com/8143171",
+          "address_name": "경기 고양시 덕양구 행주내동 65-3",
+          "road_address_name": "경기 고양시 덕양구 행주로15번길 89",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 산성,성곽",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "행주산성공원",
+          "id": "10912248",
+          "place_url": "https://place.map.kakao.com/10912248",
+          "address_name": "경기 고양시 덕양구 행주외동",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 809,
+          "score": 65
+        },
+        {
+          "place_name": "행주산성 역사공원",
+          "id": "226774064",
+          "place_url": "https://place.map.kakao.com/226774064",
+          "address_name": "경기 고양시 덕양구 행주외동 500",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 859,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·행주로15번길·89·고양 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-152",
+      "name": "서오릉",
+      "address": "경기 고양시 덕양구 서오릉로 334-32",
+      "latitude": 37.6246289719161,
+      "longitude": 126.904048877495,
+      "kakaoSearchKeyword": "서오릉",
+      "officialSourceName": "고양특례시 문화관광 서오릉·서삼릉",
+      "officialSourceUrl": "https://www.goyang.go.kr/visitgoyang/www/contents.do?key=90",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "서오릉",
+      "selectedKakaoPlaceId": "18384905",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/18384905",
+      "candidates": [
+        {
+          "place_name": "서오릉",
+          "id": "18384905",
+          "place_url": "https://place.map.kakao.com/18384905",
+          "address_name": "경기 고양시 덕양구 용두동 475-95",
+          "road_address_name": "경기 고양시 덕양구 서오릉로 334-32",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 릉,묘,총",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "서오릉 주차장",
+          "id": "17578387",
+          "place_url": "https://place.map.kakao.com/17578387",
+          "address_name": "경기 고양시 덕양구 용두동 475-95",
+          "road_address_name": "경기 고양시 덕양구 서오릉로 334-32",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 336,
+          "score": 57
+        },
+        {
+          "place_name": "서오릉풍천민물장어",
+          "id": "833304632",
+          "place_url": "https://place.map.kakao.com/833304632",
+          "address_name": "경기 고양시 덕양구 용두동 1-12",
+          "road_address_name": "경기 고양시 덕양구 서오릉로 305",
+          "category_name": "음식점 > 한식 > 해물,생선 > 장어",
+          "distance": 532,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·서오릉로·33432·고양 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-153",
+      "name": "서삼릉",
+      "address": "경기 고양시 덕양구 서삼릉길 233-126",
+      "latitude": 37.66334313347279,
+      "longitude": 126.86834440918219,
+      "kakaoSearchKeyword": "서삼릉",
+      "officialSourceName": "고양특례시 문화관광 서오릉·서삼릉",
+      "officialSourceUrl": "https://www.goyang.go.kr/visitgoyang/www/contents.do?key=90",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "서삼릉",
+      "selectedKakaoPlaceId": "7947620",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7947620",
+      "candidates": [
+        {
+          "place_name": "서삼릉",
+          "id": "7947620",
+          "place_url": "https://place.map.kakao.com/7947620",
+          "address_name": "경기 고양시 덕양구 원당동 201-99",
+          "road_address_name": "경기 고양시 덕양구 서삼릉길 233-126",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 릉,묘,총",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "서삼릉 화장실",
+          "id": "1736127954",
+          "place_url": "https://place.map.kakao.com/1736127954",
+          "address_name": "경기 고양시 덕양구 원당동 201-99",
+          "road_address_name": "경기 고양시 덕양구 서삼릉길 233-126",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 88,
+          "score": 65
+        },
+        {
+          "place_name": "서삼릉 매표소",
+          "id": "18094165",
+          "place_url": "https://place.map.kakao.com/18094165",
+          "address_name": "경기 고양시 덕양구 원당동 201-99",
+          "road_address_name": "경기 고양시 덕양구 서삼릉길 233-126",
+          "category_name": "서비스,산업 > 관리,운영 > 매표소",
+          "distance": 114,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·서삼릉길·233126·고양 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-154",
+      "name": "중남미문화원 부설박물관",
+      "address": "경기 고양시 덕양구 대양로285번길 33-15",
+      "latitude": 37.7037171107912,
+      "longitude": 126.895628115285,
+      "kakaoSearchKeyword": "중남미문화원 부설박물관",
+      "officialSourceName": "고양특례시 문화관광 전시관·박물관",
+      "officialSourceUrl": "https://www.goyang.go.kr/visitgoyang/www/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "중남미문화원 부설박물관",
+      "selectedKakaoPlaceId": "11529204",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/11529204",
+      "candidates": [
+        {
+          "place_name": "중남미문화원 부설박물관",
+          "id": "11529204",
+          "place_url": "https://place.map.kakao.com/11529204",
+          "address_name": "경기 고양시 덕양구 고양동 302-1",
+          "road_address_name": "경기 고양시 덕양구 대양로285번길 33-15",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·대양로285번길·3315·고양 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-155",
+      "name": "한국항공대학교 항공우주박물관",
+      "address": "경기 고양시 덕양구 항공대학로 76-9",
+      "latitude": 37.599741914311934,
+      "longitude": 126.86536283579244,
+      "kakaoSearchKeyword": "한국항공대학교 항공우주박물관",
+      "officialSourceName": "한국항공대학교",
+      "officialSourceUrl": "https://www.kau.ac.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "한국항공대학교 항공우주박물관",
+      "selectedKakaoPlaceId": "8152382",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8152382",
+      "candidates": [
+        {
+          "place_name": "한국항공대학교 항공우주박물관",
+          "id": "8152382",
+          "place_url": "https://place.map.kakao.com/8152382",
+          "address_name": "경기 고양시 덕양구 화전동 646-6",
+          "road_address_name": "경기 고양시 덕양구 항공대학로 76-9",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·덕양구·항공대학로·769·고양 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-156",
+      "name": "고양생태공원",
+      "address": "경기 고양시 일산서구 대화로 315",
+      "latitude": 37.6849436574473,
+      "longitude": 126.744138124527,
+      "kakaoSearchKeyword": "고양생태공원",
+      "officialSourceName": "고양특례시 고양생태공원",
+      "officialSourceUrl": "https://www.goyang.go.kr/www/www03/www03_9/www03_9_8.jsp",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "고양생태공원",
+      "selectedKakaoPlaceId": "2036439940",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2036439940",
+      "candidates": [
+        {
+          "place_name": "고양생태공원",
+          "id": "2036439940",
+          "place_url": "https://place.map.kakao.com/2036439940",
+          "address_name": "경기 고양시 일산서구 대화동 2330",
+          "road_address_name": "경기 고양시 일산서구 대화로 315",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "고양생태공원 청개구리다리",
+          "id": "27510714",
+          "place_url": "https://place.map.kakao.com/27510714",
+          "address_name": "경기 고양시 일산서구 대화동 2330",
+          "road_address_name": "경기 고양시 일산서구 대화로 315",
+          "category_name": "여행 > 공원시설물",
+          "distance": 56,
+          "score": 79
+        },
+        {
+          "place_name": "고양생태공원 단풍나무관찰원",
+          "id": "27510757",
+          "place_url": "https://place.map.kakao.com/27510757",
+          "address_name": "경기 고양시 일산서구 대화동 2330",
+          "road_address_name": "경기 고양시 일산서구 대화로 315",
+          "category_name": "여행 > 공원시설물",
+          "distance": 101,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·일산서구·대화로·315·고양 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-157",
+      "name": "람사르 고양 장항습지생태관",
+      "address": "경기 고양시 일산동구 장대들길 401",
+      "latitude": 37.6417876295102,
+      "longitude": 126.755591676981,
+      "kakaoSearchKeyword": "람사르 고양 장항습지생태관",
+      "officialSourceName": "고양특례시 장항습지생태관",
+      "officialSourceUrl": "https://www.goyang.go.kr/www/www03/www03_3/www03_3_13.jsp",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "람사르 고양 장항습지생태관",
+      "selectedKakaoPlaceId": "704651358",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/704651358",
+      "candidates": [
+        {
+          "place_name": "람사르 고양 장항습지생태관",
+          "id": "704651358",
+          "place_url": "https://place.map.kakao.com/704651358",
+          "address_name": "경기 고양시 일산동구 장항동 536-90",
+          "road_address_name": "경기 고양시 일산동구 장대들길 401",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·일산동구·장대들길·401·고양 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-158",
+      "name": "고양아람누리 아람미술관",
+      "address": "경기 고양시 일산동구 중앙로 1286",
+      "latitude": 37.66056354787763,
+      "longitude": 126.77338000289492,
+      "kakaoSearchKeyword": "고양아람누리 아람미술관",
+      "officialSourceName": "고양문화재단 고양아람누리",
+      "officialSourceUrl": "https://www.artgy.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "고양아람누리 아람미술관",
+      "selectedKakaoPlaceId": "17569807",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17569807",
+      "candidates": [
+        {
+          "place_name": "고양아람누리 아람미술관",
+          "id": "17569807",
+          "place_url": "https://place.map.kakao.com/17569807",
+          "address_name": "경기 고양시 일산동구 마두동 816",
+          "road_address_name": "경기 고양시 일산동구 중앙로 1286",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "갤러리울",
+          "id": "1519088692",
+          "place_url": "https://place.map.kakao.com/1519088692",
+          "address_name": "경기 고양시 일산동구 마두동 816",
+          "road_address_name": "경기 고양시 일산동구 중앙로 1286",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 7,
+          "score": 48
+        },
+        {
+          "place_name": "갤러리 누리",
+          "id": "1207329108",
+          "place_url": "https://place.map.kakao.com/1207329108",
+          "address_name": "경기 고양시 일산동구 마두동 816",
+          "road_address_name": "경기 고양시 일산동구 중앙로 1286",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 27,
+          "score": 48
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·일산동구·중앙로·1286·고양 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-159",
+      "name": "밤가시초가",
+      "address": "경기 고양시 일산동구 햇살로105번길 36-7",
+      "latitude": 37.6701901648691,
+      "longitude": 126.780341985602,
+      "kakaoSearchKeyword": "일산밤가시초가",
+      "officialSourceName": "고양특례시 문화관광 해설지역",
+      "officialSourceUrl": "https://www.goyang.go.kr/visitgoyang/www/contents.do?key=125",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "밤가시초가",
+      "selectedKakaoPlaceId": "13099532",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/13099532",
+      "candidates": [
+        {
+          "place_name": "밤가시초가",
+          "id": "13099532",
+          "place_url": "https://place.map.kakao.com/13099532",
+          "address_name": "경기 고양시 일산동구 정발산동 1313",
+          "road_address_name": "경기 고양시 일산동구 햇살로105번길 36-7",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 생가,고택",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·고양시·일산동구·햇살로105번길·367·고양 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-160",
+      "name": "임진각관광지",
+      "address": "경기 파주시 문산읍 마정리 1325-2",
+      "latitude": 37.89002487572572,
+      "longitude": 126.74054022766998,
+      "kakaoSearchKeyword": "임진각관광지",
+      "officialSourceName": "파주시 문화관광포털",
+      "officialSourceUrl": "https://tour.paju.go.kr/user/tour/main/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "임진각관광지",
+      "selectedKakaoPlaceId": "8055098",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8055098",
+      "candidates": [
+        {
+          "place_name": "임진각관광지",
+          "id": "8055098",
+          "place_url": "https://place.map.kakao.com/8055098",
+          "address_name": "경기 파주시 문산읍 마정리 1325-2",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 전망대",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "임진각관광지 평화의종",
+          "id": "27446213",
+          "place_url": "https://place.map.kakao.com/27446213",
+          "address_name": "경기 파주시 문산읍 마정리 1325",
+          "road_address_name": "경기 파주시 문산읍 임진각로 148-57",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 97,
+          "score": 65
+        },
+        {
+          "place_name": "임진각관광지 자유의다리",
+          "id": "27446562",
+          "place_url": "https://place.map.kakao.com/27446562",
+          "address_name": "경기 파주시 문산읍 마정리 1400-6",
+          "road_address_name": "",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 146,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·문산읍·마정리·13252·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-161",
+      "name": "국립민속박물관 파주",
+      "address": "경기 파주시 탄현면 헤이리로 30",
+      "latitude": 37.786636820364585,
+      "longitude": 126.69390291419329,
+      "kakaoSearchKeyword": "국립민속박물관 파주",
+      "officialSourceName": "국립민속박물관 파주",
+      "officialSourceUrl": "https://www.nfm.go.kr/paju/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립민속박물관 파주",
+      "selectedKakaoPlaceId": "2028606569",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/2028606569",
+      "candidates": [
+        {
+          "place_name": "국립민속박물관 파주",
+          "id": "2028606569",
+          "place_url": "https://place.map.kakao.com/2028606569",
+          "address_name": "경기 파주시 탄현면 법흥리 1631-3",
+          "road_address_name": "경기 파주시 탄현면 헤이리로 30",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립민속박물관 파주어린이박물관",
+          "id": "1290732494",
+          "place_url": "https://place.map.kakao.com/1290732494",
+          "address_name": "경기 파주시 탄현면 법흥리 1631-3",
+          "road_address_name": "경기 파주시 탄현면 헤이리로 30",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 19,
+          "score": 79
+        },
+        {
+          "place_name": "국립민속박물관(파주관) 전기차충전소",
+          "id": "987414818",
+          "place_url": "https://place.map.kakao.com/987414818",
+          "address_name": "경기 파주시 탄현면 법흥리 1631-3",
+          "road_address_name": "경기 파주시 탄현면 헤이리로 30",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 75,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·탄현면·헤이리로·30·파주 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-162",
+      "name": "오두산통일전망대",
+      "address": "경기 파주시 탄현면 필승로 369",
+      "latitude": 37.773276135695816,
+      "longitude": 126.67722749484203,
+      "kakaoSearchKeyword": "오두산통일전망대",
+      "officialSourceName": "오두산통일전망대",
+      "officialSourceUrl": "https://www.jmd.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "오두산통일전망대",
+      "selectedKakaoPlaceId": "12458133",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12458133",
+      "candidates": [
+        {
+          "place_name": "오두산통일전망대",
+          "id": "12458133",
+          "place_url": "https://place.map.kakao.com/12458133",
+          "address_name": "경기 파주시 탄현면 성동리 659",
+          "road_address_name": "경기 파주시 탄현면 필승로 369",
+          "category_name": "여행 > 관광,명소 > 전망대",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "투썸플레이스 오두산통일전망대점",
+          "id": "158196926",
+          "place_url": "https://place.map.kakao.com/158196926",
+          "address_name": "경기 파주시 탄현면 성동리 659",
+          "road_address_name": "경기 파주시 탄현면 필승로 369",
+          "category_name": "음식점 > 카페 > 커피전문점 > 투썸플레이스",
+          "distance": 25,
+          "score": 65
+        },
+        {
+          "place_name": "카페 드 리오",
+          "id": "700060235",
+          "place_url": "https://place.map.kakao.com/700060235",
+          "address_name": "경기 파주시 탄현면 성동리 674",
+          "road_address_name": "경기 파주시 탄현면 성동로 17",
+          "category_name": "음식점 > 카페",
+          "distance": 1052,
+          "score": 20
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·탄현면·필승로·369·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-163",
+      "name": "파주장릉",
+      "address": "경기 파주시 탄현면 장릉로 90",
+      "latitude": 37.773186134260506,
+      "longitude": 126.70836771318385,
+      "kakaoSearchKeyword": "파주 장릉",
+      "officialSourceName": "국가유산청 궁능유적본부 파주 장릉",
+      "officialSourceUrl": "https://royal.khs.go.kr/ROYAL/contents/R707000000.do?ilIdx=20231030072524072586&schGroupCode=rtm",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "파주장릉",
+      "selectedKakaoPlaceId": "8052831",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8052831",
+      "candidates": [
+        {
+          "place_name": "파주장릉",
+          "id": "8052831",
+          "place_url": "https://place.map.kakao.com/8052831",
+          "address_name": "경기 파주시 탄현면 갈현리 산 25-16",
+          "road_address_name": "경기 파주시 탄현면 장릉로 90",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 릉,묘,총",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "파주장릉지정주차장",
+          "id": "2144824929",
+          "place_url": "https://place.map.kakao.com/2144824929",
+          "address_name": "경기 파주시 탄현면 갈현리 793-56",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 469,
+          "score": 57
+        },
+        {
+          "place_name": "파주장릉입구",
+          "id": "998251454",
+          "place_url": "https://place.map.kakao.com/998251454",
+          "address_name": "경기 파주시 탄현면 갈현리 산 24",
+          "road_address_name": "경기 파주시 탄현면 장릉로 90",
+          "category_name": "교통,수송 > 입출구",
+          "distance": 489,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·탄현면·장릉로·90·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-164",
+      "name": "벽초지수목원",
+      "address": "경기 파주시 광탄면 부흥로 242",
+      "latitude": 37.800770043447734,
+      "longitude": 126.87425849188982,
+      "kakaoSearchKeyword": "벽초지수목원",
+      "officialSourceName": "벽초지수목원",
+      "officialSourceUrl": "https://www.bcj.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "벽초지수목원",
+      "selectedKakaoPlaceId": "7892614",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7892614",
+      "candidates": [
+        {
+          "place_name": "벽초지수목원",
+          "id": "7892614",
+          "place_url": "https://place.map.kakao.com/7892614",
+          "address_name": "경기 파주시 광탄면 창만리 166-8",
+          "road_address_name": "경기 파주시 광탄면 부흥로 242",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "벽초지수목원 빛솔원",
+          "id": "17563589",
+          "place_url": "https://place.map.kakao.com/17563589",
+          "address_name": "경기 파주시 광탄면 창만리 166-8",
+          "road_address_name": "경기 파주시 광탄면 부흥로 242",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 56,
+          "score": 79
+        },
+        {
+          "place_name": "벽초지수목원 장수주목터널",
+          "id": "17562776",
+          "place_url": "https://place.map.kakao.com/17562776",
+          "address_name": "경기 파주시 광탄면 창만리 166-8",
+          "road_address_name": "경기 파주시 광탄면 부흥로 242",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 66,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·광탄면·부흥로·242·파주 일치 · 기존 좌표에서 0m · 카테고리 수목원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-165",
+      "name": "퍼스트가든",
+      "address": "경기 파주시 탑삭골길 260",
+      "latitude": 37.73208578534846,
+      "longitude": 126.79463099866948,
+      "kakaoSearchKeyword": "퍼스트가든",
+      "officialSourceName": "퍼스트가든",
+      "officialSourceUrl": "https://firstgarden.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "퍼스트가든",
+      "selectedKakaoPlaceId": "560886206",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/560886206",
+      "candidates": [
+        {
+          "place_name": "퍼스트가든",
+          "id": "560886206",
+          "place_url": "https://place.map.kakao.com/560886206",
+          "address_name": "경기 파주시 상지석동 1086-2",
+          "road_address_name": "경기 파주시 탑삭골길 260",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "퍼스트가든 삐아또고메",
+          "id": "1784512613",
+          "place_url": "https://place.map.kakao.com/1784512613",
+          "address_name": "경기 파주시 상지석동 1086-2",
+          "road_address_name": "경기 파주시 탑삭골길 260",
+          "category_name": "음식점 > 양식 > 이탈리안",
+          "distance": 12,
+          "score": 65
+        },
+        {
+          "place_name": "BMW차징스테이션 퍼스트가든 전기차충전소",
+          "id": "1493881522",
+          "place_url": "https://place.map.kakao.com/1493881522",
+          "address_name": "경기 파주시 조리읍 능안리 1085-2",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 125,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·탑삭골길·260·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-166",
+      "name": "미메시스 아트 뮤지엄",
+      "address": "경기 파주시 문발로 253",
+      "latitude": 37.716792732012834,
+      "longitude": 126.68891883457616,
+      "kakaoSearchKeyword": "미메시스 아트 뮤지엄",
+      "officialSourceName": "미메시스 아트 뮤지엄",
+      "officialSourceUrl": "https://www.mimesisartmuseum.co.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "미메시스 아트 뮤지엄",
+      "selectedKakaoPlaceId": "13272490",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/13272490",
+      "candidates": [
+        {
+          "place_name": "미메시스 아트 뮤지엄",
+          "id": "13272490",
+          "place_url": "https://place.map.kakao.com/13272490",
+          "address_name": "경기 파주시 문발동 499-3",
+          "road_address_name": "경기 파주시 문발로 253",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "미메시스 아트뮤지엄 주차장",
+          "id": "1749325377",
+          "place_url": "https://place.map.kakao.com/1749325377",
+          "address_name": "경기 파주시 문발동 499-3",
+          "road_address_name": "경기 파주시 문발로 253",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 22,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·문발로·253·파주 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-167",
+      "name": "파주놀이구름",
+      "address": "경기 파주시 와석순환로 500",
+      "latitude": 37.7228377519779,
+      "longitude": 126.75914810681131,
+      "kakaoSearchKeyword": "파주놀이구름",
+      "officialSourceName": "파주시 문화관광포털",
+      "officialSourceUrl": "https://tour.paju.go.kr/user/tour/main/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "파주놀이구름",
+      "selectedKakaoPlaceId": "1036875303",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1036875303",
+      "candidates": [
+        {
+          "place_name": "파주놀이구름",
+          "id": "1036875303",
+          "place_url": "https://place.map.kakao.com/1036875303",
+          "address_name": "경기 파주시 와동동 1412",
+          "road_address_name": "경기 파주시 와석순환로 500",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "파주놀이구름 제2주차장",
+          "id": "1288829996",
+          "place_url": "https://place.map.kakao.com/1288829996",
+          "address_name": "경기 파주시 와동동 1412",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 185,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·와석순환로·500·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-168",
+      "name": "파주장단콩웰빙마루",
+      "address": "경기 파주시 탄현면 필승로 396",
+      "latitude": 37.77723027716121,
+      "longitude": 126.68448176475518,
+      "kakaoSearchKeyword": "파주장단콩웰빙마루",
+      "officialSourceName": "파주장단콩웰빙마루",
+      "officialSourceUrl": "https://pajumaru.com/include/main.asp",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "파주장단콩웰빙마루",
+      "selectedKakaoPlaceId": "1428038156",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1428038156",
+      "candidates": [
+        {
+          "place_name": "파주장단콩웰빙마루",
+          "id": "1428038156",
+          "place_url": "https://place.map.kakao.com/1428038156",
+          "address_name": "경기 파주시 탄현면 성동리 678",
+          "road_address_name": "경기 파주시 탄현면 필승로 396",
+          "category_name": "여행 > 체험여행",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "파주장단콩웰빙마루 율곡홀",
+          "id": "634449352",
+          "place_url": "https://place.map.kakao.com/634449352",
+          "address_name": "경기 파주시 탄현면 성동리 678",
+          "road_address_name": "경기 파주시 탄현면 필승로 396",
+          "category_name": "서비스,산업 > 전문대행 > 공간대여",
+          "distance": 10,
+          "score": 65
+        },
+        {
+          "place_name": "해스밀래더테이블",
+          "id": "865565387",
+          "place_url": "https://place.map.kakao.com/865565387",
+          "address_name": "경기 파주시 탄현면 성동리 678",
+          "road_address_name": "경기 파주시 탄현면 필승로 396",
+          "category_name": "음식점 > 한식",
+          "distance": 9,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·파주시·탄현면·필승로·396·파주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-169",
+      "name": "애기봉평화생태공원",
+      "address": "경기 김포시 하성면 가금리 193-7",
+      "latitude": 37.74452419429401,
+      "longitude": 126.59481587631868,
+      "kakaoSearchKeyword": "애기봉평화생태공원",
+      "officialSourceName": "애기봉평화생태공원",
+      "officialSourceUrl": "https://aegibong.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "애기봉평화생태공원",
+      "selectedKakaoPlaceId": "1747926381",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1747926381",
+      "candidates": [
+        {
+          "place_name": "애기봉평화생태공원",
+          "id": "1747926381",
+          "place_url": "https://place.map.kakao.com/1747926381",
+          "address_name": "경기 김포시 하성면 가금리 193-7",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "애기봉평화생태공원 매표소",
+          "id": "902998021",
+          "place_url": "https://place.map.kakao.com/902998021",
+          "address_name": "경기 김포시 하성면 가금리 193-7",
+          "road_address_name": "",
+          "category_name": "서비스,산업 > 관리,운영 > 매표소",
+          "distance": 2,
+          "score": 65
+        },
+        {
+          "place_name": "애기봉평화생태공원 평화생태전시관",
+          "id": "1737872183",
+          "place_url": "https://place.map.kakao.com/1737872183",
+          "address_name": "경기 김포시 월곶면 조강리 1-9",
+          "road_address_name": "경기 김포시 월곶면 평화공원로 289",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 959,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·하성면·가금리·1937·김포 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-170",
+      "name": "김포함상공원",
+      "address": "경기 김포시 대곶면 대명항1로 110-36",
+      "latitude": 37.640616811384916,
+      "longitude": 126.53927279439155,
+      "kakaoSearchKeyword": "김포함상공원",
+      "officialSourceName": "김포시 문화관광 김포함상공원",
+      "officialSourceUrl": "https://www.gimpo.go.kr/culture/selectTourCntntsWebView.do?ctgry=&key=6808&pageIndex=2&pageUnit=8&searchCnd=all&tourNo=1030",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "김포함상공원",
+      "selectedKakaoPlaceId": "12601465",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12601465",
+      "candidates": [
+        {
+          "place_name": "김포함상공원",
+          "id": "12601465",
+          "place_url": "https://place.map.kakao.com/12601465",
+          "address_name": "경기 김포시 대곶면 대명리",
+          "road_address_name": "경기 김포시 대곶면 대명항1로 110-36",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·대곶면·대명항1로·11036·김포 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-171",
+      "name": "김포아트빌리지",
+      "address": "경기 김포시 모담공원로 170",
+      "latitude": 37.64654567355617,
+      "longitude": 126.6958894629414,
+      "kakaoSearchKeyword": "김포아트빌리지",
+      "officialSourceName": "김포문화재단 김포아트빌리지",
+      "officialSourceUrl": "https://www.gcf.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "김포아트빌리지",
+      "selectedKakaoPlaceId": "669705582",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/669705582",
+      "candidates": [
+        {
+          "place_name": "김포아트빌리지",
+          "id": "669705582",
+          "place_url": "https://place.map.kakao.com/669705582",
+          "address_name": "경기 김포시 운양동 1325-10",
+          "road_address_name": "경기 김포시 모담공원로 170",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "김포아트빌리지 아트센터",
+          "id": "1551842963",
+          "place_url": "https://place.map.kakao.com/1551842963",
+          "address_name": "경기 김포시 운양동 1325-10",
+          "road_address_name": "경기 김포시 모담공원로 170",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 34,
+          "score": 79
+        },
+        {
+          "place_name": "김포아트빌리지 야외공연장",
+          "id": "2016419508",
+          "place_url": "https://place.map.kakao.com/2016419508",
+          "address_name": "경기 김포시 운양동 1325-10",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설 > 공연장,연극극장",
+          "distance": 62,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·모담공원로·170·김포 일치 · 기존 좌표에서 0m · 카테고리 문화시설 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-172",
+      "name": "태산패밀리파크",
+      "address": "경기 김포시 하성면 하성로 585",
+      "latitude": 37.72463405362533,
+      "longitude": 126.62974488577734,
+      "kakaoSearchKeyword": "태산패밀리파크",
+      "officialSourceName": "김포시 문화관광 VR 파노라마",
+      "officialSourceUrl": "https://www.gimpo.go.kr/culture/contents.do?key=6812",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "태산패밀리파크",
+      "selectedKakaoPlaceId": "26348803",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26348803",
+      "candidates": [
+        {
+          "place_name": "태산패밀리파크",
+          "id": "26348803",
+          "place_url": "https://place.map.kakao.com/26348803",
+          "address_name": "경기 김포시 하성면 석탄리 1100",
+          "road_address_name": "경기 김포시 하성면 하성로 585",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "태산패밀리파크 물놀이장",
+          "id": "1665842915",
+          "place_url": "https://place.map.kakao.com/1665842915",
+          "address_name": "경기 김포시 하성면 석탄리 1100",
+          "road_address_name": "",
+          "category_name": "스포츠,레저 > 수영,수상 > 수영장",
+          "distance": 40,
+          "score": 65
+        },
+        {
+          "place_name": "태산패밀리파크 공예체험장",
+          "id": "490735309",
+          "place_url": "https://place.map.kakao.com/490735309",
+          "address_name": "경기 김포시 하성면 석탄리 491-39",
+          "road_address_name": "경기 김포시 하성면 하성로 585",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 44,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·하성면·하성로·585·김포 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-173",
+      "name": "김포국제조각공원",
+      "address": "경기 김포시 월곶면 용강로13번길 38",
+      "latitude": 37.7210689808731,
+      "longitude": 126.554023670891,
+      "kakaoSearchKeyword": "김포국제조각공원",
+      "officialSourceName": "김포시 문화관광 VR 파노라마",
+      "officialSourceUrl": "https://www.gimpo.go.kr/culture/contents.do?key=6812",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "김포국제조각공원",
+      "selectedKakaoPlaceId": "1893122565",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1893122565",
+      "candidates": [
+        {
+          "place_name": "김포국제조각공원",
+          "id": "1893122565",
+          "place_url": "https://place.map.kakao.com/1893122565",
+          "address_name": "경기 김포시 월곶면 고막리 435-14",
+          "road_address_name": "경기 김포시 월곶면 용강로13번길 38",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "김포국제조각공원 아트홀",
+          "id": "1161577239",
+          "place_url": "https://place.map.kakao.com/1161577239",
+          "address_name": "경기 김포시 월곶면 군하리 산 3-1",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설 > 전시관",
+          "distance": 213,
+          "score": 76
+        },
+        {
+          "place_name": "김포국제조각공원 주차장1",
+          "id": "20514092",
+          "place_url": "https://place.map.kakao.com/20514092",
+          "address_name": "경기 김포시 월곶면 고막리 435-14",
+          "road_address_name": "경기 김포시 월곶면 용강로13번길 38",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 87,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·월곶면·용강로13번길·38·김포 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-174",
+      "name": "김포한강야생조류생태공원",
+      "address": "경기 김포시 운양동 1246-1",
+      "latitude": 37.6574210165915,
+      "longitude": 126.688833534934,
+      "kakaoSearchKeyword": "김포한강야생조류생태공원",
+      "officialSourceName": "김포시 문화관광 안내지도",
+      "officialSourceUrl": "https://www.gimpo.go.kr/site/culture_2021/images/contents/tour_file01_20240529.pdf",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "김포한강야생조류생태공원",
+      "selectedKakaoPlaceId": "1770973566",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1770973566",
+      "candidates": [
+        {
+          "place_name": "김포한강야생조류생태공원",
+          "id": "1770973566",
+          "place_url": "https://place.map.kakao.com/1770973566",
+          "address_name": "경기 김포시 운양동 1246-1",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "김포한강야생조류생태공원 제1공영주차장",
+          "id": "269267950",
+          "place_url": "https://place.map.kakao.com/269267950",
+          "address_name": "경기 김포시 운양동 1246-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장 > 공영주차장",
+          "distance": 295,
+          "score": 62
+        },
+        {
+          "place_name": "김포한강야생조류생태공원 제2부설주차장",
+          "id": "1447646511",
+          "place_url": "https://place.map.kakao.com/1447646511",
+          "address_name": "경기 김포시 운양동 1246-1",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 816,
+          "score": 51
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·운양동·12461·김포 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-175",
+      "name": "덕포진교육박물관",
+      "address": "경기 김포시 대곶면 덕포진로103번길 90",
+      "latitude": 37.6506911925766,
+      "longitude": 126.538725566744,
+      "kakaoSearchKeyword": "덕포진교육박물관",
+      "officialSourceName": "김포시 문화관광 문화공간",
+      "officialSourceUrl": "https://www.gimpo.go.kr/culture/contents.do?key=6852",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "덕포진교육박물관",
+      "selectedKakaoPlaceId": "7836470",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7836470",
+      "candidates": [
+        {
+          "place_name": "덕포진교육박물관",
+          "id": "7836470",
+          "place_url": "https://place.map.kakao.com/7836470",
+          "address_name": "경기 김포시 대곶면 신안리 232-1",
+          "road_address_name": "경기 김포시 대곶면 덕포진로103번길 90",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·김포시·대곶면·덕포진로103번길·90·김포 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-176",
+      "name": "정약용유적지",
+      "address": "경기 남양주시 조안면 다산로747번길 11",
+      "latitude": 37.5168028535678,
+      "longitude": 127.299609535143,
+      "kakaoSearchKeyword": "정약용유적지",
+      "officialSourceName": "남양주시 문화관광",
+      "officialSourceUrl": "https://www.nyj.go.kr/culture/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "정약용유적지",
+      "selectedKakaoPlaceId": "26870903",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/26870903",
+      "candidates": [
+        {
+          "place_name": "정약용유적지",
+          "id": "26870903",
+          "place_url": "https://place.map.kakao.com/26870903",
+          "address_name": "경기 남양주시 조안면 능내리 95-4",
+          "road_address_name": "경기 남양주시 조안면 다산로747번길 11",
+          "category_name": "여행 > 관광,명소 > 문화유적",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "정약용유적지 다산기념관",
+          "id": "27076714",
+          "place_url": "https://place.map.kakao.com/27076714",
+          "address_name": "경기 남양주시 조안면 능내리 94",
+          "road_address_name": "경기 남양주시 조안면 다산로747번길 11",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 44,
+          "score": 79
+        },
+        {
+          "place_name": "정약용유적지 생가",
+          "id": "8222130",
+          "place_url": "https://place.map.kakao.com/8222130",
+          "address_name": "경기 남양주시 조안면 능내리 93-2",
+          "road_address_name": "경기 남양주시 조안면 다산로747번길 11",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 생가,고택",
+          "distance": 46,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·조안면·다산로747번길·11·남양주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-177",
+      "name": "실학박물관",
+      "address": "경기 남양주시 조안면 다산로747번길 16",
+      "latitude": 37.51596944356303,
+      "longitude": 127.30066720608136,
+      "kakaoSearchKeyword": "실학박물관",
+      "officialSourceName": "경기문화재단 실학박물관",
+      "officialSourceUrl": "https://silhak.ggcf.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "실학박물관",
+      "selectedKakaoPlaceId": "9194877",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9194877",
+      "candidates": [
+        {
+          "place_name": "실학박물관",
+          "id": "9194877",
+          "place_url": "https://place.map.kakao.com/9194877",
+          "address_name": "경기 남양주시 조안면 능내리 27-1",
+          "road_address_name": "경기 남양주시 조안면 다산로747번길 16",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "실학박물관도서관",
+          "id": "21813394",
+          "place_url": "https://place.map.kakao.com/21813394",
+          "address_name": "경기 남양주시 조안면 능내리 27-1",
+          "road_address_name": "경기 남양주시 조안면 다산로747번길 16",
+          "category_name": "교육,학문 > 학습시설 > 도서관 > 작은도서관",
+          "distance": 11,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·조안면·다산로747번길·16·남양주 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-178",
+      "name": "남양주시립박물관",
+      "address": "경기 남양주시 와부읍 팔당로 121",
+      "latitude": 37.546417976117,
+      "longitude": 127.244361404987,
+      "kakaoSearchKeyword": "남양주시립박물관",
+      "officialSourceName": "남양주시립박물관",
+      "officialSourceUrl": "https://www.nyj.go.kr/museum/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "남양주시립박물관",
+      "selectedKakaoPlaceId": "1552402156",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/1552402156",
+      "candidates": [
+        {
+          "place_name": "남양주시립박물관",
+          "id": "1552402156",
+          "place_url": "https://place.map.kakao.com/1552402156",
+          "address_name": "경기 남양주시 와부읍 팔당리 237-3",
+          "road_address_name": "경기 남양주시 와부읍 팔당로 121",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "와부 제5공영(시립박물관 뒤) 전기차충전소",
+          "id": "1158269086",
+          "place_url": "https://place.map.kakao.com/1158269086",
+          "address_name": "경기 남양주시 와부읍 팔당리 243-9",
+          "road_address_name": "경기 남양주시 와부읍 팔당로 123",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 64,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·와부읍·팔당로·121·남양주 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-179",
+      "name": "남양주 어린이비전센터",
+      "address": "경기 남양주시 진접읍 금곡리 1077",
+      "latitude": 37.717640499508214,
+      "longitude": 127.19639733726765,
+      "kakaoSearchKeyword": "남양주 어린이비전센터",
+      "officialSourceName": "남양주도시공사 어린이비전센터",
+      "officialSourceUrl": "https://www.ncuc.or.kr/children",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "어린이비전센터",
+      "selectedKakaoPlaceId": "19782634",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/19782634",
+      "candidates": [
+        {
+          "place_name": "어린이비전센터",
+          "id": "19782634",
+          "place_url": "https://place.map.kakao.com/19782634",
+          "address_name": "경기 남양주시 진접읍 금곡리 1077",
+          "road_address_name": "",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "어린이비전센터 생활안전체험실",
+          "id": "2080627190",
+          "place_url": "https://place.map.kakao.com/2080627190",
+          "address_name": "경기 남양주시 진접읍 금곡리 1077",
+          "road_address_name": "",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 5,
+          "score": 65
+        },
+        {
+          "place_name": "어린이비전센터 스마트 로봇 코딩스쿨",
+          "id": "453319852",
+          "place_url": "https://place.map.kakao.com/453319852",
+          "address_name": "경기 남양주시 진접읍 금곡리 1077",
+          "road_address_name": "경기 남양주시 진접읍 해밀예당1로 96",
+          "category_name": "교육,학문 > 교육단체 > 체험학습장",
+          "distance": 7,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·진접읍·금곡리·1077·남양주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-180",
+      "name": "물맑음수목원",
+      "address": "경기 남양주시 수동면 지둔로307번길 47-4",
+      "latitude": 37.70580377724206,
+      "longitude": 127.29560132862099,
+      "kakaoSearchKeyword": "물맑음수목원",
+      "officialSourceName": "남양주시 문화관광",
+      "officialSourceUrl": "https://www.nyj.go.kr/culture/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "물맑음수목원",
+      "selectedKakaoPlaceId": "25118890",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25118890",
+      "candidates": [
+        {
+          "place_name": "물맑음수목원",
+          "id": "25118890",
+          "place_url": "https://place.map.kakao.com/25118890",
+          "address_name": "경기 남양주시 수동면 지둔리 129",
+          "road_address_name": "경기 남양주시 수동면 지둔로307번길 47-4",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "물맑음수목원 숲문화센터",
+          "id": "1005318575",
+          "place_url": "https://place.map.kakao.com/1005318575",
+          "address_name": "경기 남양주시 수동면 지둔리 산 129",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 202,
+          "score": 76
+        },
+        {
+          "place_name": "E1 남양주 물맑음수목원 전기차충전소",
+          "id": "716118241",
+          "place_url": "https://place.map.kakao.com/716118241",
+          "address_name": "경기 남양주시 수동면 지둔리 산 129",
+          "road_address_name": "경기 남양주시 수동면 지둔로307번길 47-4",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 114,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·수동면·지둔로307번길·474·남양주 일치 · 기존 좌표에서 0m · 카테고리 수목원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-181",
+      "name": "물의정원",
+      "address": "경기 남양주시 조안면 북한강로 398",
+      "latitude": 37.5568535870821,
+      "longitude": 127.314994126866,
+      "kakaoSearchKeyword": "물의정원",
+      "officialSourceName": "남양주시 문화관광 물의정원",
+      "officialSourceUrl": "https://www.nyj.go.kr/culture/viewTnResrceU.do?cpn=3&key=308&rcpp=6&resrceNo=365&si1=1&si2=26",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "물의정원",
+      "selectedKakaoPlaceId": "25672066",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/25672066",
+      "candidates": [
+        {
+          "place_name": "물의정원",
+          "id": "25672066",
+          "place_url": "https://place.map.kakao.com/25672066",
+          "address_name": "경기 남양주시 조안면 진중리 95",
+          "road_address_name": "경기 남양주시 조안면 북한강로 398",
+          "category_name": "여행 > 공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "물의정원 연꽃군락지",
+          "id": "342888616",
+          "place_url": "https://place.map.kakao.com/342888616",
+          "address_name": "경기 남양주시 조안면 진중리 95-1",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 125,
+          "score": 76
+        },
+        {
+          "place_name": "물의정원 하트존",
+          "id": "976223499",
+          "place_url": "https://place.map.kakao.com/976223499",
+          "address_name": "경기 남양주시 조안면 송촌리 531-2",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 587,
+          "score": 71
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·조안면·북한강로·398·남양주 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-182",
+      "name": "다산생태공원",
+      "address": "경기 남양주시 조안면 다산로 767",
+      "latitude": 37.5137588171133,
+      "longitude": 127.297651874363,
+      "kakaoSearchKeyword": "다산생태공원",
+      "officialSourceName": "남양주시 문화관광",
+      "officialSourceUrl": "https://www.nyj.go.kr/culture/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "다산생태공원",
+      "selectedKakaoPlaceId": "414029752",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/414029752",
+      "candidates": [
+        {
+          "place_name": "다산생태공원",
+          "id": "414029752",
+          "place_url": "https://place.map.kakao.com/414029752",
+          "address_name": "경기 남양주시 조안면 능내리 56-9",
+          "road_address_name": "경기 남양주시 조안면 다산로 767",
+          "category_name": "여행 > 공원 > 도시근린공원",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "다산생태공원 실학마당",
+          "id": "1759379114",
+          "place_url": "https://place.map.kakao.com/1759379114",
+          "address_name": "경기 남양주시 조안면 능내리 56-33",
+          "road_address_name": "",
+          "category_name": "여행 > 공원시설물",
+          "distance": 91,
+          "score": 79
+        },
+        {
+          "place_name": "다산생태공원 수생식물원",
+          "id": "1087823104",
+          "place_url": "https://place.map.kakao.com/1087823104",
+          "address_name": "경기 남양주시 조안면 능내리 산 81-2",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 245,
+          "score": 76
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·조안면·다산로·767·남양주 일치 · 기존 좌표에서 0m · 카테고리 공원 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-183",
+      "name": "우석헌자연사박물관",
+      "address": "경기 남양주시 진접읍 금강로 1095",
+      "latitude": 37.69780782022394,
+      "longitude": 127.16103332090664,
+      "kakaoSearchKeyword": "우석헌자연사박물관",
+      "officialSourceName": "남양주시 문화관광 우석헌자연사박물관",
+      "officialSourceUrl": "https://www.nyj.go.kr/culture/viewTnResrceU.do?cpn=65&key=307&resrceNo=567",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "우석헌자연사박물관",
+      "selectedKakaoPlaceId": "8060517",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8060517",
+      "candidates": [
+        {
+          "place_name": "우석헌자연사박물관",
+          "id": "8060517",
+          "place_url": "https://place.map.kakao.com/8060517",
+          "address_name": "경기 남양주시 진접읍 내각리 589",
+          "road_address_name": "경기 남양주시 진접읍 금강로 1095",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "우석헌자연사박물관 주차장",
+          "id": "2037972850",
+          "place_url": "https://place.map.kakao.com/2037972850",
+          "address_name": "경기 남양주시 진접읍 내각리 589",
+          "road_address_name": "경기 남양주시 진접읍 금강로 1095",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 22,
+          "score": 65
+        },
+        {
+          "place_name": "우석헌자연사박물관 전기차충전소",
+          "id": "1761737742",
+          "place_url": "https://place.map.kakao.com/1761737742",
+          "address_name": "경기 남양주시 진접읍 내각리 589",
+          "road_address_name": "경기 남양주시 진접읍 금강로 1095",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 31,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·진접읍·금강로·1095·남양주 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-184",
+      "name": "홍릉과 유릉",
+      "address": "경기 남양주시 홍유릉로 352-1",
+      "latitude": 37.631409826408,
+      "longitude": 127.208908320407,
+      "kakaoSearchKeyword": "남양주 홍릉과 유릉",
+      "officialSourceName": "국가유산청 궁능유적본부 홍유릉",
+      "officialSourceUrl": "https://royal.khs.go.kr/ROYAL/contents/R707000000.do?ilIdx=20231030071225254790&schGroupCode=rtm",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "홍릉과유릉",
+      "selectedKakaoPlaceId": "8161990",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8161990",
+      "candidates": [
+        {
+          "place_name": "홍릉과유릉",
+          "id": "8161990",
+          "place_url": "https://place.map.kakao.com/8161990",
+          "address_name": "경기 남양주시 금곡동 141-1",
+          "road_address_name": "경기 남양주시 홍유릉로 352-1",
+          "category_name": "여행 > 관광,명소 > 문화유적 > 릉,묘,총",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "홍릉과유릉 관람객 주차장",
+          "id": "813846722",
+          "place_url": "https://place.map.kakao.com/813846722",
+          "address_name": "경기 남양주시 금곡동 437-2",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 304,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·홍유릉로·3521·남양주 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-185",
+      "name": "모란미술관",
+      "address": "경기 남양주시 화도읍 경춘로2110번길 8",
+      "latitude": 37.65053823724767,
+      "longitude": 127.32428705650166,
+      "kakaoSearchKeyword": "모란미술관",
+      "officialSourceName": "모란미술관",
+      "officialSourceUrl": "https://www.moranmuseum.org/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "모란미술관",
+      "selectedKakaoPlaceId": "7868766",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7868766",
+      "candidates": [
+        {
+          "place_name": "모란미술관",
+          "id": "7868766",
+          "place_url": "https://place.map.kakao.com/7868766",
+          "address_name": "경기 남양주시 화도읍 월산리 246-1",
+          "road_address_name": "경기 남양주시 화도읍 경춘로2110번길 8",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "모란미술관 모란아트하우스",
+          "id": "798784518",
+          "place_url": "https://place.map.kakao.com/798784518",
+          "address_name": "경기 남양주시 화도읍 월산리 246-1",
+          "road_address_name": "경기 남양주시 화도읍 경춘로2110번길 8",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 1,
+          "score": 79
+        },
+        {
+          "place_name": "모란미술관 실내전시실",
+          "id": "17578090",
+          "place_url": "https://place.map.kakao.com/17578090",
+          "address_name": "경기 남양주시 화도읍 월산리 246-1",
+          "road_address_name": "경기 남양주시 화도읍 경춘로2110번길 8",
+          "category_name": "서비스,산업 > 관리,운영 > 문화시설관리운영",
+          "distance": 2,
+          "score": 79
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·남양주시·화도읍·경춘로2110번길·남양주 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-186",
+      "name": "자라섬",
+      "address": "경기 가평군 가평읍 달전리 30",
+      "latitude": 37.8157523632236,
+      "longitude": 127.52794671299,
+      "kakaoSearchKeyword": "자라섬",
+      "officialSourceName": "가평군시설관리공단 자라섬정원",
+      "officialSourceUrl": "https://www.gpfmc.or.kr/page/selectPage.do?muNo=707",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "자라섬",
+      "selectedKakaoPlaceId": "8059024",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8059024",
+      "candidates": [
+        {
+          "place_name": "자라섬",
+          "id": "8059024",
+          "place_url": "https://place.map.kakao.com/8059024",
+          "address_name": "경기 가평군 가평읍 달전리 30",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소 > 섬 > 섬(내륙)",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "자라섬 꽃테마공원",
+          "id": "685104409",
+          "place_url": "https://place.map.kakao.com/685104409",
+          "address_name": "경기 가평군 가평읍 달전리 30",
+          "road_address_name": "",
+          "category_name": "여행 > 공원",
+          "distance": 39,
+          "score": 79
+        },
+        {
+          "place_name": "자라섬재즈페스티벌",
+          "id": "27368536",
+          "place_url": "https://place.map.kakao.com/27368536",
+          "address_name": "경기 가평군 가평읍 달전리 30",
+          "road_address_name": "",
+          "category_name": "이슈 > 이벤트 > 페스티벌",
+          "distance": 28,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·가평읍·달전리·30·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-187",
+      "name": "잣향기푸른숲",
+      "address": "경기 가평군 상면 축령로 289-146",
+      "latitude": 37.76955408318467,
+      "longitude": 127.33287811389073,
+      "kakaoSearchKeyword": "경기도 잣향기푸른숲",
+      "officialSourceName": "경기도산림환경연구소 잣향기푸른숲",
+      "officialSourceUrl": "https://forest.gg.go.kr/forest/10311",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "잣향기푸른숲",
+      "selectedKakaoPlaceId": "21878880",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/21878880",
+      "candidates": [
+        {
+          "place_name": "잣향기푸른숲",
+          "id": "21878880",
+          "place_url": "https://place.map.kakao.com/21878880",
+          "address_name": "경기 가평군 상면 행현리 산 92-1",
+          "road_address_name": "경기 가평군 상면 축령로 289-146",
+          "category_name": "여행 > 관광,명소 > 숲",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "경기도잣향기푸른숲 무장애나눔길",
+          "id": "1815638859",
+          "place_url": "https://place.map.kakao.com/1815638859",
+          "address_name": "경기 가평군 상면 행현리 산 92-1",
+          "road_address_name": "경기 가평군 상면 축령로 289-146",
+          "category_name": "여행 > 관광,명소 > 도보여행 > 무장애나눔길",
+          "distance": 263,
+          "score": 62
+        },
+        {
+          "place_name": "잣향기푸른숲 매표소",
+          "id": "1572281574",
+          "place_url": "https://place.map.kakao.com/1572281574",
+          "address_name": "경기 가평군 상면 행현리 산 92-1",
+          "road_address_name": "경기 가평군 상면 축령로 289-146",
+          "category_name": "서비스,산업 > 관리,운영 > 매표소",
+          "distance": 347,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·상면·축령로·289146·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-188",
+      "name": "가평레일파크",
+      "address": "경기 가평군 가평읍 장터길 14",
+      "latitude": 37.828970633317155,
+      "longitude": 127.51584373209471,
+      "kakaoSearchKeyword": "가평레일파크",
+      "officialSourceName": "강촌레일파크 가평레일파크",
+      "officialSourceUrl": "https://www.railpark.co.kr/course/gapyeong/schedule",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "가평레일파크",
+      "selectedKakaoPlaceId": "27092396",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/27092396",
+      "candidates": [
+        {
+          "place_name": "가평레일파크",
+          "id": "27092396",
+          "place_url": "https://place.map.kakao.com/27092396",
+          "address_name": "경기 가평군 가평읍 읍내리 395-1",
+          "road_address_name": "경기 가평군 가평읍 장터길 14",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "CU 가평레일파크점",
+          "id": "1641814903",
+          "place_url": "https://place.map.kakao.com/1641814903",
+          "address_name": "경기 가평군 가평읍 읍내리 476-4",
+          "road_address_name": "경기 가평군 가평읍 연인길 2",
+          "category_name": "가정,생활 > 편의점 > CU",
+          "distance": 156,
+          "score": 62
+        },
+        {
+          "place_name": "리파정형외과의원",
+          "id": "869113705",
+          "place_url": "https://place.map.kakao.com/869113705",
+          "address_name": "경기 가평군 가평읍 읍내리 339-1",
+          "road_address_name": "경기 가평군 가평읍 가화로 97-2",
+          "category_name": "의료,건강 > 병원 > 정형외과",
+          "distance": 192,
+          "score": 31
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·가평읍·장터길·14·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-189",
+      "name": "가평사계절썰매장",
+      "address": "경기 가평군 상면 깃대봉길 5-20",
+      "latitude": 37.7548649549807,
+      "longitude": 127.402168724139,
+      "kakaoSearchKeyword": "가평사계절썰매장",
+      "officialSourceName": "가평군시설관리공단",
+      "officialSourceUrl": "https://www.gpfmc.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "가평사계절썰매장",
+      "selectedKakaoPlaceId": "10115400",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/10115400",
+      "candidates": [
+        {
+          "place_name": "가평사계절썰매장",
+          "id": "10115400",
+          "place_url": "https://place.map.kakao.com/10115400",
+          "address_name": "경기 가평군 상면 덕현리 159-1",
+          "road_address_name": "경기 가평군 상면 깃대봉길 5-20",
+          "category_name": "스포츠,레저 > 스포츠시설 > 눈썰매장",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·상면·깃대봉길·520·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-190",
+      "name": "음악역1939",
+      "address": "경기 가평군 가평읍 석봉로 100",
+      "latitude": 37.82388637902987,
+      "longitude": 127.51341746341137,
+      "kakaoSearchKeyword": "음악역1939",
+      "officialSourceName": "가평군 음악역1939",
+      "officialSourceUrl": "https://music1939.gp.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "음악역1939",
+      "selectedKakaoPlaceId": "330641640",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/330641640",
+      "candidates": [
+        {
+          "place_name": "음악역1939",
+          "id": "330641640",
+          "place_url": "https://place.map.kakao.com/330641640",
+          "address_name": "경기 가평군 가평읍 대곡리 693",
+          "road_address_name": "경기 가평군 가평읍 석봉로 100",
+          "category_name": "문화,예술 > 공연,연극",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "음악역1939 M스테이션",
+          "id": "1189936399",
+          "place_url": "https://place.map.kakao.com/1189936399",
+          "address_name": "경기 가평군 가평읍 대곡리 163-7",
+          "road_address_name": "경기 가평군 가평읍 석봉로 100",
+          "category_name": "문화,예술 > 문화시설",
+          "distance": 160,
+          "score": 76
+        },
+        {
+          "place_name": "음악역1939 주차장",
+          "id": "775150665",
+          "place_url": "https://place.map.kakao.com/775150665",
+          "address_name": "경기 가평군 가평읍 대곡리 148-3",
+          "road_address_name": "경기 가평군 가평읍 석봉로 100",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 145,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·가평읍·석봉로·100·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-191",
+      "name": "국립유명산자연휴양림",
+      "address": "경기 가평군 설악면 유명산길 79-53",
+      "latitude": 37.59319424877421,
+      "longitude": 127.49119800254334,
+      "kakaoSearchKeyword": "국립유명산자연휴양림",
+      "officialSourceName": "숲나들e 국립유명산자연휴양림",
+      "officialSourceUrl": "https://www.foresttrip.go.kr/pot/fi/dr/selectDrctnsDtlView.do?hmpgId=0101&menuId=002007",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립유명산자연휴양림",
+      "selectedKakaoPlaceId": "8033003",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/8033003",
+      "candidates": [
+        {
+          "place_name": "국립유명산자연휴양림",
+          "id": "8033003",
+          "place_url": "https://place.map.kakao.com/8033003",
+          "address_name": "경기 가평군 설악면 가일리 산 35",
+          "road_address_name": "경기 가평군 설악면 유명산길 79-53",
+          "category_name": "여행 > 관광,명소 > 자연휴양림",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립유명산자연휴양림 자생식물원",
+          "id": "21682464",
+          "place_url": "https://place.map.kakao.com/21682464",
+          "address_name": "경기 가평군 설악면 가일리 산 35",
+          "road_address_name": "경기 가평군 설악면 유명산길 79-53",
+          "category_name": "여행 > 관광,명소 > 수목원,식물원",
+          "distance": 205,
+          "score": 76
+        },
+        {
+          "place_name": "국립유명산자연휴양림 관리소",
+          "id": "27018117",
+          "place_url": "https://place.map.kakao.com/27018117",
+          "address_name": "경기 가평군 설악면 가일리 산 35",
+          "road_address_name": "경기 가평군 설악면 유명산길 79-53",
+          "category_name": "서비스,산업 > 관리,운영 > 관광지관리운영",
+          "distance": 2,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·설악면·유명산길·7953·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-192",
+      "name": "칼봉산자연휴양림",
+      "address": "경기 가평군 가평읍 경반안로 454",
+      "latitude": 37.8372735819531,
+      "longitude": 127.464814945897,
+      "kakaoSearchKeyword": "칼봉산자연휴양림",
+      "officialSourceName": "가평군시설관리공단",
+      "officialSourceUrl": "https://www.gpfmc.or.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "칼봉산자연휴양림",
+      "selectedKakaoPlaceId": "9490110",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9490110",
+      "candidates": [
+        {
+          "place_name": "칼봉산자연휴양림",
+          "id": "9490110",
+          "place_url": "https://place.map.kakao.com/9490110",
+          "address_name": "경기 가평군 가평읍 경반리 산 137",
+          "road_address_name": "경기 가평군 가평읍 경반안로 454",
+          "category_name": "여행 > 관광,명소 > 자연휴양림",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "칼봉산자연휴양림 관리사무소",
+          "id": "17575939",
+          "place_url": "https://place.map.kakao.com/17575939",
+          "address_name": "경기 가평군 가평읍 경반리 산 137",
+          "road_address_name": "경기 가평군 가평읍 경반안로 454",
+          "category_name": "서비스,산업 > 관리,운영 > 공원관리운영",
+          "distance": 103,
+          "score": 76
+        },
+        {
+          "place_name": "칼봉산자연휴양림 목련1",
+          "id": "17579903",
+          "place_url": "https://place.map.kakao.com/17579903",
+          "address_name": "경기 가평군 가평읍 경반리 산 136",
+          "road_address_name": "경기 가평군 가평읍 경반안로 454",
+          "category_name": "여행 > 숙박 > 펜션",
+          "distance": 40,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·가평군·가평읍·경반안로·454·가평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-193",
+      "name": "두물머리",
+      "address": "경기 양평군 양서면 양수리",
+      "latitude": 37.5328127891601,
+      "longitude": 127.315829778049,
+      "kakaoSearchKeyword": "두물머리",
+      "officialSourceName": "양평관광 두물머리",
+      "officialSourceUrl": "https://tour.yp21.go.kr/www/selectTourCntntsWebView.do?key=69&tourNo=171",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "두물머리",
+      "selectedKakaoPlaceId": "7845373",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/7845373",
+      "candidates": [
+        {
+          "place_name": "두물머리",
+          "id": "7845373",
+          "place_url": "https://place.map.kakao.com/7845373",
+          "address_name": "경기 양평군 양서면 양수리",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "두물머리나루터",
+          "id": "27091749",
+          "place_url": "https://place.map.kakao.com/27091749",
+          "address_name": "경기 양평군 양서면 양수리 711-1",
+          "road_address_name": "",
+          "category_name": "여행 > 관광,명소",
+          "distance": 14,
+          "score": 65
+        },
+        {
+          "place_name": "두물머리관광안내소",
+          "id": "692742029",
+          "place_url": "https://place.map.kakao.com/692742029",
+          "address_name": "경기 양평군 양서면 양수리 776-1",
+          "road_address_name": "경기 양평군 양서면 두물머리길 119",
+          "category_name": "여행 > 관광,명소 > 관광안내소",
+          "distance": 123,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·양서면·양수리·양평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-194",
+      "name": "양평곤충박물관",
+      "address": "경기 양평군 옥천면 경강로 1496",
+      "latitude": 37.50923614651378,
+      "longitude": 127.44916694245539,
+      "kakaoSearchKeyword": "양평곤충박물관",
+      "officialSourceName": "양평 뮤지엄허브",
+      "officialSourceUrl": "https://www.yp21.go.kr/museumhub/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "양평곤충박물관",
+      "selectedKakaoPlaceId": "18276489",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/18276489",
+      "candidates": [
+        {
+          "place_name": "양평곤충박물관",
+          "id": "18276489",
+          "place_url": "https://place.map.kakao.com/18276489",
+          "address_name": "경기 양평군 옥천면 옥천리 903-15",
+          "road_address_name": "경기 양평군 옥천면 경강로 1496",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·옥천면·경강로·1496·양평 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-195",
+      "name": "양평군립미술관",
+      "address": "경기 양평군 양평읍 문화복지길 2",
+      "latitude": 37.497169009905974,
+      "longitude": 127.48408296051531,
+      "kakaoSearchKeyword": "양평군립미술관",
+      "officialSourceName": "양평 뮤지엄허브",
+      "officialSourceUrl": "https://www.yp21.go.kr/museumhub/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "양평군립미술관",
+      "selectedKakaoPlaceId": "17025360",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/17025360",
+      "candidates": [
+        {
+          "place_name": "양평군립미술관",
+          "id": "17025360",
+          "place_url": "https://place.map.kakao.com/17025360",
+          "address_name": "경기 양평군 양평읍 양근리 543",
+          "road_address_name": "경기 양평군 양평읍 문화복지길 2",
+          "category_name": "문화,예술 > 문화시설 > 미술관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "양평군평생학습센터 전기차충전소",
+          "id": "456504177",
+          "place_url": "https://place.map.kakao.com/456504177",
+          "address_name": "경기 양평군 양평읍 양근리 545-2",
+          "road_address_name": "경기 양평군 양평읍 마유산로 1",
+          "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+          "distance": 56,
+          "score": 34
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·양평읍·문화복지길·양평 일치 · 기존 좌표에서 0m · 카테고리 미술관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-196",
+      "name": "황순원문학촌 소나기마을",
+      "address": "경기 양평군 서종면 소나기마을길 24",
+      "latitude": 37.59491787076324,
+      "longitude": 127.37788082206232,
+      "kakaoSearchKeyword": "황순원문학촌 소나기마을",
+      "officialSourceName": "양평 뮤지엄허브",
+      "officialSourceUrl": "https://www.yp21.go.kr/museumhub/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "황순원문학촌 소나기마을",
+      "selectedKakaoPlaceId": "9917052",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/9917052",
+      "candidates": [
+        {
+          "place_name": "황순원문학촌 소나기마을",
+          "id": "9917052",
+          "place_url": "https://place.map.kakao.com/9917052",
+          "address_name": "경기 양평군 서종면 수능리 산 74",
+          "road_address_name": "경기 양평군 서종면 소나기마을길 24",
+          "category_name": "여행 > 체험여행 > 정보화,체험마을",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "황순원 문학촌 소나기마을 제1주차장",
+          "id": "1056541988",
+          "place_url": "https://place.map.kakao.com/1056541988",
+          "address_name": "경기 양평군 서종면 수능리 427",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 162,
+          "score": 62
+        },
+        {
+          "place_name": "황순원 문학촌 소나기마을 제2주차장",
+          "id": "67365482",
+          "place_url": "https://place.map.kakao.com/67365482",
+          "address_name": "경기 양평군 서종면 수능리 427",
+          "road_address_name": "",
+          "category_name": "교통,수송 > 교통시설 > 주차장",
+          "distance": 256,
+          "score": 62
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·서종면·소나기마을길·24·양평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-197",
+      "name": "몽양기념관",
+      "address": "경기 양평군 양서면 몽양길 66",
+      "latitude": 37.530514186431404,
+      "longitude": 127.3736061218034,
+      "kakaoSearchKeyword": "몽양여운형기념관",
+      "officialSourceName": "양평 뮤지엄허브",
+      "officialSourceUrl": "https://www.yp21.go.kr/museumhub/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "몽양기념관",
+      "selectedKakaoPlaceId": "14933024",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/14933024",
+      "candidates": [
+        {
+          "place_name": "몽양기념관",
+          "id": "14933024",
+          "place_url": "https://place.map.kakao.com/14933024",
+          "address_name": "경기 양평군 양서면 신원리 623-2",
+          "road_address_name": "경기 양평군 양서면 몽양길 66",
+          "category_name": "문화,예술 > 문화시설 > 기념관",
+          "distance": 0,
+          "score": 100
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·양서면·몽양길·66·양평 일치 · 기존 좌표에서 0m · 카테고리 기념관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-198",
+      "name": "양평 친환경농업박물관",
+      "address": "경기 양평군 용문면 용문산로 670",
+      "latitude": 37.5476340064315,
+      "longitude": 127.581095525002,
+      "kakaoSearchKeyword": "양평친환경농업박물관",
+      "officialSourceName": "양평 뮤지엄허브",
+      "officialSourceUrl": "https://www.yp21.go.kr/museumhub/index.do",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "양평 친환경농업박물관",
+      "selectedKakaoPlaceId": "12678366",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/12678366",
+      "candidates": [
+        {
+          "place_name": "양평 친환경농업박물관",
+          "id": "12678366",
+          "place_url": "https://place.map.kakao.com/12678366",
+          "address_name": "경기 양평군 용문면 신점리 508-10",
+          "road_address_name": "경기 양평군 용문면 용문산로 670",
+          "category_name": "문화,예술 > 문화시설 > 박물관",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "양평친환경농업박물관 자연요리연구소",
+          "id": "18643221",
+          "place_url": "https://place.map.kakao.com/18643221",
+          "address_name": "경기 양평군 용문면 신점리 508-9",
+          "road_address_name": "경기 양평군 용문면 용문산로 670",
+          "category_name": "교육,학문 > 연구소",
+          "distance": 2,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·용문면·용문산로·670·양평 일치 · 기존 좌표에서 0m · 카테고리 박물관 일치 · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-199",
+      "name": "쉬자파크",
+      "address": "경기 양평군 양평읍 쉬자파크길 193",
+      "latitude": 37.5113230738195,
+      "longitude": 127.533182988672,
+      "kakaoSearchKeyword": "쉬자파크",
+      "officialSourceName": "양평관광",
+      "officialSourceUrl": "https://tour.yp21.go.kr/",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "쉬자파크",
+      "selectedKakaoPlaceId": "23580186",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/23580186",
+      "candidates": [
+        {
+          "place_name": "쉬자파크",
+          "id": "23580186",
+          "place_url": "https://place.map.kakao.com/23580186",
+          "address_name": "경기 양평군 양평읍 백안리 45-6",
+          "road_address_name": "경기 양평군 양평읍 쉬자파크길 193",
+          "category_name": "여행 > 관광,명소 > 테마파크",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "쉬자파크 치유의집",
+          "id": "1312937441",
+          "place_url": "https://place.map.kakao.com/1312937441",
+          "address_name": "경기 양평군 양평읍 백안리 산 68-7",
+          "road_address_name": "경기 양평군 양평읍 쉬자파크길 223",
+          "category_name": "여행 > 숙박 > 펜션",
+          "distance": 275,
+          "score": 62
+        },
+        {
+          "place_name": "쉬자파크 초가원",
+          "id": "248295629",
+          "place_url": "https://place.map.kakao.com/248295629",
+          "address_name": "경기 양평군 양평읍 백안리 산 68-6",
+          "road_address_name": "경기 양평군 양평읍 쉬자파크길 263",
+          "category_name": "여행 > 숙박",
+          "distance": 393,
+          "score": 57
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·양평읍·쉬자파크길·193·양평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    },
+    {
+      "id": "place-200",
+      "name": "국립산음자연휴양림",
+      "address": "경기 양평군 단월면 고북길 347",
+      "latitude": 37.596130331499324,
+      "longitude": 127.57520838224299,
+      "kakaoSearchKeyword": "국립산음자연휴양림",
+      "officialSourceName": "숲나들e 국립산음자연휴양림",
+      "officialSourceUrl": "https://www.foresttrip.go.kr/indvz/main.do?hmpgId=0103&pageId=010303",
+      "verifiedAt": "2026-09-09",
+      "selectedKakaoPlaceName": "국립산음자연휴양림",
+      "selectedKakaoPlaceId": "24058442",
+      "selectedKakaoPlaceUrl": "https://place.map.kakao.com/24058442",
+      "candidates": [
+        {
+          "place_name": "국립산음자연휴양림",
+          "id": "24058442",
+          "place_url": "https://place.map.kakao.com/24058442",
+          "address_name": "경기 양평군 단월면 산음리 산 124",
+          "road_address_name": "경기 양평군 단월면 고북길 347",
+          "category_name": "여행 > 관광,명소 > 자연휴양림",
+          "distance": 0,
+          "score": 100
+        },
+        {
+          "place_name": "국립산음자연휴양림 산림문화휴양관",
+          "id": "1914593105",
+          "place_url": "https://place.map.kakao.com/1914593105",
+          "address_name": "경기 양평군 단월면 산음리 산 124",
+          "road_address_name": "경기 양평군 단월면 고북길 347",
+          "category_name": "여행 > 관광지부속시설",
+          "distance": 13,
+          "score": 65
+        },
+        {
+          "place_name": "국립산음자연휴양림 치유의숲캠핑장",
+          "id": "24372938",
+          "place_url": "https://place.map.kakao.com/24372938",
+          "address_name": "경기 양평군 단월면 산음리 산 124",
+          "road_address_name": "경기 양평군 단월면 고북길 347",
+          "category_name": "여행 > 숙박 > 야영,캠핑장",
+          "distance": 19,
+          "score": 65
+        }
+      ],
+      "confidenceScore": 100,
+      "kakaoNeedsReview": false,
+      "priorityReview": false,
+      "reason": "기존 수동 검증 ID 유지 · 이름 정확히 일치 · 지역 경기·양평군·단월면·고북길·347·양평 일치 · 기존 좌표에서 0m · 기존 장소 ID 일치"
+    }
+  ]
+}
