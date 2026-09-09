@@ -1,0 +1,83 @@
+{
+  "dataset_version": "couple-production-phase1b2a-v1",
+  "as_of": "2026-09-01T03:00:00.000Z",
+  "scenarios": [
+    {
+      "id": "N01",
+      "title": "성수 목적형 카페·편안함",
+      "meeting_area": "seongsu",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "N02",
+      "title": "성수 high·new 체험과 긴 대기 제외",
+      "meeting_area": "seongsu",
+      "a": {"activity":"experience","energy":"high","novelty":"new","budget":"any","duration":"240","vetoes":["long_wait"]},
+      "b": {"activity":"experience","energy":"high","novelty":"new","budget":"any","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "N03",
+      "title": "성수 카페 veto와 복합공간 보존",
+      "meeting_area": "seongsu",
+      "a": {"activity":"any","energy":"medium","novelty":"new","budget":"any","duration":"240","vetoes":["cafe"]},
+      "b": {"activity":"experience","energy":"medium","novelty":"balanced","budget":"any","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "N04",
+      "title": "홍대 high·new 몰입형 체험",
+      "meeting_area": "hongdae",
+      "a": {"activity":"experience","energy":"high","novelty":"new","budget":"under_40000","duration":"240","vetoes":[]},
+      "b": {"activity":"experience","energy":"high","novelty":"new","budget":"under_40000","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "N05",
+      "title": "홍대 저예산 카페·편안함",
+      "meeting_area": "hongdae",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "N06",
+      "title": "홍대 실내 산책형 문화 경험",
+      "meeting_area": "hongdae",
+      "a": {"activity":"walk_culture","energy":"medium","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["outdoor"]},
+      "b": {"activity":"walk_culture","energy":"medium","novelty":"proven","budget":"under_20000","duration":"120","vetoes":["outdoor"]}
+    },
+    {
+      "id": "N07",
+      "title": "종로·을지로 목적형 카페",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "N08",
+      "title": "종로·을지로 high energy 체험",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"experience","energy":"high","novelty":"balanced","budget":"under_40000","duration":"240","vetoes":[]},
+      "b": {"activity":"experience","energy":"high","novelty":"new","budget":"under_40000","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "N09",
+      "title": "성수 현재 전시·신상",
+      "meeting_area": "seongsu",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "N10",
+      "title": "홍대 현재 전시·신상",
+      "meeting_area": "hongdae",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "N11",
+      "title": "종로 현재 전시·신상",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]}
+    }
+  ]
+}

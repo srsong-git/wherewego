@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import KakaoMap from './components/KakaoMap.jsx'
 import ReviewSection from './components/ReviewSection.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
-import { getUserDisplayName, isSupabaseConfigured, supabase } from './lib/supabase.js'
+import { getUserDisplayName, isAnonymousUser, isPermanentUser, isSupabaseConfigured, supabase } from './lib/supabase.js'
 import { getKakaoDirectionsLinks, getKakaoMapLink, getKakaoPlaceDetailLink } from './utils/kakaoLinks.js'
 import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
@@ -150,7 +150,7 @@ function AuthControl({ user, status, error, onLogin, onLogout }) {
 
   return (
     <div className="auth-control">
-      {user ? (
+      {isPermanentUser(user) ? (
         <>
           <span><strong>{getUserDisplayName(user)}</strong>님</span>
           <button type="button" onClick={onLogout}>로그아웃</button>
@@ -565,10 +565,10 @@ export default function App() {
   const signInWithKakao = async () => {
     if (!supabase) return
     setAuthError('')
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'kakao',
-      options: { redirectTo: `${window.location.origin}/` },
-    })
+    const options = { redirectTo: `${window.location.origin}/` }
+    const { error } = isAnonymousUser(user)
+      ? await supabase.auth.linkIdentity({ provider: 'kakao', options })
+      : await supabase.auth.signInWithOAuth({ provider: 'kakao', options })
     if (error) setAuthError('카카오 로그인을 시작하지 못했어요.')
   }
 
@@ -584,7 +584,7 @@ export default function App() {
   }
 
   const requestAccountDeletion = async () => {
-    if (!supabase || !user || !deletionAccepted) return
+    if (!supabase || !isPermanentUser(user) || !deletionAccepted) return
     setDeletionStatus('saving')
     setDeletionNotice('')
     const { error } = await supabase.rpc('request_account_deletion')
@@ -828,7 +828,7 @@ export default function App() {
       {favoriteToast && <div className="favorite-toast" role="status" aria-live="polite">{favoriteToast}</div>}
 
       {selectedPlace && (
-        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={user} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={isPermanentUser(user) ? user : null} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
       )}
 
       {infoModal === 'privacy' && (
@@ -868,7 +868,7 @@ export default function App() {
         <InfoModal title="계정 관리·탈퇴" onClose={() => setInfoModal(null)}>
           {deletionStatus === 'done' ? (
             <div className="account-result" role="status"><strong>요청이 접수됐어요.</strong><p>{deletionNotice}</p></div>
-          ) : user ? (
+          ) : isPermanentUser(user) ? (
             <div className="account-panel">
               <p><strong>{getUserDisplayName(user)}</strong>님의 계정입니다.</p>
               <p>탈퇴를 요청하면 작성한 모든 후기가 즉시 삭제됩니다. 인증 계정은 운영자가 요청을 확인한 뒤 최종 삭제하며, 처리 전까지 다시 로그인하지 말아 주세요.</p>

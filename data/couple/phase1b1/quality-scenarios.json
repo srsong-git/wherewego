@@ -1,0 +1,141 @@
+{
+  "dataset_version": "couple-production-pilot-v1",
+  "as_of": "2026-08-31T03:00:00.000Z",
+  "scenarios": [
+    {
+      "id": "S01",
+      "title": "둘 다 전시·차분함·검증된 곳",
+      "human_review": "설득력 높음. 입력과 1위 태그가 정확히 일치하며 두 사람 만족도도 모두 100점입니다.",
+      "root_cause": "정상 결과",
+      "meeting_area": "jongno_euljiro",
+      "a": { "activity": "exhibition_popup", "energy": "low", "novelty": "proven", "budget": "under_40000", "duration": "240", "vetoes": [] },
+      "b": { "activity": "exhibition_popup", "energy": "low", "novelty": "proven", "budget": "under_40000", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S02",
+      "title": "둘 다 신상·특별한 곳",
+      "human_review": "설득력 낮음. 신상을 원했지만 검증된 곳으로 태깅된 반지대학이 추천되어 기대와 어긋납니다.",
+      "root_cause": "홍대·연남 novelty:new 후보 부족",
+      "meeting_area": "hongdae",
+      "a": { "activity": "any", "energy": "medium", "novelty": "new", "budget": "any", "duration": "240", "vetoes": [] },
+      "b": { "activity": "any", "energy": "medium", "novelty": "new", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S03",
+      "title": "둘 다 활동적",
+      "human_review": "설득력 보통 이하. 체험 유형은 맞지만 high energy 후보가 없어 medium 체험으로 대체됐습니다.",
+      "root_cause": "홍대·연남 energy:high 후보 부족",
+      "meeting_area": "hongdae",
+      "a": { "activity": "experience", "energy": "high", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] },
+      "b": { "activity": "experience", "energy": "high", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S04",
+      "title": "둘 다 쉬고 싶음",
+      "human_review": "설득력 낮음. 가장 잘 맞는 카페형 LCDC보다 1위 자격이 있는 아모레 성수가 낮은 만족도로 선택됐습니다.",
+      "root_cause": "카페형 1위 자격 후보 부족 및 Editorial Tier 병목",
+      "meeting_area": "seongsu",
+      "a": { "activity": "cafe", "energy": "low", "novelty": "proven", "budget": "any", "duration": "120", "vetoes": [] },
+      "b": { "activity": "cafe", "energy": "low", "novelty": "proven", "budget": "any", "duration": "120", "vetoes": [] }
+    },
+    {
+      "id": "S05",
+      "title": "한 사람 카페·한 사람 전시",
+      "human_review": "설득력 낮음. 홍대 pilot에 실제 카페 후보가 없어 체험 장소가 절충안으로 나왔습니다.",
+      "root_cause": "홍대·연남 activity:cafe 실질 후보 부족",
+      "meeting_area": "hongdae",
+      "a": { "activity": "cafe", "energy": "low", "novelty": "balanced", "budget": "under_40000", "duration": "120", "vetoes": [] },
+      "b": { "activity": "exhibition_popup", "energy": "medium", "novelty": "proven", "budget": "under_40000", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S06",
+      "title": "한 사람 proven·한 사람 new",
+      "human_review": "설득력 보통. balanced 장소라는 절충 방향은 자연스럽지만 더 높은 Consensus 후보가 대안 전용 Tier입니다.",
+      "root_cause": "Editorial Tier 병목",
+      "meeting_area": "seongsu",
+      "a": { "activity": "any", "energy": "medium", "novelty": "proven", "budget": "any", "duration": "240", "vetoes": [] },
+      "b": { "activity": "any", "energy": "medium", "novelty": "new", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S07",
+      "title": "한 사람 low energy·한 사람 high energy",
+      "human_review": "설득력 보통. 두 사람 점수는 균형적이지만 high energy 후보가 없어 결과가 low 쪽으로 기울었습니다.",
+      "root_cause": "종로·을지로 energy:high 후보 부족",
+      "meeting_area": "jongno_euljiro",
+      "a": { "activity": "any", "energy": "low", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] },
+      "b": { "activity": "any", "energy": "high", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S08",
+      "title": "2만원 이하·짧은 시간",
+      "human_review": "설득력 높음. 무료·120분·차분한 전시 조건을 모두 지키며 점수도 높습니다.",
+      "root_cause": "정상 결과",
+      "meeting_area": "jongno_euljiro",
+      "a": { "activity": "exhibition_popup", "energy": "low", "novelty": "balanced", "budget": "under_20000", "duration": "120", "vetoes": [] },
+      "b": { "activity": "exhibition_popup", "energy": "low", "novelty": "balanced", "budget": "under_20000", "duration": "120", "vetoes": [] }
+    },
+    {
+      "id": "S09",
+      "title": "카페 veto",
+      "human_review": "결과 장소는 카페가 아니지만 Gate 검증은 미흡합니다. 카페 trait인 LCDC가 hard filter에 남았습니다.",
+      "root_cause": "category와 activityType 사이의 veto 판정 인터페이스 불일치",
+      "meeting_area": "seongsu",
+      "a": { "activity": "any", "energy": "medium", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": ["cafe"] },
+      "b": { "activity": "experience", "energy": "medium", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S10",
+      "title": "야외 veto",
+      "human_review": "설득력 낮음. 야외 제외는 지켰지만 산책 선호를 대신할 실내 산책·문화 후보가 없어 체험으로 크게 이동했습니다.",
+      "root_cause": "홍대·연남 indoor walk_culture 후보 부족",
+      "meeting_area": "hongdae",
+      "a": { "activity": "walk_culture", "energy": "medium", "novelty": "proven", "budget": "any", "duration": "240", "vetoes": ["outdoor"] },
+      "b": { "activity": "any", "energy": "medium", "novelty": "proven", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S11",
+      "title": "많이 걷기 veto",
+      "human_review": "설득력 보통 이상. 많이 걷는 후보 없이 차분한 전시로 절충했으며 veto 위반은 없습니다.",
+      "root_cause": "정상 결과지만 walk_culture 선택지는 빈약",
+      "meeting_area": "jongno_euljiro",
+      "a": { "activity": "walk_culture", "energy": "low", "novelty": "proven", "budget": "any", "duration": "240", "vetoes": ["long_walk"] },
+      "b": { "activity": "exhibition_popup", "energy": "low", "novelty": "proven", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S12",
+      "title": "긴 웨이팅 veto",
+      "human_review": "설득력 보통. high/new에 가장 가까운 무신사는 정확히 제외됐지만 남은 후보가 low/balanced에 치우칩니다.",
+      "root_cause": "성수 high/new 후보가 높은 wait risk 한 곳에 집중",
+      "meeting_area": "seongsu",
+      "a": { "activity": "experience", "energy": "high", "novelty": "new", "budget": "any", "duration": "240", "vetoes": ["long_wait"] },
+      "b": { "activity": "experience", "energy": "medium", "novelty": "balanced", "budget": "any", "duration": "240", "vetoes": [] }
+    },
+    {
+      "id": "S13",
+      "title": "복수 veto·coverage만 잔존",
+      "human_review": "설득력 높음. 경의선숲길만 남지만 coverage를 1위로 승격하지 않고 no_match 처리했습니다.",
+      "root_cause": "의도된 Editorial Gate 동작과 좁은 hard filter",
+      "meeting_area": "hongdae",
+      "a": { "activity": "walk_culture", "energy": "medium", "novelty": "proven", "budget": "under_20000", "duration": "120", "vetoes": ["cafe", "long_wait"] },
+      "b": { "activity": "any", "energy": "medium", "novelty": "proven", "budget": "under_20000", "duration": "120", "vetoes": [] }
+    },
+    {
+      "id": "S14",
+      "title": "취향이 거의 동일한 커플·종로 카페",
+      "human_review": "설득력 낮음. 두 사람 모두 카페를 원하지만 종로 pilot에 카페 후보가 없어 전시가 강력추천됩니다.",
+      "root_cause": "종로·을지로 activity:cafe 후보 부재",
+      "meeting_area": "jongno_euljiro",
+      "a": { "activity": "cafe", "energy": "medium", "novelty": "balanced", "budget": "under_20000", "duration": "240", "vetoes": ["long_wait"] },
+      "b": { "activity": "cafe", "energy": "medium", "novelty": "balanced", "budget": "under_20000", "duration": "240", "vetoes": ["long_wait"] }
+    },
+    {
+      "id": "S15",
+      "title": "취향이 매우 다른 커플",
+      "human_review": "설득력 보통 이하. veto와 엄격한 예산·시간은 지켰지만 1위 만족도가 61.7/76.7로 낮습니다.",
+      "root_cause": "상반된 입력과 성수 1위 자격 후보 부족",
+      "meeting_area": "seongsu",
+      "a": { "activity": "cafe", "energy": "low", "novelty": "proven", "budget": "under_20000", "duration": "120", "vetoes": ["long_wait"] },
+      "b": { "activity": "experience", "energy": "high", "novelty": "new", "budget": "any", "duration": "unlimited", "vetoes": ["outdoor"] }
+    }
+  ]
+}

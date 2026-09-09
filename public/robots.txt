@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /debug/
+Disallow: /couple/r/
 
 Sitemap: https://oneulwhere.kr/sitemap.xml

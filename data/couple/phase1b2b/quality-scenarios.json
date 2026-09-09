@@ -1,0 +1,90 @@
+{
+  "dataset_version": "couple-production-phase1b2b-v1",
+  "as_of": "2026-09-01T09:00:00.000Z",
+  "scenarios": [
+    {
+      "id": "B01",
+      "title": "성수 저예산·짧은 목적형 카페",
+      "meeting_area": "seongsu",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"low","novelty":"proven","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "B02",
+      "title": "성수 high·new 체험과 긴 대기 제외",
+      "meeting_area": "seongsu",
+      "a": {"activity":"experience","energy":"high","novelty":"new","budget":"under_40000","duration":"240","vetoes":["long_wait"]},
+      "b": {"activity":"experience","energy":"high","novelty":"balanced","budget":"under_40000","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "B03",
+      "title": "성수 실내 산책·문화와 야외 제외",
+      "meeting_area": "seongsu",
+      "a": {"activity":"walk_culture","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["outdoor"]},
+      "b": {"activity":"walk_culture","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":["outdoor"]}
+    },
+    {
+      "id": "B04",
+      "title": "성수 현재 Event·신상",
+      "meeting_area": "seongsu",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "B05",
+      "title": "홍대 차분한 실내 문화·저예산",
+      "meeting_area": "hongdae",
+      "a": {"activity":"walk_culture","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["outdoor"]},
+      "b": {"activity":"walk_culture","energy":"low","novelty":"proven","budget":"under_20000","duration":"120","vetoes":["outdoor"]}
+    },
+    {
+      "id": "B06",
+      "title": "홍대 음악·창작 비게임 공동 경험",
+      "meeting_area": "hongdae",
+      "a": {"activity":"experience","energy":"medium","novelty":"balanced","budget":"under_40000","duration":"240","vetoes":[]},
+      "b": {"activity":"experience","energy":"medium","novelty":"new","budget":"under_40000","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "B07",
+      "title": "홍대 현재 Event·신상",
+      "meeting_area": "hongdae",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"medium","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "B08",
+      "title": "홍대 목적형 카페·짧은 시간",
+      "meeting_area": "hongdae",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"medium","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "B09",
+      "title": "종로 목적형 카페·긴 대기 제외",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"cafe","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]},
+      "b": {"activity":"cafe","energy":"medium","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["long_wait"]}
+    },
+    {
+      "id": "B10",
+      "title": "종로 high energy 체험",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"experience","energy":"high","novelty":"balanced","budget":"under_40000","duration":"240","vetoes":[]},
+      "b": {"activity":"experience","energy":"high","novelty":"new","budget":"under_40000","duration":"240","vetoes":[]}
+    },
+    {
+      "id": "B11",
+      "title": "종로 현재 Event·저예산",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"exhibition_popup","energy":"low","novelty":"new","budget":"under_20000","duration":"120","vetoes":[]},
+      "b": {"activity":"exhibition_popup","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":[]}
+    },
+    {
+      "id": "B12",
+      "title": "종로 복수 veto와 짧은 저예산",
+      "meeting_area": "jongno_euljiro",
+      "a": {"activity":"any","energy":"low","novelty":"balanced","budget":"under_20000","duration":"120","vetoes":["outdoor","long_wait"]},
+      "b": {"activity":"walk_culture","energy":"medium","novelty":"proven","budget":"under_20000","duration":"120","vetoes":["outdoor"]}
+    }
+  ]
+}

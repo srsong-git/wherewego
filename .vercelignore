@@ -1,0 +1,21 @@
+# Local build and browser-test artifacts
+/dist/
+/.playwright-mcp/
+/.tmp-*
+
+# Server/database development files are deployed through Supabase, not Vercel
+/supabase/
+
+# Internal curation, reports, scripts, and tests are not browser runtime inputs
+/data/
+/docs/
+/reports/
+/scripts/
+/tests/
+/kakao-place-audit.csv
+/kakao-place-audit.json
+
+# Repository-only documentation
+/AGENTS.md.md
+/POLISHING.md.md
+/README.md

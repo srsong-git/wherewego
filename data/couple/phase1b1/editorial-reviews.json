@@ -1,0 +1,285 @@
+{
+  "dataset_version": "couple-production-pilot-v1",
+  "editorial_gate_version": "couple-editorial-v1",
+  "curation_origin": "independent_couple_research",
+  "editorial_reviewed_at": "2026-08-31T12:00:00+09:00",
+  "availability_verified_at": "2026-08-31T12:00:00+09:00",
+  "items": [
+    {
+      "source_key": "item-seoul-forest-walk",
+      "scores": [5, 4, 4, 3, 4, 4],
+      "editorial_score": 68,
+      "editorial_tier": "standard",
+      "editorial_rationale": "데이트 산책 관련성은 높지만 익숙한 장소이므로 날씨와 산책 선호가 맞을 때 추천합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-d-museum-visit",
+      "scores": [5, 4, 4, 4, 4, 3],
+      "editorial_score": 76,
+      "editorial_tier": "standard",
+      "editorial_rationale": "기획 전시가 방문 목적을 만들지만 hero 판단은 개별 전시 Event 단위 검수가 더 적절합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-lcdc-seoul-visit",
+      "scores": [4, 4, 3, 4, 4, 3],
+      "editorial_score": 66,
+      "editorial_tier": "standard",
+      "editorial_rationale": "카페·팝업·편집 공간을 함께 경험할 수 있지만 입점 콘텐츠의 현재성을 계속 검수해야 합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-seoul-upcycling-plaza-visit",
+      "scores": [2, 2, 3, 3, 3, 2],
+      "editorial_score": 45,
+      "editorial_tier": "reject",
+      "editorial_rationale": "상설 공간은 교육·새활용·창업 지원 성격이 강해 일반 2030 데이트 목적지로 적극 추천하기 어렵습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-musinsa-megastore-seongsu",
+      "scores": [4, 5, 5, 4, 4, 2],
+      "editorial_score": 83,
+      "editorial_tier": "hero",
+      "editorial_rationale": "2026년 신규 대형 패션·뷰티 복합 공간으로 현재성과 목적형 retail experience가 분명합니다.",
+      "editorial_review_due_at": "2026-09-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-amore-seongsu-visit",
+      "scores": [4, 4, 4, 4, 4, 2],
+      "editorial_score": 75,
+      "editorial_tier": "standard",
+      "editorial_rationale": "뷰티 취향이 맞는 커플에게 목적성이 높지만 일반 사용자 전체에 폭넓게 맞는 장소는 아닙니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-daelim-warehouse-gallery-cafe",
+      "scores": [3, 3, 2, 3, 3, 5],
+      "editorial_score": 36,
+      "editorial_tier": "reject",
+      "editorial_rationale": "성수의 상징성은 있으나 현재 데이트 감도와 차별성이 낮아 더 선명한 콘셉트 공간으로 교체하는 편이 좋습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-point-of-view-seoul-visit",
+      "scores": [4, 4, 3, 5, 4, 3],
+      "editorial_score": 69,
+      "editorial_tier": "standard",
+      "editorial_rationale": "창작 도구와 오브제를 전시처럼 경험할 수 있어 성수 코스의 목적형 편집 공간으로 적합합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-gyeongui-line-forest-walk",
+      "scores": [5, 3, 3, 2, 4, 5],
+      "editorial_score": 52,
+      "editorial_tier": "coverage",
+      "editorial_rationale": "데이트 관련성은 높지만 너무 익숙해 강력추천이 아닌 산책 선호용 대안으로 제한합니다.",
+      "editorial_review_due_at": "2026-10-31T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-ktng-sangsangmadang-hongdae",
+      "scores": [3, 3, 4, 3, 4, 4],
+      "editorial_score": 52,
+      "editorial_tier": "coverage",
+      "editorial_rationale": "건물 자체보다 당일의 구체적인 전시·공연이 추천 대상이어야 하므로 상설 Item은 대안으로 제한합니다.",
+      "editorial_review_due_at": "2026-10-31T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-seogyo-community-culture-center",
+      "scores": [2, 2, 3, 2, 3, 2],
+      "editorial_score": 42,
+      "editorial_tier": "reject",
+      "editorial_rationale": "창작자·동아리·대관 거점의 성격이 강해 일반 커플의 상설 데이트 목적지로 보기 어렵습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-ring-university-hongdae",
+      "scores": [5, 4, 3, 4, 5, 4],
+      "editorial_score": 70,
+      "editorial_tier": "standard",
+      "editorial_rationale": "둘이 결과물을 만드는 목적형 체험이지만 흔함과 가격을 고려해 상위 standard로 분류합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "booking_required": true,
+      "booking_url": "https://pf.kakao.com/_mGgNl",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-coconut-box-visit",
+      "scores": [3, 3, 2, 3, 3, 4],
+      "editorial_score": 41,
+      "editorial_tier": "reject",
+      "editorial_rationale": "휴양지 콘셉트와 포토존만으로 2026년 현재의 목적성과 차별성을 충분히 설명하기 어렵습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-943-kings-cross-visit",
+      "scores": [3, 4, 3, 5, 4, 4],
+      "editorial_score": 58,
+      "editorial_tier": "coverage",
+      "editorial_rationale": "테마 차별성은 강하지만 팬덤 취향을 크게 타므로 특정 취향용 대안으로만 사용합니다.",
+      "editorial_review_due_at": "2026-10-31T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-seongsu-museum-yeonnam-drawing",
+      "scores": [5, 4, 3, 4, 5, 4],
+      "editorial_score": 70,
+      "editorial_tier": "standard",
+      "editorial_rationale": "함께 그림을 완성하는 Couple 경험이 분명하지만 체인형 드로잉 공간의 흔함을 고려합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "booking_required": true,
+      "booking_url": "https://seongsumuseum.com/home/",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-yeonnamjang-visit",
+      "scores": [3, 3, 2, 3, 3, 4],
+      "editorial_score": 41,
+      "editorial_tier": "reject",
+      "editorial_rationale": "현재 무엇을 위해 찾아가야 하는지가 불분명해 최근 콘텐츠 현장 검증 전까지 추천에서 제외합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-seoul-craft-museum-permanent",
+      "scores": [4, 4, 4, 4, 4, 3],
+      "editorial_score": 70,
+      "editorial_tier": "standard",
+      "editorial_rationale": "공예라는 분명한 주제와 공간성, 안국 산책 연결이 있어 상설 Item도 추천 가치가 있습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-mmca-seoul-visit",
+      "scores": [5, 5, 5, 4, 5, 4],
+      "editorial_score": 82,
+      "editorial_tier": "hero",
+      "editorial_rationale": "지속적으로 교체되는 현대미술 전시와 공간 품질, 주변 동선이 모두 강한 대표 데이트 목적지입니다.",
+      "editorial_review_due_at": "2026-09-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-hikr-ground-visit",
+      "scores": [3, 3, 3, 4, 4, 3],
+      "editorial_score": 56,
+      "editorial_tier": "coverage",
+      "editorial_rationale": "무료 실내 미디어 체험 장점은 있지만 관광·K-콘텐츠 관심사에 더 명확히 맞아 대안으로 제한합니다.",
+      "editorial_review_due_at": "2026-10-31T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-arario-museum-in-space-visit",
+      "scores": [5, 5, 4, 5, 5, 2],
+      "editorial_score": 91,
+      "editorial_tier": "hero",
+      "editorial_rationale": "건축과 현대미술 컬렉션이 결합돼 목적성·차별성·대화 가치가 모두 높습니다.",
+      "editorial_review_due_at": "2026-09-30T12:00:00+09:00",
+      "availability_status": "available",
+      "availability_review_due_at": "2026-09-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-museum-kimchikan-visit",
+      "scores": [2, 2, 2, 3, 3, 4],
+      "editorial_score": 31,
+      "editorial_tier": "reject",
+      "editorial_rationale": "어린이·가족 프로그램 성격이 강해 국내 2030 Couple 브랜드의 적극 추천 후보로 적합하지 않습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-donuimun-museum-village-visit",
+      "scores": [2, 2, 3, 3, 3, 4],
+      "editorial_score": 35,
+      "editorial_tier": "reject",
+      "editorial_rationale": "가족 나들이·근현대 체험 중심의 상설 공간으로 일반 2030 데이트 목적성이 부족합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-seoul-museum-of-history-permanent",
+      "scores": [2, 2, 3, 3, 3, 5],
+      "editorial_score": 30,
+      "editorial_tier": "reject",
+      "editorial_rationale": "상설 박물관 자체는 일반 2030 커플에게 적극 추천할 데이트 목적성이 부족하며 개별 Event만 별도 심사합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "item-cheonggyecheon-walk",
+      "scores": [4, 2, 3, 2, 4, 5],
+      "editorial_score": 42,
+      "editorial_tier": "reject",
+      "editorial_rationale": "시간대와 구간이 없는 generic 산책 Item이라 편집된 데이트 루트로 재설계하기 전에는 추천하지 않습니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "unknown",
+      "availability_review_due_at": "2026-11-30T12:00:00+09:00"
+    },
+    {
+      "source_key": "event-semoca-lacquer-2025-2026",
+      "scores": [4, 4, 4, 4, 4, 2],
+      "editorial_score": 75,
+      "editorial_tier": "standard",
+      "editorial_rationale": "공예의 재료와 제작 과정을 다루는 기간 전시로 상설 Venue보다 방문 이유가 선명합니다.",
+      "editorial_review_due_at": "2026-11-30T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-10-31T12:00:00+09:00"
+    },
+    {
+      "source_key": "event-semoca-najeon-box-2026",
+      "scores": [5, 5, 5, 5, 5, 2],
+      "editorial_score": 95,
+      "editorial_tier": "hero",
+      "editorial_rationale": "성인 대상 야간 공동 제작 체험으로 Couple 목적성은 매우 높지만 현재 공식 접수가 마감됐습니다.",
+      "editorial_review_due_at": "2026-09-30T12:00:00+09:00",
+      "booking_required": true,
+      "booking_url": "https://craftmuseum.seoul.go.kr/progrm/view/489",
+      "availability_status": "registration_closed",
+      "availability_review_due_at": "2026-09-07T12:00:00+09:00"
+    },
+    {
+      "source_key": "event-seoul-city-planning-exhibition-2026",
+      "scores": [4, 3, 5, 4, 5, 2],
+      "editorial_score": 78,
+      "editorial_tier": "standard",
+      "editorial_rationale": "2026년 현재 진행되는 구체적인 전시이며 도시 변화라는 주제가 커플의 대화거리로 연결됩니다.",
+      "editorial_review_due_at": "2026-11-08T12:00:00+09:00",
+      "availability_status": "walk_in_only",
+      "availability_review_due_at": "2026-10-15T12:00:00+09:00"
+    }
+  ]
+}

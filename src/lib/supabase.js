@@ -24,3 +24,14 @@ export function getUserDisplayName(user) {
     || metadata.preferred_username
     || '방문자'
 }
+
+export function isAnonymousUser(user) {
+  if (!user) return false
+  if (typeof user.is_anonymous === 'boolean') return user.is_anonymous
+  return user.app_metadata?.provider === 'anonymous'
+    || user.app_metadata?.providers?.includes('anonymous')
+}
+
+export function isPermanentUser(user) {
+  return Boolean(user) && !isAnonymousUser(user)
+}

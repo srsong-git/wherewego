@@ -1,5 +1,15 @@
 {
   "rewrites": [
-    { "source": "/debug/kakao-links", "destination": "/" }
+    { "source": "/debug/kakao-links", "destination": "/" },
+    { "source": "/couple", "destination": "/couple/index.html" },
+    { "source": "/couple/r/:path*", "destination": "/couple/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/couple/r/:path*",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
   ]
 }

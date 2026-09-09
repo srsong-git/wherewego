@@ -1,0 +1,468 @@
+{
+  "dataset_kind": "production",
+  "dataset_version": "couple-production-phase1b2a-v1",
+  "verified_at": "2026-09-01T12:00:00+09:00",
+  "image_policy": "deferred_pending_rights_approval",
+  "venues": [
+    {
+      "source_key": "venue-haus-nowhere-seoul", "canonical_name": "하우스 노웨어 서울", "address": "서울 성동구 뚝섬로 433",
+      "latitude": 37.5380992658792, "longitude": 127.059043566641, "kakao_place_id": "735193716", "kakao_detail_url": "https://place.map.kakao.com/735193716",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/735193716","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.gentlemonster.com/kr/en/stores/detail/779149716700285432","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-tamburins-seongsu", "canonical_name": "탬버린즈 플래그십스토어 성수점", "address": "서울 성동구 연무장5길 8",
+      "latitude": 37.5437759196933, "longitude": 127.052572142533, "kakao_place_id": "452269768", "kakao_detail_url": "https://place.map.kakao.com/452269768",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/452269768","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.tamburins.com/kr/mypage/cs/customer-service/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-adererror-seongsu", "canonical_name": "아더에러 성수스페이스", "address": "서울 성동구 성수이로 82",
+      "latitude": 37.54226040614835, "longitude": 127.05654276304718, "kakao_place_id": "1566011164", "kakao_detail_url": "https://place.map.kakao.com/1566011164",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1566011164","checked_at":"2026-09-01"},{"kind":"official","url":"https://adererror.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-kith-seoul", "canonical_name": "키스 서울", "address": "서울 성동구 연무장길 70",
+      "latitude": 37.54185927118086, "longitude": 127.05693849492071, "kakao_place_id": "2062309664", "kakao_detail_url": "https://place.map.kakao.com/2062309664",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/2062309664","checked_at":"2026-09-01"},{"kind":"official","url":"https://kith.com/pages/kith-seoul","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-realworld-seongsu", "canonical_name": "리얼월드 성수", "address": "서울 성동구 연무장13길 8",
+      "latitude": 37.5421775070427, "longitude": 127.058408598076, "kakao_place_id": "1872275420", "kakao_detail_url": "https://place.map.kakao.com/1872275420",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1872275420","checked_at":"2026-09-01"},{"kind":"official","url":"https://web.realworld.to/rooms","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-groot-climbing", "canonical_name": "그루트클라이밍", "address": "서울 성동구 성수일로 19",
+      "latitude": 37.5423333333654, "longitude": 127.04856549491, "kakao_place_id": "745525153", "kakao_detail_url": "https://place.map.kakao.com/745525153",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/745525153","checked_at":"2026-09-01"},{"kind":"verification","url":"https://crux-climb.com/gyms/18f26b1f-c2cd-4873-9124-8db0962da637","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-dotnote-seongsu", "canonical_name": "성수향수공방 닷노트", "address": "서울 성동구 연무장길 6",
+      "latitude": 37.5439328217407, "longitude": 127.050207293592, "kakao_place_id": "744863748", "kakao_detail_url": "https://place.map.kakao.com/744863748",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/744863748","checked_at":"2026-09-01"},{"kind":"official","url":"https://dotnote.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-oliveyoung-n-seongsu", "canonical_name": "올리브영 N성수", "address": "서울 성동구 연무장7길 13",
+      "latitude": 37.5441733194254, "longitude": 127.054430448058, "kakao_place_id": "1287282217", "kakao_detail_url": "https://place.map.kakao.com/1287282217",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1287282217","checked_at":"2026-09-01"},{"kind":"official","url":"https://cjnews.cj.net/?p=56585","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-whipped-house", "canonical_name": "휩드 하우스", "address": "서울 성동구 성수이로20길 16",
+      "latitude": 37.543011853509, "longitude": 127.058366250252, "kakao_place_id": "239202034", "kakao_detail_url": "https://place.map.kakao.com/239202034",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/239202034","checked_at":"2026-09-01"},{"kind":"official","url":"https://whipped.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-onion-seongsu", "canonical_name": "어니언 성수", "address": "서울 성동구 아차산로9길 8",
+      "latitude": 37.544782395189884, "longitude": 127.05820807890457, "kakao_place_id": "145791269", "kakao_detail_url": "https://place.map.kakao.com/145791269",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/145791269","checked_at":"2026-09-01"},{"kind":"official","url":"https://onionkr.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-scene-seongsu", "canonical_name": "쎈느", "address": "서울 성동구 연무장5길 20",
+      "latitude": 37.54489276727298, "longitude": 127.05344423870629, "kakao_place_id": "1783691580", "kakao_detail_url": "https://place.map.kakao.com/1783691580",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1783691580","checked_at":"2026-09-01"},{"kind":"official","url":"https://sceneseoul.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-oude-seongsu", "canonical_name": "오우드", "address": "서울 성동구 성수이로24길 36",
+      "latitude": 37.5440615310089, "longitude": 127.061879434817, "kakao_place_id": "456592771", "kakao_detail_url": "https://place.map.kakao.com/456592771",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/456592771","checked_at":"2026-09-01"},{"kind":"official","url":"https://oude.kr/rental.html","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-oh-lolly-day-seongsu", "canonical_name": "오롤리데이 성수", "address": "서울 성동구 연무장길 3",
+      "latitude": 37.54415361647752, "longitude": 127.05008975913843, "kakao_place_id": "885279355", "kakao_detail_url": "https://place.map.kakao.com/885279355",
+      "meeting_area": "seongsu", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/885279355","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.oh-lolly-day.com/","checked_at":"2026-09-01"}]
+    },
+
+    {
+      "source_key": "venue-beat-phobia-hongdae-dungeon3", "canonical_name": "비트포비아 홍대던전3", "address": "서울 마포구 와우산로29길 21",
+      "latitude": 37.554920382572, "longitude": 126.928576800907, "kakao_place_id": "2070160321", "kakao_detail_url": "https://place.map.kakao.com/2070160321",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/2070160321","checked_at":"2026-09-01"},{"kind":"official","url":"https://xdungeon.net/layout/res/home.php?go=main","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-code-k-hongdae", "canonical_name": "코드케이 홍대점", "address": "서울 마포구 와우산로 64",
+      "latitude": 37.5502426875182, "longitude": 126.923287384285, "kakao_place_id": "215985076", "kakao_detail_url": "https://place.map.kakao.com/215985076",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/215985076","checked_at":"2026-09-01"},{"kind":"verification","url":"https://web.zamfit.kr/stores/1968/%EC%BD%94%EB%93%9C%EC%BC%80%EC%9D%B4-%ED%99%8D%EB%8C%80%EC%A0%90","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-zero-world-hongdae", "canonical_name": "제로월드 홍대점", "address": "서울 마포구 잔다리로6길 20-9",
+      "latitude": 37.5518807649622, "longitude": 126.920655682478, "kakao_place_id": "1732671994", "kakao_detail_url": "https://place.map.kakao.com/1732671994",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1732671994","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.zerohongdae.com/map","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-redbutton-layered-hongdae", "canonical_name": "레드버튼 레이어드 홍대점", "address": "서울 마포구 홍익로3길 44",
+      "latitude": 37.5526020758834, "longitude": 126.921422203806, "kakao_place_id": "1479788174", "kakao_detail_url": "https://place.map.kakao.com/1479788174",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1479788174","checked_at":"2026-09-01"},{"kind":"official","url":"https://redbutton.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-zzang-arcade-hongdae", "canonical_name": "짱오락실 홍대점", "address": "서울 마포구 어울마당로 69",
+      "latitude": 37.5512756101346, "longitude": 126.921127098815, "kakao_place_id": "1081289191", "kakao_detail_url": "https://place.map.kakao.com/1081289191",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1081289191","checked_at":"2026-09-01"},{"kind":"verification","url":"https://www.placeview.co.kr/id/MTA4MTI4OTE5MQ==","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-w-rock-bowling-hongdae", "canonical_name": "W락볼링센터", "address": "서울 마포구 양화로 104",
+      "latitude": 37.5529032039026, "longitude": 126.919043065112, "kakao_place_id": "1277862647", "kakao_detail_url": "https://place.map.kakao.com/1277862647",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1277862647","checked_at":"2026-09-01"},{"kind":"verification","url":"https://www.placeview.co.kr/id/MTI3Nzg2MjY0Nw==","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-object-seogyo", "canonical_name": "오브젝트 서교점", "address": "서울 마포구 와우산로35길 13",
+      "latitude": 37.55569597973931, "longitude": 126.9298096541413, "kakao_place_id": "1776787563", "kakao_detail_url": "https://place.map.kakao.com/1776787563",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1776787563","checked_at":"2026-09-01"},{"kind":"official","url":"https://insideobject.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-cafe-layered-yeonnam", "canonical_name": "카페레이어드 연남점", "address": "서울 마포구 성미산로 161-4",
+      "latitude": 37.5649763702769, "longitude": 126.924182307844, "kakao_place_id": "502958473", "kakao_detail_url": "https://place.map.kakao.com/502958473",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/502958473","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.instagram.com/cafe_layered/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-taylor-coffee-yeonnam1", "canonical_name": "테일러커피 연남1호점", "address": "서울 마포구 성미산로 189",
+      "latitude": 37.563085683374, "longitude": 126.926402647715, "kakao_place_id": "27508963", "kakao_detail_url": "https://place.map.kakao.com/27508963",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/27508963","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.taylorcoffee.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-yeonnam-donggeurami", "canonical_name": "연남동그라미", "address": "서울 마포구 성미산로32길 10",
+      "latitude": 37.5639494674707, "longitude": 126.924545544378, "kakao_place_id": "900563604", "kakao_detail_url": "https://place.map.kakao.com/900563604",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/900563604","checked_at":"2026-09-01"},{"kind":"verification","url":"https://www.instagram.com/yeonnam_donggrami/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-gongsangondo", "canonical_name": "공상온도", "address": "서울 마포구 동교로23길 40",
+      "latitude": 37.557660985908534, "longitude": 126.91979846529037, "kakao_place_id": "27379281", "kakao_detail_url": "https://place.map.kakao.com/27379281",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/27379281","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.instagram.com/gongsangondo/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-mudaeruk", "canonical_name": "무대륙", "address": "서울 마포구 토정로5길 12",
+      "latitude": 37.54601915739546, "longitude": 126.91843379335351, "kakao_place_id": "7876611", "kakao_detail_url": "https://place.map.kakao.com/7876611",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/7876611","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.instagram.com/mudaeruk/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-dotnote-hongdae", "canonical_name": "홍대향수공방 닷노트", "address": "서울 마포구 신촌로4길 14",
+      "latitude": 37.5573844532224, "longitude": 126.928317538969, "kakao_place_id": "880163349", "kakao_detail_url": "https://place.map.kakao.com/880163349",
+      "meeting_area": "hongdae", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/880163349","checked_at":"2026-09-01"},{"kind":"official","url":"https://dotnote.co.kr/","checked_at":"2026-09-01"}]
+    },
+
+    {
+      "source_key": "venue-ilmin-museum", "canonical_name": "일민미술관", "address": "서울 종로구 세종대로 152",
+      "latitude": 37.5698819940064, "longitude": 126.977637157186, "kakao_place_id": "11179476", "kakao_detail_url": "https://place.map.kakao.com/11179476",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/11179476","checked_at":"2026-09-01"},{"kind":"official","url":"https://ilmin.org/exhibitions/current/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-kukje-gallery-k1", "canonical_name": "국제갤러리 K1", "address": "서울 종로구 삼청로 54",
+      "latitude": 37.5806836181488, "longitude": 126.980459686997, "kakao_place_id": "12447481", "kakao_detail_url": "https://place.map.kakao.com/12447481",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/12447481","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.kukjegallery.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-gallery-hyundai", "canonical_name": "갤러리현대", "address": "서울 종로구 삼청로 14",
+      "latitude": 37.57728226325563, "longitude": 126.97985039338869, "kakao_place_id": "9475956", "kakao_detail_url": "https://place.map.kakao.com/9475956",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/9475956","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.galleryhyundai.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-the-reference", "canonical_name": "더레퍼런스", "address": "서울 종로구 자하문로24길 44",
+      "latitude": 37.5823000528597, "longitude": 126.97180518693, "kakao_place_id": "1581170908", "kakao_detail_url": "https://place.map.kakao.com/1581170908",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1581170908","checked_at":"2026-09-01"},{"kind":"official","url":"https://the-reference.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-dialogue-in-dark", "canonical_name": "어둠속의대화", "address": "서울 종로구 북촌로 71",
+      "latitude": 37.5833349800145, "longitude": 126.98480081078836, "kakao_place_id": "11682128", "kakao_detail_url": "https://place.map.kakao.com/11682128",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/11682128","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.dialogueinthedark.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-peakers-jongno", "canonical_name": "피커스 종로점", "address": "서울 종로구 돈화문로5가길 1",
+      "latitude": 37.57091093329, "longitude": 126.991397046749, "kakao_place_id": "1330937676", "kakao_detail_url": "https://place.map.kakao.com/1330937676",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1330937676","checked_at":"2026-09-01"},{"kind":"official","url":"https://peakers.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-music-complex-seoul", "canonical_name": "뮤직컴플렉스서울", "address": "서울 종로구 인사동길 49",
+      "latitude": 37.57446722947599, "longitude": 126.9835539937142, "kakao_place_id": "365827968", "kakao_detail_url": "https://place.map.kakao.com/365827968",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/365827968","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.instagram.com/music.complex.seoul/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-onion-anguk", "canonical_name": "어니언컴퍼니 안국점", "address": "서울 종로구 계동길 5",
+      "latitude": 37.57763190416756, "longitude": 126.98657365849033, "kakao_place_id": "853028118", "kakao_detail_url": "https://place.map.kakao.com/853028118",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/853028118","checked_at":"2026-09-01"},{"kind":"official","url":"https://onionkr.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-fritz-wonso", "canonical_name": "프릳츠 원서점", "address": "서울 종로구 율곡로 83",
+      "latitude": 37.57764652305364, "longitude": 126.98849590984979, "kakao_place_id": "1154772851", "kakao_detail_url": "https://place.map.kakao.com/1154772851",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1154772851","checked_at":"2026-09-01"},{"kind":"official","url":"https://fritz.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-coffee-hanyakbang", "canonical_name": "커피한약방", "address": "서울 중구 삼일대로12길 16-6",
+      "latitude": 37.566564293688046, "longitude": 126.9886017493288, "kakao_place_id": "1440347564", "kakao_detail_url": "https://place.map.kakao.com/1440347564",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/1440347564","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.instagram.com/coffee_hanyakbang/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-seoul-record", "canonical_name": "서울레코드", "address": "서울 종로구 종로 154",
+      "latitude": 37.5702479916395, "longitude": 126.994620937958, "kakao_place_id": "8430119", "kakao_detail_url": "https://place.map.kakao.com/8430119",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/8430119","checked_at":"2026-09-01"},{"kind":"verification","url":"https://www.instagram.com/seoulrecord/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-sulwhasoo-bukchon", "canonical_name": "설화수의집 북촌", "address": "서울 종로구 북촌로 47",
+      "latitude": 37.581006819295034, "longitude": 126.98485222950757, "kakao_place_id": "967518414", "kakao_detail_url": "https://place.map.kakao.com/967518414",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/967518414","checked_at":"2026-09-01"},{"kind":"official","url":"https://www.sulwhasoo.com/kr/ko/experience/flagship-store/flagship-store.html","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key": "venue-nonfiction-samcheong", "canonical_name": "논픽션 삼청", "address": "서울 종로구 북촌로5길 84",
+      "latitude": 37.5801060725068, "longitude": 126.980407761027, "kakao_place_id": "2049005968", "kakao_detail_url": "https://place.map.kakao.com/2049005968",
+      "meeting_area": "jongno_euljiro", "status": "active", "verified_at": "2026-09-01T12:00:00+09:00",
+      "source_references": [{"kind":"kakao","url":"https://place.map.kakao.com/2049005968","checked_at":"2026-09-01"},{"kind":"official","url":"https://nonfiction.com/pages/showroom","checked_at":"2026-09-01"}]
+    }
+  ],
+  "items": [
+    {
+      "source_key":"event-dmuseum-taste-house-2","venue_source_key":"venue-d-museum","item_kind":"event","canonical_name":"취향가옥 2: Art in Life, Life in Art 2","summary":"집이라는 익숙한 공간 안에서 미술·디자인·가구와 수집 취향을 함께 발견하는 디뮤지엄 기획 전시입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup","walk_culture"],"primary_activity_type":"exhibition_popup","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"new","freshness_class":"temporary","freshness_reason":"디뮤지엄 공식 페이지에 2026년 9월 20일까지의 전시 기간과 현재 예매가 확인됩니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-15T12:00:00+09:00","freshness_expires_at":"2026-09-21T00:00:00+09:00",
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":12000,"price_basis":"admission","price_note":"성인 일반 관람료 12,000원, 공식 예매 페이지 기준","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":"2025-06-28T00:00:00+09:00","valid_until":"2026-09-21T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://daelimmuseum.org/exhibition/current/PRG202506050001","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"event-amore-story-a-beauty-murder","venue_source_key":"venue-amore-seongsu","item_kind":"event","canonical_name":"STORY A 성수: 뷰티서바이벌 살인사건","summary":"아모레성수 공간과 뷰티 제품 속 단서를 찾아 사건을 추리하는 현장형 크라임씬 체험입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"new","freshness_class":"temporary","freshness_reason":"2026년 7월 28일부터 10월 18일까지 진행되는 현장형 기간 체험으로 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-30T12:00:00+09:00","freshness_expires_at":"2026-10-19T00:00:00+09:00",
+      "price_band":"free","typical_spend_per_person":0,"required_spend_per_person":0,"price_basis":"free","price_note":"현장 체험 무료, 제품 구매는 선택","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":"2026-07-28T00:00:00+09:00","valid_until":"2026-10-19T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"verification","url":"https://prezem.site/places/2259/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-haus-nowhere-seoul","venue_source_key":"venue-haus-nowhere-seoul","item_kind":"permanent","canonical_name":"하우스 노웨어 서울","summary":"초대형 설치와 패션·향·티 경험이 층마다 이어지는 성수의 목적형 리테일 문화 공간입니다.","category":"culture",
+      "activity_traits":["experience","walk_culture","cafe"],"primary_activity_type":"experience","secondary_activity_types":["walk_culture","cafe"],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 스토어 페이지에서 전 층 운영과 매일 영업시간을 확인했으며 콘텐츠 변화는 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 상품·티하우스 구매는 선택","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"high","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.gentlemonster.com/kr/en/stores/detail/779149716700285432","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-tamburins-seongsu","venue_source_key":"venue-tamburins-seongsu","item_kind":"permanent","canonical_name":"탬버린즈 플래그십스토어 성수점","summary":"향 제품을 시향하고 설치형 공간을 함께 둘러보며 서로의 취향을 이야기하기 좋은 뷰티 플래그십입니다.","category":"culture",
+      "activity_traits":["experience","walk_culture"],"primary_activity_type":"experience","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 고객서비스에서 성수 플래그십 운영을 확인했고 시즌 디스플레이 변화는 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"공간 체험 무료, 향 제품 구매는 선택","recommended_duration_minutes":75,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.tamburins.com/kr/mypage/cs/customer-service/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-adererror-seongsu","venue_source_key":"venue-adererror-seongsu","item_kind":"permanent","canonical_name":"아더에러 성수스페이스","summary":"브랜드의 강한 공간 연출과 패션 오브제를 전시처럼 둘러볼 수 있는 성수 플래그십입니다.","category":"culture",
+      "activity_traits":["walk_culture"],"primary_activity_type":"walk_culture","secondary_activity_types":[],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"브랜드 공식 채널과 Kakao 장소가 현재 운영을 가리키며 시즌 공간 연출을 분기별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":30000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 패션 상품 구매는 선택","recommended_duration_minutes":75,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://adererror.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-kith-seoul","venue_source_key":"venue-kith-seoul","item_kind":"permanent","canonical_name":"키스 서울","summary":"패션·스니커즈와 F&B 콘셉트를 한 동선에서 경험하는 성수의 글로벌 라이프스타일 플래그십입니다.","category":"culture",
+      "activity_traits":["walk_culture","cafe"],"primary_activity_type":"walk_culture","secondary_activity_types":["cafe"],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"KITH 공식 서울 스토어 안내와 Kakao 장소가 일치하며 시즌 상품과 운영을 분기별 확인합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":35000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 상품·음료 구매는 선택","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://kith.com/pages/kith-seoul","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-realworld-seongsu","venue_source_key":"venue-realworld-seongsu","item_kind":"permanent","canonical_name":"리얼월드 성수","summary":"둘이 단서를 모으고 이야기를 풀어가는 오픈형 방탈출 콘텐츠가 여러 개 운영되는 미스터리 체험 공간입니다.","category":"entertainment",
+      "activity_traits":["experience","cafe"],"primary_activity_type":"experience","secondary_activity_types":["cafe"],"energy_level":"high","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 리얼월드 룸즈에서 성수 공간과 15개 플레이 콘텐츠를 확인했으며 콘텐츠 구성을 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":25000,"price_basis":"program_fee","price_note":"공식 안내의 대표 1시간 체험 기준, 콘텐츠별 가격 변동","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://web.realworld.to/rooms","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-groot-climbing","venue_source_key":"venue-groot-climbing","item_kind":"permanent","canonical_name":"그루트클라이밍","summary":"초보도 장비를 빌려 함께 도전하고 서로 응원하는 경험이 분명한 성수 실내 볼더링장입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"2026년 9월 현장 모임과 8월 운영 정보가 확인됐으며 폐업한 인근 클라이밍파크와 구분해 검수했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":23000,"required_spend_per_person":20000,"price_basis":"admission","price_note":"일일 이용권 20,000원과 암벽화 대여 예상","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"high","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"verification","url":"https://crux-climb.com/gyms/18f26b1f-c2cd-4873-9124-8db0962da637","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-dotnote-seongsu","venue_source_key":"venue-dotnote-seongsu","item_kind":"permanent","canonical_name":"성수향수공방 닷노트","summary":"각자 향을 고르고 조합해 서로 다른 결과물을 가져가는 1~2시간 조향 체험 공간입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"medium","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"공식 홈페이지와 2026년 운영 후기에서 성수점 조향 체험과 영업시간을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":35000,"required_spend_per_person":35000,"price_basis":"program_fee","price_note":"대표 조향 체험 예상가, 용량·프로그램별 변동","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://dotnote.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-oliveyoung-n-seongsu","venue_source_key":"venue-oliveyoung-n-seongsu","item_kind":"permanent","canonical_name":"올리브영 N성수","summary":"팝업 쇼룸과 뷰티 서비스, 라운지가 층별로 이어져 최신 K-뷰티를 함께 탐색하는 혁신 매장입니다.","category":"culture",
+      "activity_traits":["experience","walk_culture"],"primary_activity_type":"experience","secondary_activity_types":["walk_culture"],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"CJ 공식 자료에서 체험·팝업 중심의 5층 혁신 매장 운영을 확인했고 콘텐츠를 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장과 기본 체험 무료, 제품·라운지 구매는 선택","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"high","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://cjnews.cj.net/?p=56585","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-whipped-house","venue_source_key":"venue-whipped-house","item_kind":"permanent","canonical_name":"휩드 하우스","summary":"비건 원료와 베이킹 콘셉트로 클렌저를 경험하는 소규모 K-뷰티 체험형 플래그십입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"서울 뷰티 공식 디렉터리에서 체험형 플래그십과 2026년 운영시간을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"variable","typical_spend_per_person":30000,"required_spend_per_person":0,"price_basis":"variable","price_note":"기본 공간 경험 무료, 제품·클래스 구성에 따라 변동","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://whipped.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-onion-seongsu","venue_source_key":"venue-onion-seongsu","item_kind":"permanent","canonical_name":"어니언 성수","summary":"성수의 옛 공장 구조와 베이커리 풍경을 함께 즐길 수 있어 공간 자체가 대화거리가 되는 카페입니다.","category":"cafe",
+      "activity_traits":["cafe"],"primary_activity_type":"cafe","secondary_activity_types":[],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"브랜드 공식 페이지와 Kakao 장소에서 성수점 운영을 확인했고 혼잡도와 메뉴는 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 베이커리 1개를 나눠 먹는 일반 지출 기준","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"high","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://onionkr.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-scene-seongsu","venue_source_key":"venue-scene-seongsu","item_kind":"permanent","canonical_name":"쎈느","summary":"넓은 산업형 공간과 시즌 팝업이 결합돼 카페에 머물면서도 새로운 콘텐츠를 함께 볼 수 있는 성수 거점입니다.","category":"cafe",
+      "activity_traits":["cafe","exhibition_popup"],"primary_activity_type":"cafe","secondary_activity_types":["exhibition_popup"],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 사이트에서 주소와 2026년 영업 정보를 확인했고 진행 팝업은 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":6000,"price_basis":"minimum_purchase","price_note":"음료와 디저트 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"high","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://sceneseoul.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-oude-seongsu","venue_source_key":"venue-oude-seongsu","item_kind":"permanent","canonical_name":"오우드","summary":"천창과 디자인 가구가 만든 넓은 공간에서 커피·베이커리와 대화를 여유 있게 즐기는 카페입니다.","category":"cafe",
+      "activity_traits":["cafe"],"primary_activity_type":"cafe","secondary_activity_types":[],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 사이트에서 성수 주소와 공간·메뉴·운영 정보를 확인했고 가격은 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":11000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 베이커리 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"mixed","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://oude.kr/rental.html","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-oh-lolly-day-seongsu","venue_source_key":"venue-oh-lolly-day-seongsu","item_kind":"permanent","canonical_name":"오롤리데이 성수","summary":"긍정적인 메시지와 캐릭터 문구를 함께 고르며 서로의 작은 취향을 발견하는 디자인 스토어입니다.","category":"culture",
+      "activity_traits":["walk_culture"],"primary_activity_type":"walk_culture","secondary_activity_types":[],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 사이트와 2026년 관광 정보에서 성수 매장 운영·영업시간을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 문구·잡화 구매는 선택","recommended_duration_minutes":60,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.oh-lolly-day.com/","checked_at":"2026-09-01"}]
+    },
+
+    {
+      "source_key":"event-ktng-enlistment-eve","venue_source_key":"venue-ktng-sangsangmadang-hongdae","item_kind":"event","canonical_name":"강재구 개인전 《입영 전야》","summary":"청년 작가의 구체적인 시선과 서사를 함께 보고 이야기할 수 있는 상상마당 홍대 기간 전시입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup"],"primary_activity_type":"exhibition_popup","secondary_activity_types":[],"energy_level":"low","novelty_level":"new","freshness_class":"temporary","freshness_reason":"KT&G 상상마당 공식 페이지에 2026년 8월 29일부터 9월 13일까지 전시 중으로 표시됩니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-10T12:00:00+09:00","freshness_expires_at":"2026-09-14T00:00:00+09:00",
+      "price_band":"free","typical_spend_per_person":0,"required_spend_per_person":0,"price_basis":"free","price_note":"갤러리 관람 무료","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":"2026-08-29T00:00:00+09:00","valid_until":"2026-09-14T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.sangsangmadang.com/main/HD","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"event-ktng-temporary-human","venue_source_key":"venue-ktng-sangsangmadang-hongdae","item_kind":"event","canonical_name":"메타 휴먼 프로젝트 《임시휴먼》","summary":"동시대의 인간과 기술을 다루는 프로젝트를 라운지 공간에서 가볍게 만나는 상상마당 기간 전시입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup","walk_culture"],"primary_activity_type":"exhibition_popup","secondary_activity_types":["walk_culture"],"energy_level":"medium","novelty_level":"new","freshness_class":"temporary","freshness_reason":"KT&G 상상마당 공식 페이지에 2026년 8월 21일부터 9월 13일까지 전시 중으로 표시됩니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-10T12:00:00+09:00","freshness_expires_at":"2026-09-14T00:00:00+09:00",
+      "price_band":"free","typical_spend_per_person":0,"required_spend_per_person":0,"price_basis":"free","price_note":"프로젝트 스페이스 관람 무료","recommended_duration_minutes":60,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":"2026-08-21T00:00:00+09:00","valid_until":"2026-09-14T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.sangsangmadang.com/main/HD","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-beat-phobia-hongdae-dungeon3","venue_source_key":"venue-beat-phobia-hongdae-dungeon3","item_kind":"permanent","canonical_name":"비트포비아 홍대던전3","summary":"영화 같은 세트와 장치를 따라 둘이 함께 추리하고 탈출하는 몰입형 방탈출 공간입니다.","category":"entertainment",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 예약 페이지에서 홍대던전3의 현재 테마 운영을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":28000,"required_spend_per_person":28000,"price_basis":"program_fee","price_note":"테마별 1인 예상가, 예약 화면에서 최종 확인","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://xdungeon.net/layout/res/home.php?go=main","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-code-k-hongdae","venue_source_key":"venue-code-k-hongdae","item_kind":"permanent","canonical_name":"코드케이 홍대점","summary":"큰 단일 테마 공간에서 75분 동안 함께 움직이고 문제를 푸는 프리미엄 방탈출 체험입니다.","category":"entertainment",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"2026년 6월 갱신된 장소 정보와 Kakao에서 현재 운영·주소를 교차 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":25000,"price_basis":"program_fee","price_note":"75분 테마 1인 예상가, 예약 시 최종 확인","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"verification","url":"https://web.zamfit.kr/stores/1968/%EC%BD%94%EB%93%9C%EC%BC%80%EC%9D%B4-%ED%99%8D%EB%8C%80%EC%A0%90","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-zero-world-hongdae","venue_source_key":"venue-zero-world-hongdae","item_kind":"permanent","canonical_name":"제로월드 홍대점","summary":"스토리와 공간 연출이 강한 여러 테마에서 서로 역할을 나눠 해결하는 홍대 방탈출 공간입니다.","category":"entertainment",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 홍대점 페이지에서 위치와 예약 동선을 확인했고 테마·가격을 월별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":28000,"required_spend_per_person":28000,"price_basis":"program_fee","price_note":"테마별 1인 예상가, 공식 예약에서 최종 확인","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.zerohongdae.com/map","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-redbutton-layered-hongdae","venue_source_key":"venue-redbutton-layered-hongdae","item_kind":"permanent","canonical_name":"레드버튼 레이어드 홍대점","summary":"다양한 보드게임을 골라 경쟁하거나 협력하며 대화를 자연스럽게 이어가기 좋은 실내 놀이 공간입니다.","category":"entertainment",
+      "activity_traits":["experience","cafe"],"primary_activity_type":"experience","secondary_activity_types":["cafe"],"energy_level":"medium","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"브랜드 공식 채널과 Kakao에서 레이어드 홍대점 운영을 확인했고 요금은 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":5000,"price_basis":"program_fee","price_note":"시간 이용료와 음료를 포함한 일반 지출 예상","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://redbutton.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-zzang-arcade-hongdae","venue_source_key":"venue-zzang-arcade-hongdae","item_kind":"permanent","canonical_name":"짱오락실 홍대점","summary":"리듬·레이싱·인형뽑기 등 짧은 게임을 번갈아 즐기며 즉흥적으로 활기를 더하는 대형 오락실입니다.","category":"entertainment",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"Kakao Place ID와 2026년 장소 갱신 상태를 확인했으며 기기 구성은 분기별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":10000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"게임별 자율 결제, 1인 일반 이용 예상","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"kakao","url":"https://place.map.kakao.com/1081289191","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-w-rock-bowling-hongdae","venue_source_key":"venue-w-rock-bowling-hongdae","item_kind":"permanent","canonical_name":"W락볼링센터","summary":"음악과 조명이 있는 실내에서 가볍게 승부하고 몸을 움직이는 홍대 락볼링장입니다.","category":"entertainment",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"Kakao 장소에서 현재 위치와 업종을 확인했으며 영업·요금 정보는 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":10000,"price_basis":"program_fee","price_note":"게임·대화료를 포함한 1인 예상 지출","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"kakao","url":"https://place.map.kakao.com/1277862647","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-object-seogyo","venue_source_key":"venue-object-seogyo","item_kind":"permanent","canonical_name":"오브젝트 서교점","summary":"독립 창작자의 문구와 생활 오브제를 함께 구경하며 서로의 취향을 발견하기 좋은 편집숍입니다.","category":"culture",
+      "activity_traits":["walk_culture"],"primary_activity_type":"walk_culture","secondary_activity_types":[],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"오브젝트 공식 채널과 Kakao 장소에서 서교점 운영을 확인했고 입점 작가는 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 문구·오브제 구매는 선택","recommended_duration_minutes":75,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://insideobject.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-cafe-layered-yeonnam","venue_source_key":"venue-cafe-layered-yeonnam","item_kind":"permanent","canonical_name":"카페레이어드 연남점","summary":"케이크와 베이커리를 고르는 재미와 따뜻한 공간 연출이 분명한 연남의 목적형 디저트 카페입니다.","category":"cafe",
+      "activity_traits":["cafe"],"primary_activity_type":"cafe","secondary_activity_types":[],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"브랜드 공식 채널과 Kakao 장소에서 연남점 운영을 확인했고 메뉴·혼잡도를 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":6000,"price_basis":"minimum_purchase","price_note":"음료와 디저트 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"high","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.instagram.com/cafe_layered/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-taylor-coffee-yeonnam1","venue_source_key":"venue-taylor-coffee-yeonnam1","item_kind":"permanent","canonical_name":"테일러커피 연남1호점","summary":"커피 자체에 집중하면서 둘이 차분히 대화하기 좋은 연남의 검증된 로스터리 카페입니다.","category":"cafe",
+      "activity_traits":["cafe"],"primary_activity_type":"cafe","secondary_activity_types":[],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"테일러커피 공식 채널과 Kakao 장소에서 연남1호점 운영을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":10000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 선택 디저트 일반 지출 기준","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.taylorcoffee.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-yeonnam-donggeurami","venue_source_key":"venue-yeonnam-donggeurami","item_kind":"permanent","canonical_name":"연남동그라미","summary":"연남 골목의 소규모 공간에서 디저트와 대화에 집중하기 좋은 콘셉트 카페입니다.","category":"cafe",
+      "activity_traits":["cafe"],"primary_activity_type":"cafe","secondary_activity_types":[],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 소셜 채널의 현재 운영 흔적을 확인했고 월별로 상태를 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":6000,"price_basis":"minimum_purchase","price_note":"음료와 디저트 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"kakao","url":"https://place.map.kakao.com/900563604","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-gongsangondo","venue_source_key":"venue-gongsangondo","item_kind":"permanent","canonical_name":"공상온도","summary":"책·음악·전시와 음료가 한 공간에 섞여 있어 조용한 대화와 작은 문화 발견을 함께 할 수 있는 카페입니다.","category":"cafe",
+      "activity_traits":["cafe","exhibition_popup","walk_culture"],"primary_activity_type":"cafe","secondary_activity_types":["exhibition_popup","walk_culture"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 소셜 채널에서 현재 운영을 확인했고 전시·행사는 월별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":6000,"price_basis":"minimum_purchase","price_note":"음료와 간단한 디저트 일반 주문 기준","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.instagram.com/gongsangondo/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-mudaeruk","venue_source_key":"venue-mudaeruk","item_kind":"permanent","canonical_name":"무대륙","summary":"카페와 공연·문화 프로그램이 느슨하게 이어져 당일 콘텐츠에 따라 다른 분위기를 만나는 독립 문화 공간입니다.","category":"cafe",
+      "activity_traits":["cafe","exhibition_popup","walk_culture"],"primary_activity_type":"cafe","secondary_activity_types":["exhibition_popup","walk_culture"],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 소셜 채널에서 운영을 확인했고 공연·전시 일정은 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":6000,"price_basis":"variable","price_note":"카페 주문 기준, 공연·프로그램은 별도 요금 가능","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.instagram.com/mudaeruk/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-dotnote-hongdae","venue_source_key":"venue-dotnote-hongdae","item_kind":"permanent","canonical_name":"홍대향수공방 닷노트","summary":"각자 고른 향을 조합하고 완성한 향수를 비교하며 함께 결과물을 남기는 홍대 조향 체험입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"medium","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"공식 홈페이지와 Kakao 장소에서 홍대점 조향 체험 운영을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":35000,"required_spend_per_person":35000,"price_basis":"program_fee","price_note":"대표 조향 체험 예상가, 용량·프로그램별 변동","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://dotnote.co.kr/","checked_at":"2026-09-01"}]
+    },
+
+    {
+      "source_key":"event-ilmin-vibe-era","venue_source_key":"venue-ilmin-museum","item_kind":"event","canonical_name":"《바이브 에라》","summary":"2026년 동시대 시각문화를 다루는 일민미술관의 현재 전시를 광화문 도심 동선과 함께 즐기는 선택입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup"],"primary_activity_type":"exhibition_popup","secondary_activity_types":[],"energy_level":"low","novelty_level":"new","freshness_class":"temporary","freshness_reason":"일민미술관 공식 현재 전시 페이지에 2026년 8월 25일부터 10월 25일까지로 명시됐습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-30T12:00:00+09:00","freshness_expires_at":"2026-10-26T00:00:00+09:00",
+      "price_band":"under_20000","typical_spend_per_person":9000,"required_spend_per_person":9000,"price_basis":"admission","price_note":"일반 관람 예상가, 공식 현장 요금 재확인 필요","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":"2026-08-25T00:00:00+09:00","valid_until":"2026-10-26T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://ilmin.org/exhibitions/current/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"event-ilmin-off-the-white","venue_source_key":"venue-ilmin-museum","item_kind":"event","canonical_name":"《오프 더 화이트: 무늬와 정보》","summary":"무늬와 기록을 통해 이미지를 새롭게 읽어보며 서로의 해석을 나누기 좋은 일민미술관 기간 전시입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup"],"primary_activity_type":"exhibition_popup","secondary_activity_types":[],"energy_level":"low","novelty_level":"new","freshness_class":"temporary","freshness_reason":"일민미술관 공식 현재 전시 페이지에 2026년 8월 14일부터 10월 18일까지로 명시됐습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-09-30T12:00:00+09:00","freshness_expires_at":"2026-10-19T00:00:00+09:00",
+      "price_band":"under_20000","typical_spend_per_person":9000,"required_spend_per_person":9000,"price_basis":"admission","price_note":"일반 관람 예상가, 공식 현장 요금 재확인 필요","recommended_duration_minutes":120,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":"2026-08-14T00:00:00+09:00","valid_until":"2026-10-19T00:00:00+09:00","verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://ilmin.org/exhibitions/current/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-kukje-gallery-k1","venue_source_key":"venue-kukje-gallery-k1","item_kind":"permanent","canonical_name":"국제갤러리 K1","summary":"삼청동에서 수준 높은 현대미술 기획전을 무료로 보고 작품 해석을 나누기 좋은 갤러리입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup","walk_culture"],"primary_activity_type":"exhibition_popup","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"국제갤러리 공식 사이트와 Kakao 장소에서 운영을 확인했고 전시 교체 시 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"free","typical_spend_per_person":0,"required_spend_per_person":0,"price_basis":"free","price_note":"일반 갤러리 관람 무료","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.kukjegallery.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-gallery-hyundai","venue_source_key":"venue-gallery-hyundai","item_kind":"permanent","canonical_name":"갤러리현대","summary":"한국 현대미술의 흐름을 현재 전시로 만나고 삼청동 산책과 자연스럽게 이어가기 좋은 갤러리입니다.","category":"exhibition",
+      "activity_traits":["exhibition_popup","walk_culture"],"primary_activity_type":"exhibition_popup","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"갤러리현대 공식 사이트와 Kakao 장소에서 운영을 확인했고 현재 전시는 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"free","typical_spend_per_person":0,"required_spend_per_person":0,"price_basis":"free","price_note":"일반 갤러리 관람 무료","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.galleryhyundai.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-the-reference","venue_source_key":"venue-the-reference","item_kind":"permanent","canonical_name":"더레퍼런스","summary":"사진책과 독립 출판물, 소규모 전시를 함께 살피며 시각 취향을 이야기하기 좋은 서촌 문화 공간입니다.","category":"culture",
+      "activity_traits":["exhibition_popup","walk_culture"],"primary_activity_type":"walk_culture","secondary_activity_types":["exhibition_popup"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 사이트와 Kakao 장소에서 운영을 확인했고 전시·출판 큐레이션은 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":15000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 사진책·출판물 구매는 선택","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":3,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://the-reference.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-dialogue-in-dark","venue_source_key":"venue-dialogue-in-dark","item_kind":"permanent","canonical_name":"어둠속의대화","summary":"완전한 어둠 속에서 소리·촉감·대화에 의지해 함께 이동하는 독특한 감각 체험입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"medium","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"공식 사이트와 Kakao 장소에서 북촌 체험 운영을 확인했고 예약 가능 상태를 월별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":30000,"required_spend_per_person":30000,"price_basis":"program_fee","price_note":"성인 체험 1인 예상가, 공식 예매에서 최종 확인","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"medium","wait_risk":"low","car_required":false,"mobility_score":3,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.dialogueinthedark.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-peakers-jongno","venue_source_key":"venue-peakers-jongno","item_kind":"permanent","canonical_name":"피커스 종로점","summary":"종로 한복판에서 장비를 빌려 함께 볼더링에 도전하고 성취를 공유하는 실내 활동 공간입니다.","category":"experience",
+      "activity_traits":["experience"],"primary_activity_type":"experience","secondary_activity_types":[],"energy_level":"high","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"피커스 공식 채널과 Kakao 장소에서 종로점 운영을 확인했고 이용료를 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":22000,"price_basis":"admission","price_note":"일일권과 장비 대여를 포함한 1인 예상 지출","recommended_duration_minutes":180,"indoor_outdoor":"indoor","walking_level":"high","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://peakers.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-music-complex-seoul","venue_source_key":"venue-music-complex-seoul","item_kind":"permanent","canonical_name":"뮤직컴플렉스서울","summary":"각자 고른 LP를 헤드폰으로 함께 듣고 음악 이야기를 나누는 인사동의 목적형 음악 카페입니다.","category":"cafe",
+      "activity_traits":["cafe","experience"],"primary_activity_type":"cafe","secondary_activity_types":["experience"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 소셜 채널에서 운영을 확인했고 이용 정책과 메뉴를 월별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-10-31T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":20000,"required_spend_per_person":15000,"price_basis":"minimum_purchase","price_note":"음료와 LP 좌석 이용을 포함한 일반 지출 예상","recommended_duration_minutes":150,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.instagram.com/music.complex.seoul/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-onion-anguk","venue_source_key":"venue-onion-anguk","item_kind":"permanent","canonical_name":"어니언컴퍼니 안국점","summary":"한옥 공간과 베이커리를 함께 즐기며 북촌 동선의 시작이나 마무리로 쓰기 좋은 목적형 카페입니다.","category":"cafe",
+      "activity_traits":["cafe","walk_culture"],"primary_activity_type":"cafe","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"브랜드 공식 사이트와 Kakao 장소에서 안국점 운영을 확인했고 혼잡도를 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":13000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 베이커리 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"mixed","walking_level":"low","wait_risk":"high","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://onionkr.com/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-fritz-wonso","venue_source_key":"venue-fritz-wonso","item_kind":"permanent","canonical_name":"프릳츠 원서점","summary":"고즈넉한 원서동 건물과 검증된 커피·빵을 함께 즐기며 오래 대화하기 좋은 카페입니다.","category":"cafe",
+      "activity_traits":["cafe","walk_culture"],"primary_activity_type":"cafe","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"프릳츠 공식 채널과 Kakao 장소에서 원서점 운영을 확인했고 가격·혼잡도를 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":12000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 베이커리 일반 주문 기준","recommended_duration_minutes":120,"indoor_outdoor":"mixed","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://fritz.co.kr/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-coffee-hanyakbang","venue_source_key":"venue-coffee-hanyakbang","item_kind":"permanent","canonical_name":"커피한약방","summary":"좁은 을지로 골목과 빈티지 실내가 만드는 분위기가 선명해 짧은 카페 데이트에 목적을 더하는 공간입니다.","category":"cafe",
+      "activity_traits":["cafe","walk_culture"],"primary_activity_type":"cafe","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 공식 소셜 채널에서 을지로 본점 운영을 확인했고 혼잡도를 분기별 검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":10000,"required_spend_per_person":5000,"price_basis":"minimum_purchase","price_note":"음료와 선택 디저트 일반 주문 기준","recommended_duration_minutes":90,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"high","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.instagram.com/coffee_hanyakbang/","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-seoul-record","venue_source_key":"venue-seoul-record","item_kind":"permanent","canonical_name":"서울레코드","summary":"오래된 음반과 새로운 취향을 함께 뒤져보며 서로의 음악 이야기를 꺼내기 좋은 종로 레코드숍입니다.","category":"culture",
+      "activity_traits":["walk_culture"],"primary_activity_type":"walk_culture","secondary_activity_types":[],"energy_level":"low","novelty_level":"proven","freshness_class":"evergreen","freshness_reason":"Kakao 장소와 운영 소셜 채널에서 종로 매장 상태를 확인했고 영업 정보를 분기별 재검수합니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_20000","typical_spend_per_person":20000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"입장 무료, 음반 구매는 선택","recommended_duration_minutes":75,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"low","car_required":false,"mobility_score":5,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"kakao","url":"https://place.map.kakao.com/8430119","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-sulwhasoo-bukchon","venue_source_key":"venue-sulwhasoo-bukchon","item_kind":"permanent","canonical_name":"설화수의집 북촌","summary":"한옥과 현대 공간을 오가며 향과 뷰티 브랜드의 이야기를 천천히 경험하는 북촌 플래그십입니다.","category":"culture",
+      "activity_traits":["experience","walk_culture"],"primary_activity_type":"experience","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"설화수 공식 플래그십 안내와 Kakao 장소에서 북촌점 운영을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"공간 관람 무료, 제품·유료 프로그램은 선택","recommended_duration_minutes":120,"indoor_outdoor":"mixed","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://www.sulwhasoo.com/kr/ko/experience/flagship-store/flagship-store.html","checked_at":"2026-09-01"}]
+    },
+    {
+      "source_key":"item-nonfiction-samcheong","venue_source_key":"venue-nonfiction-samcheong","item_kind":"permanent","canonical_name":"논픽션 삼청","summary":"향을 직접 비교하고 공간의 재료와 오브제를 함께 살피며 서로의 감각 취향을 나누는 삼청 쇼룸입니다.","category":"culture",
+      "activity_traits":["experience","walk_culture"],"primary_activity_type":"experience","secondary_activity_types":["walk_culture"],"energy_level":"low","novelty_level":"balanced","freshness_class":"evergreen","freshness_reason":"논픽션 공식 쇼룸 안내와 Kakao 장소에서 삼청점 운영을 확인했습니다.","freshness_verified_at":"2026-09-01T12:00:00+09:00","freshness_review_due_at":"2026-11-30T12:00:00+09:00","freshness_expires_at":null,
+      "price_band":"under_40000","typical_spend_per_person":25000,"required_spend_per_person":0,"price_basis":"optional_purchase","price_note":"쇼룸 체험 무료, 향 제품 구매는 선택","recommended_duration_minutes":75,"indoor_outdoor":"indoor","walking_level":"low","wait_risk":"medium","car_required":false,"mobility_score":4,"status":"active","valid_from":null,"valid_until":null,"verified_at":"2026-09-01T12:00:00+09:00","source_references":[{"kind":"official","url":"https://nonfiction.com/pages/showroom","checked_at":"2026-09-01"}]
+    }
+  ]
+}
