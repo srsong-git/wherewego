@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 const themeVisuals = {
   놀이: ['🎢', '놀이와 웃음'],
   과학: ['🔭', '호기심 탐험'],
@@ -17,8 +19,11 @@ function fallbackVisual(place) {
 
 export default function PlaceImage({ place, variant = 'card', eager = false }) {
   const [emoji, label] = fallbackVisual(place)
+  const [loadFailed, setLoadFailed] = useState(false)
 
-  if (!place.image?.src || place.image.localHostingAllowed !== true) {
+  useEffect(() => setLoadFailed(false), [place.id, place.image?.src])
+
+  if (!place.image?.src || place.image.localHostingAllowed !== true || loadFailed) {
     return (
       <div className={`place-image place-image-${variant} fallback theme-${place.themes[0] || 'default'}`} role="img" aria-label={`${place.name} ${label} 이미지 준비 중`}>
         <span aria-hidden="true">{emoji}</span>
@@ -29,7 +34,7 @@ export default function PlaceImage({ place, variant = 'card', eager = false }) {
 
   return (
     <figure className={`place-image place-image-${variant}`}>
-      <img src={place.image.src} alt={place.image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      <img src={place.image.src} alt={place.image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setLoadFailed(true)} />
       <figcaption>
         사진: <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">{place.image.sourceName}</a>
         {place.image.licenseUrl && <> · <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">라이선스</a></>}

@@ -74,6 +74,7 @@ test('대표 이미지 audit는 재호스팅 권리가 없는 자료를 승인�
   const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
   assert.match(imageSource, /place\.image\.sourceUrl/)
   assert.match(imageSource, /place\.image\.licenseUrl/)
+  assert.match(imageSource, /onError=.*setLoadFailed/)
 })
 
 test('Family 위치 검색은 브라우저 저장소나 Supabase에 위치를 기록하지 않는다', () => {
