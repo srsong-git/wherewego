@@ -1,40 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-
-const SDK_ID = 'kakao-map-sdk'
-let kakaoSdkPromise
-
-function loadKakaoSdk(appKey) {
-  if (window.kakao?.maps) {
-    return new Promise((resolve) => window.kakao.maps.load(() => resolve(window.kakao.maps)))
-  }
-
-  if (kakaoSdkPromise) return kakaoSdkPromise
-
-  kakaoSdkPromise = new Promise((resolve, reject) => {
-    const existingScript = document.getElementById(SDK_ID)
-    const script = existingScript || document.createElement('script')
-
-    const handleLoad = () => {
-      if (!window.kakao?.maps) {
-        reject(new Error('카카오 지도 SDK를 불러오지 못했습니다.'))
-        return
-      }
-      window.kakao.maps.load(() => resolve(window.kakao.maps))
-    }
-
-    script.addEventListener('load', handleLoad, { once: true })
-    script.addEventListener('error', () => reject(new Error('카카오 지도 연결에 실패했습니다.')), { once: true })
-
-    if (!existingScript) {
-      script.id = SDK_ID
-      script.async = true
-      script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${encodeURIComponent(appKey)}&autoload=false&libraries=clusterer`
-      document.head.appendChild(script)
-    }
-  })
-
-  return kakaoSdkPromise
-}
+import { loadKakaoSdk } from '../utils/kakaoSdk.js'
 
 export default function KakaoMap({ items, userLocation, onOpenPlace }) {
   const containerRef = useRef(null)

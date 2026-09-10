@@ -3,6 +3,7 @@ import familyExpansionBatch01 from './family-expansion-batch-01.json' with { typ
 import familyExpansionBatch02 from './family-expansion-batch-02.js'
 import familyExpansionBatch03 from './family-expansion-batch-03.js'
 import familyExpansionBatch04 from './family-expansion-batch-04.js'
+import { familyPlaceContentById } from './family-place-content.js'
 
 const ALL_AGES = ['유아', '초등 저학년', '초등 고학년']
 const YOUNG = ['유아', '초등 저학년']
@@ -323,6 +324,11 @@ const originalPlaces = [
 ]
 
 export const places = [...originalPlaces, ...familyExpansionBatch01, ...familyExpansionBatch02, ...familyExpansionBatch03, ...familyExpansionBatch04]
+  .map((placeItem) => ({
+    ...placeItem,
+    visitInfo: familyPlaceContentById[placeItem.id]?.visitInfo || null,
+    image: familyPlaceContentById[placeItem.id]?.image || null,
+  }))
 
 export const filterOptions = [
   { key: 'weather', label: '날씨', icon: '🌤️', options: [{ value: 'outdoor', label: '☀️ 야외도 좋아요' }, { value: 'indoor', label: '☔ 실내만' }] },

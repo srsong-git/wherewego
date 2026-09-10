@@ -52,3 +52,16 @@ export function refinePlaces(results, filters, favoriteIds, location) {
 
   return refined.sort((a, b) => a.recommendationIndex - b.recommendationIndex)
 }
+
+export const SEARCHED_ORIGIN_RADII_KM = Object.freeze([15, 30, 60, 120])
+
+export function getProximityCandidatePool(items, origin, minimumSize = 3) {
+  if (origin?.type !== 'searched' || items.length <= minimumSize) return items
+
+  for (const radius of SEARCHED_ORIGIN_RADII_KM) {
+    const nearby = items.filter((item) => item.distance != null && item.distance <= radius)
+    if (nearby.length >= minimumSize) return nearby
+  }
+
+  return items
+}

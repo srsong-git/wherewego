@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import FamilyLocationSearch from './components/FamilyLocationSearch.jsx'
 import KakaoMap from './components/KakaoMap.jsx'
+import PlaceImage from './components/PlaceImage.jsx'
 import ReviewSection from './components/ReviewSection.jsx'
+import VisitChecklist from './components/VisitChecklist.jsx'
 import { filterOptions, places, themeOptions } from './data/places.js'
 import { getUserDisplayName, isAnonymousUser, isPermanentUser, isSupabaseConfigured, supabase } from './lib/supabase.js'
 import { getKakaoDirectionsLinks, getKakaoMapLink, getKakaoPlaceDetailLink } from './utils/kakaoLinks.js'
-import { calculateDistance, refinePlaces, searchPlaces } from './utils/placeFilters.js'
+import { calculateDistance, getProximityCandidatePool, refinePlaces, searchPlaces } from './utils/placeFilters.js'
 
 const initialFilters = { weather: '', age: '', duration: '', price: '', themes: [] }
 const initialResultFilters = { region: '전체', themes: [], environment: '전체', sort: 'default', favoritesOnly: false }
@@ -40,7 +43,7 @@ function getMatchingConditionText(place, filters, resultFilters) {
   return uniqueLabels.length ? `고른 ${uniqueLabels.join('·')} 조건에 맞고` : `${place.indoorOutdoor}에서 ${place.duration} 동안 즐기기 좋고`
 }
 
-function getTopRecommendations(items, filters, resultFilters) {
+function getTopRecommendations(items, filters, resultFilters, origin) {
   const childFriendlyThemes = ['놀이', '동물', '체험', '과학', '물놀이·스포츠']
   const fatigueScore = { low: 3, medium: 1, high: 0 }
   const durationScore = { '1~2시간': 3, 반나절: 2, 하루: 0 }
@@ -80,7 +83,10 @@ function getTopRecommendations(items, filters, resultFilters) {
 
     if (!candidate) return []
     usedIds.add(candidate.place.id)
-    return [{ ...candidate, ...definition, reason: definition.reason(candidate.place) }]
+    const proximityReason = origin?.type === 'searched' && candidate.distance != null
+      ? ` ${origin.label}에서 직선거리 약 ${formatDistance(candidate.distance)}예요.`
+      : ''
+    return [{ ...candidate, ...definition, reason: `${definition.reason(candidate.place)}${proximityReason}` }]
   })
 }
 
@@ -200,7 +206,7 @@ function PrivacyContent() {
       </section>
       <section>
         <h3>위치 정보</h3>
-        <p>현재 위치는 사용자가 허용한 경우에만 브라우저에서 거리 계산과 지도 표시에 사용하며, 오늘 어디가지?의 데이터베이스에는 저장하지 않습니다.</p>
+        <p>현재 위치와 직접 선택한 검색 위치는 브라우저에서 직선거리 계산에만 사용하며, 오늘 어디가지?의 데이터베이스나 브라우저 저장소에는 저장하지 않습니다. 다른 위치 검색어는 검색 결과를 받기 위해 카카오 장소 검색에 전달됩니다.</p>
       </section>
       <section>
         <h3>보관과 삭제</h3>
@@ -257,6 +263,7 @@ function ThemeSelector({ selected, onToggle, compact = false }) {
 function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
   return (
     <article className="place-card" onClick={() => onOpen(place)}>
+      <PlaceImage place={place} />
       <div className="card-heading">
         <div>
           <p className="area">📍 {place.area}</p>
@@ -300,7 +307,7 @@ function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
   )
 }
 
-function TopRecommendations({ items, onOpen }) {
+function TopRecommendations({ items, onOpen, origin }) {
   if (!items.length) return null
 
   return (
@@ -310,11 +317,12 @@ function TopRecommendations({ items, onOpen }) {
           <p className="step">TODAY'S PICK</p>
           <h3 id="top-recommendations-title">오늘의 추천 TOP 3</h3>
         </div>
-        <p>지금 고른 조건에서 결정하기 쉬운 세 곳만 먼저 골랐어요.</p>
+        <p>{origin?.type === 'searched' ? `${origin.label} 주변에서 조건에 잘 맞는 곳을 골랐어요.` : '지금 고른 조건에서 결정하기 쉬운 세 곳만 먼저 골랐어요.'}</p>
       </div>
       <div className="top-recommendation-grid">
         {items.map(({ place, type, icon, title, reason }) => (
           <article className={`top-recommendation-card ${type}`} key={place.id}>
+            <PlaceImage place={place} variant="top" eager={type === 'balanced'} />
             <p className="top-recommendation-type"><span aria-hidden="true">{icon}</span> {title}</p>
             <h4>{place.name}</h4>
             <div className="top-recommendation-tags">
@@ -417,7 +425,7 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, 
   )
 }
 
-function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
+function PlaceModal({ place, distance, originLabel, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
   const [showRouteFallback, setShowRouteFallback] = useState(false)
@@ -442,17 +450,19 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
             </div>
           </div>
           <h2 id="modal-title">{place.name}</h2>
+          <PlaceImage place={place} variant="modal" eager />
           <p className="modal-description">{place.description}</p>
           <div className="modal-themes">{place.themes.map((theme) => <span key={theme}>{themeLabelMap[theme]}</span>)}</div>
           <dl className="detail-list">
             <div><dt>📍 지역</dt><dd>{place.area}</dd></div>
-            {distance != null && <div><dt>📏 거리</dt><dd>현재 위치에서 직선거리 약 {formatDistance(distance)}</dd></div>}
+            {distance != null && <div><dt>📏 거리</dt><dd>{originLabel || '현재 위치'}에서 직선거리 약 {formatDistance(distance)}</dd></div>}
             <div><dt>{place.indoorOutdoor === '실내' ? '☔' : '☀️'} 공간</dt><dd>{place.indoorOutdoor}</dd></div>
             <div><dt>👧 추천 연령</dt><dd>{place.ageGroups.join(' · ')}</dd></div>
             <div><dt>⏱ 예상 시간</dt><dd>{place.duration}</dd></div>
             <div><dt>💰 비용 구분</dt><dd>{place.priceCategory}</dd></div>
             <div><dt>🌿 엄마 피로도</dt><dd><strong>{fatigueLabelMap[place.parentFatigueLevel]}</strong><small>{place.parentFatigueReason}</small></dd></div>
           </dl>
+          <VisitChecklist visitInfo={place.visitInfo} />
           <div className="family-fit-grid">
             <section className="family-fit recommend" aria-labelledby="recommend-for-title">
               <h3 id="recommend-for-title">👍 이런 가족에게 추천해요</h3>
@@ -463,12 +473,12 @@ function PlaceModal({ place, distance, isFavorite, user, onLogin, onToggleFavori
               <ul>{place.notRecommendFor.map((reason) => <li key={reason}>{reason}</li>)}</ul>
             </section>
           </div>
+          <ReviewSection place={place} user={user} onLogin={onLogin} />
           <div className="place-info-status">
             <strong>방문 전 최신 정보를 확인해 주세요</strong>
             <p>현재 표시된 소요시간과 비용은 추천용 구분이며 실시간 운영정보가 아니에요. 정확한 주소, 운영시간, 휴무일, 실제 요금은 카카오맵 장소정보와 해당 장소의 공식 채널에서 확인해 주세요.</p>
             <div><span>서비스 데이터 업데이트 {PLACE_DATA_UPDATED_AT}</span><a href={getKakaoPlaceDetailLink(place)} target="_blank" rel="noreferrer" aria-label={`${place.kakaoPlaceName || place.name} 최신 장소정보 확인 새 창`}>최신 장소정보 확인 ↗</a></div>
           </div>
-          <ReviewSection place={place} user={user} onLogin={onLogin} />
         </div>
         {showRouteFallback && (
           <p className="route-fallback-notice" role="status">
@@ -507,7 +517,7 @@ export default function App() {
   const [viewMode, setViewMode] = useState('list')
   const [refineOpen, setRefineOpen] = useState(false)
   const [visibleResultCount, setVisibleResultCount] = useState(RESULT_PAGE_SIZE)
-  const [location, setLocation] = useState(null)
+  const [origin, setOrigin] = useState(null)
   const [locationStatus, setLocationStatus] = useState('idle')
   const [user, setUser] = useState(null)
   const [authStatus, setAuthStatus] = useState(isSupabaseConfigured ? 'loading' : 'not-configured')
@@ -616,7 +626,7 @@ export default function App() {
     setLocationStatus('loading')
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
-        setLocation({ latitude: coords.latitude, longitude: coords.longitude })
+        setOrigin({ type: 'current', label: '현재 위치', latitude: coords.latitude, longitude: coords.longitude })
         setLocationStatus('success')
       },
       () => setLocationStatus('error'),
@@ -624,17 +634,32 @@ export default function App() {
     )
   }
 
+  const selectSearchOrigin = (nextOrigin) => {
+    setOrigin(nextOrigin)
+    setLocationStatus('idle')
+    setResultFilters((current) => ({ ...current, sort: 'distance' }))
+  }
+
+  const effectiveResultFilters = useMemo(
+    () => origin?.type === 'searched' ? { ...resultFilters, sort: 'distance' } : resultFilters,
+    [origin, resultFilters],
+  )
+
   const displayedResults = useMemo(
-    () => results ? refinePlaces(results, resultFilters, favoriteIds, location) : [],
-    [favoriteIds, location, resultFilters, results],
+    () => results ? refinePlaces(results, effectiveResultFilters, favoriteIds, origin) : [],
+    [effectiveResultFilters, favoriteIds, origin, results],
   )
   const visibleResults = useMemo(
     () => displayedResults.slice(0, visibleResultCount),
     [displayedResults, visibleResultCount],
   )
+  const topCandidateResults = useMemo(
+    () => getProximityCandidatePool(displayedResults, origin),
+    [displayedResults, origin],
+  )
   const topRecommendations = useMemo(
-    () => getTopRecommendations(displayedResults, appliedFilters, resultFilters),
-    [appliedFilters, displayedResults, resultFilters],
+    () => getTopRecommendations(topCandidateResults, appliedFilters, resultFilters, origin),
+    [appliedFilters, origin, resultFilters, topCandidateResults],
   )
   const itemListJsonLd = useMemo(() => results ? ({
     '@context': 'https://schema.org',
@@ -656,12 +681,12 @@ export default function App() {
 
   useEffect(() => {
     setVisibleResultCount(RESULT_PAGE_SIZE)
-  }, [location, resultFilters, results])
+  }, [origin, resultFilters, results])
 
   const findPlaces = () => {
     setResults(searchPlaces(places, filters))
     setAppliedFilters({ ...filters, themes: [...filters.themes] })
-    setResultFilters(initialResultFilters)
+    setResultFilters(origin?.type === 'searched' ? { ...initialResultFilters, sort: 'distance' } : initialResultFilters)
     setRandomPick(null)
     setViewMode('list')
     setRefineOpen(false)
@@ -727,16 +752,18 @@ export default function App() {
             <button className="reset-button" type="button" onClick={resetAll}>↻ 초기화</button>
           </div>
           <p className="helper">선택하지 않은 항목은 전체로 찾아드려요. 테마는 여러 개 고를 수 있어요.</p>
-          <div className="location-row">
-            <div>
-              <strong>📍 내 위치에서 얼마나 가까울까요?</strong>
-              <p>위치를 허용하면 가까운 순으로 정렬할 수 있어요.</p>
-            </div>
-            <button className={location ? 'location-button active' : 'location-button'} type="button" onClick={getMyLocation} disabled={locationStatus === 'loading'}>
-              {locationStatus === 'loading' ? '위치 확인 중…' : location ? '✓ 내 위치 확인됨' : '내 위치로 거리 보기'}
-            </button>
-          </div>
-          <p className="location-distance-note">거리는 현재 위치 기준 직선거리이며, 실제 이동시간과 다를 수 있어요. 위치정보는 저장하지 않아요.</p>
+          <FamilyLocationSearch
+            origin={origin}
+            locationStatus={locationStatus}
+            onUseCurrentLocation={getMyLocation}
+            onSelect={selectSearchOrigin}
+            onClear={() => {
+              setOrigin(null)
+              setLocationStatus('idle')
+              setResultFilters((current) => ({ ...current, sort: current.sort === 'distance' ? 'default' : current.sort }))
+            }}
+          />
+          <p className="location-distance-note">거리는 {origin?.type === 'searched' ? `${origin.label} 기준` : '현재 위치 기준'} 직선거리이며, 실제 이동시간과 다를 수 있어요. 위치정보는 저장하지 않아요.</p>
           {(locationStatus === 'error' || locationStatus === 'unsupported') && <p className="location-error" role="alert">위치를 확인하지 못했어요. 브라우저의 위치 권한을 확인해 주세요.</p>}
           <div className="filters">
             {filterOptions.map((group) => <FilterGroup key={group.key} group={group} selected={filters[group.key]} onSelect={(value) => setFilters({ ...filters, [group.key]: value })} />)}
@@ -773,25 +800,25 @@ export default function App() {
               )}
             </div>
 
-            <TopRecommendations items={topRecommendations} onOpen={setSelectedPlace} />
+            <TopRecommendations items={topRecommendations} onOpen={setSelectedPlace} origin={origin} />
 
             <ResultFilters
               filters={resultFilters}
               setFilters={setResultFilters}
               favoriteCount={favoriteIds.length}
-              location={location}
+              location={origin}
               onReset={() => setResultFilters(initialResultFilters)}
               isOpen={refineOpen}
               onToggle={() => setRefineOpen((current) => !current)}
             />
 
             {randomPick && displayedResults.some(({ place }) => place.id === randomPick.id) && (
-              <RandomPick place={randomPick} distance={location ? calculateDistance(location, randomPick) : null} onRetry={chooseRandom} onClose={() => setRandomPick(null)} onOpen={setSelectedPlace} />
+              <RandomPick place={randomPick} distance={origin ? calculateDistance(origin, randomPick) : null} onRetry={chooseRandom} onClose={() => setRandomPick(null)} onOpen={setSelectedPlace} />
             )}
 
             {displayedResults.length ? (
               viewMode === 'map' ? (
-                <KakaoMap items={displayedResults} userLocation={location} onOpenPlace={setSelectedPlace} />
+                <KakaoMap items={displayedResults} userLocation={origin?.type === 'current' ? origin : null} onOpenPlace={setSelectedPlace} />
               ) : (
                 <>
                   <div className="card-grid">{visibleResults.map(({ place, distance }) => (
@@ -828,7 +855,7 @@ export default function App() {
       {favoriteToast && <div className="favorite-toast" role="status" aria-live="polite">{favoriteToast}</div>}
 
       {selectedPlace && (
-        <PlaceModal place={selectedPlace} distance={location ? calculateDistance(location, selectedPlace) : null} isFavorite={favoriteIds.includes(selectedPlace.id)} user={isPermanentUser(user) ? user : null} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+        <PlaceModal place={selectedPlace} distance={origin ? calculateDistance(origin, selectedPlace) : null} originLabel={origin?.label} isFavorite={favoriteIds.includes(selectedPlace.id)} user={isPermanentUser(user) ? user : null} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
       )}
 
       {infoModal === 'privacy' && (
