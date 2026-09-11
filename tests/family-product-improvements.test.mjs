@@ -58,23 +58,166 @@ test('검색 위치에서는 일반 결과가 자동으로 가까운 순으로 �
 
 test('대표 이미지 audit는 재호스팅 권리가 없는 자료를 승인하지 않는다', () => {
   const audit = JSON.parse(fs.readFileSync(new URL('data/family/family-image-pilot-audit.json', ROOT), 'utf8'))
-  assert.equal(audit.targetPlaceCount, 42)
-  assert.equal(audit.accepted.length, 12)
-  assert.ok(audit.accepted.every((entry) => entry.localHostingAllowed === true))
+  assert.equal(audit.targetPlaceCount, 40)
+  assert.equal(audit.accepted.length, 19)
+  assert.equal(audit.held.length, 21)
+  assert.deepEqual(
+    [audit.existingReview.keptCount, audit.existingReview.replacedCount, audit.existingReview.fallbackCount],
+    [5, 1, 6],
+  )
+  assert.equal(places.filter((place) => place.image).length, 150)
+  assert.ok(audit.accepted.every((entry) => entry.localHostingAllowed === true && entry.commercialUseAllowed === true && entry.derivativesAllowed === true))
   assert.ok(audit.held.every((entry) => entry.localHostingAllowed === false))
-  assert.ok(audit.requiredFields.includes('localHostingAllowed'))
-  for (const entry of [...audit.accepted, ...audit.held]) {
-    for (const field of audit.requiredFields) assert.notEqual(entry[field], undefined, `${entry.placeName}: ${field}`)
+  assert.ok(audit.requiredAcceptedFields.includes('localHostingAllowed'))
+  for (const entry of audit.accepted) {
+    for (const field of audit.requiredAcceptedFields) assert.notEqual(entry[field], undefined, `${entry.placeName}: ${field}`)
   }
   for (const entry of audit.accepted) {
     assert.match(entry.licenseUrl, /^https?:\/\//, `${entry.placeName}: licenseUrl`)
     assert.equal(fs.existsSync(new URL(entry.localPath, ROOT)), true, `${entry.placeName}: local image`)
+    const runtimePlace = places.find((place) => place.id === entry.placeId)
+    assert.equal(runtimePlace?.image?.sourceUrl, entry.sourceUrl, `${entry.placeName}: runtime sourceUrl`)
+    assert.equal(runtimePlace?.image?.localHostingAllowed, true, `${entry.placeName}: runtime localHostingAllowed`)
+    assert.match(runtimePlace.image.sourceName, new RegExp(entry.exactLicense.replaceAll('.', '\\.')))
+    assert.match(runtimePlace.image.sourceName, /crop·WebP 변환/)
+    if (entry.shareAlikeRequired) assert.match(runtimePlace.image.licenseOrUsageBasis, /동일조건변경허락/)
+    const imageFile = fs.readFileSync(new URL(entry.localPath, ROOT))
+    assert.equal(imageFile.subarray(0, 4).toString('ascii'), 'RIFF', `${entry.placeName}: WebP RIFF header`)
+    assert.equal(imageFile.subarray(8, 12).toString('ascii'), 'WEBP', `${entry.placeName}: WebP signature`)
   }
 
   const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
   assert.match(imageSource, /place\.image\.sourceUrl/)
   assert.match(imageSource, /place\.image\.licenseUrl/)
   assert.match(imageSource, /onError=.*setLoadFailed/)
+})
+
+test('TourAPI 파일럿은 공공누리 제1유형 승인 이미지 15장만 로컬 반영한다', () => {
+  const audit = JSON.parse(fs.readFileSync(new URL('data/family/family-tourapi-image-pilot-audit.json', ROOT), 'utf8'))
+  const approved = audit.places.filter((entry) => entry.imageCandidate.status === 'approved')
+  const review = audit.places.filter((entry) => entry.imageCandidate.status === 'review')
+
+  assert.equal(audit.summary.appliedPlaceCount, 15)
+  assert.equal(approved.length, 15)
+  assert.equal(review.length, 5)
+  assert.ok(approved.every((entry) => entry.imageCandidate.copyrightCode === 'Type1'))
+  assert.ok(review.every((entry) => entry.imageCandidate.copyrightCode === 'Type3'))
+  assert.ok(review.every((entry) => entry.imageCandidate.downloaded === false && entry.imageCandidate.uiApplied === false))
+
+  for (const entry of approved) {
+    const candidate = entry.imageCandidate
+    for (const field of ['sourceName', 'sourceUrl', 'exactLicense', 'licenseOrUsageBasis', 'licenseUrl', 'attributionPlan', 'verifiedAt', 'imageType', 'imageVariant', 'representativenessAssessment', 'representativeReason', 'localPath']) {
+      assert.notEqual(candidate[field], undefined, `${entry.familyPlaceName}: ${field}`)
+      assert.notEqual(candidate[field], null, `${entry.familyPlaceName}: ${field}`)
+    }
+    assert.equal(candidate.downloaded, true, `${entry.familyPlaceName}: downloaded`)
+    assert.equal(candidate.uiApplied, true, `${entry.familyPlaceName}: uiApplied`)
+    assert.equal(candidate.outputDimensions.width, 940, `${entry.familyPlaceName}: width`)
+    assert.equal(candidate.outputDimensions.height, 588, `${entry.familyPlaceName}: height`)
+    assert.equal(fs.existsSync(new URL(candidate.localPath, ROOT)), true, `${entry.familyPlaceName}: local image`)
+
+    const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.placeId, entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.sourceUrl, candidate.sourceUrl)
+    assert.equal(runtimePlace?.image?.tourApiContentId, entry.tourApiMatch.contentId)
+    assert.equal(runtimePlace?.image?.imageVariant, candidate.imageType)
+    assert.equal(runtimePlace?.image?.representativeReason, candidate.representativenessAssessment)
+    assert.equal(runtimePlace?.image?.localHostingAllowed, true)
+    assert.match(runtimePlace.image.licenseOrUsageBasis, /공공누리 제1유형/)
+
+    const imageFile = fs.readFileSync(new URL(candidate.localPath, ROOT))
+    assert.equal(imageFile.subarray(0, 4).toString('ascii'), 'RIFF', `${entry.familyPlaceName}: WebP RIFF header`)
+    assert.equal(imageFile.subarray(8, 12).toString('ascii'), 'WEBP', `${entry.familyPlaceName}: WebP signature`)
+  }
+})
+
+test('TourAPI 전체 audit의 자동 승인 91장만 기존 이미지를 덮어쓰지 않고 반영한다', () => {
+  const sourceAudit = JSON.parse(fs.readFileSync(new URL('data/family/family-tourapi-fallback-audit.json', ROOT), 'utf8'))
+  const applicationAudit = JSON.parse(fs.readFileSync(new URL('data/family/family-tourapi-approved-image-application.json', ROOT), 'utf8'))
+  const approved = sourceAudit.places.filter((entry) => entry.decision === 'approved')
+  const review = sourceAudit.places.filter((entry) => entry.decision === 'review')
+  const applied = applicationAudit.entries.filter((entry) => entry.status === 'applied')
+
+  assert.equal(places.length, 295)
+  assert.equal(approved.length, 91)
+  assert.equal(review.length, 109)
+  assert.equal(applicationAudit.appliedCount, 91)
+  assert.equal(applicationAudit.failedCount, 0)
+  assert.equal(applicationAudit.existingImageCountBefore, 34)
+  assert.equal(applicationAudit.existingImagesUnchanged, true)
+  assert.equal(places.filter((place) => place.image).length, 150)
+  assert.ok(approved.every((entry) => entry.licenseType === 'Type1'))
+  assert.ok(approved.every((entry) => entry.tourApiMatchStatus === 'exact'))
+  assert.ok(approved.every((entry) => entry.representativeQuality === 'high_by_tourapi_metadata'))
+
+  for (const entry of applied) {
+    for (const field of ['familyPlaceId', 'familyPlaceName', 'sourceName', 'tourApiContentId', 'sourceUrl', 'licenseOrUsageBasis', 'licenseType', 'licenseUrl', 'attributionText', 'verifiedAt', 'imageVariant', 'representativeReason', 'localPath']) {
+      assert.notEqual(entry[field], undefined, `${entry.familyPlaceName}: ${field}`)
+      assert.notEqual(entry[field], null, `${entry.familyPlaceName}: ${field}`)
+    }
+    assert.equal(entry.licenseType, 'Type1', `${entry.familyPlaceName}: licenseType`)
+    assert.equal(entry.upscaled, false, `${entry.familyPlaceName}: no upscaling`)
+    assert.equal(fs.existsSync(new URL(entry.localPath, ROOT)), true, `${entry.familyPlaceName}: local image`)
+
+    const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.placeId, entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.sourceUrl, entry.sourceUrl)
+    assert.equal(runtimePlace?.image?.tourApiContentId, entry.tourApiContentId)
+    assert.equal(runtimePlace?.image?.localHostingAllowed, true)
+    assert.match(runtimePlace.image.licenseOrUsageBasis, /공공누리 제1유형/)
+
+    const imageFile = fs.readFileSync(new URL(entry.localPath, ROOT))
+    assert.equal(imageFile.subarray(0, 4).toString('ascii'), 'RIFF', `${entry.familyPlaceName}: WebP RIFF header`)
+    assert.equal(imageFile.subarray(8, 12).toString('ascii'), 'WEBP', `${entry.familyPlaceName}: WebP signature`)
+  }
+})
+
+test('사람 승인 제1유형 15장과 변경 없는 제3유형 PoC 10장만 추가 반영한다', () => {
+  const audit = JSON.parse(fs.readFileSync(new URL('data/family/family-tourapi-human-review-type3-poc-application.json', ROOT), 'utf8'))
+  const type1Entries = audit.entries.filter((entry) => entry.licenseType === 'Type1' && entry.status === 'applied')
+  const type3Entries = audit.entries.filter((entry) => entry.licenseType === 'Type3' && entry.status === 'applied')
+
+  assert.equal(audit.type1RequestedCount, 15)
+  assert.equal(audit.type1AppliedCount, 15)
+  assert.equal(audit.type3PocRequestedCount, 10)
+  assert.equal(audit.type3PocAppliedCount, 10)
+  assert.equal(audit.failedCount, 0)
+  assert.equal(audit.existingImageCountBefore, 125)
+  assert.equal(audit.existingImagesUnchanged, true)
+  assert.equal(places.length, 295)
+  assert.equal(places.filter((place) => place.image).length, 150)
+
+  for (const entry of type1Entries) {
+    const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.tourApiContentId, entry.tourApiContentId)
+    assert.match(runtimePlace?.image?.licenseOrUsageBasis, /공공누리 제1유형/)
+    assert.equal(runtimePlace?.image?.preserveOriginal, undefined)
+    assert.equal(entry.upscaled, false)
+    assert.equal(fs.existsSync(new URL(entry.localPath, ROOT)), true)
+  }
+
+  for (const entry of type3Entries) {
+    const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.tourApiContentId, entry.tourApiContentId)
+    assert.equal(runtimePlace?.image?.licenseType, 'Type3')
+    assert.equal(runtimePlace?.image?.preserveOriginal, true)
+    assert.equal(runtimePlace?.image?.transformation, 'none')
+    assert.match(runtimePlace?.image?.licenseOrUsageBasis, /변경 및 2차적 저작물 작성 금지/)
+    assert.equal(fs.existsSync(new URL(entry.localPath, ROOT)), true)
+    assert.equal(entry.originalBytesPreserved, true)
+    assert.equal(entry.transformation, 'none')
+    assert.equal(entry.sha256, entry.downloadedSha256)
+  }
+
+  for (const placeId of ['place-021', 'place-119', 'place-164', 'place-267', 'place-293']) {
+    assert.equal(places.find((place) => place.id === placeId)?.image, null, `${placeId}: 보류 이미지는 fallback 유지`)
+  }
+
+  const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
+  const cssSource = fs.readFileSync(new URL('src/styles.css', ROOT), 'utf8')
+  assert.match(imageSource, /변경 없이 사용/)
+  assert.match(imageSource, /place\.image\.sourcePolicyUrl/)
+  assert.match(cssSource, /\.place-image\.no-derivatives img \{ object-fit: contain; \}/)
 })
 
 test('Family 위치 검색은 브라우저 저장소나 Supabase에 위치를 기록하지 않는다', () => {

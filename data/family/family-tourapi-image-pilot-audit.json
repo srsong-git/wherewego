@@ -1,0 +1,1409 @@
+{
+  "scope": "Family 대표 이미지 TourAPI 1차 파일럿 20곳",
+  "verifiedAt": "2026-09-11",
+  "api": {
+    "provider": "한국관광공사 TourAPI",
+    "service": "KorService2",
+    "endpoints": [
+      "searchKeyword2",
+      "detailImage2"
+    ],
+    "requestRuntime": "로컬 Node.js --env-file=.env.local",
+    "secretHandling": "TOURAPI_SERVICE_KEY는 프로세스 환경에서만 읽었고 요청·audit·로그·브라우저 코드에 기록하지 않았습니다."
+  },
+  "policy": {
+    "matching": "장소명만으로 자동 연결하지 않고 지역, 주소, 좌표 거리, 콘텐츠 유형을 함께 확인했습니다.",
+    "approval": "공공누리 제1유형처럼 상업적 이용과 변경·가공이 모두 허용되는 이미지 중 대표성을 눈으로 확인한 후보만 approved로 판정했습니다.",
+    "review": "공공누리 제3유형은 상업적 이용이 가능해도 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+    "download": "approved 15곳의 공공누리 제1유형 이미지만 로컬로 저장하고 1200x750 WebP로 변환했습니다. 제3유형 5곳은 다운로드·반영하지 않았습니다."
+  },
+  "references": {
+    "tourApiSpecification": "https://www.data.go.kr/data/15101578/openapi.do",
+    "ktoCopyrightPolicy": "https://contest.visitkorea.or.kr/kor/helpDesk/copyrightGuide.kto",
+    "koglType1": "https://www.kogl.or.kr/info/licenseType1.do",
+    "koglType3": "https://www.kogl.or.kr/info/licenseType3.do"
+  },
+  "summary": {
+    "investigatedPlaceCount": 20,
+    "exactMatchCount": 20,
+    "imageAvailablePlaceCount": 20,
+    "licenseIdentifiedPlaceCount": 20,
+    "approvedPlaceCount": 15,
+    "reviewPlaceCount": 5,
+    "rejectedPlaceCount": 0,
+    "downloadedImageCount": 15,
+    "uiAppliedImageCount": 15,
+    "appliedPlaceCount": 15,
+    "newCoverageCount": 15,
+    "replacedActiveImageCount": 0,
+    "fallbackMaintainedCount": 5,
+    "reviewImagesDownloaded": 0
+  },
+  "places": [
+    {
+      "familyPlaceId": "place-001",
+      "familyPlaceName": "국립중앙박물관",
+      "familyArea": "서울 용산",
+      "familyAddress": "서울 용산구 서빙고로 137",
+      "familyCoordinates": {
+        "latitude": 37.5239,
+        "longitude": 126.9803
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립중앙박물관",
+        "contentId": "129703",
+        "contentTypeId": "14",
+        "title": "국립중앙박물관",
+        "address": "서울특별시 용산구 서빙고로 137 (용산동6가)",
+        "coordinates": {
+          "latitude": 37.521116788705534,
+          "longitude": 126.97911242871115
+        },
+        "distanceKm": 0.327,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 용산구 서빙고로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3495012_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3495012_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3495012_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "대표 전시 공간과 국보급 석탑이 함께 보여 박물관 내부 성격을 직관적으로 전달합니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-001.webp",
+        "runtimeSrc": "/place-images/place-001.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 40360,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_national_museum_of_korea.jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "대표 전시 공간과 국보급 석탑이 함께 보여 박물관 내부 성격을 직관적으로 전달합니다."
+      },
+      "availableImageCount": 12,
+      "type1CandidateCount": 8,
+      "type3CandidateCount": 4
+    },
+    {
+      "familyPlaceId": "place-008",
+      "familyPlaceName": "국립어린이과학관",
+      "familyArea": "서울 종로",
+      "familyAddress": "서울 종로구 창경궁로 215",
+      "familyCoordinates": {
+        "latitude": 37.5812,
+        "longitude": 126.9975
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립어린이과학관",
+        "contentId": "2545920",
+        "contentTypeId": "14",
+        "title": "국립어린이과학관",
+        "address": "서울특별시 종로구 창경궁로 215 (와룡동)",
+        "coordinates": {
+          "latitude": 37.5818277974,
+          "longitude": 126.9967994757
+        },
+        "distanceKm": 0.093,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 종로구 창경궁로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3410958_image2_1.jpg",
+        "thumbnailUrl": "http://tong.visitkorea.or.kr/cms/resource/58/3410958_image3_1.jpg",
+        "imageName": "국립어린이과학관_4",
+        "serialNumber": "3410958_1",
+        "imageType": "detailImage2",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3410958_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "실내 과학 체험 전시가 선명해 어린이 대상 체험형 과학관임을 이해하기 쉽습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-008.webp",
+        "runtimeSrc": "/place-images/place-008.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 97358,
+        "existingImageComparison": {
+          "previousStatus": "none",
+          "previousSourceUrl": null,
+          "decision": "기존 승인 로컬 이미지가 없어 TourAPI Type1 후보를 신규 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "detailImage2",
+        "representativeReason": "실내 과학 체험 전시가 선명해 어린이 대상 체험형 과학관임을 이해하기 쉽습니다."
+      },
+      "availableImageCount": 12,
+      "type1CandidateCount": 11,
+      "type3CandidateCount": 1
+    },
+    {
+      "familyPlaceId": "place-017",
+      "familyPlaceName": "서울상상나라",
+      "familyArea": "서울 광진",
+      "familyAddress": "서울 광진구 능동로 216",
+      "familyCoordinates": {
+        "latitude": 37.5495,
+        "longitude": 127.0857
+      },
+      "tourApiMatch": {
+        "searchKeyword": "서울상상나라",
+        "contentId": "1897833",
+        "contentTypeId": "14",
+        "title": "서울상상나라",
+        "address": "서울특별시 광진구 능동로 216 (능동)",
+        "coordinates": {
+          "latitude": 37.5504,
+          "longitude": 127.0775
+        },
+        "distanceKm": 0.73,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 광진구 능동로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/3539964_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/64/3539964_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/64/3539964_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "건물 외관과 시설명이 함께 보여 장소 식별성이 높습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-017.webp",
+        "runtimeSrc": "/place-images/place-017.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 97492,
+        "existingImageComparison": {
+          "previousStatus": "none",
+          "previousSourceUrl": null,
+          "decision": "기존 승인 로컬 이미지가 없어 TourAPI Type1 후보를 신규 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "건물 외관과 시설명이 함께 보여 장소 식별성이 높습니다."
+      },
+      "availableImageCount": 6,
+      "type1CandidateCount": 6,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-005",
+      "familyPlaceName": "서울식물원",
+      "familyArea": "서울 강서",
+      "familyAddress": "서울 강서구 마곡동로 161",
+      "familyCoordinates": {
+        "latitude": 37.5694,
+        "longitude": 126.835
+      },
+      "tourApiMatch": {
+        "searchKeyword": "서울식물원",
+        "contentId": "2589349",
+        "contentTypeId": "12",
+        "title": "서울식물원",
+        "address": "서울특별시 강서구 마곡동로 161 (마곡동)",
+        "coordinates": {
+          "latitude": 37.5691701546,
+          "longitude": 126.8360015625
+        },
+        "distanceKm": 0.092,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 강서구 마곡동로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4078223_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4078223_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4078223_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "온실 구조물과 야외 공간이 함께 보여 식물원 성격이 분명합니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-005.webp",
+        "runtimeSrc": "/place-images/place-005.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 82638,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Seoul_botanic_park_03.jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "온실 구조물과 야외 공간이 함께 보여 식물원 성격이 분명합니다."
+      },
+      "availableImageCount": 30,
+      "type1CandidateCount": 8,
+      "type3CandidateCount": 22
+    },
+    {
+      "familyPlaceId": "place-004",
+      "familyPlaceName": "서울어린이대공원",
+      "familyArea": "서울 광진",
+      "familyAddress": "서울 광진구 능동로 216",
+      "familyCoordinates": {
+        "latitude": 37.5494,
+        "longitude": 127.0811
+      },
+      "tourApiMatch": {
+        "searchKeyword": "서울어린이대공원",
+        "contentId": "126490",
+        "contentTypeId": "12",
+        "title": "서울어린이대공원",
+        "address": "서울특별시 광진구 능동로 216 (능동)",
+        "coordinates": {
+          "latitude": 37.5493032718,
+          "longitude": 127.0762632513
+        },
+        "distanceKm": 0.427,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 광진구 능동로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/3355161_image2_1.JPG",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/61/3355161_image3_1.JPG",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/61/3355161_image2_1.JPG",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "공원 녹지와 팔각당 일대를 함께 보여 대형 가족 공원의 분위기를 전달합니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-004.webp",
+        "runtimeSrc": "/place-images/place-004.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 122616,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/w/index.php?search=Seoul+Children%27s+Grand+Park&title=Special:MediaSearch&type=image",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "공원 녹지와 팔각당 일대를 함께 보여 대형 가족 공원의 분위기를 전달합니다."
+      },
+      "availableImageCount": 5,
+      "type1CandidateCount": 5,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-046",
+      "familyPlaceName": "국립과천과학관",
+      "familyArea": "경기 과천",
+      "familyAddress": "경기 과천시 상하벌로 110",
+      "familyCoordinates": {
+        "latitude": 37.4383,
+        "longitude": 127.0057
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립과천과학관",
+        "contentId": "660722",
+        "contentTypeId": "14",
+        "title": "국립과천과학관",
+        "address": "경기도 과천시 상하벌로 110 (과천동)",
+        "coordinates": {
+          "latitude": 37.438119,
+          "longitude": 127.005777
+        },
+        "distanceKm": 0.021,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 과천시 상하벌로 주소가 정확히 일치하며 좌표 차이가 30m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4065392_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4065392_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4065392_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "대표 천체투영관 외관이 중심에 보여 과학관을 즉시 식별할 수 있습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-046.webp",
+        "runtimeSrc": "/place-images/place-046.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 60778,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/w/index.php?search=Gwacheon+National+Science+Museum&title=Special:MediaSearch&type=image",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "대표 천체투영관 외관이 중심에 보여 과학관을 즉시 식별할 수 있습니다."
+      },
+      "availableImageCount": 18,
+      "type1CandidateCount": 8,
+      "type3CandidateCount": 10
+    },
+    {
+      "familyPlaceId": "place-135",
+      "familyPlaceName": "아쿠아플라넷 광교",
+      "familyArea": "경기 수원",
+      "familyAddress": "경기 수원시 영통구 광교호수공원로 300",
+      "familyCoordinates": {
+        "latitude": 37.284399476111204,
+        "longitude": 127.05846363198269
+      },
+      "tourApiMatch": {
+        "searchKeyword": "아쿠아플라넷 광교",
+        "contentId": "2714652",
+        "contentTypeId": "14",
+        "title": "아쿠아플라넷 광교",
+        "address": "경기도 수원시 영통구 광교중앙로 124 (하동)",
+        "coordinates": {
+          "latitude": 37.2852510012341,
+          "longitude": 127.057454909262
+        },
+        "distanceKm": 0.13,
+        "confidence": "high",
+        "confidenceScore": 0.96,
+        "matchReason": "시설명이 정확히 일치하고 광교 복합시설 안에서 좌표가 약 130m 이내입니다. 도로명 표기는 Family 데이터와 달라 함께 기록했습니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/3515008_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/08/3515008_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/08/3515008_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "대형 수조와 해양 생물이 선명해 아쿠아리움의 핵심 체험을 잘 보여줍니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-135.webp",
+        "runtimeSrc": "/place-images/place-135.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 70832,
+        "existingImageComparison": {
+          "previousStatus": "none",
+          "previousSourceUrl": null,
+          "decision": "기존 승인 로컬 이미지가 없어 TourAPI Type1 후보를 신규 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "대형 수조와 해양 생물이 선명해 아쿠아리움의 핵심 체험을 잘 보여줍니다."
+      },
+      "availableImageCount": 6,
+      "type1CandidateCount": 6,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-242",
+      "familyPlaceName": "국립부산과학관",
+      "familyArea": "부산 기장",
+      "familyAddress": "부산 기장군 기장읍 동부산관광6로 59",
+      "familyCoordinates": {
+        "latitude": 35.20442157969581,
+        "longitude": 129.21259974946793
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립부산과학관",
+        "contentId": "2385666",
+        "contentTypeId": "14",
+        "title": "국립부산과학관",
+        "address": "부산광역시 기장군 기장읍 동부산관광6로 59",
+        "coordinates": {
+          "latitude": 35.2045740978,
+          "longitude": 129.2126863022
+        },
+        "distanceKm": 0.019,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 기장군 동부산관광6로 주소가 정확히 일치하며 좌표 차이가 20m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4039597_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4039597_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4039597_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "과학관 정문과 건축 외관이 함께 보여 시설 식별성이 높습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-242.webp",
+        "runtimeSrc": "/place-images/place-242.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 52386,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/w/index.php?search=Busan+National+Science+Museum&title=Special:MediaSearch&type=image",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "과학관 정문과 건축 외관이 함께 보여 시설 식별성이 높습니다."
+      },
+      "availableImageCount": 17,
+      "type1CandidateCount": 6,
+      "type3CandidateCount": 11
+    },
+    {
+      "familyPlaceId": "place-271",
+      "familyPlaceName": "국립제주박물관",
+      "familyArea": "제주 제주시",
+      "familyAddress": "제주특별자치도 제주시 일주동로 17",
+      "familyCoordinates": {
+        "latitude": 33.5135962890802,
+        "longitude": 126.548876058666
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립제주박물관",
+        "contentId": "130461",
+        "contentTypeId": "14",
+        "title": "국립제주박물관",
+        "address": "제주특별자치도 제주시 일주동로 17 (건입동)",
+        "coordinates": {
+          "latitude": 33.513375,
+          "longitude": 126.54886
+        },
+        "distanceKm": 0.025,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 제주시 일주동로 주소가 정확히 일치하며 좌표 차이가 30m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/3562163_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/63/3562163_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/63/3562163_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "박물관 외관과 진입 공간이 선명해 장소를 알아보기 쉽습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-271.webp",
+        "runtimeSrc": "/place-images/place-271.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 79038,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Jeju_Island_20141129_08.jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "박물관 외관과 진입 공간이 선명해 장소를 알아보기 쉽습니다."
+      },
+      "availableImageCount": 8,
+      "type1CandidateCount": 8,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-280",
+      "familyPlaceName": "스누피가든",
+      "familyArea": "제주 제주시",
+      "familyAddress": "제주특별자치도 제주시 구좌읍 금백조로 930",
+      "familyCoordinates": {
+        "latitude": 33.444131030183364,
+        "longitude": 126.77816741986328
+      },
+      "tourApiMatch": {
+        "searchKeyword": "스누피가든",
+        "contentId": "2714222",
+        "contentTypeId": "12",
+        "title": "스누피가든",
+        "address": "제주특별자치도 제주시 구좌읍 금백조로 930",
+        "coordinates": {
+          "latitude": 33.44337164886826,
+          "longitude": 126.77860501008234
+        },
+        "distanceKm": 0.094,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 제주시 구좌읍 금백조로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/3354387_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/87/3354387_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/87/3354387_image2_1.jpg",
+        "copyrightCode": "Type3",
+        "exactLicense": "공공누리 제3유형(출처표시+변경금지)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType3.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": false,
+        "localHostingAllowed": false,
+        "attributionRequired": true,
+        "attributionPlan": "출처표시는 가능하지만 변경금지라 crop·resize·WebP 변환을 전제로 한 현 UI에는 바로 사용하지 않습니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "스누피 조형물과 건물 외관이 함께 보여 장소 식별성은 높지만 변경금지 조건입니다.",
+        "status": "review",
+        "reason": "TourAPI 권리코드가 Type3입니다. 상업적 이용은 가능하지만 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+        "downloaded": false,
+        "uiApplied": false,
+        "licenseOrUsageBasis": "공공누리 제3유형(출처표시+변경금지)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "스누피 조형물과 건물 외관이 함께 보여 장소 식별성은 높지만 변경금지 조건입니다."
+      },
+      "availableImageCount": 14,
+      "type1CandidateCount": 0,
+      "type3CandidateCount": 14
+    },
+    {
+      "familyPlaceId": "place-006",
+      "familyPlaceName": "서대문자연사박물관",
+      "familyArea": "서울 서대문",
+      "familyAddress": "서울 서대문구 연희로32길 51",
+      "familyCoordinates": {
+        "latitude": 37.5767,
+        "longitude": 126.9379
+      },
+      "tourApiMatch": {
+        "searchKeyword": "서대문자연사박물관",
+        "contentId": "130448",
+        "contentTypeId": "14",
+        "title": "서대문자연사박물관",
+        "address": "서울특별시 서대문구 연희로32길 51",
+        "coordinates": {
+          "latitude": 37.5766949504464,
+          "longitude": 126.93783623533
+        },
+        "distanceKm": 0.006,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 서대문구 연희로32길 주소가 정확히 일치하며 좌표 차이가 10m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3502776_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3502776_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3502776_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "박물관 외관과 시설 안내가 함께 보여 장소를 알아보기 쉽습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-006.webp",
+        "runtimeSrc": "/place-images/place-006.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 130162,
+        "existingImageComparison": {
+          "previousStatus": "none",
+          "previousSourceUrl": null,
+          "decision": "기존 승인 로컬 이미지가 없어 TourAPI Type1 후보를 신규 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "박물관 외관과 시설 안내가 함께 보여 장소를 알아보기 쉽습니다."
+      },
+      "availableImageCount": 6,
+      "type1CandidateCount": 6,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-015",
+      "familyPlaceName": "전쟁기념관",
+      "familyArea": "서울 용산",
+      "familyAddress": "서울 용산구 이태원로 29",
+      "familyCoordinates": {
+        "latitude": 37.5365,
+        "longitude": 126.977
+      },
+      "tourApiMatch": {
+        "searchKeyword": "전쟁기념관",
+        "contentId": "130431",
+        "contentTypeId": "14",
+        "title": "전쟁기념관",
+        "address": "서울특별시 용산구 이태원로 29",
+        "coordinates": {
+          "latitude": 37.5373270838,
+          "longitude": 126.9784385198
+        },
+        "distanceKm": 0.157,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 용산구 이태원로 주소와 좌표가 일치합니다. 동명 검색 후보는 제외했습니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/29/3465929_image2_1.JPG",
+        "thumbnailUrl": "http://tong.visitkorea.or.kr/cms/resource/29/3465929_image3_1.JPG",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "http://tong.visitkorea.or.kr/cms/resource/29/3465929_image2_1.JPG",
+        "copyrightCode": "Type3",
+        "exactLicense": "공공누리 제3유형(출처표시+변경금지)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType3.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": false,
+        "localHostingAllowed": false,
+        "attributionRequired": true,
+        "attributionPlan": "출처표시는 가능하지만 변경금지라 crop·resize·WebP 변환을 전제로 한 현 UI에는 바로 사용하지 않습니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "기념관 본관 전경이 선명해 장소 식별성은 높지만 변경금지 조건입니다.",
+        "status": "review",
+        "reason": "TourAPI 권리코드가 Type3입니다. 상업적 이용은 가능하지만 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+        "downloaded": false,
+        "uiApplied": false,
+        "licenseOrUsageBasis": "공공누리 제3유형(출처표시+변경금지)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "기념관 본관 전경이 선명해 장소 식별성은 높지만 변경금지 조건입니다."
+      },
+      "availableImageCount": 15,
+      "type1CandidateCount": 0,
+      "type3CandidateCount": 15
+    },
+    {
+      "familyPlaceId": "place-051",
+      "familyPlaceName": "한국민속촌",
+      "familyArea": "경기 용인",
+      "familyAddress": "경기 용인시 기흥구 민속촌로 90",
+      "familyCoordinates": {
+        "latitude": 37.2584,
+        "longitude": 127.119
+      },
+      "tourApiMatch": {
+        "searchKeyword": "한국민속촌",
+        "contentId": "125578",
+        "contentTypeId": "12",
+        "title": "한국민속촌",
+        "address": "경기도 용인시 기흥구 민속촌로 90 (보라동)",
+        "coordinates": {
+          "latitude": 37.256714672682186,
+          "longitude": 127.11458055748689
+        },
+        "distanceKm": 0.434,
+        "confidence": "high",
+        "confidenceScore": 0.98,
+        "matchReason": "시설명과 용인시 민속촌로 주소가 정확히 일치합니다. 쇼핑 분류의 동명 후보 대신 관광지 콘텐츠를 선택했습니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3563970_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3563970_image2_1.jpg",
+        "imageName": "용인_한국민속촌 (1)",
+        "serialNumber": "3563970_1",
+        "imageType": "detailImage2",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3563970_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "전통 가옥이 중심에 보여 민속촌의 공간 성격을 첫 화면에서 이해하기 쉽습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-051.webp",
+        "runtimeSrc": "/place-images/place-051.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 120492,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Korean_Folk_Village_IMG_2122.jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "detailImage2",
+        "representativeReason": "전통 가옥이 중심에 보여 민속촌의 공간 성격을 첫 화면에서 이해하기 쉽습니다."
+      },
+      "availableImageCount": 13,
+      "type1CandidateCount": 13,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-057",
+      "familyPlaceName": "광명동굴",
+      "familyArea": "경기 광명",
+      "familyAddress": "경기 광명시 가학동 34-1",
+      "familyCoordinates": {
+        "latitude": 37.4253,
+        "longitude": 126.8646
+      },
+      "tourApiMatch": {
+        "searchKeyword": "광명동굴",
+        "contentId": "2649975",
+        "contentTypeId": "12",
+        "title": "광명동굴",
+        "address": "경기도 광명시 가학로85번길 142",
+        "coordinates": {
+          "latitude": 37.4243017512,
+          "longitude": 126.8648770331
+        },
+        "distanceKm": 0.114,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 광명시 가학로85번길 주소와 좌표가 일치합니다. 동굴 관련 부대시설 후보는 제외했습니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4095727_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4095727_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4095727_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "미디어 조명이 있는 동굴 내부가 보여 핵심 체험을 직관적으로 전달합니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-057.webp",
+        "runtimeSrc": "/place-images/place-057.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 129056,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Gwangmyeong_Cave_20240606_(02).jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "미디어 조명이 있는 동굴 내부가 보여 핵심 체험을 직관적으로 전달합니다."
+      },
+      "availableImageCount": 24,
+      "type1CandidateCount": 7,
+      "type3CandidateCount": 17
+    },
+    {
+      "familyPlaceId": "place-092",
+      "familyPlaceName": "국립세계문자박물관",
+      "familyArea": "인천 연수",
+      "familyAddress": "인천 연수구 센트럴로 217",
+      "familyCoordinates": {
+        "latitude": 37.3938,
+        "longitude": 126.6355
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립세계문자박물관",
+        "contentId": "3097744",
+        "contentTypeId": "14",
+        "title": "국립세계문자박물관",
+        "address": "인천광역시 연수구 센트럴로 217",
+        "coordinates": {
+          "latitude": 37.3947110226,
+          "longitude": 126.6379452558
+        },
+        "distanceKm": 0.239,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 인천 연수구 센트럴로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4090531_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4090531_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4090531_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "특징적인 박물관 외관과 진입부가 함께 보여 장소 식별성이 높습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-092.webp",
+        "runtimeSrc": "/place-images/place-092.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 627
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 54174,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/w/index.php?search=National+Museum+of+World+Writing+Systems&title=Special:MediaSearch&type=image",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "특징적인 박물관 외관과 진입부가 함께 보여 장소 식별성이 높습니다."
+      },
+      "availableImageCount": 21,
+      "type1CandidateCount": 18,
+      "type3CandidateCount": 3
+    },
+    {
+      "familyPlaceId": "place-201",
+      "familyPlaceName": "독립기념관",
+      "familyArea": "충청 천안",
+      "familyAddress": "충남 천안시 동남구 목천읍 독립기념관로 1",
+      "familyCoordinates": {
+        "latitude": 36.78366949071773,
+        "longitude": 127.22280833066404
+      },
+      "tourApiMatch": {
+        "searchKeyword": "독립기념관",
+        "contentId": "129790",
+        "contentTypeId": "14",
+        "title": "독립기념관",
+        "address": "충청남도 천안시 동남구 목천읍 독립기념관로 1",
+        "coordinates": {
+          "latitude": 36.7818719998,
+          "longitude": 127.2303981117
+        },
+        "distanceKm": 0.705,
+        "confidence": "high",
+        "confidenceScore": 0.98,
+        "matchReason": "시설명이 정확히 일치하고 천안시 독립기념관로 주소가 일치합니다. 넓은 경내 때문에 좌표 차이는 약 0.7km입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3450021_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3450021_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3450021_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "겨레의탑과 넓은 경내를 함께 담아 독립기념관을 즉시 식별할 수 있습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-201.webp",
+        "runtimeSrc": "/place-images/place-201.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 705
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 101340,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Independence_Hall_of_Korea_01.JPG",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "겨레의탑과 넓은 경내를 함께 담아 독립기념관을 즉시 식별할 수 있습니다."
+      },
+      "availableImageCount": 48,
+      "type1CandidateCount": 14,
+      "type3CandidateCount": 34
+    },
+    {
+      "familyPlaceId": "place-234",
+      "familyPlaceName": "아르떼뮤지엄 강릉",
+      "familyArea": "강원 강릉",
+      "familyAddress": "강원특별자치도 강릉시 난설헌로 131",
+      "familyCoordinates": {
+        "latitude": 37.791698395443404,
+        "longitude": 128.90753392583056
+      },
+      "tourApiMatch": {
+        "searchKeyword": "아르떼뮤지엄 강릉",
+        "contentId": "2804197",
+        "contentTypeId": "14",
+        "title": "아르떼뮤지엄 강릉",
+        "address": "강원특별자치도 강릉시 난설헌로 131",
+        "coordinates": {
+          "latitude": 37.7900340111,
+          "longitude": 128.9078747054
+        },
+        "distanceKm": 0.187,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "시설명이 정확히 일치하고 강릉시 난설헌로 주소와 좌표가 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/3085833_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/33/3085833_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/33/3085833_image2_1.jpg",
+        "copyrightCode": "Type3",
+        "exactLicense": "공공누리 제3유형(출처표시+변경금지)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType3.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": false,
+        "localHostingAllowed": false,
+        "attributionRequired": true,
+        "attributionPlan": "출처표시는 가능하지만 변경금지라 crop·resize·WebP 변환을 전제로 한 현 UI에는 바로 사용하지 않습니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "몰입형 미디어아트 전시가 선명해 장소 경험은 잘 전달하지만 변경금지 조건입니다.",
+        "status": "review",
+        "reason": "TourAPI 권리코드가 Type3입니다. 상업적 이용은 가능하지만 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+        "downloaded": false,
+        "uiApplied": false,
+        "licenseOrUsageBasis": "공공누리 제3유형(출처표시+변경금지)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "몰입형 미디어아트 전시가 선명해 장소 경험은 잘 전달하지만 변경금지 조건입니다."
+      },
+      "availableImageCount": 6,
+      "type1CandidateCount": 0,
+      "type3CandidateCount": 6
+    },
+    {
+      "familyPlaceId": "place-241",
+      "familyPlaceName": "국립해양박물관",
+      "familyArea": "부산 영도",
+      "familyAddress": "부산 영도구 해양로301번길 45",
+      "familyCoordinates": {
+        "latitude": 35.078517720104706,
+        "longitude": 129.08028722464732
+      },
+      "tourApiMatch": {
+        "searchKeyword": "국립해양박물관",
+        "contentId": "1825843",
+        "contentTypeId": "14",
+        "title": "국립해양박물관",
+        "address": "부산광역시 영도구 해양로301번길 45",
+        "coordinates": {
+          "latitude": 35.0785003395095,
+          "longitude": 129.080291027424
+        },
+        "distanceKm": 0.002,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 부산 영도구 해양로301번길 주소가 정확히 일치하며 좌표 차이가 10m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/3498596_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/96/3498596_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/96/3498596_image2_1.jpg",
+        "copyrightCode": "Type1",
+        "exactLicense": "공공누리 제1유형(출처표시)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType1.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": true,
+        "localHostingAllowed": true,
+        "attributionRequired": true,
+        "attributionPlan": "한국관광공사, TourAPI 원본 URL, 공공누리 제1유형을 표시하고 제공 정보에 작성연도·저작자가 있으면 함께 표기합니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "박물관 외관 전체가 보여 해양문화시설의 규모와 장소를 알아보기 쉽습니다.",
+        "status": "approved",
+        "reason": "TourAPI 권리코드가 Type1이고 시설을 식별하기 좋은 대표 이미지로 확인되어 상업적 표시와 가공이 가능합니다.",
+        "downloaded": true,
+        "uiApplied": true,
+        "localPath": "public/place-images/place-241.webp",
+        "runtimeSrc": "/place-images/place-241.webp",
+        "transformation": "center-cropped and resized to 940x588 without upscaling, converted to WebP (quality 82)",
+        "originalDimensions": {
+          "width": 940,
+          "height": 626
+        },
+        "outputDimensions": {
+          "width": 940,
+          "height": 588
+        },
+        "outputBytes": 100702,
+        "existingImageComparison": {
+          "previousStatus": "held",
+          "previousSourceUrl": "https://commons.wikimedia.org/wiki/File:Aquarium_exhibit_at_the_National_Maritime_Museum_of_Korea,_Busan.jpg",
+          "decision": "TourAPI Type1 후보가 권리 조건이 명확하고 현재 fallback보다 장소 대표성이 높아 신규 로컬 이미지로 반영했습니다."
+        },
+        "licenseOrUsageBasis": "공공누리 제1유형(출처표시)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "박물관 외관 전체가 보여 해양문화시설의 규모와 장소를 알아보기 쉽습니다."
+      },
+      "availableImageCount": 33,
+      "type1CandidateCount": 33,
+      "type3CandidateCount": 0
+    },
+    {
+      "familyPlaceId": "place-246",
+      "familyPlaceName": "씨라이프 부산아쿠아리움",
+      "familyArea": "부산 해운대",
+      "familyAddress": "부산 해운대구 해운대해변로 266",
+      "familyCoordinates": {
+        "latitude": 35.159354377968754,
+        "longitude": 129.16099918602094
+      },
+      "tourApiMatch": {
+        "searchKeyword": "씨라이프 부산아쿠아리움",
+        "contentId": "229912",
+        "contentTypeId": "12",
+        "title": "씨라이프부산아쿠아리움",
+        "address": "부산광역시 해운대구 해운대해변로 266",
+        "coordinates": {
+          "latitude": 35.159196575,
+          "longitude": 129.1610328343
+        },
+        "distanceKm": 0.018,
+        "confidence": "very_high",
+        "confidenceScore": 0.99,
+        "matchReason": "TourAPI 명칭의 띄어쓰기만 다르고 해운대구 해운대해변로 주소와 좌표가 정확히 일치합니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/09/3020609_image2_1.jpg",
+        "thumbnailUrl": "http://tong.visitkorea.or.kr/cms/resource/09/3020609_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "http://tong.visitkorea.or.kr/cms/resource/09/3020609_image2_1.jpg",
+        "copyrightCode": "Type3",
+        "exactLicense": "공공누리 제3유형(출처표시+변경금지)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType3.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": false,
+        "localHostingAllowed": false,
+        "attributionRequired": true,
+        "attributionPlan": "출처표시는 가능하지만 변경금지라 crop·resize·WebP 변환을 전제로 한 현 UI에는 바로 사용하지 않습니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "대형 수조가 보여 아쿠아리움 경험은 분명하지만 변경금지 조건입니다.",
+        "status": "review",
+        "reason": "TourAPI 권리코드가 Type3입니다. 상업적 이용은 가능하지만 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+        "downloaded": false,
+        "uiApplied": false,
+        "licenseOrUsageBasis": "공공누리 제3유형(출처표시+변경금지)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "대형 수조가 보여 아쿠아리움 경험은 분명하지만 변경금지 조건입니다."
+      },
+      "availableImageCount": 9,
+      "type1CandidateCount": 0,
+      "type3CandidateCount": 9
+    },
+    {
+      "familyPlaceId": "place-277",
+      "familyPlaceName": "아쿠아플라넷 제주",
+      "familyArea": "제주 서귀포",
+      "familyAddress": "제주특별자치도 서귀포시 성산읍 섭지코지로 95",
+      "familyCoordinates": {
+        "latitude": 33.433068041140075,
+        "longitude": 126.92784588473428
+      },
+      "tourApiMatch": {
+        "searchKeyword": "아쿠아플라넷 제주",
+        "contentId": "2048059",
+        "contentTypeId": "14",
+        "title": "아쿠아플라넷 제주",
+        "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 95",
+        "coordinates": {
+          "latitude": 33.4328023538,
+          "longitude": 126.9278439065
+        },
+        "distanceKm": 0.03,
+        "confidence": "very_high",
+        "confidenceScore": 1,
+        "matchReason": "시설명과 서귀포시 성산읍 섭지코지로 주소가 정확히 일치하며 좌표 차이가 30m 이내입니다."
+      },
+      "imageCandidate": {
+        "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/2986980_image2_1.jpg",
+        "thumbnailUrl": "https://tong.visitkorea.or.kr/cms/resource/80/2986980_image3_1.jpg",
+        "imageName": "대표 이미지(firstimage)",
+        "serialNumber": "firstimage",
+        "imageType": "searchKeyword2.firstimage",
+        "sourceName": "한국관광공사 TourAPI",
+        "sourceUrl": "https://tong.visitkorea.or.kr/cms/resource/80/2986980_image2_1.jpg",
+        "copyrightCode": "Type3",
+        "exactLicense": "공공누리 제3유형(출처표시+변경금지)",
+        "licenseUrl": "https://www.kogl.or.kr/info/licenseType3.do",
+        "commercialUseAllowed": true,
+        "modificationAllowed": false,
+        "localHostingAllowed": false,
+        "attributionRequired": true,
+        "attributionPlan": "출처표시는 가능하지만 변경금지라 crop·resize·WebP 변환을 전제로 한 현 UI에는 바로 사용하지 않습니다.",
+        "visuallyReviewed": true,
+        "representativenessAssessment": "시설 외관과 로고가 함께 보여 장소 식별성은 높지만 변경금지 조건입니다.",
+        "status": "review",
+        "reason": "TourAPI 권리코드가 Type3입니다. 상업적 이용은 가능하지만 변경금지이므로 crop·resize·WebP 변환을 전제로 자동 승인하지 않았습니다.",
+        "downloaded": false,
+        "uiApplied": false,
+        "licenseOrUsageBasis": "공공누리 제3유형(출처표시+변경금지)",
+        "verifiedAt": "2026-09-11",
+        "imageVariant": "searchKeyword2.firstimage",
+        "representativeReason": "시설 외관과 로고가 함께 보여 장소 식별성은 높지만 변경금지 조건입니다."
+      },
+      "availableImageCount": 7,
+      "type1CandidateCount": 0,
+      "type3CandidateCount": 7
+    }
+  ],
+  "implementation": {
+    "appliedAt": "2026-09-11",
+    "assetDirectory": "public/place-images",
+    "runtimePriority": [
+      "승인된 로컬 이미지",
+      "테마별 fallback"
+    ],
+    "googlePlacesUsed": false,
+    "type3ImagesApplied": false
+  }
+}

@@ -20,6 +20,7 @@ function fallbackVisual(place) {
 export default function PlaceImage({ place, variant = 'card', eager = false }) {
   const [emoji, label] = fallbackVisual(place)
   const [loadFailed, setLoadFailed] = useState(false)
+  const preservesOriginal = place.image?.preserveOriginal === true
 
   useEffect(() => setLoadFailed(false), [place.id, place.image?.src])
 
@@ -33,12 +34,28 @@ export default function PlaceImage({ place, variant = 'card', eager = false }) {
   }
 
   return (
-    <figure className={`place-image place-image-${variant}`}>
-      <img src={place.image.src} alt={place.image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setLoadFailed(true)} />
-      <figcaption>
-        사진: <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">{place.image.sourceName}</a>
-        {place.image.licenseUrl && <> · <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">라이선스</a></>}
-      </figcaption>
-    </figure>
+    <>
+      <figure className={`place-image place-image-${variant}${preservesOriginal ? ' no-derivatives' : ''}`}>
+        <img src={place.image.src} alt={place.image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setLoadFailed(true)} />
+        <figcaption>
+          사진: <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">{place.image.sourceName}</a>
+          {place.image.licenseUrl && <> · <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{place.image.licenseLabel || '라이선스'}</a></>}
+          {preservesOriginal && <> · 변경 없이 사용</>}
+        </figcaption>
+      </figure>
+      {preservesOriginal && variant === 'modal' && (
+        <details className="place-image-license-details">
+          <summary>ⓘ 사진정보</summary>
+          <p>{place.image.attributionText}</p>
+          <p>원본 파일의 비율과 내용을 변경하지 않고 표시하고 있어요.</p>
+          <div>
+            <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">원본 이미지</a>
+            <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">공공누리 제3유형</a>
+            {place.image.sourcePolicyUrl && <a href={place.image.sourcePolicyUrl} target="_blank" rel="noreferrer">한국관광공사 저작권 정책</a>}
+          </div>
+          <small>{place.image.verifiedAt} 확인</small>
+        </details>
+      )}
+    </>
   )
 }

@@ -1,3 +1,7 @@
+import { tourApiApprovedImageMetadataById } from './family-tourapi-approved-images.generated.js'
+import { tourApiHumanApprovedImageMetadataById } from './family-tourapi-human-approved-images.generated.js'
+import { tourApiType3PocImageMetadataById } from './family-tourapi-type3-poc-images.generated.js'
+
 const visit = (officialSourceName, officialInfoUrl, verifiedAt, details = {}) => ({
   reservationStatus: 'unknown',
   reservationNote: null,
@@ -14,7 +18,7 @@ const visit = (officialSourceName, officialInfoUrl, verifiedAt, details = {}) =>
   ...details,
 })
 
-const image = (src, alt, sourceName, sourceUrl, licenseOrUsageBasis, licenseUrl, attributionText) => ({
+const image = (src, alt, sourceName, sourceUrl, licenseOrUsageBasis, licenseUrl, attributionText, details = {}) => ({
   src,
   alt,
   sourceName,
@@ -23,8 +27,56 @@ const image = (src, alt, sourceName, sourceUrl, licenseOrUsageBasis, licenseUrl,
   licenseUrl,
   localHostingAllowed: true,
   attributionText,
-  verifiedAt: '2026-09-10',
+  verifiedAt: '2026-09-11',
+  ...details,
 })
+
+const tourApiImage = (placeId, alt, sourceUrl, tourApiContentId, imageVariant, representativeReason, verifiedAt = '2026-09-11') => image(
+  `/place-images/${placeId}.webp`,
+  alt,
+  '한국관광공사 TourAPI',
+  sourceUrl,
+  '공공누리 제1유형: 상업적 이용, 복제·재배포 및 수정 허용(출처표시, crop·resize·WebP 변환)',
+  'https://www.kogl.or.kr/info/licenseType1.do',
+  '한국관광공사 TourAPI / 공공누리 제1유형 / center-cropped, resized without upscaling, and converted to WebP',
+  {
+    placeId,
+    tourApiContentId,
+    imageVariant,
+    representativeReason,
+    licenseLabel: '공공누리 제1유형',
+    verifiedAt,
+  },
+)
+
+const tourApiOriginalImage = (placeId, metadata) => image(
+  metadata.src,
+  metadata.alt,
+  '한국관광공사 TourAPI',
+  metadata.sourceUrl,
+  '공공누리 제3유형: 상업적 이용과 원본 공유 가능, 변경 및 2차적 저작물 작성 금지(출처표시)',
+  'https://www.kogl.or.kr/info/licenseType3.do',
+  metadata.attributionText,
+  {
+    placeId,
+    tourApiContentId: metadata.tourApiContentId,
+    tourApiTitle: metadata.tourApiTitle,
+    imageVariant: metadata.imageVariant,
+    representativeReason: metadata.representativeReason,
+    sourcePolicyUrl: metadata.sourcePolicyUrl,
+    licenseLabel: '공공누리 제3유형',
+    licenseType: 'Type3',
+    preserveOriginal: true,
+    transformation: 'none',
+    verifiedAt: metadata.verifiedAt,
+    publishedYear: metadata.publishedYear,
+    originalWidth: metadata.originalWidth,
+    originalHeight: metadata.originalHeight,
+    originalAspectRatio: metadata.originalAspectRatio,
+    originalFormat: metadata.originalFormat,
+    originalSha256: metadata.sha256,
+  },
+)
 
 const checkedToday = '2026-09-10'
 
@@ -43,15 +95,6 @@ export const familyPlaceContentById = {
         'https://www.museum.go.kr/MUSEUM/contents/M0104090000.do',
       ],
     }),
-    image: image(
-      '/place-images/place-001.webp',
-      '국립중앙박물관 전경',
-      'Jinah78 · Wikimedia Commons · CC BY-SA 3.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:Front_view_of_national_museum_of_korea.jpg',
-      'CC BY-SA 3.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/3.0/',
-      'Jinah78 / Wikimedia Commons / CC BY-SA 3.0 / cropped and converted to WebP',
-    ),
   },
   'place-008': {
     visitInfo: visit('국립어린이과학관', 'https://www.sciencecenter.go.kr/csc/', checkedToday, {
@@ -113,15 +156,6 @@ export const familyPlaceContentById = {
         'https://science.seoul.go.kr/board/qna?bbsId=13&menuId=24',
       ],
     }),
-    image: image(
-      '/place-images/place-018.webp',
-      '서울시립과학관 전경',
-      'ChongDae · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:Seoul_Science_Center_02.jpg',
-      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/4.0/',
-      'ChongDae / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
-    ),
   },
   'place-019': {
     visitInfo: visit('국립항공박물관', 'https://www.aviation.or.kr/contents.do?menuno=65', checkedToday, {
@@ -181,12 +215,12 @@ export const familyPlaceContentById = {
     }),
     image: image(
       '/place-images/place-095.webp',
-      '인천대공원 풍경',
-      '메이 · Wikimedia Commons · CC BY-SA 1.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EB%8C%80%EA%B3%B5%EC%9B%90.JPG',
-      'CC BY-SA 1.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/1.0/',
-      '메이 / Wikimedia Commons / CC BY-SA 1.0 / cropped and converted to WebP',
+      '인천대공원 남문 벚꽃 풍경',
+      'Narubaru7 · Wikimedia Commons · CC BY 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EB%8C%80%EA%B3%B5%EC%9B%90_%EB%82%A8%EB%AC%B8%EC%B8%A1_%EB%B2%9A%EA%BD%83%EB%82%98%EB%AC%B4_2024.jpg',
+      'CC BY 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시)',
+      'https://creativecommons.org/licenses/by/4.0/',
+      'Narubaru7 / Wikimedia Commons / CC BY 4.0 / cropped and converted to WebP',
     ),
   },
   'place-096': {
@@ -259,15 +293,6 @@ export const familyPlaceContentById = {
       importantNotes: ['10명 이상 단체라면 방문 전 예약이 필요해요.'],
       checkedPages: ['https://njp.ggcf.kr/pages/information'],
     }),
-    image: image(
-      '/place-images/place-115.webp',
-      '백남준아트센터 전경',
-      'HanKooKin · Wikimedia Commons · CC BY-SA 3.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:DankookU-Paiknamjun.JPG',
-      'CC BY-SA 3.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/3.0/',
-      'HanKooKin / Wikimedia Commons / CC BY-SA 3.0 / cropped and converted to WebP',
-    ),
   },
   'place-134': {
     visitInfo: visit('국립농업박물관', 'https://namuk.or.kr/kr/1333/subview.do', checkedToday, {
@@ -330,15 +355,6 @@ export const familyPlaceContentById = {
         'https://i815.or.kr/2018/tour/explain.do?agree=P&mode=L',
       ],
     }),
-    image: image(
-      '/place-images/place-201.webp',
-      '독립기념관 전경',
-      'Lawinc82 · Wikimedia Commons · CC BY-SA 3.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:Independence_Hall_of_Korea_01.JPG',
-      'CC BY-SA 3.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/3.0/',
-      'Lawinc82 / Wikimedia Commons / CC BY-SA 3.0 / cropped and converted to WebP',
-    ),
   },
   'place-204': {
     visitInfo: visit('천안문화재단 천안시립미술관', 'https://www.camoa.or.kr/camoa/sub02_01.do', checkedToday, {
@@ -524,15 +540,6 @@ export const familyPlaceContentById = {
         'https://www.visitsealife.com/busan/plan-your-visit/information/help-center/',
       ],
     }),
-    image: image(
-      '/place-images/place-246.webp',
-      'SEA LIFE 부산아쿠아리움 수조',
-      'Ryan Bodenstein · Wikimedia Commons · CC BY 2.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:Sea_Life_Busan_Aquarium_13.jpg',
-      'CC BY 2.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자 표시)',
-      'https://creativecommons.org/licenses/by/2.0/',
-      'Ryan Bodenstein / Wikimedia Commons / CC BY 2.0 / cropped and converted to WebP',
-    ),
   },
   'place-258': {
     visitInfo: visit('부산광역시교육청 부산과학체험관', 'https://home.pen.go.kr/scinuri/cm/cntnts/cntntsView.do?cntntsId=3096&mi=15967', checkedToday, {
@@ -585,6 +592,15 @@ export const familyPlaceContentById = {
         'https://www.bluelinepark.com/images/guidemap/GUIDEBOOK_KOR.pdf',
       ],
     }),
+    image: image(
+      '/place-images/place-265.webp',
+      '해운대블루라인파크 해안 스카이캡슐',
+      'VN.NguyenDucDuy · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Sky_Capsule_train_at_Haeundae_Blueline_Park,_Busan.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'VN.NguyenDucDuy / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
   },
 
   'place-271': {
@@ -610,15 +626,6 @@ export const familyPlaceContentById = {
       verificationReason: '공식 관람 안내에서 온라인 구매 고객 정보는 확인했으나 일반 관람의 예약 필수·불필요를 직접 명시하지 않음',
       checkedPages: ['https://www.jdc-jam.com/visit/info.do'],
     }),
-    image: image(
-      '/place-images/place-275.webp',
-      '제주항공우주박물관 전경',
-      'Hunini · Wikimedia Commons · CC BY-SA 3.0 (crop·WebP 변환)',
-      'https://commons.wikimedia.org/wiki/File:Jeju_Aerospace_Museum_20140606-02.JPG',
-      'CC BY-SA 3.0: 상업적 이용, 복제·재배포 및 수정 허용(동일조건변경허락·저작자 표시)',
-      'https://creativecommons.org/licenses/by-sa/3.0/',
-      'Hunini / Wikimedia Commons / CC BY-SA 3.0 / cropped and converted to WebP',
-    ),
   },
   'place-277': {
     visitInfo: visit('아쿠아플라넷 제주', 'https://www.aquaplanet.co.kr/jeju/information/use_price.do', checkedToday, {
@@ -678,6 +685,210 @@ export const familyPlaceContentById = {
       ],
     }),
   },
+  'place-002': {
+    image: image(
+      '/place-images/place-002.webp',
+      '코엑스 아쿠아리움 수조의 푸른바다거북',
+      'Thingreenline4546 · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Green_sea_turtle_at_the_Coex_aquarium_in_Seoul_22_24_31_414000.jpeg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Thingreenline4546 / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-003': {
+    image: image(
+      '/place-images/place-003.webp',
+      '석촌호수에서 본 롯데월드 매직아일랜드',
+      'kallerna · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Lotte_World_day_view_5.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'kallerna / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-009': {
+    image: image(
+      '/place-images/place-009.webp',
+      '저녁 무렵 여의도한강공원과 마포대교',
+      'Striker9498 · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:20250927_%EC%97%AC%EC%9D%98%EB%8F%84%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Striker9498 / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-013': {
+    image: image(
+      '/place-images/place-013.webp',
+      '국립민속박물관 정문과 본관',
+      'DtSeoul · Wikimedia Commons · CC0 1.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Main_entrance_of_the_National_Folk_Museum_of_Korea_in_April_2025.jpg',
+      'CC0 1.0: 상업적 이용, 복제·재배포 및 수정 허용',
+      'https://creativecommons.org/publicdomain/zero/1.0/',
+      'DtSeoul / Wikimedia Commons / CC0 1.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-033': {
+    image: image(
+      '/place-images/place-033.webp',
+      '올림픽공원과 세계평화의문 일대 전경',
+      'Woohyun Photos · Wikimedia Commons · CC BY-SA 2.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Seoul_Olympic_Park_April_2022.jpg',
+      'CC BY-SA 2.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/2.0/',
+      'Woohyun Photos / Wikimedia Commons / CC BY-SA 2.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-043': {
+    image: image(
+      '/place-images/place-043.webp',
+      '경복궁 근정전 정면',
+      'Basile Morin · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Front_view_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Basile Morin / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-050': {
+    image: image(
+      '/place-images/place-050.webp',
+      '에버랜드 장미정원의 에버랜드 조형물',
+      '*Youngjin · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:240115_Everland_etc_04.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      '*Youngjin / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-060': {
+    image: image(
+      '/place-images/place-060.webp',
+      '수원화성 화홍문과 수원천',
+      'Mobius6 · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Hwahongmun_20240929_001.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Mobius6 / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-094': {
+    image: image(
+      '/place-images/place-094.webp',
+      '송도센트럴파크 호수와 도심 야경',
+      'Vincent van Zeijst · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:South_Korea,_Incheon,_Songdo,_Sharp_Central_Park_Towers,_Prugio_Central_Park_Towers,_Sharp_First_World_Towers.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Vincent van Zeijst / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-248': {
+    image: image(
+      '/place-images/place-248.webp',
+      '롯데월드 어드벤처 부산의 분수와 성',
+      '이중 환상 · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:%EB%B6%80%EC%82%B0_%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C_%EB%B6%84%EC%88%98.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      '이중 환상 / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-286': {
+    image: image(
+      '/place-images/place-286.webp',
+      '수국밭 너머로 보이는 성산일출봉',
+      'Basile Morin · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Hydrangea_macrophylla_in_front_of_Seongsan_Ilchulbong_volcano_at_blue_hour_in_Jeju_Island_South_Korea.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Basile Morin / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
+  'place-287': {
+    image: image(
+      '/place-images/place-287.webp',
+      '비자림의 붉은 흙길과 비자나무 숲',
+      'Sgroey · Wikimedia Commons · CC BY-SA 4.0 (crop·WebP 변환)',
+      'https://commons.wikimedia.org/wiki/File:Bijarim_nutmeg_forest_jeju_korea_3.jpg',
+      'CC BY-SA 4.0: 상업적 이용, 복제·재배포 및 수정 허용(저작자·출처·라이선스·변경 사실 표시, 동일조건변경허락)',
+      'https://creativecommons.org/licenses/by-sa/4.0/',
+      'Sgroey / Wikimedia Commons / CC BY-SA 4.0 / cropped and converted to WebP',
+    ),
+  },
 }
 
-export const familyVisitInfoPilotIds = Object.freeze(Object.keys(familyPlaceContentById))
+const tourApiImageById = {
+  'place-001': tourApiImage('place-001', '국립중앙박물관 실내 석탑 전시', 'https://tong.visitkorea.or.kr/cms/resource/12/3495012_image2_1.jpg', '129703', 'searchKeyword2.firstimage', '대표 전시 공간과 국보급 석탑이 함께 보여 박물관 내부 성격을 직관적으로 전달합니다.'),
+  'place-004': tourApiImage('place-004', '서울어린이대공원 녹지와 팔각당', 'https://tong.visitkorea.or.kr/cms/resource/61/3355161_image2_1.JPG', '126490', 'searchKeyword2.firstimage', '공원 녹지와 팔각당 일대를 함께 보여 대형 가족 공원의 분위기를 전달합니다.'),
+  'place-005': tourApiImage('place-005', '서울식물원 온실과 야외 공간', 'https://tong.visitkorea.or.kr/cms/resource/23/4078223_image2_1.jpg', '2589349', 'searchKeyword2.firstimage', '온실 구조물과 야외 공간이 함께 보여 식물원 성격이 분명합니다.'),
+  'place-006': tourApiImage('place-006', '서대문자연사박물관 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/76/3502776_image2_1.jpg', '130448', 'searchKeyword2.firstimage', '박물관 외관과 시설 안내가 함께 보여 장소를 알아보기 쉽습니다.'),
+  'place-008': tourApiImage('place-008', '국립어린이과학관 실내 과학 체험 전시', 'https://tong.visitkorea.or.kr/cms/resource/58/3410958_image2_1.jpg', '2545920', 'detailImage2', '실내 과학 체험 전시가 선명해 어린이 대상 체험형 과학관임을 이해하기 쉽습니다.'),
+  'place-017': tourApiImage('place-017', '서울상상나라 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/64/3539964_image2_1.jpg', '1897833', 'searchKeyword2.firstimage', '건물 외관과 시설명이 함께 보여 장소 식별성이 높습니다.'),
+  'place-046': tourApiImage('place-046', '국립과천과학관 천체투영관 전경', 'https://tong.visitkorea.or.kr/cms/resource/92/4065392_image2_1.jpg', '660722', 'searchKeyword2.firstimage', '대표 천체투영관 외관이 중심에 보여 과학관을 즉시 식별할 수 있습니다.'),
+  'place-051': tourApiImage('place-051', '한국민속촌 전통 가옥', 'https://tong.visitkorea.or.kr/cms/resource/70/3563970_image2_1.jpg', '125578', 'detailImage2', '전통 가옥이 중심에 보여 민속촌의 공간 성격을 첫 화면에서 이해하기 쉽습니다.'),
+  'place-057': tourApiImage('place-057', '광명동굴 미디어 조명 전시', 'https://tong.visitkorea.or.kr/cms/resource/27/4095727_image2_1.jpg', '2649975', 'searchKeyword2.firstimage', '미디어 조명이 있는 동굴 내부가 보여 핵심 체험을 직관적으로 전달합니다.'),
+  'place-092': tourApiImage('place-092', '국립세계문자박물관 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/31/4090531_image2_1.jpg', '3097744', 'searchKeyword2.firstimage', '특징적인 박물관 외관과 진입부가 함께 보여 장소 식별성이 높습니다.'),
+  'place-135': tourApiImage('place-135', '아쿠아플라넷 광교 대형 수조', 'https://tong.visitkorea.or.kr/cms/resource/08/3515008_image2_1.jpg', '2714652', 'searchKeyword2.firstimage', '대형 수조와 해양 생물이 선명해 아쿠아리움의 핵심 체험을 잘 보여줍니다.'),
+  'place-201': tourApiImage('place-201', '독립기념관 겨레의탑과 경내', 'https://tong.visitkorea.or.kr/cms/resource/21/3450021_image2_1.jpg', '129790', 'searchKeyword2.firstimage', '겨레의탑과 넓은 경내를 함께 담아 독립기념관을 즉시 식별할 수 있습니다.'),
+  'place-241': tourApiImage('place-241', '국립해양박물관 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/96/3498596_image2_1.jpg', '1825843', 'searchKeyword2.firstimage', '박물관 외관 전체가 보여 해양문화시설의 규모와 장소를 알아보기 쉽습니다.'),
+  'place-242': tourApiImage('place-242', '국립부산과학관 정문과 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/97/4039597_image2_1.jpg', '2385666', 'searchKeyword2.firstimage', '과학관 정문과 건축 외관이 함께 보여 시설 식별성이 높습니다.'),
+  'place-271': tourApiImage('place-271', '국립제주박물관 건물 전경', 'https://tong.visitkorea.or.kr/cms/resource/63/3562163_image2_1.jpg', '130461', 'searchKeyword2.firstimage', '박물관 외관과 진입 공간이 선명해 장소를 알아보기 쉽습니다.'),
+}
+
+for (const [placeId, metadata] of Object.entries(tourApiApprovedImageMetadataById)) {
+  if (familyPlaceContentById[placeId]?.image || tourApiImageById[placeId]) {
+    throw new Error(`기존 Family 대표 이미지는 덮어쓸 수 없습니다: ${placeId}`)
+  }
+
+  tourApiImageById[placeId] = tourApiImage(
+    placeId,
+    metadata.alt,
+    metadata.sourceUrl,
+    metadata.tourApiContentId,
+    metadata.imageVariant,
+    metadata.representativeReason,
+    metadata.verifiedAt,
+  )
+}
+
+for (const [placeId, metadata] of Object.entries(tourApiHumanApprovedImageMetadataById)) {
+  if (familyPlaceContentById[placeId]?.image || tourApiImageById[placeId]) {
+    throw new Error(`기존 Family 대표 이미지는 덮어쓸 수 없습니다: ${placeId}`)
+  }
+
+  tourApiImageById[placeId] = tourApiImage(
+    placeId,
+    metadata.alt,
+    metadata.sourceUrl,
+    metadata.tourApiContentId,
+    metadata.imageVariant,
+    metadata.representativeReason,
+    metadata.verifiedAt,
+  )
+}
+
+for (const [placeId, placeImage] of Object.entries(tourApiImageById)) {
+  familyPlaceContentById[placeId] = {
+    ...familyPlaceContentById[placeId],
+    image: placeImage,
+  }
+}
+
+for (const [placeId, metadata] of Object.entries(tourApiType3PocImageMetadataById)) {
+  if (familyPlaceContentById[placeId]?.image) {
+    throw new Error(`기존 Family 대표 이미지는 덮어쓸 수 없습니다: ${placeId}`)
+  }
+
+  familyPlaceContentById[placeId] = {
+    ...familyPlaceContentById[placeId],
+    image: tourApiOriginalImage(placeId, metadata),
+  }
+}
+
+export const familyVisitInfoPilotIds = Object.freeze(
+  Object.entries(familyPlaceContentById)
+    .filter(([, content]) => Boolean(content.visitInfo))
+    .map(([placeId]) => placeId),
+)
