@@ -279,3 +279,48 @@ test('Family 위치 검색은 브라우저 저장소나 Supabase에 위치를 �
   assert.match(appSource, /useState\(null\)/)
   assert.doesNotMatch(appSource, /localStorage\.setItem\([^)]*(origin|location)/i)
 })
+
+test('Family 이미지 카드는 축약 출처를 쓰고 상세에는 라이선스 필수 정보를 유지한다', () => {
+  const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
+  const appSource = fs.readFileSync(new URL('src/App.jsx', ROOT), 'utf8')
+  const stylesSource = fs.readFileSync(new URL('src/styles.css', ROOT), 'utf8')
+
+  assert.match(imageSource, /ⓒ 한국관광공사/)
+  assert.match(imageSource, /ⓘ 사진정보/)
+  assert.match(imageSource, /저작자:/)
+  assert.match(imageSource, /원본 출처:/)
+  assert.match(imageSource, /이용조건:/)
+  assert.match(imageSource, /변경 여부:/)
+  assert.match(imageSource, />원본 보기</)
+  assert.match(imageSource, /place\.image\.licenseOrUsageBasis/)
+  assert.match(imageSource, /place\.image\.licenseUrl/)
+  assert.match(imageSource, /event\.stopPropagation\(\)/)
+  assert.match(appSource, /onOpenInfo=\{\(\) => onOpen\(place, \{ photoInfo: true \}\)\}/)
+  assert.match(appSource, /infoInitiallyOpen=\{photoInfoOpen\}/)
+  assert.match(imageSource, /open=\{infoInitiallyOpen\}/)
+  assert.match(stylesSource, /\.place-image figcaption button/)
+  assert.match(stylesSource, /\.top-recommendation-card > button/)
+
+  const examples = {
+    tourApiType1: places.find((place) => place.id === 'place-001')?.image,
+    tourApiType3: places.find((place) => place.id === 'place-012')?.image,
+    ccBy: places.find((place) => place.id === 'place-095')?.image,
+    ccBySa: places.find((place) => place.id === 'place-002')?.image,
+    cc0: places.find((place) => place.id === 'place-011')?.image,
+  }
+
+  assert.match(examples.tourApiType1?.licenseOrUsageBasis || '', /공공누리 제1유형/)
+  assert.match(examples.tourApiType3?.licenseOrUsageBasis || '', /공공누리 제3유형/)
+  assert.equal(examples.tourApiType3?.preserveOriginal, true)
+  assert.match(examples.ccBy?.licenseOrUsageBasis || '', /CC BY 4\.0/)
+  assert.match(examples.ccBySa?.licenseOrUsageBasis || '', /CC BY-SA 4\.0/)
+  assert.match(examples.ccBySa?.licenseOrUsageBasis || '', /동일조건변경허락/)
+  assert.match(examples.cc0?.licenseOrUsageBasis || '', /CC0 1\.0/)
+
+  for (const [kind, image] of Object.entries(examples)) {
+    assert.ok(image, `${kind}: image`)
+    assert.match(image.sourceUrl, /^https?:\/\//, `${kind}: sourceUrl`)
+    assert.match(image.licenseUrl, /^https?:\/\//, `${kind}: licenseUrl`)
+    assert.ok(image.attributionText, `${kind}: attributionText`)
+  }
+})

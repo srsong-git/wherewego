@@ -100,13 +100,15 @@ h2 { margin-bottom: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.0
 .top-recommendation-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
 .top-recommendation-tags span { padding: 5px 7px; border-radius: 7px; color: #536057; background: #f1f3ed; font-size: .64rem; }
 .top-recommendation-reason { margin: 13px 0 17px; color: #59645c; font-size: .76rem; line-height: 1.65; }
-.top-recommendation-card button { display: flex; justify-content: space-between; width: 100%; margin-top: auto; padding: 11px 0 0; border: 0; border-top: 1px solid #ece7dc; color: #315b41; background: transparent; cursor: pointer; font-size: .72rem; font-weight: 800; }
+.top-recommendation-card > button { display: flex; justify-content: space-between; width: 100%; margin-top: auto; padding: 11px 0 0; border: 0; border-top: 1px solid #ece7dc; color: #315b41; background: transparent; cursor: pointer; font-size: .72rem; font-weight: 800; }
 .place-image { position: relative; overflow: hidden; margin: 0; border-radius: 12px; background: #e7efe7; }
 .place-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .place-image.no-derivatives { background: #e7ece8; }
 .place-image.no-derivatives img { object-fit: contain; }
-.place-image figcaption { position: absolute; right: 7px; bottom: 6px; max-width: calc(100% - 14px); padding: 3px 6px; border-radius: 6px; color: #fff; background: rgba(24, 40, 29, .72); font-size: .56rem; line-height: 1.35; }
-.place-image figcaption a { color: inherit; }
+.place-image figcaption { position: absolute; right: 7px; bottom: 6px; max-width: calc(100% - 14px); overflow: hidden; border-radius: 999px; color: #fff; background: rgba(24, 40, 29, .68); font-size: .64rem; line-height: 1.35; backdrop-filter: blur(3px); }
+.place-image figcaption button, .place-image figcaption span { display: block; min-height: 25px; max-width: 100%; padding: 5px 8px; overflow: hidden; border: 0; color: inherit; background: transparent; cursor: pointer; font: inherit; font-weight: 750; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+.place-image figcaption span { cursor: default; }
+.place-image figcaption button:focus-visible { outline: 2px solid #fff; outline-offset: -3px; }
 .place-image-license-details { margin: -10px 0 18px; padding: 10px 12px; border: 1px solid #dfe5df; border-radius: 10px; color: #4d5d52; background: #f4f7f3; font-size: .7rem; line-height: 1.55; }
 .place-image-license-details summary { cursor: pointer; color: #355a42; font-weight: 800; }
 .place-image-license-details p { margin: 8px 0 0; }
@@ -406,7 +408,7 @@ footer > div:first-child { display: flex; flex-direction: column; gap: 5px; }
   .top-recommendation-card h4 { font-size: 1rem; }
   .top-recommendation-tags { margin-top: 8px; }
   .top-recommendation-reason { display: -webkit-box; overflow: hidden; margin: 9px 0 10px; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-  .top-recommendation-card button { padding-top: 9px; }
+  .top-recommendation-card > button { padding-top: 9px; }
   .view-toggle { width: 100%; }
   .view-toggle button { flex: 1; }
   .random-button { width: 100%; }

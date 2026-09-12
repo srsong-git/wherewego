@@ -263,7 +263,7 @@ function ThemeSelector({ selected, onToggle, compact = false }) {
 function PlaceCard({ place, distance, isFavorite, onToggleFavorite, onOpen }) {
   return (
     <article className="place-card" onClick={() => onOpen(place)}>
-      <PlaceImage place={place} />
+      <PlaceImage place={place} onOpenInfo={() => onOpen(place, { photoInfo: true })} />
       <div className="card-heading">
         <div>
           <p className="area">📍 {place.area}</p>
@@ -322,7 +322,7 @@ function TopRecommendations({ items, onOpen, origin }) {
       <div className="top-recommendation-grid">
         {items.map(({ place, type, icon, title, reason }) => (
           <article className={`top-recommendation-card ${type}`} key={place.id}>
-            <PlaceImage place={place} variant="top" eager={type === 'balanced'} />
+            <PlaceImage place={place} variant="top" eager={type === 'balanced'} onOpenInfo={() => onOpen(place, { photoInfo: true })} />
             <p className="top-recommendation-type"><span aria-hidden="true">{icon}</span> {title}</p>
             <h4>{place.name}</h4>
             <div className="top-recommendation-tags">
@@ -425,7 +425,7 @@ function ResultFilters({ filters, setFilters, favoriteCount, location, onReset, 
   )
 }
 
-function PlaceModal({ place, distance, originLabel, isFavorite, user, onLogin, onToggleFavorite, onClose }) {
+function PlaceModal({ place, distance, originLabel, isFavorite, user, onLogin, onToggleFavorite, onClose, photoInfoOpen }) {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
   const [showRouteFallback, setShowRouteFallback] = useState(false)
@@ -450,7 +450,7 @@ function PlaceModal({ place, distance, originLabel, isFavorite, user, onLogin, o
             </div>
           </div>
           <h2 id="modal-title">{place.name}</h2>
-          <PlaceImage place={place} variant="modal" eager />
+          <PlaceImage place={place} variant="modal" eager infoInitiallyOpen={photoInfoOpen} />
           <p className="modal-description">{place.description}</p>
           <div className="modal-themes">{place.themes.map((theme) => <span key={theme}>{themeLabelMap[theme]}</span>)}</div>
           <dl className="detail-list">
@@ -514,6 +514,7 @@ export default function App() {
   const [resultFilters, setResultFilters] = useState(initialResultFilters)
   const [randomPick, setRandomPick] = useState(null)
   const [selectedPlace, setSelectedPlace] = useState(null)
+  const [photoInfoOpen, setPhotoInfoOpen] = useState(false)
   const [viewMode, setViewMode] = useState('list')
   const [refineOpen, setRefineOpen] = useState(false)
   const [visibleResultCount, setVisibleResultCount] = useState(RESULT_PAGE_SIZE)
@@ -537,6 +538,11 @@ export default function App() {
       return []
     }
   })
+
+  const openPlace = (place, options = {}) => {
+    setPhotoInfoOpen(options.photoInfo === true)
+    setSelectedPlace(place)
+  }
 
   useEffect(() => {
     localStorage.setItem('oneul-favorite-places', JSON.stringify(favoriteIds))
@@ -800,7 +806,7 @@ export default function App() {
               )}
             </div>
 
-            <TopRecommendations items={topRecommendations} onOpen={setSelectedPlace} origin={origin} />
+            <TopRecommendations items={topRecommendations} onOpen={openPlace} origin={origin} />
 
             <ResultFilters
               filters={resultFilters}
@@ -813,16 +819,16 @@ export default function App() {
             />
 
             {randomPick && displayedResults.some(({ place }) => place.id === randomPick.id) && (
-              <RandomPick place={randomPick} distance={origin ? calculateDistance(origin, randomPick) : null} onRetry={chooseRandom} onClose={() => setRandomPick(null)} onOpen={setSelectedPlace} />
+              <RandomPick place={randomPick} distance={origin ? calculateDistance(origin, randomPick) : null} onRetry={chooseRandom} onClose={() => setRandomPick(null)} onOpen={openPlace} />
             )}
 
             {displayedResults.length ? (
               viewMode === 'map' ? (
-                <KakaoMap items={displayedResults} userLocation={origin?.type === 'current' ? origin : null} onOpenPlace={setSelectedPlace} />
+                <KakaoMap items={displayedResults} userLocation={origin?.type === 'current' ? origin : null} onOpenPlace={openPlace} />
               ) : (
                 <>
                   <div className="card-grid">{visibleResults.map(({ place, distance }) => (
-                    <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={setSelectedPlace} key={place.id} />
+                    <PlaceCard place={place} distance={distance} isFavorite={favoriteIds.includes(place.id)} onToggleFavorite={toggleFavorite} onOpen={openPlace} key={place.id} />
                   ))}</div>
                   <div className="load-more-panel" aria-live="polite">
                     <p><strong>{visibleResults.length}곳</strong> / 전체 {displayedResults.length}곳을 보고 있어요.</p>
@@ -855,7 +861,10 @@ export default function App() {
       {favoriteToast && <div className="favorite-toast" role="status" aria-live="polite">{favoriteToast}</div>}
 
       {selectedPlace && (
-        <PlaceModal place={selectedPlace} distance={origin ? calculateDistance(origin, selectedPlace) : null} originLabel={origin?.label} isFavorite={favoriteIds.includes(selectedPlace.id)} user={isPermanentUser(user) ? user : null} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} onClose={() => setSelectedPlace(null)} />
+        <PlaceModal place={selectedPlace} distance={origin ? calculateDistance(origin, selectedPlace) : null} originLabel={origin?.label} isFavorite={favoriteIds.includes(selectedPlace.id)} user={isPermanentUser(user) ? user : null} onLogin={requestKakaoLogin} onToggleFavorite={toggleFavorite} photoInfoOpen={photoInfoOpen} onClose={() => {
+          setSelectedPlace(null)
+          setPhotoInfoOpen(false)
+        }} />
       )}
 
       {infoModal === 'privacy' && (
