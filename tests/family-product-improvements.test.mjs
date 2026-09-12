@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import { createHash } from 'node:crypto'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { familyVisitInfoPilotIds } from '../src/data/family-place-content.js'
@@ -65,7 +66,7 @@ test('대표 이미지 audit는 재호스팅 권리가 없는 자료를 승인�
     [audit.existingReview.keptCount, audit.existingReview.replacedCount, audit.existingReview.fallbackCount],
     [5, 1, 6],
   )
-  assert.equal(places.filter((place) => place.image).length, 150)
+  assert.equal(places.filter((place) => place.image).length, 219)
   assert.ok(audit.accepted.every((entry) => entry.localHostingAllowed === true && entry.commercialUseAllowed === true && entry.derivativesAllowed === true))
   assert.ok(audit.held.every((entry) => entry.localHostingAllowed === false))
   assert.ok(audit.requiredAcceptedFields.includes('localHostingAllowed'))
@@ -145,7 +146,7 @@ test('TourAPI 전체 audit의 자동 승인 91장만 기존 이미지를 덮어�
   assert.equal(applicationAudit.failedCount, 0)
   assert.equal(applicationAudit.existingImageCountBefore, 34)
   assert.equal(applicationAudit.existingImagesUnchanged, true)
-  assert.equal(places.filter((place) => place.image).length, 150)
+  assert.equal(places.filter((place) => place.image).length, 219)
   assert.ok(approved.every((entry) => entry.licenseType === 'Type1'))
   assert.ok(approved.every((entry) => entry.tourApiMatchStatus === 'exact'))
   assert.ok(approved.every((entry) => entry.representativeQuality === 'high_by_tourapi_metadata'))
@@ -185,7 +186,7 @@ test('사람 승인 제1유형 15장과 변경 없는 제3유형 PoC 10장만 �
   assert.equal(audit.existingImageCountBefore, 125)
   assert.equal(audit.existingImagesUnchanged, true)
   assert.equal(places.length, 295)
-  assert.equal(places.filter((place) => place.image).length, 150)
+  assert.equal(places.filter((place) => place.image).length, 219)
 
   for (const entry of type1Entries) {
     const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
@@ -215,9 +216,60 @@ test('사람 승인 제1유형 15장과 변경 없는 제3유형 PoC 10장만 �
 
   const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
   const cssSource = fs.readFileSync(new URL('src/styles.css', ROOT), 'utf8')
-  assert.match(imageSource, /변경 없이 사용/)
+  assert.match(imageSource, /변경하지 않고 표시/)
   assert.match(imageSource, /place\.image\.sourcePolicyUrl/)
   assert.match(cssSource, /\.place-image\.no-derivatives img \{ object-fit: contain; \}/)
+})
+
+test('사람 검토를 통과한 제3유형 69장은 원본 그대로 추가하고 부적합한 4장은 fallback을 유지한다', () => {
+  const audit = JSON.parse(fs.readFileSync(new URL('data/family/family-tourapi-type3-expansion-application.json', ROOT), 'utf8'))
+  const applied = audit.decisions.filter((entry) => entry.decision === 'applied')
+  const held = audit.decisions.filter((entry) => entry.decision === 'held')
+
+  assert.equal(audit.targetCount, 73)
+  assert.equal(audit.appliedCount, 69)
+  assert.equal(audit.heldCount, 4)
+  assert.equal(audit.alternateCandidateAppliedCount, 16)
+  assert.equal(audit.existingImageCountBefore, 150)
+  assert.equal(audit.existingImagesUnchanged, true)
+  assert.equal(places.length, 295)
+  assert.equal(places.filter((place) => place.image).length, 219)
+
+  for (const entry of applied) {
+    for (const field of ['familyPlaceId', 'familyPlaceName', 'sourceName', 'tourApiContentId', 'tourApiTitle', 'sourceUrl', 'sourcePolicyUrl', 'licenseOrUsageBasis', 'licenseUrl', 'attributionText', 'verifiedAt', 'imageVariant', 'representativeReason', 'localPath', 'sha256', 'downloadedSha256']) {
+      assert.notEqual(entry[field], undefined, `${entry.familyPlaceName}: ${field}`)
+      assert.notEqual(entry[field], null, `${entry.familyPlaceName}: ${field}`)
+    }
+    assert.equal(entry.licenseType, 'Type3')
+    assert.equal(entry.originalBytesPreserved, true)
+    assert.equal(entry.transformation, 'none')
+    assert.equal(entry.sha256, entry.downloadedSha256)
+
+    const file = fs.readFileSync(new URL(entry.localPath, ROOT))
+    assert.equal(createHash('sha256').update(file).digest('hex'), entry.sha256)
+
+    const runtimePlace = places.find((place) => place.id === entry.familyPlaceId)
+    assert.equal(runtimePlace?.image?.sourceUrl, entry.sourceUrl)
+    assert.equal(runtimePlace?.image?.tourApiContentId, entry.tourApiContentId)
+    assert.equal(runtimePlace?.image?.licenseType, 'Type3')
+    assert.equal(runtimePlace?.image?.preserveOriginal, true)
+    assert.equal(runtimePlace?.image?.transformation, 'none')
+    assert.equal(runtimePlace?.image?.originalSha256, entry.sha256)
+  }
+
+  assert.deepEqual(
+    held.map((entry) => entry.familyPlaceId).sort(),
+    ['place-052', 'place-072', 'place-076', 'place-149'],
+  )
+  for (const entry of held) {
+    assert.ok(entry.reason)
+    assert.equal(places.find((place) => place.id === entry.familyPlaceId)?.image, null)
+  }
+
+  const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
+  assert.match(imageSource, /공공누리 3유형/)
+  assert.match(imageSource, /공공누리 1유형/)
+  assert.match(imageSource, /한국관광공사 저작권 정책/)
 })
 
 test('Family 위치 검색은 브라우저 저장소나 Supabase에 위치를 기록하지 않는다', () => {

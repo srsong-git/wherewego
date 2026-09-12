@@ -1,6 +1,7 @@
 import { tourApiApprovedImageMetadataById } from './family-tourapi-approved-images.generated.js'
 import { tourApiHumanApprovedImageMetadataById } from './family-tourapi-human-approved-images.generated.js'
 import { tourApiType3PocImageMetadataById } from './family-tourapi-type3-poc-images.generated.js'
+import { tourApiType3ExpandedImageMetadataById } from './family-tourapi-type3-expanded-images.generated.js'
 
 const visit = (officialSourceName, officialInfoUrl, verifiedAt, details = {}) => ({
   reservationStatus: 'unknown',
@@ -44,6 +45,7 @@ const tourApiImage = (placeId, alt, sourceUrl, tourApiContentId, imageVariant, r
     tourApiContentId,
     imageVariant,
     representativeReason,
+    sourcePolicyUrl: 'https://contest.visitkorea.or.kr/kor/helpDesk/copyrightGuide.kto',
     licenseLabel: '공공누리 제1유형',
     verifiedAt,
   },
@@ -877,6 +879,17 @@ for (const [placeId, placeImage] of Object.entries(tourApiImageById)) {
 }
 
 for (const [placeId, metadata] of Object.entries(tourApiType3PocImageMetadataById)) {
+  if (familyPlaceContentById[placeId]?.image) {
+    throw new Error(`기존 Family 대표 이미지는 덮어쓸 수 없습니다: ${placeId}`)
+  }
+
+  familyPlaceContentById[placeId] = {
+    ...familyPlaceContentById[placeId],
+    image: tourApiOriginalImage(placeId, metadata),
+  }
+}
+
+for (const [placeId, metadata] of Object.entries(tourApiType3ExpandedImageMetadataById)) {
   if (familyPlaceContentById[placeId]?.image) {
     throw new Error(`기존 Family 대표 이미지는 덮어쓸 수 없습니다: ${placeId}`)
   }

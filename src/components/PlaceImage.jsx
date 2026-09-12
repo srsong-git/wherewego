@@ -21,6 +21,9 @@ export default function PlaceImage({ place, variant = 'card', eager = false }) {
   const [emoji, label] = fallbackVisual(place)
   const [loadFailed, setLoadFailed] = useState(false)
   const preservesOriginal = place.image?.preserveOriginal === true
+  const isTourApiImage = Boolean(place.image?.tourApiContentId)
+  const tourApiLicenseLabel = preservesOriginal ? '공공누리 3유형' : '공공누리 1유형'
+  const sourceName = isTourApiImage ? '한국관광공사' : place.image?.sourceName
 
   useEffect(() => setLoadFailed(false), [place.id, place.image?.src])
 
@@ -38,19 +41,20 @@ export default function PlaceImage({ place, variant = 'card', eager = false }) {
       <figure className={`place-image place-image-${variant}${preservesOriginal ? ' no-derivatives' : ''}`}>
         <img src={place.image.src} alt={place.image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setLoadFailed(true)} />
         <figcaption>
-          사진: <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">{place.image.sourceName}</a>
-          {place.image.licenseUrl && <> · <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{place.image.licenseLabel || '라이선스'}</a></>}
-          {preservesOriginal && <> · 변경 없이 사용</>}
+          사진: <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">{sourceName}</a>
+          {place.image.licenseUrl && <> · <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{isTourApiImage ? tourApiLicenseLabel : place.image.licenseLabel || '라이선스'}</a></>}
         </figcaption>
       </figure>
-      {preservesOriginal && variant === 'modal' && (
+      {isTourApiImage && variant === 'modal' && (
         <details className="place-image-license-details">
           <summary>ⓘ 사진정보</summary>
           <p>{place.image.attributionText}</p>
-          <p>원본 파일의 비율과 내용을 변경하지 않고 표시하고 있어요.</p>
+          <p>{place.image.publishedYear ? `${place.image.publishedYear}년 발행` : `${place.image.verifiedAt?.slice(0, 4)}년 이용조건 확인`} · 제공기관 한국관광공사</p>
+          {place.image.author && <p>저작자: {place.image.author}</p>}
+          <p>{preservesOriginal ? '원본 파일의 비율과 내용을 변경하지 않고 표시하고 있어요.' : '카드 표시에 맞게 crop·resize 및 WebP 변환한 이미지예요.'}</p>
           <div>
             <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">원본 이미지</a>
-            <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">공공누리 제3유형</a>
+            <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{preservesOriginal ? '공공누리 제3유형' : '공공누리 제1유형'}</a>
             {place.image.sourcePolicyUrl && <a href={place.image.sourcePolicyUrl} target="_blank" rel="noreferrer">한국관광공사 저작권 정책</a>}
           </div>
           <small>{place.image.verifiedAt} 확인</small>
