@@ -267,8 +267,8 @@ test('사람 검토를 통과한 제3유형 69장은 원본 그대로 추가하�
   }
 
   const imageSource = fs.readFileSync(new URL('src/components/PlaceImage.jsx', ROOT), 'utf8')
-  assert.match(imageSource, /공공누리 3유형/)
-  assert.match(imageSource, /공공누리 1유형/)
+  assert.match(imageSource, /공공누리 제3유형/)
+  assert.match(imageSource, /공공누리 제1유형/)
   assert.match(imageSource, /한국관광공사 저작권 정책/)
 })
 
@@ -287,11 +287,17 @@ test('Family 이미지 카드는 축약 출처를 쓰고 상세에는 라이선�
 
   assert.match(imageSource, /ⓒ 한국관광공사/)
   assert.match(imageSource, /ⓘ 사진정보/)
-  assert.match(imageSource, /저작자:/)
-  assert.match(imageSource, /원본 출처:/)
-  assert.match(imageSource, /이용조건:/)
-  assert.match(imageSource, /변경 여부:/)
-  assert.match(imageSource, />원본 보기</)
+  assert.match(imageSource, /저작자/)
+  assert.match(imageSource, /제공기관/)
+  assert.match(imageSource, /한국관광공사 TourAPI/)
+  assert.match(imageSource, /Wikimedia Commons/)
+  assert.match(imageSource, /라이선스 상세/)
+  assert.match(imageSource, /전체 이용조건:/)
+  assert.match(imageSource, /변경 상세:/)
+  assert.match(imageSource, /원본 보기 ↗/)
+  assert.match(imageSource, /변경 없이 사용/)
+  assert.match(imageSource, /place-image-license-summary/)
+  assert.match(imageSource, /place-image-license-full/)
   assert.match(imageSource, /place\.image\.licenseOrUsageBasis/)
   assert.match(imageSource, /place\.image\.licenseUrl/)
   assert.match(imageSource, /event\.stopPropagation\(\)/)
@@ -299,6 +305,8 @@ test('Family 이미지 카드는 축약 출처를 쓰고 상세에는 라이선�
   assert.match(appSource, /infoInitiallyOpen=\{photoInfoOpen\}/)
   assert.match(imageSource, /open=\{infoInitiallyOpen\}/)
   assert.match(stylesSource, /\.place-image figcaption button/)
+  assert.match(stylesSource, /\.place-image-license-summary/)
+  assert.match(stylesSource, /\.place-image-license-full/)
   assert.match(stylesSource, /\.top-recommendation-card > button/)
 
   const examples = {

@@ -24,7 +24,7 @@ function getWikimediaAuthor(image) {
 }
 
 function getLicenseLabel(image, isTourApiImage, preservesOriginal) {
-  if (isTourApiImage) return preservesOriginal ? '공공누리 3유형' : '공공누리 1유형'
+  if (isTourApiImage) return preservesOriginal ? '공공누리 제3유형' : '공공누리 제1유형'
   if (image.licenseLabel) return image.licenseLabel
   return image.licenseOrUsageBasis?.split(':')[0]?.trim() || '라이선스'
 }
@@ -38,6 +38,15 @@ function getModificationNote(image, isTourApiImage, preservesOriginal) {
   return '이미지 변경 여부는 원본 출처와 이용조건을 함께 확인해 주세요.'
 }
 
+function getConciseModificationNote(image, isTourApiImage, preservesOriginal) {
+  if (preservesOriginal) return '변경 없이 사용'
+  if (isTourApiImage) return '카드 비율에 맞게 편집한 이미지예요.'
+  if (/CC BY(?:-SA)?\b/i.test(image.licenseOrUsageBasis || '')) {
+    return '카드 비율에 맞게 crop·WebP 변환했어요.'
+  }
+  return null
+}
+
 export default function PlaceImage({ place, variant = 'card', eager = false, onOpenInfo, infoInitiallyOpen = false }) {
   const [emoji, label] = fallbackVisual(place)
   const [loadFailed, setLoadFailed] = useState(false)
@@ -45,6 +54,7 @@ export default function PlaceImage({ place, variant = 'card', eager = false, onO
   const isTourApiImage = Boolean(place.image?.tourApiContentId)
   const imageAuthor = getWikimediaAuthor(place.image || {})
   const licenseLabel = getLicenseLabel(place.image || {}, isTourApiImage, preservesOriginal)
+  const conciseModificationNote = getConciseModificationNote(place.image || {}, isTourApiImage, preservesOriginal)
   const compactAttribution = isTourApiImage
     ? `ⓒ 한국관광공사${place.image?.author ? ` · ${place.image.author}` : ''}`
     : 'ⓘ 사진정보'
@@ -82,28 +92,46 @@ export default function PlaceImage({ place, variant = 'card', eager = false, onO
       {variant === 'modal' && (
         <details className="place-image-license-details" open={infoInitiallyOpen}>
           <summary>ⓘ 사진정보</summary>
-          {isTourApiImage ? (
-            <>
-              <p><strong>출처:</strong> 한국관광공사 TourAPI</p>
-              {place.image.author && <p><strong>촬영자:</strong> {place.image.author}</p>}
-              <p>{place.image.attributionText}</p>
-              <p>{place.image.publishedYear ? `${place.image.publishedYear}년 발행` : `${place.image.verifiedAt?.slice(0, 4)}년 이용조건 확인`} · 제공기관 한국관광공사</p>
-            </>
-          ) : (
-            <>
-              {imageAuthor && <p><strong>저작자:</strong> {imageAuthor}</p>}
-              <p><strong>원본 출처:</strong> Wikimedia Commons</p>
-              <p>{place.image.attributionText}</p>
-            </>
-          )}
-          <p><strong>이용조건:</strong> {place.image.licenseOrUsageBasis}</p>
-          <p><strong>변경 여부:</strong> {getModificationNote(place.image, isTourApiImage, preservesOriginal)}</p>
-          <div>
-            <a href={place.image.sourceUrl} target="_blank" rel="noreferrer">원본 보기</a>
-            {place.image.licenseUrl && <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{licenseLabel}</a>}
-            {isTourApiImage && place.image.sourcePolicyUrl && <a href={place.image.sourcePolicyUrl} target="_blank" rel="noreferrer">한국관광공사 저작권 정책</a>}
+          <div className="place-image-license-summary">
+            <dl>
+              <div>
+                <dt>{isTourApiImage ? '제공기관' : '저작자'}</dt>
+                <dd>{isTourApiImage ? '한국관광공사' : imageAuthor || '원본 페이지에서 확인'}</dd>
+              </div>
+              {isTourApiImage && place.image.author && (
+                <div>
+                  <dt>촬영자</dt>
+                  <dd>{place.image.author}</dd>
+                </div>
+              )}
+              <div>
+                <dt>출처</dt>
+                <dd>{isTourApiImage ? '한국관광공사 TourAPI' : 'Wikimedia Commons'}</dd>
+              </div>
+              <div>
+                <dt>라이선스</dt>
+                <dd>{place.image.licenseUrl ? <a href={place.image.licenseUrl} target="_blank" rel="noreferrer">{licenseLabel}</a> : licenseLabel}</dd>
+              </div>
+              {isTourApiImage && place.image.publishedYear && (
+                <div>
+                  <dt>발행연도</dt>
+                  <dd>{place.image.publishedYear}년</dd>
+                </div>
+              )}
+            </dl>
+            {conciseModificationNote && <p className="place-image-change-note">{conciseModificationNote}</p>}
+            <a className="place-image-original-link" href={place.image.sourceUrl} target="_blank" rel="noreferrer">원본 보기 ↗</a>
           </div>
-          <small>{place.image.verifiedAt} 확인</small>
+          <details className="place-image-license-full">
+            <summary>라이선스 상세</summary>
+            <p><strong>전체 출처 표기:</strong> {place.image.attributionText}</p>
+            <p><strong>전체 이용조건:</strong> {place.image.licenseOrUsageBasis}</p>
+            <p><strong>변경 상세:</strong> {getModificationNote(place.image, isTourApiImage, preservesOriginal)}</p>
+            {isTourApiImage && place.image.sourcePolicyUrl && (
+              <a href={place.image.sourcePolicyUrl} target="_blank" rel="noreferrer">한국관광공사 저작권 정책 ↗</a>
+            )}
+            <small>{place.image.verifiedAt} 확인</small>
+          </details>
         </details>
       )}
     </>
